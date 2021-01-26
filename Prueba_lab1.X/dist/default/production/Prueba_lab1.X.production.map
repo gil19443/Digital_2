@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.20\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\Prueba_lab1.X.production.sym \
   --cmf=dist/default/production\Prueba_lab1.X.production.cmf -z -Q16F887 \
-  -oC:\Users\CARLOS~1\AppData\Local\Temp\sjhk.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\CARLOS~1\AppData\Local\Temp\skdg.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Prueba_lab1.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 \
   -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o \
+  C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o \
   dist/default/production\Prueba_lab1.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
+C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        2        0       4
 dist/default/production\Prueba_lab1.X.production.o
@@ -359,7 +359,7 @@ Total ram usage:        0 bytes
 
  *************** function _jugador2 *****************
  Defined at:
-		line 124 in file "main.c"
+		line 125 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -389,7 +389,7 @@ Total ram usage:        0 bytes
 
  *************** function _juego2 *****************
  Defined at:
-		line 150 in file "main.c"
+		line 152 in file "main.c"
  Parameters:    Size  Location     Type
   selector2       1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -448,7 +448,7 @@ Total ram usage:        0 bytes
 
  *************** function _juego1 *****************
  Defined at:
-		line 134 in file "main.c"
+		line 135 in file "main.c"
  Parameters:    Size  Location     Type
   selector1       1    wreg     unsigned char 
  Auto vars:     Size  Location     Type

@@ -2607,6 +2607,7 @@ void jugador1 (void){
         juego1(jugadores1);
     }
 }
+
 void jugador2 (void ){
     if (PORTBbits.RB2 == 0){
         conteo2 = 1;
@@ -2633,6 +2634,7 @@ void juego1(unsigned char selector1){
             break;
     }
 }
+
 void juego2(unsigned char selector2){
     switch (selector2){
         case 1:

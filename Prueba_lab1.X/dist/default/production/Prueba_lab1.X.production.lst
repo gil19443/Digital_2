@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
-                                                                                               Mon Jan 25 19:24:38 2021
+                                                                                               Mon Jan 25 22:04:32 2021
 
 Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1 
      1                           	processor	16F887
@@ -518,7 +518,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    504  071B                     __ptext2:	
    505 ;; *************** function _jugador2 *****************
    506 ;; Defined at:
-   507 ;;		line 124 in file "main.c"
+   507 ;;		line 125 in file "main.c"
    508 ;; Parameters:    Size  Location     Type
    509 ;;		None
    510 ;; Auto vars:     Size  Location     Type
@@ -554,7 +554,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    540                           ; Regs used in _jugador2: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
    541                           
    542                           
-   543                           ;main.c: 125:         case 8:
+   543                           ;main.c: 126:             break;
    544  071B  1283               	bcf	3,5	;RP0=0, select bank0
    545  071C  1303               	bcf	3,6	;RP1=0, select bank0
    546  071D  1906               	btfsc	6,2	;volatile
@@ -565,14 +565,14 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    551  0721                     u50:
    552  0721                     l783:
    553                           
-   554                           ;main.c: 126:             PORTD = 128;
+   554                           ;main.c: 127:         case 8:
    555  0721  01F2               	clrf	_conteo2
    556  0722  0AF2               	incf	_conteo2,f
    557  0723                     l77:	
-   558                           ;main.c: 127:             PORTBbits.RB4 = 1;
+   558                           ;main.c: 128:             PORTD = 128;
    559                           
    560                           
-   561                           ;main.c: 128:             check = 0;
+   561                           ;main.c: 129:             PORTBbits.RB4 = 1;
    562  0723  1D06               	btfss	6,2	;volatile
    563  0724  2F26               	goto	u61
    564  0725  2F27               	goto	u60
@@ -589,16 +589,16 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    575  072C                     u70:
    576  072C                     l787:
    577                           
-   578                           ;main.c: 129:             jugadores2 = 0;
+   578                           ;main.c: 130:             check = 0;
    579  072C  01F2               	clrf	_conteo2
    580  072D                     l789:
    581                           
-   582                           ;main.c: 130:             break;
+   582                           ;main.c: 131:             jugadores2 = 0;
    583  072D  0870               	movf	_jugadores2,w
    584  072E  120A  118A  27A3  120A  118A  	fcall	_juego2
    585  0733                     l791:
    586                           
-   587                           ;main.c: 131:         default:
+   587                           ;main.c: 132:             break;
    588  0733  3001               	movlw	1
    589  0734  00FF               	movwf	btemp+1
    590  0735  087F               	movf	btemp+1,w
@@ -611,7 +611,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    597  07A3                     __ptext3:	
    598 ;; *************** function _juego2 *****************
    599 ;; Defined at:
-   600 ;;		line 150 in file "main.c"
+   600 ;;		line 152 in file "main.c"
    601 ;; Parameters:    Size  Location     Type
    602 ;;  selector2       1    wreg     unsigned char 
    603 ;; Auto vars:     Size  Location     Type
@@ -758,7 +758,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    743                           ; Regs used in _jugador1: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
    744                           
    745                           
-   746                           ;main.c: 115:         default:
+   746                           ;main.c: 115:             break;
    747  06FE  1283               	bcf	3,5	;RP0=0, select bank0
    748  06FF  1303               	bcf	3,6	;RP1=0, select bank0
    749  0700  1886               	btfsc	6,1	;volatile
@@ -769,14 +769,14 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    754  0704                     u20:
    755  0704                     l771:
    756                           
-   757                           ;main.c: 116:             PORTC = PORTC << 1;
+   757                           ;main.c: 116:         default:
    758  0704  01F3               	clrf	_conteo1
    759  0705  0AF3               	incf	_conteo1,f
    760  0706                     l72:	
-   761                           ;main.c: 117:             break;
+   761                           ;main.c: 117:             PORTC = PORTC << 1;
    762                           
    763                           
-   764                           ;main.c: 118:     }
+   764                           ;main.c: 118:             break;
    765  0706  1C86               	btfss	6,1	;volatile
    766  0707  2F09               	goto	u31
    767  0708  2F0A               	goto	u30
@@ -793,18 +793,18 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    778  070F                     u40:
    779  070F                     l775:
    780                           
-   781                           ;main.c: 119: }
+   781                           ;main.c: 119:     }
    782  070F  01F3               	clrf	_conteo1
    783  0710                     l777:
    784                           
-   785                           ;main.c: 120: void juego2(unsigned char selector2){
+   785                           ;main.c: 120: }
    786  0710  3001               	movlw	1
    787  0711  00FF               	movwf	btemp+1
    788  0712  087F               	movf	btemp+1,w
    789  0713  07F1               	addwf	_jugadores1,f
    790  0714                     l779:
    791                           
-   792                           ;main.c: 121:     switch (selector2){
+   792                           ;main.c: 121: 
    793  0714  0871               	movf	_jugadores1,w
    794  0715  120A  118A  277A  120A  118A  	fcall	_juego1
    795  071A                     l74:
@@ -815,7 +815,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    800  077A                     __ptext5:	
    801 ;; *************** function _juego1 *****************
    802 ;; Defined at:
-   803 ;;		line 134 in file "main.c"
+   803 ;;		line 135 in file "main.c"
    804 ;; Parameters:    Size  Location     Type
    805 ;;  selector1       1    wreg     unsigned char 
    806 ;; Auto vars:     Size  Location     Type
@@ -852,7 +852,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    837  077A  00F7               	movwf	juego1@selector1
    838  077B                     l691:
    839                           
-   840                           ;main.c: 135: }
+   840                           ;main.c: 136:     }
    841  077B  2F92               	goto	l707
    842  077C                     l693:
    843  077C  3001               	movlw	1
@@ -964,7 +964,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    948                           ; Regs used in _habilitar_semaforo: [wreg+status,2+status,0+pclath+cstack]
    949                           
    950                           
-   951                           ;main.c: 103: }
+   951                           ;main.c: 103:     }
    952  06E8  1283               	bcf	3,5	;RP0=0, select bank0
    953  06E9  1303               	bcf	3,6	;RP1=0, select bank0
    954  06EA  1806               	btfsc	6,0	;volatile
@@ -975,38 +975,38 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    959  06EE                     u10:
    960  06EE                     l753:
    961                           
-   962                           ;main.c: 104: void juego1(unsigned char selector1){
+   962                           ;main.c: 104: }
    963  06EE  120A  118A  27CC  120A  118A  	fcall	_luces
    964  06F3                     l755:
    965                           
-   966                           ;main.c: 105:     switch (selector1){
+   966                           ;main.c: 105: void juego1(unsigned char selector1){
    967  06F3  01F4               	clrf	_check
    968  06F4  0AF4               	incf	_check,f
    969  06F5                     l757:
    970                           
-   971                           ;main.c: 106:         case 1:
+   971                           ;main.c: 106:     switch (selector1){
    972  06F5  1283               	bcf	3,5	;RP0=0, select bank0
    973  06F6  1303               	bcf	3,6	;RP1=0, select bank0
    974  06F7  0188               	clrf	8	;volatile
    975  06F8                     l759:
    976                           
-   977                           ;main.c: 107:             PORTC++;
+   977                           ;main.c: 107:         case 1:
    978  06F8  0187               	clrf	7	;volatile
    979  06F9                     l761:
    980                           
-   981                           ;main.c: 108:             break;
+   981                           ;main.c: 108:             PORTC++;
    982  06F9  01F3               	clrf	_conteo1
    983  06FA                     l763:
    984                           
-   985                           ;main.c: 109:         case 8:
+   985                           ;main.c: 109:             break;
    986  06FA  01F2               	clrf	_conteo2
    987  06FB                     l765:
    988                           
-   989                           ;main.c: 110:             PORTC = 128;
+   989                           ;main.c: 110:         case 8:
    990  06FB  1186               	bcf	6,3	;volatile
    991  06FC                     l767:
    992                           
-   993                           ;main.c: 111:             PORTBbits.RB3 = 1;
+   993                           ;main.c: 111:             PORTC = 128;
    994  06FC  1206               	bcf	6,4	;volatile
    995  06FD                     l69:
    996  06FD  0008               	return
@@ -1051,13 +1051,13 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1035                           ; Regs used in _luces: [wreg+status,2]
   1036                           
   1037                           
-  1038                           ;main.c: 94: void jugador2 (void ){
+  1038                           ;main.c: 94: 
   1039  07CC  3001               	movlw	1
   1040  07CD  1283               	bcf	3,5	;RP0=0, select bank0
   1041  07CE  1303               	bcf	3,6	;RP1=0, select bank0
   1042  07CF  0089               	movwf	9	;volatile
   1043                           
-  1044                           ;main.c: 95:     if (PORTBbits.RB2 == 0){
+  1044                           ;main.c: 95: void jugador2 (void ){
   1045  07D0  3082               	movlw	130
   1046  07D1  00F6               	movwf	??_luces+1
   1047  07D2  30DD               	movlw	221
@@ -1069,13 +1069,13 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1053  07D7  2FD4               	goto	u97
   1054  07D8  2FD9               	nop2
   1055                           
-  1056                           ;main.c: 96:         conteo2 = 1;
+  1056                           ;main.c: 96:     if (PORTBbits.RB2 == 0){
   1057  07D9  3002               	movlw	2
   1058  07DA  1283               	bcf	3,5	;RP0=0, select bank0
   1059  07DB  1303               	bcf	3,6	;RP1=0, select bank0
   1060  07DC  0089               	movwf	9	;volatile
   1061                           
-  1062                           ;main.c: 97:     }
+  1062                           ;main.c: 97:         conteo2 = 1;
   1063  07DD  3082               	movlw	130
   1064  07DE  00F6               	movwf	??_luces+1
   1065  07DF  30DD               	movlw	221
@@ -1087,13 +1087,13 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1071  07E4  2FE1               	goto	u107
   1072  07E5  2FE6               	nop2
   1073                           
-  1074                           ;main.c: 98:     if (PORTBbits.RB2 == 1 && conteo2 == 1){
+  1074                           ;main.c: 98:     }
   1075  07E6  3004               	movlw	4
   1076  07E7  1283               	bcf	3,5	;RP0=0, select bank0
   1077  07E8  1303               	bcf	3,6	;RP1=0, select bank0
   1078  07E9  0089               	movwf	9	;volatile
   1079                           
-  1080                           ;main.c: 99:         conteo2 = 0;
+  1080                           ;main.c: 99:     if (PORTBbits.RB2 == 1 && conteo2 == 1){
   1081  07EA  3082               	movlw	130
   1082  07EB  00F6               	movwf	??_luces+1
   1083  07EC  30DD               	movlw	221
@@ -1106,7 +1106,7 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   1090  07F2  2FF3               	nop2
   1091  07F3                     l689:
   1092                           
-  1093                           ;main.c: 100:         juego2(jugadores2);
+  1093                           ;main.c: 100:         conteo2 = 0;
   1094  07F3  1283               	bcf	3,5	;RP0=0, select bank0
   1095  07F4  1303               	bcf	3,6	;RP1=0, select bank0
   1096  07F5  0189               	clrf	9	;volatile
@@ -1269,7 +1269,7 @@ DATA                 0      0       8      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.20 build 20200408173844 
-Symbol Table                                                                                   Mon Jan 25 19:24:38 2021
+Symbol Table                                                                                   Mon Jan 25 22:04:32 2021
 
                          l62 0779                           l55 073D                           l72 0706  
                          l65 07F6                           l74 071A                           l69 06FD  

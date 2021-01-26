@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
+$C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Prueba_lab1.X.production.o
@@ -73,105 +73,105 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Prueba_lab1.X.production.o
-7F7 cinit CODE >461:C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.s
-7F7 cinit CODE >464:C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.s
-7F7 cinit CODE >487:C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.s
-7F8 cinit CODE >488:C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.s
-7F9 cinit CODE >489:C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.s
-7FA cinit CODE >490:C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.s
-7FB cinit CODE >491:C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.s
-7FC cinit CODE >497:C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.s
-7FC cinit CODE >499:C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.s
-7FD cinit CODE >500:C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.s
-7CC text7 CODE >93:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7CC text7 CODE >94:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7D0 text7 CODE >95:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7D9 text7 CODE >96:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7DD text7 CODE >97:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7E6 text7 CODE >98:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7EA text7 CODE >99:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7F3 text7 CODE >100:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7F6 text7 CODE >101:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6E8 text6 CODE >102:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6E8 text6 CODE >103:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6EE text6 CODE >104:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6F3 text6 CODE >105:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6F5 text6 CODE >106:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6F8 text6 CODE >107:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6F9 text6 CODE >108:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6FA text6 CODE >109:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6FB text6 CODE >110:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6FC text6 CODE >111:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6FD text6 CODE >113:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-77A text5 CODE >134:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-77B text5 CODE >135:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-77C text5 CODE >137:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-782 text5 CODE >138:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-783 text5 CODE >140:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-787 text5 CODE >141:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-788 text5 CODE >142:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-789 text5 CODE >143:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-78A text5 CODE >144:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-78B text5 CODE >146:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-791 text5 CODE >147:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-792 text5 CODE >148:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7A2 text5 CODE >149:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6FE text4 CODE >114:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-6FE text4 CODE >115:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-704 text4 CODE >116:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-706 text4 CODE >117:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-706 text4 CODE >118:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-70F text4 CODE >119:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-710 text4 CODE >120:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-714 text4 CODE >121:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-71A text4 CODE >123:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7A3 text3 CODE >150:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7A4 text3 CODE >151:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7A5 text3 CODE >153:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7AB text3 CODE >154:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7AC text3 CODE >156:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7B0 text3 CODE >157:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7B1 text3 CODE >158:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7B2 text3 CODE >159:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7B3 text3 CODE >160:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7B4 text3 CODE >162:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7BA text3 CODE >163:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7BB text3 CODE >164:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-7CB text3 CODE >165:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-71B text2 CODE >124:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-71B text2 CODE >125:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-721 text2 CODE >126:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-723 text2 CODE >127:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-723 text2 CODE >128:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-72C text2 CODE >129:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-72D text2 CODE >130:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-733 text2 CODE >131:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-737 text2 CODE >133:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-755 text1 CODE >71:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-755 text1 CODE >72:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-758 text1 CODE >73:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-759 text1 CODE >74:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-75C text1 CODE >75:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-75F text1 CODE >76:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-762 text1 CODE >77:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-765 text1 CODE >78:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-768 text1 CODE >79:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-76B text1 CODE >80:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-76C text1 CODE >81:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-76D text1 CODE >82:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-76E text1 CODE >83:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-76F text1 CODE >84:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-770 text1 CODE >85:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-773 text1 CODE >86:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-777 text1 CODE >87:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-779 text1 CODE >88:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-738 maintext CODE >52:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-738 maintext CODE >53:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-73D maintext CODE >57:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-73D maintext CODE >58:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-742 maintext CODE >59:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-747 maintext CODE >60:C:\MPlab_Digital2\Prueba_lab1.X\main.c
-74C maintext CODE >61:C:\MPlab_Digital2\Prueba_lab1.X\main.c
+7F7 cinit CODE >461:C:\Users\CARLOS~1\AppData\Local\Temp\skdg.s
+7F7 cinit CODE >464:C:\Users\CARLOS~1\AppData\Local\Temp\skdg.s
+7F7 cinit CODE >487:C:\Users\CARLOS~1\AppData\Local\Temp\skdg.s
+7F8 cinit CODE >488:C:\Users\CARLOS~1\AppData\Local\Temp\skdg.s
+7F9 cinit CODE >489:C:\Users\CARLOS~1\AppData\Local\Temp\skdg.s
+7FA cinit CODE >490:C:\Users\CARLOS~1\AppData\Local\Temp\skdg.s
+7FB cinit CODE >491:C:\Users\CARLOS~1\AppData\Local\Temp\skdg.s
+7FC cinit CODE >497:C:\Users\CARLOS~1\AppData\Local\Temp\skdg.s
+7FC cinit CODE >499:C:\Users\CARLOS~1\AppData\Local\Temp\skdg.s
+7FD cinit CODE >500:C:\Users\CARLOS~1\AppData\Local\Temp\skdg.s
+7CC text7 CODE >93:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7CC text7 CODE >94:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7D0 text7 CODE >95:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7D9 text7 CODE >96:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7DD text7 CODE >97:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7E6 text7 CODE >98:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7EA text7 CODE >99:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7F3 text7 CODE >100:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7F6 text7 CODE >101:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6E8 text6 CODE >102:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6E8 text6 CODE >103:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6EE text6 CODE >104:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6F3 text6 CODE >105:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6F5 text6 CODE >106:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6F8 text6 CODE >107:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6F9 text6 CODE >108:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6FA text6 CODE >109:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6FB text6 CODE >110:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6FC text6 CODE >111:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6FD text6 CODE >113:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+77A text5 CODE >135:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+77B text5 CODE >136:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+77C text5 CODE >138:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+782 text5 CODE >139:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+783 text5 CODE >141:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+787 text5 CODE >142:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+788 text5 CODE >143:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+789 text5 CODE >144:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+78A text5 CODE >145:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+78B text5 CODE >147:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+791 text5 CODE >148:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+792 text5 CODE >149:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7A2 text5 CODE >150:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6FE text4 CODE >114:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+6FE text4 CODE >115:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+704 text4 CODE >116:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+706 text4 CODE >117:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+706 text4 CODE >118:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+70F text4 CODE >119:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+710 text4 CODE >120:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+714 text4 CODE >121:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+71A text4 CODE >123:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7A3 text3 CODE >152:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7A4 text3 CODE >153:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7A5 text3 CODE >155:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7AB text3 CODE >156:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7AC text3 CODE >158:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7B0 text3 CODE >159:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7B1 text3 CODE >160:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7B2 text3 CODE >161:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7B3 text3 CODE >162:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7B4 text3 CODE >164:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7BA text3 CODE >165:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7BB text3 CODE >166:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+7CB text3 CODE >167:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+71B text2 CODE >125:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+71B text2 CODE >126:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+721 text2 CODE >127:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+723 text2 CODE >128:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+723 text2 CODE >129:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+72C text2 CODE >130:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+72D text2 CODE >131:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+733 text2 CODE >132:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+737 text2 CODE >134:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+755 text1 CODE >71:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+755 text1 CODE >72:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+758 text1 CODE >73:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+759 text1 CODE >74:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+75C text1 CODE >75:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+75F text1 CODE >76:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+762 text1 CODE >77:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+765 text1 CODE >78:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+768 text1 CODE >79:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+76B text1 CODE >80:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+76C text1 CODE >81:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+76D text1 CODE >82:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+76E text1 CODE >83:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+76F text1 CODE >84:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+770 text1 CODE >85:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+773 text1 CODE >86:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+777 text1 CODE >87:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+779 text1 CODE >88:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+738 maintext CODE >52:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+738 maintext CODE >53:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+73D maintext CODE >57:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+73D maintext CODE >58:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+742 maintext CODE >59:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+747 maintext CODE >60:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
+74C maintext CODE >61:C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -196,19 +196,19 @@ __size_of_jugador2 0 0 ABS 0 - dist/default/production\Prueba_lab1.X.production.
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 _WPUB 95 0 ABS 0 - dist/default/production\Prueba_lab1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
+___sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
 _main E70 0 CODE 0 maintext dist/default/production\Prueba_lab1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Prueba_lab1.X.production.o
-start 0 0 CODE 0 init C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
+start 0 0 CODE 0 init C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Prueba_lab1.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _jugador1 DFC 0 CODE 0 text4 dist/default/production\Prueba_lab1.X.production.o
 _jugador2 E36 0 CODE 0 text2 dist/default/production\Prueba_lab1.X.production.o
@@ -220,15 +220,15 @@ __end_of_jugador2 E70 0 CODE 0 text2 dist/default/production\Prueba_lab1.X.produ
 _ANSELH 189 0 ABS 0 - dist/default/production\Prueba_lab1.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _OPTION_REG 81 0 ABS 0 - dist/default/production\Prueba_lab1.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
-___stacklo 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
+___stackhi 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
+___stacklo 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
 __size_of_luces 0 0 ABS 0 - dist/default/production\Prueba_lab1.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Prueba_lab1.X.production.o
 start_initialization FEE 0 CODE 0 cinit dist/default/production\Prueba_lab1.X.production.o
 __end_of_juego1 F46 0 CODE 0 text5 dist/default/production\Prueba_lab1.X.production.o
 __end_of_juego2 F98 0 CODE 0 text3 dist/default/production\Prueba_lab1.X.production.o
 _TRISBbits 86 0 ABS 0 - dist/default/production\Prueba_lab1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
+___int_sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -270,7 +270,7 @@ __S3 0 0 ABS 0 - -
 _jugadores1 71 0 COMMON 1 bssCOMMON dist/default/production\Prueba_lab1.X.production.o
 _jugadores2 70 0 COMMON 1 bssCOMMON dist/default/production\Prueba_lab1.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\CARLOS~1\AppData\Local\Temp\sjhk.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
 __end_of_habilitar_semaforo DFC 0 CODE 0 text6 dist/default/production\Prueba_lab1.X.production.o
 _juego1 EF4 0 CODE 0 text5 dist/default/production\Prueba_lab1.X.production.o
 _juego2 F46 0 CODE 0 text3 dist/default/production\Prueba_lab1.X.production.o

@@ -11,7 +11,7 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"52 C:\MPlab_Digital2\Prueba_lab1.X\main.c
+"52 C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "71
 [v _setup setup `(v  1 e 1 0 ]
@@ -21,11 +21,11 @@
 [v _habilitar_semaforo habilitar_semaforo `(v  1 e 1 0 ]
 "114
 [v _jugador1 jugador1 `(v  1 e 1 0 ]
-"124
+"125
 [v _jugador2 jugador2 `(v  1 e 1 0 ]
-"134
+"135
 [v _juego1 juego1 `(v  1 e 1 0 ]
-"150
+"152
 [v _juego2 juego2 `(v  1 e 1 0 ]
 "228 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -73,7 +73,7 @@
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"33 C:\MPlab_Digital2\Prueba_lab1.X\main.c
+"33 C:\MPlab_Digital2\Digital_2\Prueba_lab1.X\main.c
 [v _check check `uc  1 e 1 0 ]
 "34
 [v _conteo1 conteo1 `uc  1 e 1 0 ]
@@ -93,31 +93,31 @@
 {
 "88
 } 0
-"124
+"125
 [v _jugador2 jugador2 `(v  1 e 1 0 ]
 {
-"133
+"134
 } 0
-"150
+"152
 [v _juego2 juego2 `(v  1 e 1 0 ]
 {
 [v juego2@selector2 selector2 `uc  1 a 1 wreg ]
 [v juego2@selector2 selector2 `uc  1 a 1 wreg ]
 [v juego2@selector2 selector2 `uc  1 a 1 2 ]
-"165
+"167
 } 0
 "114
 [v _jugador1 jugador1 `(v  1 e 1 0 ]
 {
 "123
 } 0
-"134
+"135
 [v _juego1 juego1 `(v  1 e 1 0 ]
 {
 [v juego1@selector1 selector1 `uc  1 a 1 wreg ]
 [v juego1@selector1 selector1 `uc  1 a 1 wreg ]
 [v juego1@selector1 selector1 `uc  1 a 1 2 ]
-"149
+"150
 } 0
 "102
 [v _habilitar_semaforo habilitar_semaforo `(v  1 e 1 0 ]

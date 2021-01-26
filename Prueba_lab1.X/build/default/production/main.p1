@@ -483,184 +483,185 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _luces ]
 [f ]
 "94
-[; ;main.c: 94: void jugador2 (void ){
+[; ;main.c: 94: 
 [e = _PORTE -> -> 1 `i `uc ]
 "95
-[; ;main.c: 95:     if (PORTBbits.RB2 == 0){
+[; ;main.c: 95: void jugador2 (void ){
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 800000 `l `d .4000.0 `ul ]
 "96
-[; ;main.c: 96:         conteo2 = 1;
+[; ;main.c: 96:     if (PORTBbits.RB2 == 0){
 [e = _PORTE -> -> 2 `i `uc ]
 "97
-[; ;main.c: 97:     }
+[; ;main.c: 97:         conteo2 = 1;
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 800000 `l `d .4000.0 `ul ]
 "98
-[; ;main.c: 98:     if (PORTBbits.RB2 == 1 && conteo2 == 1){
+[; ;main.c: 98:     }
 [e = _PORTE -> -> 4 `i `uc ]
 "99
-[; ;main.c: 99:         conteo2 = 0;
+[; ;main.c: 99:     if (PORTBbits.RB2 == 1 && conteo2 == 1){
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 800000 `l `d .4000.0 `ul ]
 "100
-[; ;main.c: 100:         juego2(jugadores2);
+[; ;main.c: 100:         conteo2 = 0;
 [e = _PORTE -> -> 0 `i `uc ]
 "101
-[; ;main.c: 101:         jugadores2++;
+[; ;main.c: 101:         juego2(jugadores2);
 [e :UE 144 ]
 }
 "102
-[; ;main.c: 102:     }
+[; ;main.c: 102:         jugadores2++;
 [v _habilitar_semaforo `(v ~T0 @X0 1 ef ]
 {
 [e :U _habilitar_semaforo ]
 [f ]
 "103
-[; ;main.c: 103: }
+[; ;main.c: 103:     }
 [e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 146  ]
 {
 "104
-[; ;main.c: 104: void juego1(unsigned char selector1){
+[; ;main.c: 104: }
 [e ( _luces ..  ]
 "105
-[; ;main.c: 105:     switch (selector1){
+[; ;main.c: 105: void juego1(unsigned char selector1){
 [e = _check -> -> 1 `i `uc ]
 "106
-[; ;main.c: 106:         case 1:
+[; ;main.c: 106:     switch (selector1){
 [e = _PORTD -> -> 0 `i `uc ]
 "107
-[; ;main.c: 107:             PORTC++;
+[; ;main.c: 107:         case 1:
 [e = _PORTC -> -> 0 `i `uc ]
 "108
-[; ;main.c: 108:             break;
+[; ;main.c: 108:             PORTC++;
 [e = _conteo1 -> -> 0 `i `uc ]
 "109
-[; ;main.c: 109:         case 8:
+[; ;main.c: 109:             break;
 [e = _conteo2 -> -> 0 `i `uc ]
 "110
-[; ;main.c: 110:             PORTC = 128;
+[; ;main.c: 110:         case 8:
 [e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
 "111
-[; ;main.c: 111:             PORTBbits.RB3 = 1;
+[; ;main.c: 111:             PORTC = 128;
 [e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
 "112
-[; ;main.c: 112:             check = 0;
+[; ;main.c: 112:             PORTBbits.RB3 = 1;
 }
 [e :U 146 ]
 "113
-[; ;main.c: 113:             jugadores1 = 0;
+[; ;main.c: 113:             check = 0;
 [e :UE 145 ]
 }
 "114
-[; ;main.c: 114:             break;
+[; ;main.c: 114:             jugadores1 = 0;
 [v _jugador1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _jugador1 ]
 [f ]
 "115
-[; ;main.c: 115:         default:
+[; ;main.c: 115:             break;
 [e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 148  ]
 {
 "116
-[; ;main.c: 116:             PORTC = PORTC << 1;
+[; ;main.c: 116:         default:
 [e = _conteo1 -> -> 1 `i `uc ]
 "117
-[; ;main.c: 117:             break;
+[; ;main.c: 117:             PORTC = PORTC << 1;
 }
 [e :U 148 ]
 "118
-[; ;main.c: 118:     }
+[; ;main.c: 118:             break;
 [e $ ! && == -> . . _PORTBbits 0 1 `i -> 1 `i == -> _conteo1 `i -> 1 `i 149  ]
 {
 "119
-[; ;main.c: 119: }
+[; ;main.c: 119:     }
 [e = _conteo1 -> -> 0 `i `uc ]
 "120
-[; ;main.c: 120: void juego2(unsigned char selector2){
+[; ;main.c: 120: }
 [e ++ _jugadores1 -> -> 1 `i `uc ]
 "121
-[; ;main.c: 121:     switch (selector2){
+[; ;main.c: 121: 
 [e ( _juego1 (1 _jugadores1 ]
 "122
-[; ;main.c: 122:         case 1:
+[; ;main.c: 122: void juego2(unsigned char selector2){
 }
 [e :U 149 ]
 "123
-[; ;main.c: 123:             PORTD++;
+[; ;main.c: 123:     switch (selector2){
 [e :UE 147 ]
 }
-"124
-[; ;main.c: 124:             break;
+"125
+[; ;main.c: 125:             PORTD++;
 [v _jugador2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _jugador2 ]
 [f ]
-"125
-[; ;main.c: 125:         case 8:
+"126
+[; ;main.c: 126:             break;
 [e $ ! == -> . . _PORTBbits 0 2 `i -> 0 `i 151  ]
 {
-"126
-[; ;main.c: 126:             PORTD = 128;
-[e = _conteo2 -> -> 1 `i `uc ]
 "127
-[; ;main.c: 127:             PORTBbits.RB4 = 1;
+[; ;main.c: 127:         case 8:
+[e = _conteo2 -> -> 1 `i `uc ]
+"128
+[; ;main.c: 128:             PORTD = 128;
 }
 [e :U 151 ]
-"128
-[; ;main.c: 128:             check = 0;
+"129
+[; ;main.c: 129:             PORTBbits.RB4 = 1;
 [e $ ! && == -> . . _PORTBbits 0 2 `i -> 1 `i == -> _conteo2 `i -> 1 `i 152  ]
 {
-"129
-[; ;main.c: 129:             jugadores2 = 0;
-[e = _conteo2 -> -> 0 `i `uc ]
 "130
-[; ;main.c: 130:             break;
-[e ( _juego2 (1 _jugadores2 ]
+[; ;main.c: 130:             check = 0;
+[e = _conteo2 -> -> 0 `i `uc ]
 "131
-[; ;main.c: 131:         default:
-[e ++ _jugadores2 -> -> 1 `i `uc ]
+[; ;main.c: 131:             jugadores2 = 0;
+[e ( _juego2 (1 _jugadores2 ]
 "132
-[; ;main.c: 132:             PORTD = PORTD << 1;
+[; ;main.c: 132:             break;
+[e ++ _jugadores2 -> -> 1 `i `uc ]
+"133
+[; ;main.c: 133:         default:
 }
 [e :U 152 ]
-"133
-[; ;main.c: 133:             break;
+"134
+[; ;main.c: 134:             PORTD = PORTD << 1;
 [e :UE 150 ]
 }
-"134
-[; ;main.c: 134:     }
+"135
+[; ;main.c: 135:             break;
 [v _juego1 `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _juego1 ]
 [v _selector1 `uc ~T0 @X0 1 r1 ]
 [f ]
-"135
-[; ;main.c: 135: }
+"136
+[; ;main.c: 136:     }
 [e $U 155  ]
 {
-"136
-[e :U 156 ]
 "137
-[e ++ _PORTC -> -> 1 `i `Vuc ]
+[; ;main.c: 137: }
+[e :U 156 ]
 "138
-[e $U 154  ]
+[e ++ _PORTC -> -> 1 `i `Vuc ]
 "139
-[e :U 157 ]
+[e $U 154  ]
 "140
-[e = _PORTC -> -> 128 `i `uc ]
+[e :U 157 ]
 "141
-[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
+[e = _PORTC -> -> 128 `i `uc ]
 "142
-[e = _check -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
 "143
-[e = _jugadores1 -> -> 0 `i `uc ]
+[e = _check -> -> 0 `i `uc ]
 "144
-[e $U 154  ]
+[e = _jugadores1 -> -> 0 `i `uc ]
 "145
-[e :U 158 ]
-"146
-[e = _PORTC -> << -> _PORTC `i -> 1 `i `uc ]
-"147
 [e $U 154  ]
+"146
+[e :U 158 ]
+"147
+[e = _PORTC -> << -> _PORTC `i -> 1 `i `uc ]
 "148
+[e $U 154  ]
+"149
 }
 [e $U 154  ]
 [e :U 155 ]
@@ -668,43 +669,43 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 8 `i 157
  158 ]
 [e :U 154 ]
-"149
+"150
 [e :UE 153 ]
 }
-"150
+"152
 [v _juego2 `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _juego2 ]
 [v _selector2 `uc ~T0 @X0 1 r1 ]
 [f ]
-"151
+"153
 [e $U 161  ]
 {
-"152
-[e :U 162 ]
-"153
-[e ++ _PORTD -> -> 1 `i `Vuc ]
 "154
-[e $U 160  ]
+[e :U 162 ]
 "155
-[e :U 163 ]
+[e ++ _PORTD -> -> 1 `i `Vuc ]
 "156
-[e = _PORTD -> -> 128 `i `uc ]
+[e $U 160  ]
 "157
-[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
+[e :U 163 ]
 "158
-[e = _check -> -> 0 `i `uc ]
+[e = _PORTD -> -> 128 `i `uc ]
 "159
-[e = _jugadores2 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
 "160
-[e $U 160  ]
+[e = _check -> -> 0 `i `uc ]
 "161
-[e :U 164 ]
+[e = _jugadores2 -> -> 0 `i `uc ]
 "162
-[e = _PORTD -> << -> _PORTD `i -> 1 `i `uc ]
-"163
 [e $U 160  ]
+"163
+[e :U 164 ]
 "164
+[e = _PORTD -> << -> _PORTD `i -> 1 `i `uc ]
+"165
+[e $U 160  ]
+"166
 }
 [e $U 160  ]
 [e :U 161 ]
@@ -712,6 +713,6 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 8 `i 163
  164 ]
 [e :U 160 ]
-"165
+"167
 [e :UE 159 ]
 }
