@@ -1,0 +1,94 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"73 C:\MPlab_Digital2\Digital_2\Laboratorio_1.X\Laboratorio_1_digital2.c
+[v _setup setup `(v  1 e 1 0 ]
+"98
+[v _luces luces `(v  1 e 1 0 ]
+"107
+[v _habilitar_semaforo habilitar_semaforo `(v  1 e 1 0 ]
+"119
+[v _jugador1 jugador1 `(v  1 e 1 0 ]
+"128
+[v _jugador2 jugador2 `(v  1 e 1 0 ]
+"137
+[v _juego1 juego1 `(v  1 e 1 0 ]
+"154
+[v _juego2 juego2 `(v  1 e 1 0 ]
+"11 C:\MPlab_Digital2\Digital_2\Laboratorio_1.X\Laboratorio_1_digital_2.c
+[v _main main `(v  1 e 1 0 ]
+"167 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f887.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"229
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S93 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"246
+[u S102 . 1 `S93 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES102  1 e 1 @6 ]
+"291
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"353
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"415
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+"1347
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1417
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+[s S62 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1496
+[u S71 . 1 `S62 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES71  1 e 1 @134 ]
+"1541
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1603
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1665
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"2347
+[v _WPUB WPUB `VEuc  1 e 1 @149 ]
+"3388
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3450
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"33 C:\MPlab_Digital2\Digital_2\Laboratorio_1.X\Laboratorio_1_digital2.c
+[v _check check `uc  1 e 1 0 ]
+"34
+[v _conteo1 conteo1 `uc  1 e 1 0 ]
+"35
+[v _conteo2 conteo2 `uc  1 e 1 0 ]
+"36
+[v _jugadores1 jugadores1 `uc  1 e 1 0 ]
+"37
+[v _jugadores2 jugadores2 `uc  1 e 1 0 ]
+"11 C:\MPlab_Digital2\Digital_2\Laboratorio_1.X\Laboratorio_1_digital_2.c
+[v _main main `(v  1 e 1 0 ]
+{
+"13
+} 0
