@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.20\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\Prueba_lab1.X.production.sym \
   --cmf=dist/default/production\Prueba_lab1.X.production.cmf -z -Q16F887 \
-  -oC:\Users\CARLOS~1\AppData\Local\Temp\skdg.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\CARLOS~1\AppData\Local\Temp\s7ok.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Prueba_lab1.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 \
   -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o \
+  C:\Users\CARLOS~1\AppData\Local\Temp\s7ok.o \
   dist/default/production\Prueba_lab1.X.production.o 
 
 Object code version is 3.11
@@ -28,14 +28,14 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\CARLOS~1\AppData\Local\Temp\skdg.o
+C:\Users\CARLOS~1\AppData\Local\Temp\s7ok.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        2        0       4
 dist/default/production\Prueba_lab1.X.production.o
                 cinit                               7F7      7F7        9      FEE       0
                 config                             2007     2007        2        0       4
                 text7                               7CC      7CC       2B      F98       0
-                text6                               6E8      6E8       16      DD0       0
+                text6                               6E6      6E6       18      DCC       0
                 text5                               77A      77A       29      EF4       0
                 text4                               6FE      6FE       1D      DFC       0
                 text3                               7A3      7A3       29      F46       0
@@ -52,7 +52,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 end_init                              0        0        3         0
                 cinit                               7F7      7F7        9         0
                 text7                               7CC      7CC       2B         0
-                text6                               6E8      6E8       16         0
+                text6                               6E6      6E6       18         0
                 text5                               77A      77A       29         0
                 text4                               6FE      6FE       1D         0
                 text3                               7A3      7A3       29         0
@@ -106,7 +106,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
                 bssCOMMON                      000070  000008  000078        70       1  COMMON      1
-                text6                          0006E8  000016  0006FE       DD0       0  CODE        2
+                text6                          0006E6  000018  0006FE       DCC       0  CODE        2
                 text4                          0006FE  00001D  00071B       DFC       0  CODE        2
                 text2                          00071B  00001D  000738       E36       0  CODE        2
                 maintext                       000738  00001D  000755       E70       0  CODE        2
@@ -124,13 +124,13 @@ UNUSED ADDRESS RANGES
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
-        CODE             0003-06E7            6E5           2
+        CODE             0003-06E5            6E3           2
                          0800-1FFF            800
         COMMON           0078-007D              6           1
-        CONST            0003-06E7            100           2
+        CONST            0003-06E5            100           2
                          0800-1FFF            100
         EEDATA           2100-21FF            100           2
-        ENTRY            0003-06E7            100           2
+        ENTRY            0003-06E5            100           2
                          0800-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0020-006F             50           1
@@ -142,9 +142,9 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
-        STRCODE          0003-06E7            6E5           2
+        STRCODE          0003-06E5            6E3           2
                          0800-1FFF           1800
-        STRING           0003-06E7            100           2
+        STRING           0003-06E5            100           2
                          0800-1FFF            100
 
                                   Symbol Table
@@ -255,7 +255,7 @@ __ptext2                     text2        071B
 __ptext3                     text3        07A3
 __ptext4                     text4        06FE
 __ptext5                     text5        077A
-__ptext6                     text6        06E8
+__ptext6                     text6        06E6
 __ptext7                     text7        07CC
 __size_of_habilitar_semaforo (abs)        0000
 __size_of_juego1             (abs)        0000
@@ -268,7 +268,7 @@ __size_of_setup              (abs)        0000
 _check                       bssCOMMON    0074
 _conteo1                     bssCOMMON    0073
 _conteo2                     bssCOMMON    0072
-_habilitar_semaforo          text6        06E8
+_habilitar_semaforo          text6        06E6
 _juego1                      text5        077A
 _juego2                      text3        07A3
 _jugador1                    text4        06FE
@@ -359,7 +359,7 @@ Total ram usage:        0 bytes
 
  *************** function _jugador2 *****************
  Defined at:
-		line 125 in file "main.c"
+		line 127 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -389,7 +389,7 @@ Total ram usage:        0 bytes
 
  *************** function _juego2 *****************
  Defined at:
-		line 152 in file "main.c"
+		line 154 in file "main.c"
  Parameters:    Size  Location     Type
   selector2       1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -418,7 +418,7 @@ Total ram usage:        3 bytes
 
  *************** function _jugador1 *****************
  Defined at:
-		line 114 in file "main.c"
+		line 116 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -448,7 +448,7 @@ Total ram usage:        0 bytes
 
  *************** function _juego1 *****************
  Defined at:
-		line 135 in file "main.c"
+		line 137 in file "main.c"
  Parameters:    Size  Location     Type
   selector1       1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -549,9 +549,9 @@ main.c
 		_jugador1      		CODE           	06FE	0000	30
 		_jugador2      		CODE           	071B	0000	30
 		_luces         		CODE           	07CC	0000	44
-		_habilitar_semaforo		CODE           	06E8	0000	23
+		_habilitar_semaforo		CODE           	06E6	0000	25
 		_setup         		CODE           	0755	0000	38
 		_juego1        		CODE           	077A	0000	42
 
-main.c estimated size: 279
+main.c estimated size: 281
 

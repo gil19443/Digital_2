@@ -19,13 +19,13 @@
 [v _luces luces `(v  1 e 1 0 ]
 "102
 [v _habilitar_semaforo habilitar_semaforo `(v  1 e 1 0 ]
-"114
+"116
 [v _jugador1 jugador1 `(v  1 e 1 0 ]
-"125
+"127
 [v _jugador2 jugador2 `(v  1 e 1 0 ]
-"135
+"137
 [v _juego1 juego1 `(v  1 e 1 0 ]
-"152
+"154
 [v _juego2 juego2 `(v  1 e 1 0 ]
 "228 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -93,36 +93,36 @@
 {
 "88
 } 0
-"125
+"127
 [v _jugador2 jugador2 `(v  1 e 1 0 ]
 {
-"134
+"136
 } 0
-"152
+"154
 [v _juego2 juego2 `(v  1 e 1 0 ]
 {
 [v juego2@selector2 selector2 `uc  1 a 1 wreg ]
 [v juego2@selector2 selector2 `uc  1 a 1 wreg ]
 [v juego2@selector2 selector2 `uc  1 a 1 2 ]
-"167
+"169
 } 0
-"114
+"116
 [v _jugador1 jugador1 `(v  1 e 1 0 ]
 {
-"123
+"125
 } 0
-"135
+"137
 [v _juego1 juego1 `(v  1 e 1 0 ]
 {
 [v juego1@selector1 selector1 `uc  1 a 1 wreg ]
 [v juego1@selector1 selector1 `uc  1 a 1 wreg ]
 [v juego1@selector1 selector1 `uc  1 a 1 2 ]
-"150
+"152
 } 0
 "102
 [v _habilitar_semaforo habilitar_semaforo `(v  1 e 1 0 ]
 {
-"113
+"115
 } 0
 "93
 [v _luces luces `(v  1 e 1 0 ]

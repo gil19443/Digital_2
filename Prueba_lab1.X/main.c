@@ -107,6 +107,8 @@ void habilitar_semaforo (void){ // se revisa el boton de inicio y se habilita pa
             PORTC = 0;
             conteo1 = 0;
             conteo2 = 0;
+            jugadores1 = 0;
+            jugadores2 = 0;
             PORTBbits.RB3 = 0;
             PORTBbits.RB4 = 0;
         }
@@ -128,8 +130,8 @@ void jugador2 (void ){
     }
     if (PORTBbits.RB2 == 1 && conteo2 == 1){
         conteo2 = 0;
-        juego2(jugadores2);
         jugadores2++;
+        juego2(jugadores2);
     }
 }
 void juego1(unsigned char selector1){  //rutina con cases 
