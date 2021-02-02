@@ -53,22 +53,22 @@ void toggle_s (void);
 //******************************************************************************
 void __interrupt() isr(void){
     if (INTCONbits.TMR0IF == 1){
-        TMR0 = 236;
-        toggle_s();
-        controlADC++;
-        INTCONbits.TMR0IF = 0;
+        TMR0 = 236; //valor del timer para 5ms
+        toggle_s(); //funcion que alterna el valor de la variable que multiplexa
+        controlADC++; //contador para dar el GO del ADC en el main loop 
+        INTCONbits.TMR0IF = 0; //limpiar la bandera 
     }
     if (PIR1bits.ADIF == 1){
-        ADC = ADRESH;
-        PIR1bits.ADIF = 0;
+        ADC = ADRESH; //mover el valor de la lectura a una variable local 
+        PIR1bits.ADIF = 0; //limpiar la bandera de interrupcion 
     }
-    if (INTCONbits.RBIF == 1){
-        if (PORTBbits.RB6 == 0){
+    if (INTCONbits.RBIF == 1){ //rutina de interrupcion con antirrebote de ambos botones 
+        if (PORTBbits.RB6 == 0){ //un boton incrementa el puertoD y otra lo decrementa 
             boton1 = 1;
         }
         if (PORTBbits.RB6 == 1 && boton1 == 1){
             boton1  = 0;
-            PORTD++;
+            PORTD++; 
         }
         if (PORTBbits.RB7 == 0){
             boton2 = 1;
@@ -85,14 +85,14 @@ void __interrupt() isr(void){
 //******************************************************************************
 
 void main(void) {
-    setup();
+    setup(); //setup 
     //**************************************************************************
     //                             mian loop
     //**************************************************************************
     while (1) {
-        display ();
-        chequeo ();
-        ADC_GO ();
+        display (); //rutina que multiplexa los displays 
+        chequeo (); //rutina que hace la verificacion del puerto para encender el indicador 
+        ADC_GO (); //rutina que revisa el contador para dar el GO cada 5 interrupcinoes del TMR0
 
     }
 }
@@ -117,20 +117,20 @@ void setup(void) {
     TRISE = 0; // se marca el puerto E como salida
     PORTE = 0;  //se resetea el puerto E
     PORTA = 0;
-    TRISAbits.TRISA0 = 1;
-    TRISBbits.TRISB6 = 1;
-    TRISBbits.TRISB7 = 1;
-    WPUB = 0b11000000; //0000 0111 pines para pull up 
+    TRISAbits.TRISA0 = 1; //EL A0 como entrada 
+    TRISBbits.TRISB6 = 1; //RB6 como entrada 
+    TRISBbits.TRISB7 = 1; //RB7 como entrada 
+    WPUB = 0b11000000; //pull ups en RB7 y RB6
 //****************************interrupcinoes************************************
     INTCONbits.GIE = 1; //se activan las interrupciones globales 
     INTCONbits.PEIE = 1; // se activan las interrupciones perifericas 
     INTCONbits.TMR0IE = 1; //se activan las interrupciones del timer 0
     INTCONbits.RBIE = 1; //se activan las interrupciones del puerto b
     PIE1bits.ADIE = 1; //activar las interrupciones del ADC
-    IOCB = 0b11000000;
-    PIR1bits.ADIF = 0;
-    INTCONbits.RBIF = 0;
-    INTCONbits.T0IF = 0;
+    IOCB = 0b11000000; //configuracion de los pines de las interrupciones PORTB
+    PIR1bits.ADIF = 0; //limpiar la bandera del ADC
+    INTCONbits.RBIF = 0; //limpiar la bandera del puerto B
+    INTCONbits.T0IF = 0; //limpiar bandera del timer0
 //******************************************************************************
 }
 void chequeo (void){
@@ -154,12 +154,12 @@ void display (void){
     }
 }
 void ADC_GO (void){
-    if (controlADC > 10){
+    if (controlADC > 10){ //revisa si el contador es mayor a 10 para dar el GO 
         controlADC = 0;
         ADCON0bits.GO_nDONE = 1;
     }
 }
-void toggle_s (void) {
+void toggle_s (void) { //alterna la variable toggle entre 1 y 0
     if (toggle == 1){
         toggle = 0;
     }else{
