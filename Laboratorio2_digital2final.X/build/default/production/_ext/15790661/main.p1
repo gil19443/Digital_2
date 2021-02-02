@@ -19,8 +19,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "59
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 59: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
 [v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
-"47 C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 47: 
+"47 C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 47: 
 [v _display `(v ~T0 @X0 0 ef ]
 "543 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 543:     struct {
@@ -74,17 +74,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
 [v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 [p mainexit ]
-"45 C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 45: }
+"45 C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 45: }
 [v _setup `(v ~T0 @X0 0 ef ]
 "46
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 46: 
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 46: 
 [v _chequeo `(v ~T0 @X0 0 ef ]
-"36 C:/MPlab_Digital2/Laboratorio2_digital2final.X/Libreria2.h
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/Libreria2.h: 36: void initOsc (uint8_t option);
+"36 C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/Libreria2.h
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/Libreria2.h: 36: void initOsc (uint8_t option);
 [v _initOsc `(v ~T0 @X0 0 ef1`uc ]
-"36 C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.h
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.h: 36: void configADC(uint8_t canal, uint8_t vel);
+"36 C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h: 36: void configADC(uint8_t canal, uint8_t vel);
 [v _configADC `(v ~T0 @X0 0 ef2`uc`uc ]
 "1346 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1346: extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
@@ -174,8 +174,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "427
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 427: extern volatile PORTEbits_t PORTEbits __attribute__((address(0x009)));
 [v _PORTEbits `VS13 ~T0 @X0 0 e@9 ]
-"7 C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.h
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.h: 7: void tabla(uint8_t numero);
+"7 C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.h
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.h: 7: void tabla(uint8_t numero);
 [v _tabla `(v ~T0 @X0 0 ef1`uc ]
 "54 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
@@ -411,268 +411,270 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"19 C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 19:         INTCONbits.TMR0IF = 0;
+"19 C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 19:         INTCONbits.TMR0IF = 0;
 [p x FOSC = INTRC_NOCLKOUT ]
 "20
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 20:         TMR0 = 236;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 20:         TMR0 = 200;
 [p x WDTE = OFF ]
 "21
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 21:         display();
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 21:         display();
 [p x PWRTE = OFF ]
 "22
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 22:     }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 22:     }
 [p x MCLRE = OFF ]
 "23
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 23:     if (PIR1bits.ADIF == 1){
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 23:     if (PIR1bits.ADIF == 1){
 [p x CP = OFF ]
 "24
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 24:         ADC = ADRESH;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 24:         ADC = ADRESH;
 [p x CPD = OFF ]
 "25
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 25:         PIR1bits.ADIF = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 25:         PIR1bits.ADIF = 0;
 [p x BOREN = OFF ]
 "26
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 26:         ADCON0bits.GO = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 26:         ADCON0bits.GO = 1;
 [p x IESO = OFF ]
 "27
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 27:     }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 27:     }
 [p x FCMEN = OFF ]
 "28
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 28:     if (INTCONbits.RBIF == 1){
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 28:     if (INTCONbits.RBIF == 1){
 [p x LVP = OFF ]
 "31
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 31:             boton1 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 31:         }
 [p x BOR4V = BOR40V ]
 "32
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 32:         }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 32:         if (PORTBbits.RB6 == 1 && boton1 == 1){
 [p x WRT = OFF ]
 "36
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 36:         }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 36:         if (PORTBbits.RB7 == 0){
 [v _ADC `uc ~T0 @X0 1 e ]
 [i _ADC
 -> -> 0 `i `uc
 ]
 "37
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 37:          if (PORTBbits.RB7 == 0){
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 37:             boton2 = 1;
 [v _toggle `uc ~T0 @X0 1 e ]
 [i _toggle
 -> -> 0 `i `uc
 ]
 "38
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 38:             boton2 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 38:         }
 [v _display1 `uc ~T0 @X0 1 e ]
 [i _display1
 -> -> 0 `i `uc
 ]
 "39
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 39:         }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 39:         if (PORTBbits.RB6 == 1 && boton2 == 1){
 [v _display0 `uc ~T0 @X0 1 e ]
 [i _display0
 -> -> 0 `i `uc
 ]
 "40
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 40:         if (PORTBbits.RB6 && boton1 == 1){
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 40:             boton2 = 0;
 [v _boton1 `uc ~T0 @X0 1 e ]
 [i _boton1
 -> -> 0 `i `uc
 ]
 "41
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 41:             boton2 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 41:             PORTD--;
 [v _boton2 `uc ~T0 @X0 1 e ]
 [i _boton2
 -> -> 0 `i `uc
 ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
 "51
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 51:     setup();
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 51:     setup();
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
 "52
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 52: 
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 52: 
 [e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 139  ]
 {
 "53
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 53: 
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 53: 
 [e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
 "54
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 54: 
-[e = _TMR0 -> -> 236 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 54: 
+[e = _TMR0 -> -> 200 `i `uc ]
 "55
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 55:     while (1) {
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 55:     while (1) {
 [e ( _display ..  ]
 "56
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 56:         chequeo ();
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 56:         chequeo ();
 }
 [e :U 139 ]
 "57
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 57: 
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 57: 
 [e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 140  ]
 {
 "58
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 58:     }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 58:     }
 [e = _ADC _ADRESH ]
 "59
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 59: }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 59: }
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
 "60
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 60: 
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 60: 
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
 "61
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 61: 
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 61: 
 }
 [e :U 140 ]
 "62
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 62: 
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 62: 
 [e $ ! == -> . . _INTCONbits 0 0 `i -> 1 `i 141  ]
 {
 "63
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 63: 
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"64
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 64: 
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 63: 
 [e $ ! == -> . . _PORTBbits 0 6 `i -> 0 `i 142  ]
 {
-"65
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 65: 
+"64
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 64: 
 [e = _boton1 -> -> 1 `i `uc ]
-"66
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 66: void setup(void) {
+"65
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 65: 
 }
 [e :U 142 ]
-"67
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 67:     initOsc(7);
-[e $ ! && != -> . . _PORTBbits 0 6 `i -> 0 `i == -> _boton1 `i -> 1 `i 143  ]
+"66
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 66: void setup(void) {
+[e $ ! && == -> . . _PORTBbits 0 6 `i -> 1 `i == -> _boton1 `i -> 1 `i 143  ]
 {
-"68
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 68:     configADC(0,2);
+"67
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 67:     initOsc(7);
 [e = _boton1 -> -> 0 `i `uc ]
-"69
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 69:     OPTION_REG = 0b01010111;
+"68
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 68:     configADC(0,2);
 [e ++ _PORTD -> -> 1 `i `Vuc ]
-"70
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 70:     ANSEL = 0;
+"69
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 69:     OPTION_REG = 0b01010111;
 }
 [e :U 143 ]
-"71
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 71:     ANSELbits.ANS0 = 1;
+"70
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 70:     ANSEL = 0;
 [e $ ! == -> . . _PORTBbits 0 7 `i -> 0 `i 144  ]
 {
-"72
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 72:     ANSELH = 0;
+"71
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 71:     ANSELbits.ANS0 = 1;
 [e = _boton2 -> -> 1 `i `uc ]
-"73
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 73:     PORTC = 0;
+"72
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 72:     ANSELH = 0;
 }
 [e :U 144 ]
-"74
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 74:     TRISC = 0;
-[e $ ! && != -> . . _PORTBbits 0 6 `i -> 0 `i == -> _boton1 `i -> 1 `i 145  ]
+"73
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 73:     PORTC = 0;
+[e $ ! && == -> . . _PORTBbits 0 6 `i -> 1 `i == -> _boton2 `i -> 1 `i 145  ]
 {
-"75
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 75:     PORTD = 0;
+"74
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 74:     TRISC = 0;
 [e = _boton2 -> -> 0 `i `uc ]
-"76
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 76:     TRISD = 0;
+"75
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 75:     PORTD = 0;
 [e -- _PORTD -> -> 1 `i `Vuc ]
-"77
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 77:     PORTB = 0;
+"76
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 76:     TRISD = 0;
 }
 [e :U 145 ]
+"77
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 77:     PORTB = 0;
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
 "78
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 78:     TRISE = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 78:     TRISE = 0;
 }
 [e :U 141 ]
 "79
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 79:     PORTE = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 79:     PORTE = 0;
 [e :UE 138 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
 "84
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 84:     WPUB = 0b00000111;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 84:     WPUB = 0b11000111;
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
 "85
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 85: 
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 85: 
 [e ( _setup ..  ]
 "89
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 89:     INTCONbits.RBIE = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 89:     INTCONbits.RBIE = 1;
 [e :U 148 ]
 {
 "90
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 90:     PIE1bits.ADIE = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 90:     PIE1bits.ADIE = 1;
 [e ( _chequeo ..  ]
 "92
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 92: 
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 92:     INTCONbits.RBIF = 0;
 }
 [e :U 147 ]
 [e $U 148  ]
 [e :U 149 ]
 "93
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 93: }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 93:     INTCONbits.T0IF = 0;
 [e :UE 146 ]
 }
 "100
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 100: }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 100:         PORTEbits.RE3 = 0;
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
 "101
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 101: void display (void){
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 101:     }
 [e ( _initOsc (1 -> -> 7 `i `uc ]
 "102
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 102:     PORTEbits.RE0 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 102: }
 [e ( _configADC (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
 "103
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 103:     PORTEbits.RE1 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 103: void display (void){
 [e = _OPTION_REG -> -> 87 `i `uc ]
 "104
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 104:     if (toggle == 1){
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 104:     PORTEbits.RE0 = 0;
 [e = _ANSEL -> -> 0 `i `uc ]
 "105
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 105:         PORTEbits.RE0 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 105:     PORTEbits.RE1 = 0;
 [e = . . _ANSELbits 0 0 -> -> 1 `i `uc ]
 "106
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 106:         toggle = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 106:     if (toggle == 1){
 [e = _ANSELH -> -> 0 `i `uc ]
 "107
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 107:         display0 = ADC & 0b00001111;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 107:         PORTEbits.RE1 = 1;
 [e = _PORTC -> -> 0 `i `uc ]
 "108
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 108:         tabla(display0);
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 108:         toggle = 0;
 [e = _TRISC -> -> 0 `i `uc ]
 "109
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 109:     }else{
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 109:         display0 = ADC & 0b00001111;
 [e = _PORTD -> -> 0 `i `uc ]
 "110
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 110:         PORTEbits.RE1 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 110:         tabla(display0);
 [e = _TRISD -> -> 0 `i `uc ]
 "111
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 111:         toggle = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 111:     }else{
 [e = _PORTB -> -> 0 `i `uc ]
 "112
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 112:         display1 = (ADC & 0b11110000)>>4;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 112:         PORTEbits.RE0 = 1;
 [e = _TRISE -> -> 0 `i `uc ]
 "113
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 113:         tabla(display1);
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 113:         toggle = 1;
 [e = _PORTE -> -> 0 `i `uc ]
 "114
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 114:     }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 114:         display1 = (ADC & 0b11110000)>>4;
 [e = _PORTA -> -> 0 `i `uc ]
 "115
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c: 115: }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 115:         tabla(display1);
 [e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
 "116
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 116:     }
 [e = . . _TRISBbits 0 6 -> -> 1 `i `uc ]
 "117
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c: 117: }
 [e = . . _TRISBbits 0 7 -> -> 1 `i `uc ]
 "118
-[e = _WPUB -> -> 7 `i `uc ]
+[e = _WPUB -> -> 199 `i `uc ]
 "120
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "121
@@ -685,68 +687,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
 "125
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"126
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
 "127
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"129
 [e :UE 150 ]
 }
-"128
+"130
 [v _chequeo `(v ~T0 @X0 1 ef ]
 {
 [e :U _chequeo ]
 [f ]
-"129
+"131
 [e $ ! > -> _ADC `i -> _PORTC `i 152  ]
 {
-"130
+"132
 [e = . . _PORTEbits 0 3 -> -> 1 `i `uc ]
-"131
+"133
 }
 [e $U 153  ]
 [e :U 152 ]
 {
-"132
+"134
 [e = . . _PORTEbits 0 3 -> -> 0 `i `uc ]
-"133
+"135
 }
 [e :U 153 ]
-"134
+"136
 [e :UE 151 ]
 }
-"135
+"137
 [v _display `(v ~T0 @X0 1 ef ]
 {
 [e :U _display ]
 [f ]
-"136
-[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-"137
-[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
 "138
+[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+"139
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+"140
 [e $ ! == -> _toggle `i -> 1 `i 155  ]
 {
-"139
-[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
-"140
-[e = _toggle -> -> 0 `i `uc ]
 "141
-[e = _display0 -> & -> _ADC `i -> 15 `i `uc ]
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
 "142
-[e ( _tabla (1 _display0 ]
+[e = _toggle -> -> 0 `i `uc ]
 "143
+[e = _display0 -> & -> _ADC `i -> 15 `i `uc ]
+"144
+[e ( _tabla (1 _display0 ]
+"145
 }
 [e $U 156  ]
 [e :U 155 ]
 {
-"144
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
-"145
-[e = _toggle -> -> 1 `i `uc ]
 "146
-[e = _display1 -> >> & -> _ADC `i -> 240 `i -> 4 `i `uc ]
+[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
 "147
-[e ( _tabla (1 _display1 ]
+[e = _toggle -> -> 1 `i `uc ]
 "148
+[e = _display1 -> >> & -> _ADC `i -> 240 `i -> 4 `i `uc ]
+"149
+[e ( _tabla (1 _display1 ]
+"150
 }
 [e :U 156 ]
-"149
+"151
 [e :UE 154 ]
 }

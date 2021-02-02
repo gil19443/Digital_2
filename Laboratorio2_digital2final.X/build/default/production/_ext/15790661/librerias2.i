@@ -1,4 +1,4 @@
-# 1 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c"
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,20 +6,15 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c" 2
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c" 2
 
 
 
 
 
 
-
-
-# 1 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.h" 1
-
-
-
-
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/Libreria2.h" 1
+# 34 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/Libreria2.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2504,7 +2499,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-# 5 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.h" 2
+# 34 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/Libreria2.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
@@ -2639,60 +2634,52 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 6 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.h" 2
+# 35 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/Libreria2.h" 2
 
-void tabla(uint8_t numero);
-# 9 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c" 2
+void initOsc (uint8_t option);
+# 7 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c" 2
 
-void tabla(uint8_t numero){
-    switch (numero){
+void initOsc (uint8_t option){
+    switch (option){
         case 0:
-            PORTC = 0b11000000;
+            OSCCONbits.IRCF2 = 0;
+            OSCCONbits.IRCF1 = 0;
+            OSCCONbits.IRCF0 = 0;
             break;
         case 1:
-            PORTC = 0b11111001;
+            OSCCONbits.IRCF2 = 0;
+            OSCCONbits.IRCF1 = 0;
+            OSCCONbits.IRCF0 = 1;
             break;
         case 2:
-            PORTC = 0b10100100;
+            OSCCONbits.IRCF2 = 0;
+            OSCCONbits.IRCF1 = 1;
+            OSCCONbits.IRCF0 = 0;
             break;
         case 3:
-            PORTC = 0b10110000;
+            OSCCONbits.IRCF2 = 0;
+            OSCCONbits.IRCF1 = 1;
+            OSCCONbits.IRCF0 = 1;
             break;
         case 4:
-            PORTC = 0b10011001;
+            OSCCONbits.IRCF2 = 1;
+            OSCCONbits.IRCF1 = 0;
+            OSCCONbits.IRCF0 = 0;
             break;
         case 5:
-            PORTC = 0b10010010;
+            OSCCONbits.IRCF2 = 1;
+            OSCCONbits.IRCF1 = 0;
+            OSCCONbits.IRCF0 = 1;
             break;
         case 6:
-            PORTC = 0b10000010;
+            OSCCONbits.IRCF2 = 1;
+            OSCCONbits.IRCF1 = 1;
+            OSCCONbits.IRCF0 = 0;
             break;
         case 7:
-            PORTC = 0b11111000;
+            OSCCONbits.IRCF2 = 1;
+            OSCCONbits.IRCF1 = 1;
+            OSCCONbits.IRCF0 = 1;
             break;
-        case 8:
-            PORTC = 0b10000000;
-            break;
-        case 9:
-            PORTC = 0b10010000;
-            break;
-        case 10:
-            PORTC = 0b10001000;
-            break;
-        case 11:
-            PORTC = 0b10000011;
-            break;
-        case 12:
-            PORTC = 0b11000110;
-            break;
-        case 13:
-            PORTC = 0b10100001;
-            break;
-        case 14:
-            PORTC = 0b10000110;
-            break;
-        case 15:
-            PORTC = 0b10001110;
-            break;
-}
+    }
 }

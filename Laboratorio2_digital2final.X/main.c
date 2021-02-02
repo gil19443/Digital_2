@@ -51,7 +51,7 @@ void display (void);
 void __interrupt() isr(void){
     if (INTCONbits.TMR0IF == 1){
         INTCONbits.TMR0IF = 0;
-        TMR0 = 236;
+        TMR0 = 200;
         display();
     }
     if (PIR1bits.ADIF == 1){
@@ -60,21 +60,21 @@ void __interrupt() isr(void){
         ADCON0bits.GO = 1;
     }
     if (INTCONbits.RBIF == 1){
-        INTCONbits.RBIF = 0;
         if (PORTBbits.RB6 == 0){
             boton1 = 1;
         }
-        if (PORTBbits.RB6 && boton1 == 1){
+        if (PORTBbits.RB6 == 1 && boton1 == 1){
             boton1  = 0;
             PORTD++;
         }
-         if (PORTBbits.RB7 == 0){
+        if (PORTBbits.RB7 == 0){
             boton2 = 1;
         }
-        if (PORTBbits.RB6 && boton1 == 1){
+        if (PORTBbits.RB6 == 1 && boton2 == 1){
             boton2  = 0;
             PORTD--;
         }
+        INTCONbits.RBIF = 0;
     }
 }
 //******************************************************************************
@@ -115,7 +115,7 @@ void setup(void) {
     TRISAbits.TRISA0 = 1;
     TRISBbits.TRISB6 = 1;
     TRISBbits.TRISB7 = 1;
-    WPUB = 0b00000111; //0000 0111 pines para pull up 
+    WPUB = 0b11000111; //0000 0111 pines para pull up 
 //****************************interrupcinoes************************************
     INTCONbits.GIE = 1; //se activan las interrupciones globales 
     INTCONbits.PEIE = 1; // se activan las interrupciones perifericas 
@@ -123,6 +123,8 @@ void setup(void) {
     INTCONbits.RBIE = 1; //se activan las interrupciones del puerto b
     PIE1bits.ADIE = 1; //activar las interrupciones del ADC
     PIR1bits.ADIF = 0;
+    INTCONbits.RBIF = 0;
+    INTCONbits.T0IF = 0;
 //******************************************************************************
 }
 void chequeo (void){
@@ -136,12 +138,12 @@ void display (void){
     PORTEbits.RE0 = 0;//apagar los bits para los transistores 
     PORTEbits.RE1 = 0;
     if (toggle == 1){ //muxeo de los valores del display
-        PORTEbits.RE0 = 1; //encender el valor del transistor 
+        PORTEbits.RE1 = 1; //encender el valor del transistor 
         toggle = 0; //poner en 0 la bandera para que la siguiente vez no entre aca 
         display0 = ADC & 0b00001111; //colocar la variable del display el primer nibble de la variable ADC
         tabla(display0); //llamar a la tabla para mostrar el valor correspondiente
     }else{
-        PORTEbits.RE1 = 1;
+        PORTEbits.RE0 = 1;
         toggle = 1; //poner en 1 la bandera para que la siguiente vez no entre aca 
         display1 = (ADC & 0b11110000)>>4; //mover el segundo nibble a los primers 4 bits para buscar en la tabla
         tabla(display1);//llamar a la tabla para mostrar el valor correspondiente

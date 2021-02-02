@@ -1,10 +1,8 @@
 
-
+#define _XTAL_FREQ 400000
 #include "configuracionADC.h"
 void configADC(uint8_t canal, uint8_t vel){
-    ADCON0bits.ADON = 1;
-    ADCON0bits.GO = 1;
-    ADCON1 = 1;
+    ADCON1 = 0;
     switch (canal){
         case 0: //AN0
             ADCON0bits.CHS3 = 0;
@@ -120,6 +118,9 @@ void configADC(uint8_t canal, uint8_t vel){
             ADCON0bits.ADCS1 = 1;
             ADCON0bits.ADCS0 = 1;
             break;
-            
+        
     }
+    ADCON0bits.ADON = 1;
+    __delay_ms(11); //tiempo para que se configure e ADC
+    ADCON0bits.GO = 1;
 }

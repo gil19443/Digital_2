@@ -1,4 +1,4 @@
-# 1 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.c"
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,11 +6,11 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.c" 2
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.c" 2
 
 
-# 1 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.h" 1
-# 34 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.h"
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h" 1
+# 34 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2495,7 +2495,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-# 34 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.h" 2
+# 34 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
@@ -2630,15 +2630,13 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 35 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.h" 2
+# 35 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h" 2
 
 void configADC(uint8_t canal, uint8_t vel);
-# 3 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.c" 2
+# 3 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.c" 2
 
 void configADC(uint8_t canal, uint8_t vel){
-    ADCON0bits.ADON = 1;
-    ADCON0bits.GO = 1;
-    ADCON1 = 1;
+    ADCON1 = 0;
     switch (canal){
         case 0:
             ADCON0bits.CHS3 = 0;
@@ -2756,4 +2754,7 @@ void configADC(uint8_t canal, uint8_t vel){
             break;
 
     }
+    ADCON0bits.ADON = 1;
+    _delay((unsigned long)((11)*(400000/4000.0)));
+    ADCON0bits.GO = 1;
 }

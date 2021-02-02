@@ -4,9 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h</itemPath>
-      <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/Libreria2.h</itemPath>
-      <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.h</itemPath>
+      <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -15,10 +13,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.c</itemPath>
-      <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c</itemPath>
-      <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c</itemPath>
-      <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -26,10 +20,6 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>C:\MPlab_Digital2\Laboratorio2_digital2final.X</Elem>
-    <Elem>C:\MPlab_Digital2\Digital_2\Laboratorio2_digital2final.X</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">

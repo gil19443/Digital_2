@@ -1,4 +1,4 @@
-# 1 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c"
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,20 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c" 2
-# 10 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c"
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c" 2
+
+
+
+
+
+
+
+
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.h" 1
+
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2492,7 +2504,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-# 10 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c" 2
+# 5 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
@@ -2627,168 +2639,60 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 11 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c" 2
-
-# 1 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/Libreria2.h" 1
-# 35 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/Libreria2.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 35 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/Libreria2.h" 2
-
-void initOsc (uint8_t option);
-# 12 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c" 2
-
-# 1 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.h" 1
-# 35 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 35 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/configuracionADC.h" 2
-
-void configADC(uint8_t canal, uint8_t vel);
-# 13 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c" 2
-
-# 1 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.h" 1
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 6 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.h" 2
+# 6 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.h" 2
 
 void tabla(uint8_t numero);
-# 14 "C:/MPlab_Digital2/Laboratorio2_digital2final.X/main.c" 2
+# 9 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c" 2
 
-
-
-
-
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-uint8_t ADC = 0;
-uint8_t toggle = 0;
-uint8_t display1 = 0;
-uint8_t display0 = 0;
-uint8_t boton1 = 0;
-uint8_t boton2 = 0;
-
-
-
-void setup(void);
-void chequeo (void);
-void display (void);
-
-
-
-void __attribute__((picinterrupt(("")))) isr(void){
-    if (INTCONbits.TMR0IF == 1){
-        INTCONbits.TMR0IF = 0;
-        TMR0 = 236;
-        display();
-    }
-    if (PIR1bits.ADIF == 1){
-        ADC = ADRESH;
-        PIR1bits.ADIF = 0;
-        ADCON0bits.GO = 1;
-    }
-    if (INTCONbits.RBIF == 1){
-        INTCONbits.RBIF = 0;
-        if (PORTBbits.RB6 == 0){
-            boton1 = 1;
-        }
-        if (PORTBbits.RB6 && boton1 == 1){
-            boton1 = 0;
-            PORTD++;
-        }
-         if (PORTBbits.RB7 == 0){
-            boton2 = 1;
-        }
-        if (PORTBbits.RB6 && boton1 == 1){
-            boton2 = 0;
-            PORTD--;
-        }
-    }
+void tabla(uint8_t numero){
+    switch (numero){
+        case 0:
+            PORTC = 0b11000000;
+            break;
+        case 1:
+            PORTC = 0b11111001;
+            break;
+        case 2:
+            PORTC = 0b10100100;
+            break;
+        case 3:
+            PORTC = 0b10110000;
+            break;
+        case 4:
+            PORTC = 0b10011001;
+            break;
+        case 5:
+            PORTC = 0b10010010;
+            break;
+        case 6:
+            PORTC = 0b10000010;
+            break;
+        case 7:
+            PORTC = 0b11111000;
+            break;
+        case 8:
+            PORTC = 0b10000000;
+            break;
+        case 9:
+            PORTC = 0b10010000;
+            break;
+        case 10:
+            PORTC = 0b10001000;
+            break;
+        case 11:
+            PORTC = 0b10000011;
+            break;
+        case 12:
+            PORTC = 0b11000110;
+            break;
+        case 13:
+            PORTC = 0b10100001;
+            break;
+        case 14:
+            PORTC = 0b10000110;
+            break;
+        case 15:
+            PORTC = 0b10001110;
+            break;
 }
-
-
-
-
-void main(void) {
-    setup();
-
-
-
-    while (1) {
-        chequeo ();
-
-    }
-}
-
-
-
-
-
-
-void setup(void) {
-    initOsc(7);
-    configADC(0,2);
-    OPTION_REG = 0b01010111;
-    ANSEL = 0;
-    ANSELbits.ANS0 = 1;
-    ANSELH = 0;
-    PORTC = 0;
-    TRISC = 0;
-    PORTD = 0;
-    TRISD = 0;
-    PORTB = 0;
-    TRISE = 0;
-    PORTE = 0;
-    PORTA = 0;
-    TRISAbits.TRISA0 = 1;
-    TRISBbits.TRISB6 = 1;
-    TRISBbits.TRISB7 = 1;
-    WPUB = 0b00000111;
-
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    INTCONbits.TMR0IE = 1;
-    INTCONbits.RBIE = 1;
-    PIE1bits.ADIE = 1;
-    PIR1bits.ADIF = 0;
-
-}
-void chequeo (void){
-    if (ADC > PORTC){
-        PORTEbits.RE3 = 1;
-    }else{
-        PORTEbits.RE3 = 0;
-    }
-}
-void display (void){
-    PORTEbits.RE0 = 0;
-    PORTEbits.RE1 = 0;
-    if (toggle == 1){
-        PORTEbits.RE0 = 1;
-        toggle = 0;
-        display0 = ADC & 0b00001111;
-        tabla(display0);
-    }else{
-        PORTEbits.RE1 = 1;
-        toggle = 1;
-        display1 = (ADC & 0b11110000)>>4;
-        tabla(display1);
-    }
 }

@@ -248,139 +248,139 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"8 C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 8: void initOsc (uint8_t option){
+"8 C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 8: void initOsc (uint8_t option){
 [v _initOsc `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _initOsc ]
 [v _option `uc ~T0 @X0 1 r1 ]
 [f ]
 "9
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 9:     switch (option){
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 9:     switch (option){
 [e $U 140  ]
 {
 "10
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 10:         case 0:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 10:         case 0:
 [e :U 141 ]
 "11
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 11:             OSCCONbits.IRCF2 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 11:             OSCCONbits.IRCF2 = 0;
 [e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
 "12
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 12:             OSCCONbits.IRCF1 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 12:             OSCCONbits.IRCF1 = 0;
 [e = . . _OSCCONbits 1 2 -> -> 0 `i `uc ]
 "13
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 13:             OSCCONbits.IRCF0 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 13:             OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
 "14
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 14:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 14:             break;
 [e $U 139  ]
 "15
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 15:         case 1:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 15:         case 1:
 [e :U 142 ]
 "16
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 16:             OSCCONbits.IRCF2 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 16:             OSCCONbits.IRCF2 = 0;
 [e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
 "17
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 17:             OSCCONbits.IRCF1 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 17:             OSCCONbits.IRCF1 = 0;
 [e = . . _OSCCONbits 1 2 -> -> 0 `i `uc ]
 "18
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 18:             OSCCONbits.IRCF0 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 18:             OSCCONbits.IRCF0 = 1;
 [e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
 "19
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 19:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 19:             break;
 [e $U 139  ]
 "20
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 20:         case 2:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 20:         case 2:
 [e :U 143 ]
 "21
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 21:             OSCCONbits.IRCF2 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 21:             OSCCONbits.IRCF2 = 0;
 [e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
 "22
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 22:             OSCCONbits.IRCF1 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 22:             OSCCONbits.IRCF1 = 1;
 [e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
 "23
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 23:             OSCCONbits.IRCF0 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 23:             OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
 "24
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 24:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 24:             break;
 [e $U 139  ]
 "25
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 25:         case 3:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 25:         case 3:
 [e :U 144 ]
 "26
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 26:             OSCCONbits.IRCF2 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 26:             OSCCONbits.IRCF2 = 0;
 [e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
 "27
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 27:             OSCCONbits.IRCF1 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 27:             OSCCONbits.IRCF1 = 1;
 [e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
 "28
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 28:             OSCCONbits.IRCF0 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 28:             OSCCONbits.IRCF0 = 1;
 [e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
 "29
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 29:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 29:             break;
 [e $U 139  ]
 "30
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 30:         case 4:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 30:         case 4:
 [e :U 145 ]
 "31
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 31:             OSCCONbits.IRCF2 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 31:             OSCCONbits.IRCF2 = 1;
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "32
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 32:             OSCCONbits.IRCF1 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 32:             OSCCONbits.IRCF1 = 0;
 [e = . . _OSCCONbits 1 2 -> -> 0 `i `uc ]
 "33
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 33:             OSCCONbits.IRCF0 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 33:             OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
 "34
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 34:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 34:             break;
 [e $U 139  ]
 "35
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 35:         case 5:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 35:         case 5:
 [e :U 146 ]
 "36
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 36:             OSCCONbits.IRCF2 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 36:             OSCCONbits.IRCF2 = 1;
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "37
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 37:             OSCCONbits.IRCF1 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 37:             OSCCONbits.IRCF1 = 0;
 [e = . . _OSCCONbits 1 2 -> -> 0 `i `uc ]
 "38
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 38:             OSCCONbits.IRCF0 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 38:             OSCCONbits.IRCF0 = 1;
 [e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
 "39
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 39:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 39:             break;
 [e $U 139  ]
 "40
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 40:         case 6:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 40:         case 6:
 [e :U 147 ]
 "41
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 41:             OSCCONbits.IRCF2 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 41:             OSCCONbits.IRCF2 = 1;
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "42
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 42:             OSCCONbits.IRCF1 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 42:             OSCCONbits.IRCF1 = 1;
 [e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
 "43
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 43:             OSCCONbits.IRCF0 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 43:             OSCCONbits.IRCF0 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
 "44
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 44:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 44:             break;
 [e $U 139  ]
 "45
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 45:         case 7:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 45:         case 7:
 [e :U 148 ]
 "46
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 46:             OSCCONbits.IRCF2 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 46:             OSCCONbits.IRCF2 = 1;
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "47
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 47:             OSCCONbits.IRCF1 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 47:             OSCCONbits.IRCF1 = 1;
 [e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
 "48
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 48:             OSCCONbits.IRCF0 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 48:             OSCCONbits.IRCF0 = 1;
 [e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
 "49
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 49:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 49:             break;
 [e $U 139  ]
 "50
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 50:     }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 50:     }
 }
 [e $U 139  ]
 [e :U 140 ]
@@ -395,6 +395,6 @@ Version 4.0 HI-TECH Software Intermediate Code
  139 ]
 [e :U 139 ]
 "51
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/librerias2.c: 51: }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 51: }
 [e :UE 138 ]
 }

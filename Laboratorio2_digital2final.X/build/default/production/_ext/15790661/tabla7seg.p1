@@ -236,163 +236,163 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"10 C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 10: void tabla(uint8_t numero){
+"10 C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 10: void tabla(uint8_t numero){
 [v _tabla `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _tabla ]
 [v _numero `uc ~T0 @X0 1 r1 ]
 [f ]
 "11
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 11:     switch (numero){
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 11:     switch (numero){
 [e $U 140  ]
 {
 "12
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 12:         case 0:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 12:         case 0:
 [e :U 141 ]
 "13
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 13:             PORTC = 0b11000000;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 13:             PORTC = 0b11000000;
 [e = _PORTC -> -> 192 `i `uc ]
 "14
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 14:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 14:             break;
 [e $U 139  ]
 "15
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 15:         case 1:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 15:         case 1:
 [e :U 142 ]
 "16
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 16:             PORTC = 0b11111001;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 16:             PORTC = 0b11111001;
 [e = _PORTC -> -> 249 `i `uc ]
 "17
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 17:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 17:             break;
 [e $U 139  ]
 "18
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 18:         case 2:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 18:         case 2:
 [e :U 143 ]
 "19
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 19:             PORTC = 0b10100100;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 19:             PORTC = 0b10100100;
 [e = _PORTC -> -> 164 `i `uc ]
 "20
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 20:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 20:             break;
 [e $U 139  ]
 "21
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 21:         case 3:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 21:         case 3:
 [e :U 144 ]
 "22
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 22:             PORTC = 0b10110000;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 22:             PORTC = 0b10110000;
 [e = _PORTC -> -> 176 `i `uc ]
 "23
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 23:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 23:             break;
 [e $U 139  ]
 "24
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 24:         case 4:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 24:         case 4:
 [e :U 145 ]
 "25
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 25:             PORTC = 0b10011001;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 25:             PORTC = 0b10011001;
 [e = _PORTC -> -> 153 `i `uc ]
 "26
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 26:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 26:             break;
 [e $U 139  ]
 "27
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 27:         case 5:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 27:         case 5:
 [e :U 146 ]
 "28
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 28:             PORTC = 0b10010010;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 28:             PORTC = 0b10010010;
 [e = _PORTC -> -> 146 `i `uc ]
 "29
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 29:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 29:             break;
 [e $U 139  ]
 "30
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 30:         case 6:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 30:         case 6:
 [e :U 147 ]
 "31
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 31:             PORTC = 0b10000010;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 31:             PORTC = 0b10000010;
 [e = _PORTC -> -> 130 `i `uc ]
 "32
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 32:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 32:             break;
 [e $U 139  ]
 "33
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 33:         case 7:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 33:         case 7:
 [e :U 148 ]
 "34
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 34:             PORTC = 0b11111000;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 34:             PORTC = 0b11111000;
 [e = _PORTC -> -> 248 `i `uc ]
 "35
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 35:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 35:             break;
 [e $U 139  ]
 "36
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 36:         case 8:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 36:         case 8:
 [e :U 149 ]
 "37
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 37:             PORTC = 0b10000000;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 37:             PORTC = 0b10000000;
 [e = _PORTC -> -> 128 `i `uc ]
 "38
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 38:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 38:             break;
 [e $U 139  ]
 "39
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 39:         case 9:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 39:         case 9:
 [e :U 150 ]
 "40
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 40:             PORTC = 0b10010000;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 40:             PORTC = 0b10010000;
 [e = _PORTC -> -> 144 `i `uc ]
 "41
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 41:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 41:             break;
 [e $U 139  ]
 "42
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 42:         case 10:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 42:         case 10:
 [e :U 151 ]
 "43
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 43:             PORTC = 0b10001000;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 43:             PORTC = 0b10001000;
 [e = _PORTC -> -> 136 `i `uc ]
 "44
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 44:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 44:             break;
 [e $U 139  ]
 "45
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 45:         case 11:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 45:         case 11:
 [e :U 152 ]
 "46
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 46:             PORTC = 0b10000011;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 46:             PORTC = 0b10000011;
 [e = _PORTC -> -> 131 `i `uc ]
 "47
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 47:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 47:             break;
 [e $U 139  ]
 "48
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 48:         case 12:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 48:         case 12:
 [e :U 153 ]
 "49
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 49:             PORTC = 0b11000110;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 49:             PORTC = 0b11000110;
 [e = _PORTC -> -> 198 `i `uc ]
 "50
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 50:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 50:             break;
 [e $U 139  ]
 "51
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 51:         case 13:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 51:         case 13:
 [e :U 154 ]
 "52
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 52:             PORTC = 0b10100001;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 52:             PORTC = 0b10100001;
 [e = _PORTC -> -> 161 `i `uc ]
 "53
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 53:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 53:             break;
 [e $U 139  ]
 "54
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 54:         case 14:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 54:         case 14:
 [e :U 155 ]
 "55
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 55:             PORTC = 0b10000110;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 55:             PORTC = 0b10000110;
 [e = _PORTC -> -> 134 `i `uc ]
 "56
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 56:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 56:             break;
 [e $U 139  ]
 "57
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 57:         case 15:
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 57:         case 15:
 [e :U 156 ]
 "58
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 58:             PORTC = 0b10001110;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 58:             PORTC = 0b10001110;
 [e = _PORTC -> -> 142 `i `uc ]
 "59
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 59:             break;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 59:             break;
 [e $U 139  ]
 "60
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 60: }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 60: }
 }
 [e $U 139  ]
 [e :U 140 ]
@@ -415,6 +415,6 @@ Version 4.0 HI-TECH Software Intermediate Code
  139 ]
 [e :U 139 ]
 "61
-[; ;C:/MPlab_Digital2/Laboratorio2_digital2final.X/tabla7seg.c: 61: }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/tabla7seg.c: 61: }
 [e :UE 138 ]
 }
