@@ -1,4 +1,4 @@
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.c"
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,11 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.c" 2
-
-
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h" 1
-# 14 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h"
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c" 2
+# 10 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c"
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h" 1
+# 14 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2495,266 +2494,119 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-# 14 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int8_t;
-
-
-
-
-
-
-typedef signed int int16_t;
-
-
-
-
-
-
-
-typedef __int24 int24_t;
-
-
-
-
-
-
-
-typedef signed long int int32_t;
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint8_t;
-
-
-
-
-
-typedef unsigned int uint16_t;
-
-
-
-
-
-
-typedef __uint24 uint24_t;
-
-
-
-
-
-
-typedef unsigned long int uint32_t;
-# 88 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_least8_t;
-
-
-
-
-
-
-
-typedef signed int int_least16_t;
-# 109 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_least24_t;
-# 118 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed long int int_least32_t;
-# 136 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_least8_t;
-
-
-
-
-
-
-typedef unsigned int uint_least16_t;
-# 154 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_least24_t;
-
-
-
-
-
-
-
-typedef unsigned long int uint_least32_t;
-# 181 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_fast8_t;
-
-
-
-
-
-
-typedef signed int int_fast16_t;
-# 200 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_fast24_t;
-
-
-
-
-
-
-
-typedef signed long int int_fast32_t;
-# 224 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_fast8_t;
-
-
-
-
-
-typedef unsigned int uint_fast16_t;
-# 240 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_fast24_t;
-
-
-
-
-
-
-typedef unsigned long int uint_fast32_t;
-# 268 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef int32_t intmax_t;
-# 282 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef uint32_t uintmax_t;
-
-
-
-
-
-
-typedef int16_t intptr_t;
-
-
-
-
-typedef uint16_t uintptr_t;
-# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h" 2
-
-void configADC(uint8_t canal, uint8_t vel);
-# 3 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.c" 2
-
-void configADC(uint8_t canal, uint8_t vel){
-    ADCON1 = 0;
-    switch (canal){
-        case 0:
-            ADCON0bits.CHS3 = 0;
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 0;
-            ADCON0bits.CHS0 = 0;
-            break;
-        case 1:
-            ADCON0bits.CHS3 = 0;
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 0;
-            ADCON0bits.CHS0 = 1;
-            break;
-        case 2:
-            ADCON0bits.CHS3 = 0;
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 1;
-            ADCON0bits.CHS0 = 0;
-            break;
-        case 3:
-            ADCON0bits.CHS3 = 0;
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 1;
-            ADCON0bits.CHS0 = 1;
-            break;
-        case 4:
-            ADCON0bits.CHS3 = 0;
-            ADCON0bits.CHS2 = 1;
-            ADCON0bits.CHS1 = 0;
-            ADCON0bits.CHS0 = 0;
-            break;
-        case 5:
-            ADCON0bits.CHS3 = 0;
-            ADCON0bits.CHS2 = 1;
-            ADCON0bits.CHS1 = 0;
-            ADCON0bits.CHS0 = 1;
-            break;
-        case 6:
-            ADCON0bits.CHS3 = 0;
-            ADCON0bits.CHS2 = 1;
-            ADCON0bits.CHS1 = 1;
-            ADCON0bits.CHS0 = 0;
-            break;
-        case 7:
-            ADCON0bits.CHS3 = 0;
-            ADCON0bits.CHS2 = 1;
-            ADCON0bits.CHS1 = 1;
-            ADCON0bits.CHS0 = 1;
-            break;
-        case 8:
-            ADCON0bits.CHS3 = 1;
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 0;
-            ADCON0bits.CHS0 = 0;
-            break;
-        case 9:
-            ADCON0bits.CHS3 = 1;
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 0;
-            ADCON0bits.CHS0 = 1;
-            break;
-        case 10:
-            ADCON0bits.CHS3 = 1;
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 1;
-            ADCON0bits.CHS0 = 0;
-            break;
-        case 11:
-            ADCON0bits.CHS3 = 1;
-            ADCON0bits.CHS2 = 0;
-            ADCON0bits.CHS1 = 1;
-            ADCON0bits.CHS0 = 1;
-            break;
-        case 12:
-            ADCON0bits.CHS3 = 1;
-            ADCON0bits.CHS2 = 1;
-            ADCON0bits.CHS1 = 0;
-            ADCON0bits.CHS0 = 0;
-            break;
-        case 13:
-            ADCON0bits.CHS3 = 1;
-            ADCON0bits.CHS2 = 1;
-            ADCON0bits.CHS1 = 0;
-            ADCON0bits.CHS0 = 1;
-            break;
-        case 14:
-            ADCON0bits.CHS3 = 1;
-            ADCON0bits.CHS2 = 1;
-            ADCON0bits.CHS1 = 1;
-            ADCON0bits.CHS0 = 0;
-            break;
-        case 15:
-            ADCON0bits.CHS3 = 1;
-            ADCON0bits.CHS2 = 1;
-            ADCON0bits.CHS1 = 1;
-            ADCON0bits.CHS0 = 1;
-            break;
-    }
-    switch (vel){
-        case 0:
-            ADCON0bits.ADCS1 = 0;
-            ADCON0bits.ADCS0 = 0;
-            break;
-        case 1:
-            ADCON0bits.ADCS1 = 0;
-            ADCON0bits.ADCS0 = 1;
-            break;
-        case 2:
-            ADCON0bits.ADCS1 = 1;
-            ADCON0bits.ADCS0 = 0;
-            break;
-        case 3:
-            ADCON0bits.ADCS1 = 1;
-            ADCON0bits.ADCS0 = 1;
-            break;
-
-    }
-    ADCON0bits.ADON = 1;
-    _delay((unsigned long)((11)*(400000/4000.0)));
-    ADCON0bits.GO_nDONE = 1;
+# 14 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h" 2
+
+
+void Lcd_Port(char a);
+void Lcd_Cmd(char a);
+Lcd_Clear();
+void Lcd_Set_Cursor(char a, char b);
+void Lcd_Init();
+void Lcd_Write_Char(char a)
+void Lcd_Write_String(char *a);
+void Lcd_Shift_Right();
+void Lcd_Shift_Left();
+# 10 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c" 2
+
+void Lcd_Port(char a){
+ if(a & 1)
+  D4 = 1;
+ else
+  D4 = 0;
+
+ if(a & 2)
+  D5 = 1;
+ else
+  D5 = 0;
+
+ if(a & 4)
+  D6 = 1;
+ else
+  D6 = 0;
+
+ if(a & 8)
+  D7 = 1;
+ else
+  D7 = 0;
+}
+void Lcd_Cmd(char a){
+ RS = 0;
+ Lcd_Port(a);
+ EN = 1;
+        _delay((unsigned long)((4)*(400000/4000.0)));
+        EN = 0;
+}
+
+Lcd_Clear(){
+ Lcd_Cmd(0);
+ Lcd_Cmd(1);
+}
+
+void Lcd_Set_Cursor(char a, char b){
+ char temp,z,y;
+ if(a == 1)
+ {
+   temp = 0x80 + b - 1;
+  z = temp>>4;
+  y = temp & 0x0F;
+  Lcd_Cmd(z);
+  Lcd_Cmd(y);
+ }
+ else if(a == 2)
+ {
+  temp = 0xC0 + b - 1;
+  z = temp>>4;
+  y = temp & 0x0F;
+  Lcd_Cmd(z);
+  Lcd_Cmd(y);
+ }
+}
+
+void Lcd_Init(){
+  Lcd_Port(0x00);
+   _delay((unsigned long)((20)*(400000/4000.0)));
+  Lcd_Cmd(0x03);
+ _delay((unsigned long)((5)*(400000/4000.0)));
+  Lcd_Cmd(0x03);
+ _delay((unsigned long)((11)*(400000/4000.0)));
+  Lcd_Cmd(0x03);
+
+  Lcd_Cmd(0x02);
+  Lcd_Cmd(0x02);
+  Lcd_Cmd(0x08);
+  Lcd_Cmd(0x00);
+  Lcd_Cmd(0x0C);
+  Lcd_Cmd(0x00);
+  Lcd_Cmd(0x06);
+}
+
+void Lcd_Write_Char(char a){
+   char temp,y;
+   temp = a&0x0F;
+   y = a&0xF0;
+   RS = 1;
+   Lcd_Port(y>>4);
+   EN = 1;
+   _delay((unsigned long)((40)*(400000/4000000.0)));
+   EN = 0;
+   Lcd_Port(temp);
+   EN = 1;
+   _delay((unsigned long)((40)*(400000/4000000.0)));
+   EN = 0;
+}
+
+void Lcd_Write_String(char *a){
+ int i;
+ for(i=0;a[i]!='\0';i++)
+    Lcd_Write_Char(a[i]);
+}
+
+void Lcd_Shift_Right(){
+ Lcd_Cmd(0x01);
+ Lcd_Cmd(0x0C);
+}
+
+void Lcd_Shift_Left(){
+ Lcd_Cmd(0x01);
+ Lcd_Cmd(0x08);
 }

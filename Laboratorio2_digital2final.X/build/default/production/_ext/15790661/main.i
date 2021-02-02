@@ -2638,9 +2638,9 @@ void initOsc (uint8_t option);
 # 12 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c" 2
 
 # 1 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h" 1
-# 35 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h"
+# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 35 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h" 2
+# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/configuracionADC.h" 2
 
 void configADC(uint8_t canal, uint8_t vel);
 # 13 "C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/main.c" 2
@@ -2684,25 +2684,28 @@ uint8_t display1 = 0;
 uint8_t display0 = 0;
 uint8_t boton1 = 0;
 uint8_t boton2 = 0;
+uint8_t controlADC = 0;
 
 
 
 void setup(void);
 void chequeo (void);
 void display (void);
+void ADC_GO (void);
+void toggle_s (void);
 
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
     if (INTCONbits.TMR0IF == 1){
+        TMR0 = 236;
+        toggle_s();
+        controlADC++;
         INTCONbits.TMR0IF = 0;
-        TMR0 = 200;
-        display();
     }
     if (PIR1bits.ADIF == 1){
         ADC = ADRESH;
         PIR1bits.ADIF = 0;
-        ADCON0bits.GO = 1;
     }
     if (INTCONbits.RBIF == 1){
         if (PORTBbits.RB6 == 0){
@@ -2715,7 +2718,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
         if (PORTBbits.RB7 == 0){
             boton2 = 1;
         }
-        if (PORTBbits.RB6 == 1 && boton2 == 1){
+        if (PORTBbits.RB7 == 1 && boton2 == 1){
             boton2 = 0;
             PORTD--;
         }
@@ -2732,7 +2735,9 @@ void main(void) {
 
 
     while (1) {
+        display ();
         chequeo ();
+        ADC_GO ();
 
     }
 }
@@ -2760,23 +2765,24 @@ void setup(void) {
     TRISAbits.TRISA0 = 1;
     TRISBbits.TRISB6 = 1;
     TRISBbits.TRISB7 = 1;
-    WPUB = 0b11000111;
+    WPUB = 0b11000000;
 
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     INTCONbits.TMR0IE = 1;
     INTCONbits.RBIE = 1;
     PIE1bits.ADIE = 1;
+    IOCB = 0b11000000;
     PIR1bits.ADIF = 0;
     INTCONbits.RBIF = 0;
     INTCONbits.T0IF = 0;
 
 }
 void chequeo (void){
-    if (ADC > PORTC){
-        PORTEbits.RE3 = 1;
+    if (ADC > PORTD){
+        PORTEbits.RE2 = 1;
     }else{
-        PORTEbits.RE3 = 0;
+        PORTEbits.RE2 = 0;
     }
 }
 void display (void){
@@ -2784,13 +2790,24 @@ void display (void){
     PORTEbits.RE1 = 0;
     if (toggle == 1){
         PORTEbits.RE1 = 1;
-        toggle = 0;
         display0 = ADC & 0b00001111;
         tabla(display0);
     }else{
         PORTEbits.RE0 = 1;
-        toggle = 1;
         display1 = (ADC & 0b11110000)>>4;
         tabla(display1);
+    }
+}
+void ADC_GO (void){
+    if (controlADC > 10){
+        controlADC = 0;
+        ADCON0bits.GO_nDONE = 1;
+    }
+}
+void toggle_s (void) {
+    if (toggle == 1){
+        toggle = 0;
+    }else{
+        toggle = 1;
     }
 }

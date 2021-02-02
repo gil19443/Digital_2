@@ -39,25 +39,28 @@ uint8_t display1 = 0;
 uint8_t display0 = 0;
 uint8_t boton1 = 0;
 uint8_t boton2 = 0;
+uint8_t controlADC = 0;
 //******************************************************************************
 //                          Prototipos de funciones 
 //******************************************************************************
 void setup(void);
 void chequeo (void);
 void display (void);
+void ADC_GO (void);
+void toggle_s (void);
 //******************************************************************************
 //                          interrupciones 
 //******************************************************************************
 void __interrupt() isr(void){
     if (INTCONbits.TMR0IF == 1){
+        TMR0 = 236;
+        toggle_s();
+        controlADC++;
         INTCONbits.TMR0IF = 0;
-        TMR0 = 200;
-        display();
     }
     if (PIR1bits.ADIF == 1){
         ADC = ADRESH;
         PIR1bits.ADIF = 0;
-        ADCON0bits.GO = 1;
     }
     if (INTCONbits.RBIF == 1){
         if (PORTBbits.RB6 == 0){
@@ -70,7 +73,7 @@ void __interrupt() isr(void){
         if (PORTBbits.RB7 == 0){
             boton2 = 1;
         }
-        if (PORTBbits.RB6 == 1 && boton2 == 1){
+        if (PORTBbits.RB7 == 1 && boton2 == 1){
             boton2  = 0;
             PORTD--;
         }
@@ -87,7 +90,9 @@ void main(void) {
     //                             mian loop
     //**************************************************************************
     while (1) {
+        display ();
         chequeo ();
+        ADC_GO ();
 
     }
 }
@@ -115,23 +120,24 @@ void setup(void) {
     TRISAbits.TRISA0 = 1;
     TRISBbits.TRISB6 = 1;
     TRISBbits.TRISB7 = 1;
-    WPUB = 0b11000111; //0000 0111 pines para pull up 
+    WPUB = 0b11000000; //0000 0111 pines para pull up 
 //****************************interrupcinoes************************************
     INTCONbits.GIE = 1; //se activan las interrupciones globales 
     INTCONbits.PEIE = 1; // se activan las interrupciones perifericas 
     INTCONbits.TMR0IE = 1; //se activan las interrupciones del timer 0
     INTCONbits.RBIE = 1; //se activan las interrupciones del puerto b
     PIE1bits.ADIE = 1; //activar las interrupciones del ADC
+    IOCB = 0b11000000;
     PIR1bits.ADIF = 0;
     INTCONbits.RBIF = 0;
     INTCONbits.T0IF = 0;
 //******************************************************************************
 }
 void chequeo (void){
-    if (ADC > PORTC){ //revisar so el valor del ADC es mayor al contador 
-        PORTEbits.RE3 = 1; //si es mayor encender el led
+    if (ADC > PORTD){ //revisar so el valor del ADC es mayor al contador 
+        PORTEbits.RE2 = 1; //si es mayor encender el led
     }else{
-        PORTEbits.RE3 = 0; //si es menor apagar el led 
+        PORTEbits.RE2 = 0; //si es menor apagar el led 
     }    
 }
 void display (void){
@@ -139,13 +145,24 @@ void display (void){
     PORTEbits.RE1 = 0;
     if (toggle == 1){ //muxeo de los valores del display
         PORTEbits.RE1 = 1; //encender el valor del transistor 
-        toggle = 0; //poner en 0 la bandera para que la siguiente vez no entre aca 
         display0 = ADC & 0b00001111; //colocar la variable del display el primer nibble de la variable ADC
         tabla(display0); //llamar a la tabla para mostrar el valor correspondiente
     }else{
         PORTEbits.RE0 = 1;
-        toggle = 1; //poner en 1 la bandera para que la siguiente vez no entre aca 
         display1 = (ADC & 0b11110000)>>4; //mover el segundo nibble a los primers 4 bits para buscar en la tabla
         tabla(display1);//llamar a la tabla para mostrar el valor correspondiente
+    }
+}
+void ADC_GO (void){
+    if (controlADC > 10){
+        controlADC = 0;
+        ADCON0bits.GO_nDONE = 1;
+    }
+}
+void toggle_s (void) {
+    if (toggle == 1){
+        toggle = 0;
+    }else{
+        toggle = 1;
     }
 }
