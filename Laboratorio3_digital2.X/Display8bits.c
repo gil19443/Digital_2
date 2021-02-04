@@ -15,8 +15,8 @@ void Lcd_Cmd(char a){
 	RS = 0;             // => RS = 0
 	Lcd_Port(a);
 	EN  = 1;             // => E = 1
-        __delay_ms(4);
-        EN  = 0;             // => E = 0
+    __delay_ms(4);
+    EN  = 0;             // => E = 0
 }
 void Lcd_Clear(void){
 	Lcd_Cmd(0);
@@ -49,13 +49,13 @@ void Lcd_Init(){
   Lcd_Cmd(0x30);
 	__delay_ms(5);
   Lcd_Cmd(0x30);
-	__delay_ms(11);
+	__delay_us(80);
   Lcd_Cmd(0x30);
   /////////////////////////////////////////////////////
-  Lcd_Cmd(0x30);
+  Lcd_Cmd(0x38);
   Lcd_Cmd(0x08);
   Lcd_Cmd(0x01);
-  Lcd_Cmd(0x04);
+  Lcd_Cmd(0x06);
 }
 void Lcd_Write_Char(char a){
    RS = 1;             // => RS = 1
