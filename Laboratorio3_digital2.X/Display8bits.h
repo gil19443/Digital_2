@@ -1,13 +1,13 @@
-
-/* 
- * File:   
- * Author: 
- * Comments:
- * Revision history: 
+/*
+ * File:   Display8bits.c
+ * Author: electrosome
+ * Programacion modificada para configuracion de 8 bits, obtenida en :https://electrosome.com/category/projects/embedded-projects/pic-microcontroller-projects/
+ * Created on 1 de febrero de 2021, 06:51 PM
  */
-
-// This is a guard condition so that contents of this file are not included
-// more than once.  
+#ifndef EN
+#define EN
+#ifndef RS
+#define RS
 #ifndef DISPLAY8BITS_H
 #define	DISPLAY8BITS_H
 
@@ -15,13 +15,13 @@
 
 void Lcd_Port(char a);
 void Lcd_Cmd(char a);
-Lcd_Clear();
+void Lcd_Clear(void);
 void Lcd_Set_Cursor(char a, char b);
-void Lcd_Init();
+void Lcd_Init(void);
 void Lcd_Write_Char(char a)
 void Lcd_Write_String(char *a);
-void Lcd_Shift_Right();
-void Lcd_Shift_Left();
+void Lcd_Shift_Right(void);
+void Lcd_Shift_Left(void);
 
 
 #endif	/* DISPLAY8BITS */
