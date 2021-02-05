@@ -123,4 +123,5 @@ void configADC(uint8_t canal, uint8_t vel){
     ADCON0bits.ADON = 1;
     __delay_ms(11); //tiempo para que se configure e ADC
     ADCON0bits.GO_nDONE = 1;
+    
 }

@@ -12,7 +12,7 @@
 #define RW RE1
 #define RS RE0
 void Lcd_Port(char a){
-    PORTA = a; 
+    PORTD = a; 
 }
 void Lcd_Cmd(char a){
 	RS = 0;             // => RS = 0

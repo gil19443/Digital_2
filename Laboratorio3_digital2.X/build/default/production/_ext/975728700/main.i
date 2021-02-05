@@ -2652,7 +2652,7 @@ void initOsc (uint8_t option);
 # 16 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.h" 2
 
 
-void tabla_hex (uint8_t selector, volatile uint8_t *puerto);
+void tabla_hex (uint8_t selector, volatile uint8_t *port);
 # 15 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c" 2
 # 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.h" 1
 # 15 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.h"
@@ -2704,36 +2704,51 @@ uint8_t decenasp2 = 0;
 uint8_t centenasp2 = 0;
 uint16_t TEMP1 = 0;
 uint16_t TEMP2 = 0;
+uint8_t controlADC = 0;
+uint8_t bandera1 = 0;
+uint8_t bandera2 = 0;
 
 
 
 void setup(void);
-void mux_ADC (void);
-void envio (uint8_t var_envio);
-void sep_nibbles (uint8_t *var1, uint8_t *var2);
+void envio (void);
+void sep_nibbles (void);
 void verificacion (void);
-void mapeo (uint8_t *val1, uint8_t *val2);
+void mapeo (void);
+void setup(void);
+void ADC_GO (void);
 
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
     if (INTCONbits.TMR0IF == 1){
         TMR0 = 236;
-        sep_nibbles(&POT1, &POT2);
-        envio(var_envio);
+        sep_nibbles();
+        controlADC++;
         INTCONbits.TMR0IF = 0;
     }
+
     if (PIR1bits.ADIF == 1){
-        mux_ADC();
+        if (ADC_selector == 1){
+          ADC_selector = 0;
+          POT1 = ADRESH;
+
+          configADC(1,2);
+        }else{
+          ADC_selector = 1;
+          POT2 = ADRESH;
+          configADC(0,2);
+        }
+        PIR1bits.ADIF = 0;
     }
     if (PIR1bits.RCIF == 1){
-        if (RC_selector == 1){
-            DATO_RECIBIDO = RCREG;
-            RC_selector = 0;
-        }else{
-            RC_selector = 1;
-            ENTER = RCREG;
+           DATO_RECIBIDO = RCREG;
         }
+
+    if (PIR1bits.TXIF == 1){
+        envio();
+        PIE1bits.TXIE = 0;
+
     }
 }
 
@@ -2746,13 +2761,9 @@ void main(void) {
 
 
     while (1) {
-        verificacion();
-        Lcd_Clear();
-        Lcd_Set_Cursor(1,1);
-        Lcd_Write_String("Prueba pantalla");
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String("Prueba pantalla");
-        _delay((unsigned long)((2000)*(400000/4000.0)));
+
+          ADC_GO();
+          verificacion();
     }
 }
 
@@ -2763,22 +2774,25 @@ void main(void) {
 
 void setup(void) {
     initUSART();
-    initOsc(7);
-    configADC(10,2);
+    initOsc(6);
+    configADC(0,2);
     OPTION_REG = 0b11010111;
     ANSEL = 0;
-    ANSELHbits.ANS10 = 1;
-    ANSELHbits.ANS12 = 1;
+    ANSELH = 0;
+    ANSELbits.ANS0 = 1;
+    ANSELbits.ANS1 = 1;
     PORTC = 0;
-    TRISC = 0;
+    TRISC = 0x80;
     PORTD = 0;
     TRISD = 0;
     PORTB = 0;
     TRISE = 0;
     PORTE = 0;
     PORTA = 0;
-    TRISBbits.TRISB0 = 1;
-    TRISBbits.TRISB1 = 1;
+    TRISA = 0;
+    TRISB = 0;
+    TRISAbits.TRISA0 = 1;
+    TRISAbits.TRISA1 = 1;
 
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
@@ -2787,24 +2801,53 @@ void setup(void) {
     PIR1bits.ADIF = 0;
     INTCONbits.T0IF = 0;
     PIR1bits.RCIF = 0;
-    PIE1bits.RCIE = 0;
+    PIE1bits.TXIE = 1;
+    PIR1bits.TXIF = 0;
+    PIE1bits.RCIE = 1;
 }
-void mux_ADC (void){
-    if (ADC_selector == 1){
-      ADC_selector = 1;
-      POT1 = ADRESH;
-      PIR1bits.ADIF = 0;
-      configADC(12,2);
-      ADCON0bits.GO_nDONE = 1;
-    }else{
-      ADC_selector = 1;
-      POT2 = ADRESH;
-      PIR1bits.ADIF = 0;
-      configADC(10,2);
-      ADCON0bits.GO_nDONE = 1;
+void sep_nibbles (void){
+    NLPOT1 = POT1 & 0b00001111;
+    NHPOT1 = (POT1 & 0b11110000)>>4;
+    NLPOT2 = POT2 & 0b00001111;
+    NHPOT2 = (POT2 & 0b11110000)>>4;
+
+}
+void verificacion (void){
+    if (DATO_RECIBIDO == 43){
+        bandera1 = 1;
+    }
+    if (DATO_RECIBIDO != 43 && bandera1 ==1){
+        bandera1 = 0;
+        PORTB++;
+    }
+    if (DATO_RECIBIDO == 45){
+        bandera2 = 1;
+    }
+    if (DATO_RECIBIDO != 45 && bandera2 ==1){
+        bandera2 = 0;
+        PORTB--;
+    }
+
+}
+void mapeo (void){
+    TEMP1 = ((POT1 / 5)*100);
+    TEMP2 = ((POT2 / 5)*100);
+    centenasp1 = TEMP1/100;
+    decenasp1 = (TEMP1-(centenasp1*100))/10;
+    unidadesp1 = (TEMP1-((centenasp1*100)+(decenasp1*10)));
+
+    centenasp2 = TEMP2/100;
+    decenasp2 = (TEMP2-(centenasp2*100))/10;
+    unidadesp2 = (TEMP2-((centenasp2*100)+(decenasp2*10)));
+}
+void ADC_GO (void){
+    if (controlADC > 10){
+        controlADC = 0;
+        ADCON0bits.GO_nDONE = 1;
+        PIE1bits.TXIE = 1;
     }
 }
-void envio (uint8_t var_envio){
+void envio (void){
     switch (var_envio){
         case 0:
            tabla_hex(NHPOT1,&TXREG);
@@ -2832,33 +2875,4 @@ void envio (uint8_t var_envio){
            break;
 
     }
-}
-void sep_nibbles (uint8_t *var1, uint8_t *var2){
-    NLPOT1 = *var1 & 0b00001111;
-    NHPOT1 = (*var1 & 0b11110000)>>4;
-    NLPOT2 = *var2 & 0b00001111;
-    NHPOT2 = (*var2 & 0b11110000)>>4;
-
-}
-void verificacion (void){
-    if (ENTER == 10 & DATO_RECIBIDO == 43){
-        CONT++;
-    }
-    else if (ENTER == 10 & DATO_RECIBIDO == 45){
-        CONT--;
-    }else{
-        ENTER = 0;
-        DATO_RECIBIDO = 0;
-    }
-}
-void mapeo (uint8_t *val1, uint8_t *val2){
-    TEMP1 = ((*val1 / 5)*100);
-    TEMP2 = ((*val2 / 5)*100);
-    centenasp1 = TEMP1/100;
-    decenasp1 = (TEMP1-(centenasp1*100))/10;
-    unidadesp1 = (TEMP1-((centenasp1*100)+(decenasp1*10)));
-
-    centenasp2 = TEMP2/100;
-    decenasp2 = (TEMP2-(centenasp2*100))/10;
-    unidadesp2 = (TEMP2-((centenasp2*100)+(decenasp2*10)));
 }

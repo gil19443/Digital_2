@@ -661,7 +661,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "125
 [; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.c: 125:     ADCON0bits.GO_nDONE = 1;
 [e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
-"126
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.c: 126: }
+"127
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.c: 127: }
 [e :UE 138 ]
 }

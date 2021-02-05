@@ -2757,4 +2757,5 @@ void configADC(uint8_t canal, uint8_t vel){
     ADCON0bits.ADON = 1;
     _delay((unsigned long)((11)*(400000/4000.0)));
     ADCON0bits.GO_nDONE = 1;
+
 }

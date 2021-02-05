@@ -2519,7 +2519,7 @@ void Lcd_Shift_Left(void);
 
 
 void Lcd_Port(char a){
-    PORTA = a;
+    PORTD = a;
 }
 void Lcd_Cmd(char a){
  RE0 = 0;
