@@ -1,4 +1,4 @@
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c"
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,9 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c" 2
-# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c"
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h" 1
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c" 2
 
 
 
@@ -16,6 +14,140 @@
 
 
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef signed char int8_t;
+
+
+
+
+
+
+typedef signed int int16_t;
+
+
+
+
+
+
+
+typedef __int24 int24_t;
+
+
+
+
+
+
+
+typedef signed long int int32_t;
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef unsigned char uint8_t;
+
+
+
+
+
+typedef unsigned int uint16_t;
+
+
+
+
+
+
+typedef __uint24 uint24_t;
+
+
+
+
+
+
+typedef unsigned long int uint32_t;
+# 88 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef signed char int_least8_t;
+
+
+
+
+
+
+
+typedef signed int int_least16_t;
+# 109 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef __int24 int_least24_t;
+# 118 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef signed long int int_least32_t;
+# 136 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef unsigned char uint_least8_t;
+
+
+
+
+
+
+typedef unsigned int uint_least16_t;
+# 154 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef __uint24 uint_least24_t;
+
+
+
+
+
+
+
+typedef unsigned long int uint_least32_t;
+# 181 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef signed char int_fast8_t;
+
+
+
+
+
+
+typedef signed int int_fast16_t;
+# 200 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef __int24 int_fast24_t;
+
+
+
+
+
+
+
+typedef signed long int int_fast32_t;
+# 224 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef unsigned char uint_fast8_t;
+
+
+
+
+
+typedef unsigned int uint_fast16_t;
+# 240 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef __uint24 uint_fast24_t;
+
+
+
+
+
+
+typedef unsigned long int uint_fast32_t;
+# 268 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef int32_t intmax_t;
+# 282 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef uint32_t uintmax_t;
+
+
+
+
+
+
+typedef int16_t intptr_t;
+
+
+
+
+typedef uint16_t uintptr_t;
+# 8 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 3
@@ -2501,78 +2633,71 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-# 9 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h" 2
+# 9 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c" 2
+
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.h" 1
+# 16 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 16 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.h" 2
 
 
-void Lcd_Port(char a);
-void Lcd_Cmd(char a);
-void Lcd_Clear(void);
-void Lcd_Set_Cursor(char a, char b);
-void Lcd_Init(void);
-void Lcd_Write_Char(char a);
-void Lcd_Write_String(char *a);
-void Lcd_Shift_Right(void);
-void Lcd_Shift_Left(void);
-# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c" 2
+void tabla_hex (uint8_t selector, uint8_t *puerto);
+# 10 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c" 2
 
-void Lcd_Port(char a){
-    PORTA = a;
-}
-void Lcd_Cmd(char a){
-    = 0;
- Lcd_Port(a);
-     = 1;
-    _delay((unsigned long)((4)*(400000/4000.0)));
-        = 0;
-}
-void Lcd_Clear(void){
- Lcd_Cmd(0);
- Lcd_Cmd(1);
-}
-void Lcd_Set_Cursor(char a, char b){
- char temp;
- if(a == 1)
- {
-   temp = 0x80 + b - 1;
-      Lcd_Cmd(temp);
- }
- else if(a == 2)
- {
-  temp = 0xC0 + b - 1;
-        Lcd_Cmd(temp);
- }
-}
-void Lcd_Init(){
-  Lcd_Port(0x00);
-   _delay((unsigned long)((20)*(400000/4000.0)));
-  Lcd_Cmd(0x30);
- _delay((unsigned long)((5)*(400000/4000.0)));
-  Lcd_Cmd(0x30);
- _delay((unsigned long)((80)*(400000/4000000.0)));
-  Lcd_Cmd(0x30);
+void tabla_hex (uint8_t selector, uint8_t *puerto){
+switch (selector){
+    case 0:
+        *puerto = 48;
+        break;
+    case 1:
+        *puerto = 49;
+        break;
+    case 2:
+        *puerto = 50;
+        break;
+    case 3:
+        *puerto = 51;
+        break;
+    case 4:
+        *puerto = 52;
+        break;
+    case 5:
+        *puerto = 53;
+        break;
+    case 6:
+        *puerto = 54;
+        break;
+    case 7:
+        *puerto = 55;
+        break;
+    case 8:
+        *puerto = 56;
+        break;
+    case 9:
+        *puerto = 57;
+        break;
+    case 10:
+        *puerto = 65;
+        break;
+    case 11:
+        *puerto = 66;
+        break;
+    case 12:
+        *puerto = 67;
+        break;
+    case 13:
+        *puerto = 68;
+        break;
+    case 14:
+        *puerto = 69;
+        break;
+    case 15:
+        *puerto = 70;
+        break;
+    default:
+        *puerto = 48;
+        break;
 
-  Lcd_Cmd(0x38);
-  Lcd_Cmd(0x08);
-  Lcd_Cmd(0x01);
-  Lcd_Cmd(0x06);
 }
-void Lcd_Write_Char(char a){
-      = 1;
-   Lcd_Port(a);
-      = 1;
-   _delay((unsigned long)((40)*(400000/4000000.0)));
-      = 0;
-}
-void Lcd_Write_String(char *a){
- int i;
- for(i=0;a[i]!='\0';i++)
-    Lcd_Write_Char(a[i]);
-}
-void Lcd_Shift_Right(){
- Lcd_Cmd(0x01);
- Lcd_Cmd(0x0C);
-}
-void Lcd_Shift_Left(){
- Lcd_Cmd(0x01);
- Lcd_Cmd(0x08);
+
 }

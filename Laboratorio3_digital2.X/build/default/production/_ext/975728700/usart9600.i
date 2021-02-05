@@ -1,4 +1,4 @@
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c"
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,9 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c" 2
-# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c"
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h" 1
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c" 2
 
 
 
@@ -2501,78 +2499,23 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-# 9 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h" 2
+# 9 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c" 2
+
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.h" 1
+# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.h"
+void initUSART(void);
+# 10 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c" 2
 
 
-void Lcd_Port(char a);
-void Lcd_Cmd(char a);
-void Lcd_Clear(void);
-void Lcd_Set_Cursor(char a, char b);
-void Lcd_Init(void);
-void Lcd_Write_Char(char a);
-void Lcd_Write_String(char *a);
-void Lcd_Shift_Right(void);
-void Lcd_Shift_Left(void);
-# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c" 2
-
-void Lcd_Port(char a){
-    PORTA = a;
-}
-void Lcd_Cmd(char a){
-    = 0;
- Lcd_Port(a);
-     = 1;
-    _delay((unsigned long)((4)*(400000/4000.0)));
-        = 0;
-}
-void Lcd_Clear(void){
- Lcd_Cmd(0);
- Lcd_Cmd(1);
-}
-void Lcd_Set_Cursor(char a, char b){
- char temp;
- if(a == 1)
- {
-   temp = 0x80 + b - 1;
-      Lcd_Cmd(temp);
- }
- else if(a == 2)
- {
-  temp = 0xC0 + b - 1;
-        Lcd_Cmd(temp);
- }
-}
-void Lcd_Init(){
-  Lcd_Port(0x00);
-   _delay((unsigned long)((20)*(400000/4000.0)));
-  Lcd_Cmd(0x30);
- _delay((unsigned long)((5)*(400000/4000.0)));
-  Lcd_Cmd(0x30);
- _delay((unsigned long)((80)*(400000/4000000.0)));
-  Lcd_Cmd(0x30);
-
-  Lcd_Cmd(0x38);
-  Lcd_Cmd(0x08);
-  Lcd_Cmd(0x01);
-  Lcd_Cmd(0x06);
-}
-void Lcd_Write_Char(char a){
-      = 1;
-   Lcd_Port(a);
-      = 1;
-   _delay((unsigned long)((40)*(400000/4000000.0)));
-      = 0;
-}
-void Lcd_Write_String(char *a){
- int i;
- for(i=0;a[i]!='\0';i++)
-    Lcd_Write_Char(a[i]);
-}
-void Lcd_Shift_Right(){
- Lcd_Cmd(0x01);
- Lcd_Cmd(0x0C);
-}
-void Lcd_Shift_Left(){
- Lcd_Cmd(0x01);
- Lcd_Cmd(0x08);
+void initUSART (void){
+    TXSTAbits.TX9 = 0;
+    TXSTAbits.TXEN = 1;
+    TXSTAbits.SYNC = 0;
+    TXSTAbits.BRGH = 1;
+    BAUDCTLbits.BRG16 = 0;
+    SPBRG = 25;
+    SPBRGH = 0;
+    RCSTAbits.SPEN = 1;
+    RCSTAbits.RX9 = 0;
+    RCSTAbits.CREN = 1;
 }

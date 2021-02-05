@@ -5,7 +5,12 @@
  * Created on 1 de febrero de 2021, 06:51 PM
  */
 //LCD Functions Developed by electroSome
-
+#ifndef EN
+#define EN
+#endif
+#ifndef RS
+#define RS
+#endif
 #define _XTAL_FREQ 400000
 #include "Display8bits.h"
 void Lcd_Port(char a){
@@ -23,24 +28,16 @@ void Lcd_Clear(void){
 	Lcd_Cmd(1);
 }
 void Lcd_Set_Cursor(char a, char b){
-	//char temp,z,y;
+	char temp;
 	if(a == 1)
 	{
 	  temp = 0x80 + b - 1;
       Lcd_Cmd(temp);
-//		z = temp>>4;
-//		y = temp & 0x0F;
-//		Lcd_Cmd(z);
-//		Lcd_Cmd(y);
 	}
 	else if(a == 2)
 	{
 		temp = 0xC0 + b - 1;
         Lcd_Cmd(temp);
-//		z = temp>>4;
-//		y = temp & 0x0F;
-//		Lcd_Cmd(z);
-//		Lcd_Cmd(y);
 	}
 }
 void Lcd_Init(){

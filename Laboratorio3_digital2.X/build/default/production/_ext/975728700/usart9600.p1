@@ -1,19 +1,63 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"1868 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1868:     struct {
-[s S70 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
-[n S70 . SCS LTS HTS OSTS IRCF ]
-"1875
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1875:     struct {
-[s S71 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S71 . . IRCF0 IRCF1 IRCF2 ]
-"1867
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1867: typedef union {
-[u S69 `S70 1 `S71 1 ]
-[n S69 . . . ]
-"1882
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1882: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0x08F)));
-[v _OSCCONbits `VS69 ~T0 @X0 0 e@143 ]
+"2562 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2562:     struct {
+[s S99 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S99 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"2572
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2572:     struct {
+[s S100 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S100 . TXD8 . nTX8 ]
+"2577
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2577:     struct {
+[s S101 :6 `uc 1 :1 `uc 1 ]
+[n S101 . . TX8_9 ]
+"2561
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2561: typedef union {
+[u S98 `S99 1 `S100 1 `S101 1 ]
+[n S98 . . . . ]
+"2582
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2582: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0x098)));
+[v _TXSTAbits `VS98 ~T0 @X0 0 e@152 ]
+"3341
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3341:     struct {
+[s S131 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S131 . ABDEN WUE . BRG16 SCKP . RCIDL ABDOVF ]
+"3340
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3340: typedef union {
+[u S130 `S131 1 ]
+[n S130 . . ]
+"3352
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3352: extern volatile BAUDCTLbits_t BAUDCTLbits __attribute__((address(0x187)));
+[v _BAUDCTLbits `VS130 ~T0 @X0 0 e@391 ]
+"2642
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2642: extern volatile unsigned char SPBRG __attribute__((address(0x099)));
+[v _SPBRG `Vuc ~T0 @X0 0 e@153 ]
+"2704
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2704: extern volatile unsigned char SPBRGH __attribute__((address(0x09A)));
+[v _SPBRGH `Vuc ~T0 @X0 0 e@154 ]
+"1044
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1044:     struct {
+[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"1054
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1054:     struct {
+[s S38 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S38 . RCD8 . RC9 ]
+"1059
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1059:     struct {
+[s S39 :6 `uc 1 :1 `uc 1 ]
+[n S39 . . nRC8 ]
+"1063
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1063:     struct {
+[s S40 :6 `uc 1 :1 `uc 1 ]
+[n S40 . . RC8_9 ]
+"1043
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1043: typedef union {
+[u S36 `S37 1 `S38 1 `S39 1 `S40 1 ]
+[n S36 . . . . . ]
+"1068
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1068: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0x018)));
+[v _RCSTAbits `VS36 ~T0 @X0 0 e@24 ]
 "54 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -248,153 +292,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"8 C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 8: void initOsc (uint8_t option){
-[v _initOsc `(v ~T0 @X0 1 ef1`uc ]
+"12 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 12: void initUSART (void){
+[v _initUSART `(v ~T0 @X0 1 ef ]
 {
-[e :U _initOsc ]
-[v _option `uc ~T0 @X0 1 r1 ]
+[e :U _initUSART ]
 [f ]
-"9
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 9:     switch (option){
-[e $U 140  ]
-{
-"10
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 10:         case 0:
-[e :U 141 ]
-"11
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 11:             OSCCONbits.IRCF2 = 0;
-[e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
-"12
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 12:             OSCCONbits.IRCF1 = 0;
-[e = . . _OSCCONbits 1 2 -> -> 0 `i `uc ]
 "13
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 13:             OSCCONbits.IRCF0 = 0;
-[e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 13:     TXSTAbits.TX9 = 0;
+[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
 "14
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 14:             break;
-[e $U 139  ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 14:     TXSTAbits.TXEN = 1;
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
 "15
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 15:         case 1:
-[e :U 142 ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 15:     TXSTAbits.SYNC = 0;
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
 "16
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 16:             OSCCONbits.IRCF2 = 0;
-[e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 16:     TXSTAbits.BRGH = 1;
+[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
 "17
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 17:             OSCCONbits.IRCF1 = 0;
-[e = . . _OSCCONbits 1 2 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 17:     BAUDCTLbits.BRG16 = 0;
+[e = . . _BAUDCTLbits 0 3 -> -> 0 `i `uc ]
 "18
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 18:             OSCCONbits.IRCF0 = 1;
-[e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 18:     SPBRG = 25;
+[e = _SPBRG -> -> 25 `i `uc ]
 "19
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 19:             break;
-[e $U 139  ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 19:     SPBRGH = 0;
+[e = _SPBRGH -> -> 0 `i `uc ]
 "20
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 20:         case 2:
-[e :U 143 ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 20:     RCSTAbits.SPEN = 1;
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
 "21
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 21:             OSCCONbits.IRCF2 = 0;
-[e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 21:     RCSTAbits.RX9 = 0;
+[e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
 "22
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 22:             OSCCONbits.IRCF1 = 1;
-[e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 22:     RCSTAbits.CREN = 1;
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
 "23
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 23:             OSCCONbits.IRCF0 = 0;
-[e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
-"24
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 24:             break;
-[e $U 139  ]
-"25
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 25:         case 3:
-[e :U 144 ]
-"26
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 26:             OSCCONbits.IRCF2 = 0;
-[e = . . _OSCCONbits 1 3 -> -> 0 `i `uc ]
-"27
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 27:             OSCCONbits.IRCF1 = 1;
-[e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"28
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 28:             OSCCONbits.IRCF0 = 1;
-[e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
-"29
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 29:             break;
-[e $U 139  ]
-"30
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 30:         case 4:
-[e :U 145 ]
-"31
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 31:             OSCCONbits.IRCF2 = 1;
-[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"32
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 32:             OSCCONbits.IRCF1 = 0;
-[e = . . _OSCCONbits 1 2 -> -> 0 `i `uc ]
-"33
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 33:             OSCCONbits.IRCF0 = 0;
-[e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
-"34
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 34:             break;
-[e $U 139  ]
-"35
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 35:         case 5:
-[e :U 146 ]
-"36
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 36:             OSCCONbits.IRCF2 = 1;
-[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"37
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 37:             OSCCONbits.IRCF1 = 0;
-[e = . . _OSCCONbits 1 2 -> -> 0 `i `uc ]
-"38
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 38:             OSCCONbits.IRCF0 = 1;
-[e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
-"39
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 39:             break;
-[e $U 139  ]
-"40
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 40:         case 6:
-[e :U 147 ]
-"41
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 41:             OSCCONbits.IRCF2 = 1;
-[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"42
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 42:             OSCCONbits.IRCF1 = 1;
-[e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"43
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 43:             OSCCONbits.IRCF0 = 0;
-[e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
-"44
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 44:             break;
-[e $U 139  ]
-"45
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 45:         case 7:
-[e :U 148 ]
-"46
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 46:             OSCCONbits.IRCF2 = 1;
-[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"47
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 47:             OSCCONbits.IRCF1 = 1;
-[e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"48
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 48:             OSCCONbits.IRCF0 = 1;
-[e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
-"49
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 49:             break;
-[e $U 139  ]
-"50
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 50:     }
-}
-[e $U 139  ]
-[e :U 140 ]
-[e [\ -> _option `i , $ -> 0 `i 141
- , $ -> 1 `i 142
- , $ -> 2 `i 143
- , $ -> 3 `i 144
- , $ -> 4 `i 145
- , $ -> 5 `i 146
- , $ -> 6 `i 147
- , $ -> 7 `i 148
- 139 ]
-[e :U 139 ]
-"51
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio2_digital2final.X/librerias2.c: 51: }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c: 23: }
 [e :UE 138 ]
 }
