@@ -18,7 +18,7 @@
 //                             Palabras de configuracion 
 //******************************************************************************
 // CONFIG1
-#pragma config FOSC = XT        // Oscillator Selection bits (XT oscillator: Crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN)
+#pragma config FOSC = INTRC_NOCLKOUT        // Oscillator Selection bits (XT oscillator: Crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
 #pragma config MCLRE = OFF      // RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
@@ -33,18 +33,12 @@
 #pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
 #define _XTAL_FREQ 400000
-#ifndef EN
-#define EN
-#endif
-#ifndef RS
-#define RS
-#endif
 //******************************************************************************
 //                          Macros 
 //******************************************************************************
-#define EN = RE2
-#define RW = RE1
-#define RS = RE0
+#define EN RE2
+#define RW RE1
+#define RS RE0
 //******************************************************************************
 //                          Variables 
 //******************************************************************************

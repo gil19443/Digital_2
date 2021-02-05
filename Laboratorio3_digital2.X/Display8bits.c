@@ -5,14 +5,12 @@
  * Created on 1 de febrero de 2021, 06:51 PM
  */
 //LCD Functions Developed by electroSome
-#ifndef EN
-#define EN
-#endif
-#ifndef RS
-#define RS
-#endif
+
 #define _XTAL_FREQ 400000
 #include "Display8bits.h"
+#define EN RE2
+#define RW RE1
+#define RS RE0
 void Lcd_Port(char a){
     PORTA = a; 
 }

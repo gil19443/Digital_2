@@ -15,6 +15,6 @@
 #include <xc.h> // include processor files - each processor file is guarded.  
 #include <stdint.h>
 
-void tabla_hex (uint8_t selector, uint8_t *puerto);
+void tabla_hex (uint8_t selector, volatile  uint8_t *puerto);
 #endif	/* XC_HEADER_TEMPLATE_H */
 

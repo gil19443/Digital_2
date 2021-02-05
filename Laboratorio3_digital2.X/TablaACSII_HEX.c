@@ -8,7 +8,7 @@
 #include <stdint.h>
 #include <xc.h>
 #include "TablaACSII_HEX.h"
-void tabla_hex (uint8_t selector, uint8_t *puerto){
+void tabla_hex (uint8_t selector, volatile uint8_t *puerto){
 switch (selector){
     case 0:
         *puerto = 48;

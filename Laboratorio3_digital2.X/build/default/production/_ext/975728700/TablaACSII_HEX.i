@@ -2641,10 +2641,10 @@ extern __bank0 __bit __timeout;
 # 16 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.h" 2
 
 
-void tabla_hex (uint8_t selector, uint8_t *puerto);
+void tabla_hex (uint8_t selector, volatile uint8_t *puerto);
 # 10 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c" 2
 
-void tabla_hex (uint8_t selector, uint8_t *puerto){
+void tabla_hex (uint8_t selector, volatile uint8_t *puerto){
 switch (selector){
     case 0:
         *puerto = 48;

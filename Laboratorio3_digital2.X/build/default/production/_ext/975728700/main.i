@@ -1,4 +1,4 @@
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c"
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,17 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c" 2
-# 10 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c"
-# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h" 1
-
-
-
-
-
-
-
-
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c" 2
+# 10 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2501,9 +2492,143 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-# 9 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h" 2
+# 11 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef signed char int8_t;
 
 
+
+
+
+
+typedef signed int int16_t;
+
+
+
+
+
+
+
+typedef __int24 int24_t;
+
+
+
+
+
+
+
+typedef signed long int int32_t;
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef unsigned char uint8_t;
+
+
+
+
+
+typedef unsigned int uint16_t;
+
+
+
+
+
+
+typedef __uint24 uint24_t;
+
+
+
+
+
+
+typedef unsigned long int uint32_t;
+# 88 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef signed char int_least8_t;
+
+
+
+
+
+
+
+typedef signed int int_least16_t;
+# 109 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef __int24 int_least24_t;
+# 118 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef signed long int int_least32_t;
+# 136 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef unsigned char uint_least8_t;
+
+
+
+
+
+
+typedef unsigned int uint_least16_t;
+# 154 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef __uint24 uint_least24_t;
+
+
+
+
+
+
+
+typedef unsigned long int uint_least32_t;
+# 181 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef signed char int_fast8_t;
+
+
+
+
+
+
+typedef signed int int_fast16_t;
+# 200 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef __int24 int_fast24_t;
+
+
+
+
+
+
+
+typedef signed long int int_fast32_t;
+# 224 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef unsigned char uint_fast8_t;
+
+
+
+
+
+typedef unsigned int uint_fast16_t;
+# 240 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef __uint24 uint_fast24_t;
+
+
+
+
+
+
+typedef unsigned long int uint_fast32_t;
+# 268 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef int32_t intmax_t;
+# 282 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
+typedef uint32_t uintmax_t;
+
+
+
+
+
+
+typedef int16_t intptr_t;
+
+
+
+
+typedef uint16_t uintptr_t;
+# 12 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c" 2
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h" 1
+# 11 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h"
 void Lcd_Port(char a);
 void Lcd_Cmd(char a);
 void Lcd_Clear(void);
@@ -2513,69 +2638,227 @@ void Lcd_Write_Char(char a);
 void Lcd_Write_String(char *a);
 void Lcd_Shift_Right(void);
 void Lcd_Shift_Left(void);
-# 10 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c" 2
+# 13 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c" 2
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Libreria2.h" 1
+# 35 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Libreria2.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 35 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Libreria2.h" 2
+
+void initOsc (uint8_t option);
+# 14 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c" 2
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.h" 1
+# 16 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 16 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.h" 2
+
+
+void tabla_hex (uint8_t selector, volatile uint8_t *puerto);
+# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c" 2
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.h" 1
+# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.h" 2
+
+void configADC(uint8_t canal, uint8_t vel);
+# 16 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c" 2
+# 1 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.h" 1
+# 15 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.h"
+void initUSART(void);
+# 17 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c" 2
 
 
 
 
-void Lcd_Port(char a){
-    PORTA = a;
-}
-void Lcd_Cmd(char a){
- RE0 = 0;
- Lcd_Port(a);
- RE2 = 1;
-    _delay((unsigned long)((4)*(400000/4000.0)));
-    RE2 = 0;
-}
-void Lcd_Clear(void){
- Lcd_Cmd(0);
- Lcd_Cmd(1);
-}
-void Lcd_Set_Cursor(char a, char b){
- char temp;
- if(a == 1)
- {
-   temp = 0x80 + b - 1;
-      Lcd_Cmd(temp);
- }
- else if(a == 2)
- {
-  temp = 0xC0 + b - 1;
-        Lcd_Cmd(temp);
- }
-}
-void Lcd_Init(){
-  Lcd_Port(0x00);
-   _delay((unsigned long)((20)*(400000/4000.0)));
-  Lcd_Cmd(0x30);
- _delay((unsigned long)((5)*(400000/4000.0)));
-  Lcd_Cmd(0x30);
- _delay((unsigned long)((80)*(400000/4000000.0)));
-  Lcd_Cmd(0x30);
+#pragma config FOSC = INTRC_NOCLKOUT
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = OFF
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = OFF
+#pragma config IESO = OFF
+#pragma config FCMEN = OFF
+#pragma config LVP = OFF
 
-  Lcd_Cmd(0x38);
-  Lcd_Cmd(0x08);
-  Lcd_Cmd(0x01);
-  Lcd_Cmd(0x06);
+
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
+# 45 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
+uint8_t ADC_selector =0;
+uint8_t POT1 = 0;
+uint8_t POT2 = 0;
+uint8_t NHPOT1 = 0;
+uint8_t NLPOT1 = 0;
+uint8_t NHPOT2 = 0;
+uint8_t NLPOT2 = 0;
+uint8_t var_envio = 0;
+uint8_t RC_selector = 0;
+uint8_t DATO_RECIBIDO = 0;
+uint8_t ENTER = 0;
+uint8_t CONT = 0;
+uint8_t unidadesp1 = 0;
+uint8_t decenasp1 = 0;
+uint8_t centenasp1 = 0;
+uint8_t unidadesp2 = 0;
+uint8_t decenasp2 = 0;
+uint8_t centenasp2 = 0;
+uint16_t TEMP1 = 0;
+uint16_t TEMP2 = 0;
+
+
+
+void setup(void);
+void mux_ADC (void);
+void envio (uint8_t var_envio);
+void sep_nibbles (uint8_t *var1, uint8_t *var2);
+void verificacion (void);
+void mapeo (uint8_t *val1, uint8_t *val2);
+
+
+
+void __attribute__((picinterrupt(("")))) isr(void){
+    if (INTCONbits.TMR0IF == 1){
+        TMR0 = 236;
+        sep_nibbles(&POT1, &POT2);
+        envio(var_envio);
+        INTCONbits.TMR0IF = 0;
+    }
+    if (PIR1bits.ADIF == 1){
+        mux_ADC();
+    }
+    if (PIR1bits.RCIF == 1){
+        if (RC_selector == 1){
+            DATO_RECIBIDO = RCREG;
+            RC_selector = 0;
+        }else{
+            RC_selector = 1;
+            ENTER = RCREG;
+        }
+    }
 }
-void Lcd_Write_Char(char a){
-   RE0 = 1;
-   Lcd_Port(a);
-   RE2 = 1;
-   _delay((unsigned long)((40)*(400000/4000000.0)));
-   RE2 = 0;
+
+
+
+
+void main(void) {
+    setup();
+
+
+
+    while (1) {
+        verificacion();
+        Lcd_Clear();
+        Lcd_Set_Cursor(1,1);
+        Lcd_Write_String("Prueba pantalla");
+        Lcd_Set_Cursor(2,1);
+        Lcd_Write_String("Prueba pantalla");
+        _delay((unsigned long)((2000)*(400000/4000.0)));
+    }
 }
-void Lcd_Write_String(char *a){
- int i;
- for(i=0;a[i]!='\0';i++)
-    Lcd_Write_Char(a[i]);
+
+
+
+
+
+
+void setup(void) {
+    initUSART();
+    initOsc(7);
+    configADC(10,2);
+    OPTION_REG = 0b11010111;
+    ANSEL = 0;
+    ANSELHbits.ANS10 = 1;
+    ANSELHbits.ANS12 = 1;
+    PORTC = 0;
+    TRISC = 0;
+    PORTD = 0;
+    TRISD = 0;
+    PORTB = 0;
+    TRISE = 0;
+    PORTE = 0;
+    PORTA = 0;
+    TRISBbits.TRISB0 = 1;
+    TRISBbits.TRISB1 = 1;
+
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    INTCONbits.TMR0IE = 1;
+    PIE1bits.ADIE = 1;
+    PIR1bits.ADIF = 0;
+    INTCONbits.T0IF = 0;
+    PIR1bits.RCIF = 0;
+    PIE1bits.RCIE = 0;
 }
-void Lcd_Shift_Right(){
- Lcd_Cmd(0x01);
- Lcd_Cmd(0x0C);
+void mux_ADC (void){
+    if (ADC_selector == 1){
+      ADC_selector = 1;
+      POT1 = ADRESH;
+      PIR1bits.ADIF = 0;
+      configADC(12,2);
+      ADCON0bits.GO_nDONE = 1;
+    }else{
+      ADC_selector = 1;
+      POT2 = ADRESH;
+      PIR1bits.ADIF = 0;
+      configADC(10,2);
+      ADCON0bits.GO_nDONE = 1;
+    }
 }
-void Lcd_Shift_Left(){
- Lcd_Cmd(0x01);
- Lcd_Cmd(0x08);
+void envio (uint8_t var_envio){
+    switch (var_envio){
+        case 0:
+           tabla_hex(NHPOT1,&TXREG);
+           var_envio++;
+           break;
+        case 1:
+           tabla_hex(NLPOT1,&TXREG);
+           var_envio++;
+           break;
+        case 2:
+           TXREG = 44;
+           var_envio++;
+           break;
+        case 3:
+           tabla_hex(NHPOT2,&TXREG);
+           var_envio++;
+           break;
+        case 4:
+           tabla_hex(NLPOT2,&TXREG);
+           var_envio++;
+           break;
+        case 5:
+           TXREG = 10;
+           var_envio = 0;
+           break;
+
+    }
+}
+void sep_nibbles (uint8_t *var1, uint8_t *var2){
+    NLPOT1 = *var1 & 0b00001111;
+    NHPOT1 = (*var1 & 0b11110000)>>4;
+    NLPOT2 = *var2 & 0b00001111;
+    NHPOT2 = (*var2 & 0b11110000)>>4;
+
+}
+void verificacion (void){
+    if (ENTER == 10 & DATO_RECIBIDO == 43){
+        CONT++;
+    }
+    else if (ENTER == 10 & DATO_RECIBIDO == 45){
+        CONT--;
+    }else{
+        ENTER = 0;
+        DATO_RECIBIDO = 0;
+    }
+}
+void mapeo (uint8_t *val1, uint8_t *val2){
+    TEMP1 = ((*val1 / 5)*100);
+    TEMP2 = ((*val2 / 5)*100);
+    centenasp1 = TEMP1/100;
+    decenasp1 = (TEMP1-(centenasp1*100))/10;
+    unidadesp1 = (TEMP1-((centenasp1*100)+(decenasp1*10)));
+
+    centenasp2 = TEMP2/100;
+    decenasp2 = (TEMP2-(centenasp2*100))/10;
+    unidadesp2 = (TEMP2-((centenasp2*100)+(decenasp2*10)));
 }

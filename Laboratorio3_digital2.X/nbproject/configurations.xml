@@ -18,11 +18,11 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c</itemPath>
-      <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main</itemPath>
       <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c</itemPath>
       <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.c</itemPath>
       <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/librerias2.c</itemPath>
       <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c</itemPath>
+      <itemPath>C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
