@@ -361,14 +361,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 42:   Lcd_Port(0x00);
 [e ( _Lcd_Port (1 -> -> 0 `i `uc ]
 "43
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 43:    _delay((unsigned long)((20)*(400000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 400000 `l `d .4000.0 `ul ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 43:    _delay((unsigned long)((10)*(400000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 400000 `l `d .4000.0 `ul ]
 "44
 [; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 44:   Lcd_Cmd(0x30);
 [e ( _Lcd_Cmd (1 -> -> 48 `i `uc ]
 "45
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 45:  _delay((unsigned long)((5)*(400000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 400000 `l `d .4000.0 `ul ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 45:  _delay((unsigned long)((4)*(400000/4000.0)));
+[e ( __delay (1 -> * -> -> 4 `i `d / -> -> 400000 `l `d .4000.0 `ul ]
 "46
 [; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 46:   Lcd_Cmd(0x30);
 [e ( _Lcd_Cmd (1 -> -> 48 `i `uc ]
@@ -417,66 +417,69 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 60:    RE2 = 0;
 [e = _RE2 -> -> 0 `i `b ]
 "61
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 61: }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 61:    RE0 = 0;
+[e = _RE0 -> -> 0 `i `b ]
+"62
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 62: }
 [e :UE 146 ]
 }
-"62
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 62: void Lcd_Write_String(char *a){
+"63
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 63: void Lcd_Write_String(char *a){
 [v _Lcd_Write_String `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _Lcd_Write_String ]
 [v _a `*uc ~T0 @X0 1 r1 ]
 [f ]
-"63
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 63:  int i;
-[v _i `i ~T0 @X0 1 a ]
 "64
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 64:  for(i=0;a[i]!='\0';i++)
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 64:  int i;
+[v _i `i ~T0 @X0 1 a ]
+"65
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 65:  for(i=0;a[i]!='\0';i++)
 {
 [e = _i -> 0 `i ]
 [e $U 151  ]
 [e :U 148 ]
-"65
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 65:     Lcd_Write_Char(a[i]);
+"66
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 66:     Lcd_Write_Char(a[i]);
 [e ( _Lcd_Write_Char (1 *U + _a * -> _i `x -> -> # *U _a `i `x ]
 [e ++ _i -> 1 `i ]
 [e :U 151 ]
 [e $ != -> *U + _a * -> _i `x -> -> # *U _a `i `x `ui -> 0 `ui 148  ]
 [e :U 149 ]
 }
-"66
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 66: }
+"67
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 67: }
 [e :UE 147 ]
 }
-"67
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 67: void Lcd_Shift_Right(){
+"68
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 68: void Lcd_Shift_Right(){
 [v _Lcd_Shift_Right `(v ~T0 @X0 1 ef ]
 {
 [e :U _Lcd_Shift_Right ]
 [f ]
-"68
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 68:  Lcd_Cmd(0x01);
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
 "69
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 69:  Lcd_Cmd(0x0C);
-[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 69:  Lcd_Cmd(0x01);
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
 "70
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 70: }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 70:  Lcd_Cmd(0x0C);
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+"71
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 71: }
 [e :UE 152 ]
 }
-"71
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 71: void Lcd_Shift_Left(){
+"72
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 72: void Lcd_Shift_Left(){
 [v _Lcd_Shift_Left `(v ~T0 @X0 1 ef ]
 {
 [e :U _Lcd_Shift_Left ]
 [f ]
-"72
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 72:  Lcd_Cmd(0x01);
-[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
 "73
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 73:  Lcd_Cmd(0x08);
-[e ( _Lcd_Cmd (1 -> -> 8 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 73:  Lcd_Cmd(0x01);
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
 "74
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 74: }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 74:  Lcd_Cmd(0x08);
+[e ( _Lcd_Cmd (1 -> -> 8 `i `uc ]
+"75
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c: 75: }
 [e :UE 153 ]
 }

@@ -2492,231 +2492,161 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-# 10 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int8_t;
-
-
-
-
-
-
-typedef signed int int16_t;
-
-
-
-
-
-
-
-typedef __int24 int24_t;
-
-
-
-
-
-
-
-typedef signed long int int32_t;
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint8_t;
-
-
-
-
-
-typedef unsigned int uint16_t;
-
-
-
-
-
-
-typedef __uint24 uint24_t;
-
-
-
-
-
-
-typedef unsigned long int uint32_t;
-# 88 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_least8_t;
-
-
-
-
-
-
-
-typedef signed int int_least16_t;
-# 109 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_least24_t;
-# 118 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed long int int_least32_t;
-# 136 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_least8_t;
-
-
-
-
-
-
-typedef unsigned int uint_least16_t;
-# 154 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_least24_t;
-
-
-
-
-
-
-
-typedef unsigned long int uint_least32_t;
-# 181 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_fast8_t;
-
-
-
-
-
-
-typedef signed int int_fast16_t;
-# 200 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_fast24_t;
-
-
-
-
-
-
-
-typedef signed long int int_fast32_t;
-# 224 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_fast8_t;
-
-
-
-
-
-typedef unsigned int uint_fast16_t;
-# 240 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_fast24_t;
-
-
-
-
-
-
-typedef unsigned long int uint_fast32_t;
-# 268 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef int32_t intmax_t;
-# 282 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef uint32_t uintmax_t;
-
-
-
-
-
-
-typedef int16_t intptr_t;
-
-
-
-
-typedef uint16_t uintptr_t;
 # 11 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c" 2
+# 1 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h" 1
 
-# 1 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/Libreria2.h" 1
-# 35 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/Libreria2.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 35 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/Libreria2.h" 2
 
-void initOsc (uint8_t option);
+
+void Lcd_Port(char a)
+{
+    PORTD = a;
+# 26 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h"
+}
+void Lcd_Cmd(char a)
+{
+ RE0 = 0;
+ Lcd_Port(a);
+ RE2 = 1;
+        _delay((unsigned long)((4)*(8000000/4000.0)));
+        RE2 = 0;
+}
+
+Lcd_Clear()
+{
+ Lcd_Cmd(0);
+ Lcd_Cmd(1);
+}
+
+void Lcd_Set_Cursor(char a, char b)
+{
+ char temp,z,y;
+ if(a == 1)
+ {
+   temp = 0x80 + b - 1;
+      Lcd_Cmd(temp);
+
+
+
+
+ }
+ else if(a == 2)
+ {
+  temp = 0xC0 + b - 1;
+        Lcd_Cmd(temp);
+
+
+
+
+ }
+}
+
+void Lcd_Init()
+{
+      Lcd_Port(0x00);
+      _delay((unsigned long)((10)*(8000000/4000.0)));
+      Lcd_Cmd(0x30);
+   _delay((unsigned long)((4)*(8000000/4000.0)));
+      Lcd_Cmd(0x30);
+   _delay((unsigned long)((80)*(8000000/4000000.0)));
+      Lcd_Cmd(0x30);
+
+      Lcd_Cmd(0x38);
+      Lcd_Cmd(0x08);
+      Lcd_Cmd(0x01);
+      Lcd_Cmd(0x06);
+# 94 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h"
+}
+
+void Lcd_Write_Char(char a)
+{
+
+
+
+   RE0 = 1;
+
+
+
+
+   Lcd_Port(a);
+   RE2 = 1;
+   _delay((unsigned long)((40)*(8000000/4000000.0)));
+   RE2 = 0;
+   RE0 = 0;
+}
+
+void Lcd_Write_String(char *a)
+{
+ int i;
+ for(i=0;a[i]!='\0';i++)
+    Lcd_Write_Char(a[i]);
+}
+
+void Lcd_Shift_Right()
+{
+ Lcd_Cmd(0x01);
+ Lcd_Cmd(0x0C);
+}
+
+void Lcd_Shift_Left()
+{
+ Lcd_Cmd(0x01);
+ Lcd_Cmd(0x08);
+}
 # 12 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c" 2
 
-# 1 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/usart9600.h" 1
-# 15 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/usart9600.h"
-void initUSART(void);
-# 13 "C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c" 2
 
-
-
-
-
-#pragma config FOSC = INTRC_NOCLKOUT
+#pragma config FOSC = HS
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
+#pragma config BOREN = ON
 #pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
+#pragma config CPD = OFF
 #pragma config WRT = OFF
+#pragma config CP = OFF
 
-void setup(void);
-void ADC_GO(void);
-uint8_t controlADC = 0;
-void __attribute__((picinterrupt(("")))) isr(void){
-    if (INTCONbits.TMR0IF == 1){
-        TMR0 = 236;
-        controlADC++;
-        INTCONbits.TMR0IF = 0;
+
+int main()
+{
+  unsigned int a;
+  TRISE = 0;
+  ANSEL = 0;
+  TRISD = 0x00;
+  Lcd_Init();
+  while(1)
+  {
+    Lcd_Clear();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("LCD Library for");
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_String("MPLAB XC8");
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
+    Lcd_Clear();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("Developed By");
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_String("electroSome");
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
+    Lcd_Clear();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("www.electroSome.com");
+
+    for(a=0;a<15;a++)
+    {
+        _delay((unsigned long)((300)*(8000000/4000.0)));
+        Lcd_Shift_Left();
     }
 
-
-
-
-
-
-}
-void main(void) {
-    setup();
-
-
-
-    while (1) {
-          ADC_GO();
-          TXREG = 48;
+    for(a=0;a<15;a++)
+    {
+        _delay((unsigned long)((300)*(8000000/4000.0)));
+        Lcd_Shift_Right();
     }
-}
-void setup(void) {
-    initUSART();
-    initOsc(6);
-    OPTION_REG = 0b11010111;
 
-    WDTCON = 0;
-    ANSEL = 0;
-    ANSELH = 0;
-    PORTC = 0;
-    TRISC = 0x80;
-    PORTD = 0;
-    TRISD = 0;
-    PORTB = 0;
-    TRISE = 0;
-    PORTE = 0;
-    PORTA = 0;
-    TRISA = 0;
-    TRISB = 0;
-    TRISAbits.TRISA0 = 1;
-    TRISAbits.TRISA1 = 1;
-
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-
-    INTCONbits.TMR0IE = 1;
-}
-void ADC_GO (void){
-    if (controlADC > 10){
-        controlADC = 0;
-
-
-    }
+    Lcd_Clear();
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_Char('e');
+    Lcd_Write_Char('S');
+    _delay((unsigned long)((2000)*(8000000/4000.0)));
+  }
+  return 0;
 }

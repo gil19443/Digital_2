@@ -3,18 +3,26 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"8 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/librerias2.c
-[v _initOsc initOsc `(v  1 e 1 0 ]
-"36 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c
-[v _isr isr `II(v  1 e 1 0 ]
-"49
-[v _main main `(v  1 e 1 0 ]
-"59
-[v _setup setup `(v  1 e 1 0 ]
-"85
-[v _ADC_GO ADC_GO `(v  1 e 1 0 ]
-"12 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/usart9600.c
-[v _initUSART initUSART `(v  1 e 1 0 ]
+"4 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+"27
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"36
+[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
+"42
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+"65
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+"96
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+"113
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+"120
+[v _Lcd_Shift_Right Lcd_Shift_Right `(v  1 e 1 0 ]
+"126
+[v _Lcd_Shift_Left Lcd_Shift_Left `(v  1 e 1 0 ]
+"24 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c
+[v _main main `(i  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul8_16.c
@@ -23,37 +31,8 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"35 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c
-[v _controlADC controlADC `uc  1 e 1 0 ]
-"59 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
-[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
-"166
-[v _PORTA PORTA `VEuc  1 e 1 @5 ]
-"228
-[v _PORTB PORTB `VEuc  1 e 1 @6 ]
-"290
-[v _PORTC PORTC `VEuc  1 e 1 @7 ]
-"352
+"352 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-"414
-[v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S183 . 1 `uc 1 RBIF 1 0 :1:0 
-`uc 1 INTF 1 0 :1:1 
-`uc 1 T0IF 1 0 :1:2 
-`uc 1 RBIE 1 0 :1:3 
-`uc 1 INTE 1 0 :1:4 
-`uc 1 T0IE 1 0 :1:5 
-`uc 1 PEIE 1 0 :1:6 
-`uc 1 GIE 1 0 :1:7 
-]
-"482
-[s S192 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 TMR0IF 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 TMR0IE 1 0 :1:5 
-]
-[u S197 . 1 `S183 1 . 1 0 `S192 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES197  1 e 1 @11 ]
 [s S114 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
@@ -76,28 +55,6 @@
 ]
 [u S133 . 1 `S114 1 . 1 0 `S123 1 . 1 0 `S127 1 . 1 0 `S130 1 . 1 0 ]
 [v _RCSTAbits RCSTAbits `VES133  1 e 1 @24 ]
-"1133
-[v _TXREG TXREG `VEuc  1 e 1 @25 ]
-"1346
-[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
-"1416
-[v _TRISA TRISA `VEuc  1 e 1 @133 ]
-[s S241 . 1 `uc 1 TRISA0 1 0 :1:0 
-`uc 1 TRISA1 1 0 :1:1 
-`uc 1 TRISA2 1 0 :1:2 
-`uc 1 TRISA3 1 0 :1:3 
-`uc 1 TRISA4 1 0 :1:4 
-`uc 1 TRISA5 1 0 :1:5 
-`uc 1 TRISA6 1 0 :1:6 
-`uc 1 TRISA7 1 0 :1:7 
-]
-"1433
-[u S250 . 1 `S241 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES250  1 e 1 @133 ]
-"1478
-[v _TRISB TRISB `VEuc  1 e 1 @134 ]
-"1540
-[v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
@@ -139,8 +96,6 @@
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2704
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
-"3011
-[v _WDTCON WDTCON `VEuc  1 e 1 @261 ]
 [s S91 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
@@ -155,38 +110,86 @@
 [v _BAUDCTLbits BAUDCTLbits `VES100  1 e 1 @391 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
-"3449
-[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"49 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c
-[v _main main `(v  1 e 1 0 ]
+"4205
+[v _RE0 RE0 `VEb  1 e 0 @72 ]
+"4211
+[v _RE2 RE2 `VEb  1 e 0 @74 ]
+"24 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c
+[v _main main `(i  1 e 2 0 ]
 {
-"58
+"26
+[v main@a a `ui  1 a 2 10 ]
+"68
 } 0
-"59
-[v _setup setup `(v  1 e 1 0 ]
+"113 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
 {
-"84
+[v Lcd_Write_String@a a `*.24uc  1 a 1 wreg ]
+"115
+[v Lcd_Write_String@i i `i  1 a 2 3 ]
+"113
+[v Lcd_Write_String@a a `*.24uc  1 a 1 wreg ]
+"116
+[v Lcd_Write_String@a a `*.24uc  1 a 1 5 ]
+"118
 } 0
-"12 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/usart9600.c
-[v _initUSART initUSART `(v  1 e 1 0 ]
+"96
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
 {
-"23
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+"101
+[v Lcd_Write_Char@a a `uc  1 a 1 2 ]
+"111
 } 0
-"8 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/librerias2.c
-[v _initOsc initOsc `(v  1 e 1 0 ]
+"120
+[v _Lcd_Shift_Right Lcd_Shift_Right `(v  1 e 1 0 ]
 {
-[v initOsc@option option `uc  1 a 1 wreg ]
-[v initOsc@option option `uc  1 a 1 wreg ]
-[v initOsc@option option `uc  1 a 1 5 ]
-"51
+"124
 } 0
-"85 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c
-[v _ADC_GO ADC_GO `(v  1 e 1 0 ]
+"126
+[v _Lcd_Shift_Left Lcd_Shift_Left `(v  1 e 1 0 ]
 {
-"91
+"130
+} 0
+"42
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+{
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+"44
+[v Lcd_Set_Cursor@temp temp `uc  1 a 1 6 ]
+"42
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+[v Lcd_Set_Cursor@b b `uc  1 p 1 4 ]
+"45
+[v Lcd_Set_Cursor@a a `uc  1 a 1 5 ]
+"63
+} 0
+"65
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+{
+"94
 } 0
 "36
-[v _isr isr `II(v  1 e 1 0 ]
+[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
 {
-"48
+"40
+} 0
+"27
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+{
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+"29
+[v Lcd_Cmd@a a `uc  1 a 1 3 ]
+"34
+} 0
+"4
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+{
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+"6
+[v Lcd_Port@a a `uc  1 a 1 0 ]
+"26
 } 0

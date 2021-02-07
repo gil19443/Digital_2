@@ -14,6 +14,10 @@
 #include "TablaACSII_HEX.h"
 #include "configuracionADC.h"
 #include "usart9600.h"
+
+
+#define RS RE0
+#define EN RE2
 //******************************************************************************
 //                             Palabras de configuracion 
 //******************************************************************************
@@ -75,6 +79,7 @@ void verificacion (void);
 void mapeo (void);
 void setup(void);
 void ADC_GO (void);
+void write_data (void);
 //******************************************************************************
 //                          interrupciones 
 //******************************************************************************
@@ -119,9 +124,28 @@ void main(void) {
     //                             mian loop
     //**************************************************************************
     while (1) {
-          
           ADC_GO();
-          verificacion();
+          //verificacion();
+            Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("LCD Library for");
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("MPLAB XC8");
+            __delay_ms(2000);
+            Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("Developed By");
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("electroSome");
+            __delay_ms(2000);
+            Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("www.electroSome.com");
+            Lcd_Clear();
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_Char('e');
+            Lcd_Write_Char('S');
+            __delay_ms(2000);
     }
 }
 
@@ -131,6 +155,7 @@ void main(void) {
 //******************************************************************************
 
 void setup(void) {
+    Lcd_Init();
     initUSART();
     initOsc(6);//configura el osculador interno a 4Mhz
     configADC(0,2); //canal 0 y velocidad FOSC/32

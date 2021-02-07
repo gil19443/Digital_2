@@ -1,93 +1,27 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[t ~ __interrupt . k ]
-[t T1 __interrupt ]
-"465 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 465:     struct {
-[s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S16 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
-"475
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 475:     struct {
-[s S17 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S17 . . TMR0IF . TMR0IE ]
-"464
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 464: typedef union {
-[u S15 `S16 1 `S17 1 ]
-[n S15 . . . ]
-"482
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 482: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
-[v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
-"59
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 59: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
-[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"352 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"4205
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 4205: extern volatile __bit RE0 __attribute__((address(0x48)));
+[v _RE0 `Vb ~T0 @X0 0 e@72 ]
+"4211
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 4211: extern volatile __bit RE2 __attribute__((address(0x4A)));
+[v _RE2 `Vb ~T0 @X0 0 e@74 ]
+[v F1256 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files\Microchip\xc8\v2.20\pic\include\pic.h
+[v __delay `JF1256 ~T0 @X0 0 e ]
+[p i __delay ]
 [p mainexit ]
-"33 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 33:     ANSELH = 0;
-[v _setup `(v ~T0 @X0 0 ef ]
-"34
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 34:     PORTC = 0;
-[v _ADC_GO `(v ~T0 @X0 0 ef ]
-"1133 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1133: extern volatile unsigned char TXREG __attribute__((address(0x019)));
-[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
-"15 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/usart9600.h
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/usart9600.h: 15: void initUSART(void);
-[v _initUSART `(v ~T0 @X0 0 ef ]
-"36 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/Libreria2.h
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/Libreria2.h: 36: void initOsc (uint8_t option);
-[v _initOsc `(v ~T0 @X0 0 ef1`uc ]
-"1346 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1346: extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
-[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
-"3011
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3011: extern volatile unsigned char WDTCON __attribute__((address(0x105)));
-[v _WDTCON `Vuc ~T0 @X0 0 e@261 ]
+"1664 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1664: extern volatile unsigned char TRISE __attribute__((address(0x089)));
+[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
 "3387
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
-"3449
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
-[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
-"290
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 290: extern volatile unsigned char PORTC __attribute__((address(0x007)));
-[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
-"1540
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1540: extern volatile unsigned char TRISC __attribute__((address(0x087)));
-[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
-"352
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "1602
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1602: extern volatile unsigned char TRISD __attribute__((address(0x088)));
 [v _TRISD `Vuc ~T0 @X0 0 e@136 ]
-"228
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"1664
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1664: extern volatile unsigned char TRISE __attribute__((address(0x089)));
-[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
-"414
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 414: extern volatile unsigned char PORTE __attribute__((address(0x009)));
-[v _PORTE `Vuc ~T0 @X0 0 e@9 ]
-"166
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
-[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
-"1416
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1416: extern volatile unsigned char TRISA __attribute__((address(0x085)));
-[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
-"1478
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
-[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
-"1422
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1422:     struct {
-[s S53 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S53 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
-"1421
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1421: typedef union {
-[u S52 `S53 1 ]
-[n S52 . . ]
-"1433
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1433: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x085)));
-[v _TRISAbits `VS52 ~T0 @X0 0 e@133 ]
 "54 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -322,169 +256,439 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"18 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 18: 
-[p x FOSC = INTRC_NOCLKOUT ]
-"19
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 19: 
-[p x WDTE = OFF ]
-"20
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 20: 
-[p x PWRTE = OFF ]
-"21
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 21:     while (1) {
-[p x MCLRE = OFF ]
-"22
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 22:           ADC_GO();
-[p x CP = OFF ]
-"23
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 23:           TXREG = 48;
-[p x CPD = OFF ]
-"24
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 24:     }
-[p x BOREN = OFF ]
-"25
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 25: }
-[p x IESO = OFF ]
-"26
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 26: void setup(void) {
-[p x FCMEN = OFF ]
-"27
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 27:     initUSART();
-[p x LVP = OFF ]
-"30
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 30: 
-[p x BOR4V = BOR40V ]
-"31
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 31:     WDTCON = 0;
-[p x WRT = OFF ]
-"35
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 35:     TRISC = 0x80;
-[v _controlADC `uc ~T0 @X0 1 e ]
-[i _controlADC
--> -> 0 `i `uc
-]
-[v $root$_isr `(v ~T0 @X0 0 e ]
-"36
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 36:     PORTD = 0;
-[v _isr `(v ~T1 @X0 1 ef ]
+"4 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 4: void Lcd_Port(char a)
+[v _Lcd_Port `(v ~T0 @X0 1 ef1`uc ]
+"5
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 5: {
 {
-[e :U _isr ]
+[e :U _Lcd_Port ]
+"4
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 4: void Lcd_Port(char a)
+[v _a `uc ~T0 @X0 1 r1 ]
+"5
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 5: {
 [f ]
-"37
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 37:     TRISD = 0;
-[e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 139  ]
-{
-"38
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 38:     PORTB = 0;
-[e = _TMR0 -> -> 236 `i `uc ]
-"39
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 39:     TRISE = 0;
-[e ++ _controlADC -> -> 1 `i `uc ]
-"40
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 40:     PORTE = 0;
-[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
-"41
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 41:     PORTA = 0;
-}
-[e :U 139 ]
-"48
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 48:     INTCONbits.PEIE = 1;
+"6
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 6:     PORTD = a;
+[e = _PORTD -> _a `uc ]
+"26
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 26: }
 [e :UE 138 ]
 }
+"27
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 27: void Lcd_Cmd(char a)
+[v _Lcd_Cmd `(v ~T0 @X0 1 ef1`uc ]
+"28
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 28: {
+{
+[e :U _Lcd_Cmd ]
+"27
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 27: void Lcd_Cmd(char a)
+[v _a `uc ~T0 @X0 1 r1 ]
+"28
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 28: {
+[f ]
+"29
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 29:  RE0 = 0;
+[e = _RE0 -> -> 0 `i `b ]
+"30
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 30:  Lcd_Port(a);
+[e ( _Lcd_Port (1 _a ]
+"31
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 31:  RE2 = 1;
+[e = _RE2 -> -> 1 `i `b ]
+"32
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 32:         _delay((unsigned long)((4)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 4 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"33
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 33:         RE2 = 0;
+[e = _RE2 -> -> 0 `i `b ]
+"34
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 34: }
+[e :UE 139 ]
+}
+"36
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 36: Lcd_Clear()
+[v _Lcd_Clear `(i ~T0 @X0 1 ef ]
+"37
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 37: {
+{
+[e :U _Lcd_Clear ]
+[f ]
+"38
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 38:  Lcd_Cmd(0);
+[e ( _Lcd_Cmd (1 -> -> 0 `i `uc ]
+"39
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 39:  Lcd_Cmd(1);
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+"40
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 40: }
+[e :UE 140 ]
+}
+"42
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 42: void Lcd_Set_Cursor(char a, char b)
+[v _Lcd_Set_Cursor `(v ~T0 @X0 1 ef2`uc`uc ]
+"43
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 43: {
+{
+[e :U _Lcd_Set_Cursor ]
+"42
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 42: void Lcd_Set_Cursor(char a, char b)
+[v _a `uc ~T0 @X0 1 r1 ]
+[v _b `uc ~T0 @X0 1 r2 ]
+"43
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 43: {
+[f ]
+"44
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 44:  char temp,z,y;
+[v _temp `uc ~T0 @X0 1 a ]
+[v _z `uc ~T0 @X0 1 a ]
+[v _y `uc ~T0 @X0 1 a ]
+"45
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 45:  if(a == 1)
+[e $ ! == -> _a `i -> 1 `i 142  ]
+"46
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 46:  {
+{
+"47
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 47:    temp = 0x80 + b - 1;
+[e = _temp -> - + -> 128 `i -> _b `i -> 1 `i `uc ]
+"48
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 48:       Lcd_Cmd(temp);
+[e ( _Lcd_Cmd (1 _temp ]
+"53
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 53:  }
+}
+[e $U 143  ]
+"54
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 54:  else if(a == 2)
+[e :U 142 ]
+[e $ ! == -> _a `i -> 2 `i 144  ]
+"55
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 55:  {
+{
+"56
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 56:   temp = 0xC0 + b - 1;
+[e = _temp -> - + -> 192 `i -> _b `i -> 1 `i `uc ]
+"57
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 57:         Lcd_Cmd(temp);
+[e ( _Lcd_Cmd (1 _temp ]
+"62
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 62:  }
+}
+[e :U 144 ]
+[e :U 143 ]
+"63
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 63: }
+[e :UE 141 ]
+}
+"65
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 65: void Lcd_Init()
+[v _Lcd_Init `(v ~T0 @X0 1 ef ]
+"66
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 66: {
+{
+[e :U _Lcd_Init ]
+[f ]
+"67
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 67:       Lcd_Port(0x00);
+[e ( _Lcd_Port (1 -> -> 0 `i `uc ]
+"68
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 68:       _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"69
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 69:       Lcd_Cmd(0x30);
+[e ( _Lcd_Cmd (1 -> -> 48 `i `uc ]
+"70
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 70:    _delay((unsigned long)((4)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 4 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"71
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 71:       Lcd_Cmd(0x30);
+[e ( _Lcd_Cmd (1 -> -> 48 `i `uc ]
+"72
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 72:    _delay((unsigned long)((80)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"73
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 73:       Lcd_Cmd(0x30);
+[e ( _Lcd_Cmd (1 -> -> 48 `i `uc ]
+"75
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 75:       Lcd_Cmd(0x38);
+[e ( _Lcd_Cmd (1 -> -> 56 `i `uc ]
+"76
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 76:       Lcd_Cmd(0x08);
+[e ( _Lcd_Cmd (1 -> -> 8 `i `uc ]
+"77
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 77:       Lcd_Cmd(0x01);
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+"78
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 78:       Lcd_Cmd(0x06);
+[e ( _Lcd_Cmd (1 -> -> 6 `i `uc ]
+"94
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 94: }
+[e :UE 145 ]
+}
+"96
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 96: void Lcd_Write_Char(char a)
+[v _Lcd_Write_Char `(v ~T0 @X0 1 ef1`uc ]
+"97
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 97: {
+{
+[e :U _Lcd_Write_Char ]
+"96
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 96: void Lcd_Write_Char(char a)
+[v _a `uc ~T0 @X0 1 r1 ]
+"97
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 97: {
+[f ]
+"101
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 101:    RE0 = 1;
+[e = _RE0 -> -> 1 `i `b ]
+"106
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 106:    Lcd_Port(a);
+[e ( _Lcd_Port (1 _a ]
+"107
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 107:    RE2 = 1;
+[e = _RE2 -> -> 1 `i `b ]
+"108
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 108:    _delay((unsigned long)((40)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"109
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 109:    RE2 = 0;
+[e = _RE2 -> -> 0 `i `b ]
+"110
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 110:    RE0 = 0;
+[e = _RE0 -> -> 0 `i `b ]
+"111
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 111: }
+[e :UE 146 ]
+}
+"113
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 113: void Lcd_Write_String(char *a)
+[v _Lcd_Write_String `(v ~T0 @X0 1 ef1`*uc ]
+"114
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 114: {
+{
+[e :U _Lcd_Write_String ]
+"113
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 113: void Lcd_Write_String(char *a)
+[v _a `*uc ~T0 @X0 1 r1 ]
+"114
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 114: {
+[f ]
+"115
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 115:  int i;
+[v _i `i ~T0 @X0 1 a ]
+"116
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 116:  for(i=0;a[i]!='\0';i++)
+{
+[e = _i -> 0 `i ]
+[e $U 151  ]
+[e :U 148 ]
+"117
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 117:     Lcd_Write_Char(a[i]);
+[e ( _Lcd_Write_Char (1 *U + _a * -> _i `x -> -> # *U _a `i `x ]
+[e ++ _i -> 1 `i ]
+[e :U 151 ]
+[e $ != -> *U + _a * -> _i `x -> -> # *U _a `i `x `ui -> 0 `ui 148  ]
+[e :U 149 ]
+}
+"118
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 118: }
+[e :UE 147 ]
+}
+"120
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 120: void Lcd_Shift_Right()
+[v _Lcd_Shift_Right `(v ~T0 @X0 1 ef ]
+"121
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 121: {
+{
+[e :U _Lcd_Shift_Right ]
+[f ]
+"122
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 122:  Lcd_Cmd(0x01);
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+"123
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 123:  Lcd_Cmd(0x0C);
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+"124
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 124: }
+[e :UE 152 ]
+}
+"126
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 126: void Lcd_Shift_Left()
+[v _Lcd_Shift_Left `(v ~T0 @X0 1 ef ]
+"127
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 127: {
+{
+[e :U _Lcd_Shift_Left ]
+[f ]
+"128
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 128:  Lcd_Cmd(0x01);
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+"129
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 129:  Lcd_Cmd(0x08);
+[e ( _Lcd_Cmd (1 -> -> 8 `i `uc ]
+"130
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/lcd.h: 130: }
+[e :UE 153 ]
+}
+"14 C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 14:     Lcd_Write_String("MPLAB XC8");
+[p x FOSC = HS ]
+"15
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 15:     _delay((unsigned long)((2000)*(8000000/4000.0)));
+[p x WDTE = OFF ]
+"16
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 16:     Lcd_Clear();
+[p x PWRTE = OFF ]
+"17
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 17:     Lcd_Set_Cursor(1,1);
+[p x BOREN = ON ]
+"18
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 18:     Lcd_Write_String("Developed By");
+[p x LVP = OFF ]
+"19
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 19:     Lcd_Set_Cursor(2,1);
+[p x CPD = OFF ]
+"20
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 20:     Lcd_Write_String("electroSome");
+[p x WRT = OFF ]
+"21
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 21:     _delay((unsigned long)((2000)*(8000000/4000.0)));
+[p x CP = OFF ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"49
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 49: 
-[v _main `(v ~T0 @X0 1 ef ]
+"24
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 24:     Lcd_Write_String("www.electroSome.com");
+[v _main `(i ~T0 @X0 1 ef ]
+"25
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 25: 
 {
 [e :U _main ]
 [f ]
-"50
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 50:     INTCONbits.TMR0IE = 1;
-[e ( _setup ..  ]
-"54
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 54:         controlADC = 0;
-[e :U 142 ]
-{
-"55
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 55: 
-[e ( _ADC_GO ..  ]
-"56
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 56: 
-[e = _TXREG -> -> 48 `i `uc ]
-"57
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 57:     }
-}
-[e :U 141 ]
-[e $U 142  ]
-[e :U 143 ]
-"58
-[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 58: }
-[e :UE 140 ]
-}
-"59
-[v _setup `(v ~T0 @X0 1 ef ]
-{
-[e :U _setup ]
-[f ]
-"60
-[e ( _initUSART ..  ]
-"61
-[e ( _initOsc (1 -> -> 6 `i `uc ]
-"62
-[e = _OPTION_REG -> -> 215 `i `uc ]
-"64
-[e = _WDTCON -> -> 0 `i `uc ]
-"65
-[e = _ANSEL -> -> 0 `i `uc ]
-"66
-[e = _ANSELH -> -> 0 `i `uc ]
-"67
-[e = _PORTC -> -> 0 `i `uc ]
-"68
-[e = _TRISC -> -> 128 `i `uc ]
-"69
-[e = _PORTD -> -> 0 `i `uc ]
-"70
-[e = _TRISD -> -> 0 `i `uc ]
-"71
-[e = _PORTB -> -> 0 `i `uc ]
-"72
+"26
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 26:     for(a=0;a<15;a++)
+[v _a `ui ~T0 @X0 1 a ]
+"27
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 27:     {
 [e = _TRISE -> -> 0 `i `uc ]
-"73
-[e = _PORTE -> -> 0 `i `uc ]
-"74
-[e = _PORTA -> -> 0 `i `uc ]
-"75
-[e = _TRISA -> -> 0 `i `uc ]
-"76
-[e = _TRISB -> -> 0 `i `uc ]
-"77
-[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
-"78
-[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
-"80
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"81
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"83
-[e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
-"84
-[e :UE 144 ]
-}
-"85
-[v _ADC_GO `(v ~T0 @X0 1 ef ]
+"28
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 28:         _delay((unsigned long)((300)*(8000000/4000.0)));
+[e = _ANSEL -> -> 0 `i `uc ]
+"29
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 29:         Lcd_Shift_Left();
+[e = _TRISD -> -> 0 `i `uc ]
+"30
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 30:     }
+[e ( _Lcd_Init ..  ]
+"31
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 31: 
+[e :U 156 ]
+"32
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 32:     for(a=0;a<15;a++)
 {
-[e :U _ADC_GO ]
-[f ]
-"86
-[e $ ! > -> _controlADC `i -> 10 `i 146  ]
+"33
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 33:     {
+[e ( _Lcd_Clear ..  ]
+"34
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 34:         _delay((unsigned long)((300)*(8000000/4000.0)));
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"35
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 35:         Lcd_Shift_Right();
+[e ( _Lcd_Write_String (1 :s 1C ]
+"36
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 36:     }
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"37
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 37: 
+[e ( _Lcd_Write_String (1 :s 2C ]
+"38
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 38:     Lcd_Clear();
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"39
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 39:     Lcd_Set_Cursor(2,1);
+[e ( _Lcd_Clear ..  ]
+"40
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 40:     Lcd_Write_Char('e');
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"41
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 41:     Lcd_Write_Char('S');
+[e ( _Lcd_Write_String (1 :s 3C ]
+"42
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 42:     _delay((unsigned long)((2000)*(8000000/4000.0)));
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"43
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 43:   }
+[e ( _Lcd_Write_String (1 :s 4C ]
+"44
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 44:   return 0;
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"45
+[; ;C:/MPlab_Digital2/Digital_2/Prueba_UART.X/main.c: 45: }
+[e ( _Lcd_Clear ..  ]
+"46
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"47
+[e ( _Lcd_Write_String (1 :s 5C ]
+"49
 {
-"87
-[e = _controlADC -> -> 0 `i `uc ]
-"90
+[e = _a -> -> 0 `i `ui ]
+[e $ < _a -> -> 15 `i `ui 158  ]
+[e $U 159  ]
+[e :U 158 ]
+"50
+{
+"51
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"52
+[e ( _Lcd_Shift_Left ..  ]
+"53
 }
-[e :U 146 ]
-"91
-[e :UE 145 ]
+[e ++ _a -> -> 1 `i `ui ]
+[e $ < _a -> -> 15 `i `ui 158  ]
+[e :U 159 ]
 }
+"55
+{
+[e = _a -> -> 0 `i `ui ]
+[e $ < _a -> -> 15 `i `ui 161  ]
+[e $U 162  ]
+[e :U 161 ]
+"56
+{
+"57
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"58
+[e ( _Lcd_Shift_Right ..  ]
+"59
+}
+[e ++ _a -> -> 1 `i `ui ]
+[e $ < _a -> -> 15 `i `ui 161  ]
+[e :U 162 ]
+}
+"61
+[e ( _Lcd_Clear ..  ]
+"62
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"63
+[e ( _Lcd_Write_Char (1 -> -> 101 `ui `uc ]
+"64
+[e ( _Lcd_Write_Char (1 -> -> 83 `ui `uc ]
+"65
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"66
+}
+[e :U 155 ]
+[e $U 156  ]
+[e :U 157 ]
+"67
+[e ) -> 0 `i ]
+[e $UE 154  ]
+"68
+[e :UE 154 ]
+}
+[a 3C 68 101 118 101 108 111 112 101 100 32 66 121 0 ]
+[a 1C 76 67 68 32 76 105 98 114 97 114 121 32 102 111 114 0 ]
+[a 5C 119 119 119 46 101 108 101 99 116 114 111 83 111 109 101 46 99 111 109 0 ]
+[a 4C 101 108 101 99 116 114 111 83 111 109 101 0 ]
+[a 2C 77 80 76 65 66 32 88 67 56 0 ]

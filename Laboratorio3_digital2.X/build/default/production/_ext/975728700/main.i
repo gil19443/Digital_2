@@ -2669,6 +2669,10 @@ void initUSART(void);
 
 
 
+
+
+
+
 #pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -2683,7 +2687,7 @@ void initUSART(void);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 45 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
+# 49 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
 uint8_t ADC_selector =0;
 uint8_t POT1 = 0;
 uint8_t POT2 = 0;
@@ -2717,6 +2721,7 @@ void verificacion (void);
 void mapeo (void);
 void setup(void);
 void ADC_GO (void);
+void write_data (void);
 
 
 
@@ -2761,9 +2766,28 @@ void main(void) {
 
 
     while (1) {
-
           ADC_GO();
-          verificacion();
+
+              Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("LCD Library for");
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("MPLAB XC8");
+            _delay((unsigned long)((2000)*(400000/4000.0)));
+            Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("Developed By");
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("electroSome");
+            _delay((unsigned long)((2000)*(400000/4000.0)));
+            Lcd_Clear();
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("www.electroSome.com");
+            Lcd_Clear();
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_Char('e');
+            Lcd_Write_Char('S');
+            _delay((unsigned long)((2000)*(400000/4000.0)));
     }
 }
 
@@ -2773,6 +2797,7 @@ void main(void) {
 
 
 void setup(void) {
+    Lcd_Init();
     initUSART();
     initOsc(6);
     configADC(0,2);

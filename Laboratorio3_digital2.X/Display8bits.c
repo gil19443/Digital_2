@@ -40,9 +40,9 @@ void Lcd_Set_Cursor(char a, char b){
 }
 void Lcd_Init(){
   Lcd_Port(0x00);
-   __delay_ms(20);
+   __delay_ms(10);
   Lcd_Cmd(0x30);
-	__delay_ms(5);
+	__delay_ms(4);
   Lcd_Cmd(0x30);
 	__delay_us(80);
   Lcd_Cmd(0x30);
@@ -58,6 +58,7 @@ void Lcd_Write_Char(char a){
    EN = 1;
    __delay_us(40);
    EN = 0;
+   RS = 0;
 }
 void Lcd_Write_String(char *a){
 	int i;
