@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
+$C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 12 12 3 2
 config CONFIG 4 2007 2007 2 2
@@ -104,20 +104,20 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Laboratorio3_digital2.X.production.o
-15 cinit CODE >1358:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-15 cinit CODE >1361:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-15 cinit CODE >1459:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-16 cinit CODE >1460:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-17 cinit CODE >1461:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-18 cinit CODE >1464:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-19 cinit CODE >1465:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-1A cinit CODE >1466:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-1B cinit CODE >1467:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-1C cinit CODE >1468:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-21 cinit CODE >1474:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-21 cinit CODE >1476:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-22 cinit CODE >1477:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-4 intentry CODE >87:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+15 cinit CODE >1358:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+15 cinit CODE >1361:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+15 cinit CODE >1459:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+16 cinit CODE >1460:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+17 cinit CODE >1461:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+18 cinit CODE >1464:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+19 cinit CODE >1465:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+1A cinit CODE >1466:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+1B cinit CODE >1467:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+1C cinit CODE >1468:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+21 cinit CODE >1474:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+21 cinit CODE >1476:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+22 cinit CODE >1477:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+4 intentry CODE >86:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 3C3 text23 CODE >11:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c
 3C4 text23 CODE >12:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c
 3C5 text23 CODE >14:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c
@@ -154,39 +154,39 @@ $dist/default/production\Laboratorio3_digital2.X.production.o
 464 text23 CODE >60:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c
 465 text23 CODE >65:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c
 49F text23 CODE >67:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c
+68A text22 CODE >252:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 68A text22 CODE >253:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-68A text22 CODE >254:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-68B text22 CODE >256:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-695 text22 CODE >257:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-69B text22 CODE >258:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-69C text22 CODE >260:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6A7 text22 CODE >264:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6AA text22 CODE >268:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6B5 text22 CODE >272:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6C0 text22 CODE >276:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6C2 text22 CODE >277:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6C3 text22 CODE >278:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6C4 text22 CODE >280:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6E2 text22 CODE >281:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+68B text22 CODE >255:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+695 text22 CODE >256:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+69B text22 CODE >257:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+69C text22 CODE >259:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6A7 text22 CODE >263:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6AA text22 CODE >267:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6B5 text22 CODE >271:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6C0 text22 CODE >275:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6C2 text22 CODE >276:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6C3 text22 CODE >277:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6C4 text22 CODE >279:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6E2 text22 CODE >280:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+F75 text21 CODE >208:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 F75 text21 CODE >209:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-F75 text21 CODE >210:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-F7C text21 CODE >211:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-F89 text21 CODE >212:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-F8E text21 CODE >213:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-F9B text21 CODE >215:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+F7C text21 CODE >210:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+F89 text21 CODE >211:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+F8E text21 CODE >212:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+F9B text21 CODE >214:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FC5 text20 CODE >215:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 FC5 text20 CODE >216:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FC5 text20 CODE >217:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FCB text20 CODE >218:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FCF text20 CODE >220:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FDC text20 CODE >221:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FDD text20 CODE >222:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FE1 text20 CODE >224:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FE7 text20 CODE >225:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FEB text20 CODE >227:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FF8 text20 CODE >228:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FF9 text20 CODE >229:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FFB text20 CODE >231:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-FFF text20 CODE >232:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FCB text20 CODE >217:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FCF text20 CODE >219:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FDC text20 CODE >220:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FDD text20 CODE >221:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FE1 text20 CODE >223:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FE7 text20 CODE >224:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FEB text20 CODE >226:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FF8 text20 CODE >227:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FF9 text20 CODE >228:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FFB text20 CODE >230:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+FFF text20 CODE >231:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 2E1 text19 CODE >4:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.c
 2E2 text19 CODE >5:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.c
 2E5 text19 CODE >6:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.c
@@ -308,35 +308,35 @@ FFF text20 CODE >232:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 3B8 text19 CODE >124:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.c
 3BF text19 CODE >125:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.c
 3C2 text19 CODE >127:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.c
+5CB text18 CODE >86:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 5CB text18 CODE >87:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5CB text18 CODE >88:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5CF text18 CODE >89:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5D1 text18 CODE >90:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5D6 text18 CODE >91:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5DC text18 CODE >92:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5DD text18 CODE >95:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5E1 text18 CODE >96:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5E6 text18 CODE >97:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5E7 text18 CODE >98:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5EB text18 CODE >100:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5F5 text18 CODE >101:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5F6 text18 CODE >102:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5F8 text18 CODE >103:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5FC text18 CODE >104:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-606 text18 CODE >106:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-609 text18 CODE >108:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-60D text18 CODE >109:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-611 text18 CODE >110:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-616 text18 CODE >113:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-61C text18 CODE >114:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-621 text18 CODE >115:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-624 text18 CODE >118:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5CF text18 CODE >88:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5D1 text18 CODE >89:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5D6 text18 CODE >90:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5DC text18 CODE >91:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5DD text18 CODE >94:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5E1 text18 CODE >95:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5E6 text18 CODE >96:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5E7 text18 CODE >97:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5EB text18 CODE >99:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5F5 text18 CODE >100:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5F6 text18 CODE >101:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5F8 text18 CODE >102:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5FC text18 CODE >103:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+606 text18 CODE >105:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+609 text18 CODE >107:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+60D text18 CODE >108:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+611 text18 CODE >109:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+616 text18 CODE >112:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+61C text18 CODE >113:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+621 text18 CODE >114:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+624 text18 CODE >117:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+EEA text17 CODE >245:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 EEA text17 CODE >246:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-EEA text17 CODE >247:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-EF2 text17 CODE >248:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-EF3 text17 CODE >249:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-EF4 text17 CODE >250:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-EF7 text17 CODE >252:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+EF2 text17 CODE >247:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+EF3 text17 CODE >248:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+EF4 text17 CODE >249:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+EF7 text17 CODE >251:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 ED5 text16 CODE >14:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c
 ED8 text16 CODE >15:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c
 EDA text16 CODE >16:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c
@@ -429,16 +429,16 @@ F35 text9 CODE >51:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\U
 7F4 text7 CODE >49:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul16.c
 7FA text7 CODE >52:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul16.c
 7FE text7 CODE >53:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul16.c
+1E0 text6 CODE >232:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 1E0 text6 CODE >233:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-1E0 text6 CODE >234:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-207 text6 CODE >235:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-22C text6 CODE >236:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-23F text6 CODE >237:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-268 text6 CODE >238:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-286 text6 CODE >240:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-299 text6 CODE >241:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-2C2 text6 CODE >242:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-2E0 text6 CODE >245:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+207 text6 CODE >234:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+22C text6 CODE >235:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+23F text6 CODE >236:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+268 text6 CODE >237:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+286 text6 CODE >239:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+299 text6 CODE >240:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+2C2 text6 CODE >241:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+2E0 text6 CODE >244:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 630 text5 CODE >40:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c
 630 text5 CODE >41:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c
 63B text5 CODE >42:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.c
@@ -631,88 +631,88 @@ F19 text2 CODE >20:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600
 F1C text2 CODE >21:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c
 F1D text2 CODE >22:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c
 F1E text2 CODE >23:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c
+6E3 text1 CODE >174:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 6E3 text1 CODE >175:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6E3 text1 CODE >176:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6E8 text1 CODE >177:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6EE text1 CODE >178:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6FA text1 CODE >179:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6FE text1 CODE >180:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-701 text1 CODE >181:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-702 text1 CODE >182:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-703 text1 CODE >183:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-704 text1 CODE >184:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-707 text1 CODE >185:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-70B text1 CODE >186:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-70E text1 CODE >187:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-711 text1 CODE >188:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-714 text1 CODE >189:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-717 text1 CODE >190:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-71A text1 CODE >191:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-71B text1 CODE >192:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-71E text1 CODE >193:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-71F text1 CODE >194:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-720 text1 CODE >195:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-721 text1 CODE >196:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-726 text1 CODE >198:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-727 text1 CODE >199:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-728 text1 CODE >200:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-729 text1 CODE >201:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-72C text1 CODE >202:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-72F text1 CODE >203:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-730 text1 CODE >204:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-731 text1 CODE >205:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-734 text1 CODE >206:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-737 text1 CODE >207:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-73A text1 CODE >208:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6E8 text1 CODE >176:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6EE text1 CODE >177:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6FA text1 CODE >178:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6FE text1 CODE >179:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+701 text1 CODE >180:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+702 text1 CODE >181:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+703 text1 CODE >182:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+704 text1 CODE >183:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+707 text1 CODE >184:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+70B text1 CODE >185:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+70E text1 CODE >186:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+711 text1 CODE >187:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+714 text1 CODE >188:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+717 text1 CODE >189:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+71A text1 CODE >190:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+71B text1 CODE >191:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+71E text1 CODE >192:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+71F text1 CODE >193:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+720 text1 CODE >194:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+721 text1 CODE >195:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+726 text1 CODE >197:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+727 text1 CODE >198:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+728 text1 CODE >199:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+729 text1 CODE >200:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+72C text1 CODE >201:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+72F text1 CODE >202:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+730 text1 CODE >203:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+731 text1 CODE >204:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+734 text1 CODE >205:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+737 text1 CODE >206:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+73A text1 CODE >207:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+25 maintext CODE >122:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 25 maintext CODE >123:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-25 maintext CODE >124:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-2A maintext CODE >125:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-2F maintext CODE >126:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-39 maintext CODE >127:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-3F maintext CODE >132:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-44 maintext CODE >133:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-49 maintext CODE >134:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-50 maintext CODE >135:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-52 maintext CODE >136:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-5A maintext CODE >137:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-63 maintext CODE >138:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-6F maintext CODE >139:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-75 maintext CODE >140:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-81 maintext CODE >141:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-8A maintext CODE >142:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-96 maintext CODE >143:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-9F maintext CODE >144:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-AB maintext CODE >145:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-B1 maintext CODE >146:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-B7 maintext CODE >147:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-BB maintext CODE >148:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-C5 maintext CODE >149:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-CE maintext CODE >150:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-DA maintext CODE >151:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-E0 maintext CODE >152:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-EC maintext CODE >153:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-F5 maintext CODE >154:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-101 maintext CODE >155:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-10A maintext CODE >156:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-116 maintext CODE >157:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-11C maintext CODE >158:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-11D maintext CODE >159:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-11E maintext CODE >160:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-128 maintext CODE >161:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-143 maintext CODE >162:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-14F maintext CODE >163:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-18F maintext CODE >164:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-19B maintext CODE >165:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-EE2 clrtext CODE >1446:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-EE2 clrtext CODE >1447:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-EE3 clrtext CODE >1448:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-EE3 clrtext CODE >1449:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-EE4 clrtext CODE >1450:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-EE5 clrtext CODE >1451:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-EE6 clrtext CODE >1452:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-EE7 clrtext CODE >1453:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-EE8 clrtext CODE >1454:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
-EE9 clrtext CODE >1455:C:\Users\CARLOS~1\AppData\Local\Temp\sa64.s
+2A maintext CODE >124:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+2F maintext CODE >125:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+39 maintext CODE >126:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+3F maintext CODE >131:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+44 maintext CODE >132:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+49 maintext CODE >133:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+50 maintext CODE >134:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+52 maintext CODE >135:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+5A maintext CODE >136:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+63 maintext CODE >137:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+6F maintext CODE >138:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+75 maintext CODE >139:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+81 maintext CODE >140:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+8A maintext CODE >141:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+96 maintext CODE >142:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+9F maintext CODE >143:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+AB maintext CODE >144:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+B1 maintext CODE >145:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+B7 maintext CODE >146:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+BB maintext CODE >147:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+C5 maintext CODE >148:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+CE maintext CODE >149:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+DA maintext CODE >150:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+E0 maintext CODE >151:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+EC maintext CODE >152:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+F5 maintext CODE >153:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+101 maintext CODE >154:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+10A maintext CODE >155:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+116 maintext CODE >156:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+11C maintext CODE >157:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+11D maintext CODE >158:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+11E maintext CODE >159:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+128 maintext CODE >160:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+143 maintext CODE >161:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+14F maintext CODE >162:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+18F maintext CODE >163:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+19B maintext CODE >164:C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+EE2 clrtext CODE >1446:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+EE2 clrtext CODE >1447:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+EE3 clrtext CODE >1448:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+EE3 clrtext CODE >1449:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+EE4 clrtext CODE >1450:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+EE5 clrtext CODE >1451:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+EE6 clrtext CODE >1452:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+EE7 clrtext CODE >1453:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+EE8 clrtext CODE >1454:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
+EE9 clrtext CODE >1455:C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -742,11 +742,11 @@ _CONT 49 0 BANK0 1 bssBANK0 dist/default/production\Laboratorio3_digital2.X.prod
 _POT1 51 0 BANK0 1 bssBANK0 dist/default/production\Laboratorio3_digital2.X.production.o
 _POT2 50 0 BANK0 1 bssBANK0 dist/default/production\Laboratorio3_digital2.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\Laboratorio3_digital2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
+___sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
 _main 4A 0 CODE 0 maintext dist/default/production\Laboratorio3_digital2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Laboratorio3_digital2.X.production.o
 _Lcd_Write_Char 1DF0 0 CODE 0 text12 dist/default/production\Laboratorio3_digital2.X.production.o
-start 24 0 CODE 0 init C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
+start 24 0 CODE 0 init C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\Laboratorio3_digital2.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Laboratorio3_digital2.X.production.o
 __size_of___lwdiv 0 0 ABS 0 - dist/default/production\Laboratorio3_digital2.X.production.o
@@ -756,12 +756,12 @@ __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _var_envio 4C 0 BANK0 1 bssBANK0 dist/default/production\Laboratorio3_digital2.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 __end_of_sep_nibbles 1F38 0 CODE 0 text21 dist/default/production\Laboratorio3_digital2.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 ___bmul@multiplicand 20 0 BANK0 1 cstackBANK0 dist/default/production\Laboratorio3_digital2.X.production.o
 _decenasp1 47 0 BANK0 1 bssBANK0 dist/default/production\Laboratorio3_digital2.X.production.o
@@ -796,8 +796,8 @@ __end_of___awdiv B96 0 CODE 0 text10 dist/default/production\Laboratorio3_digita
 __end_of___lwdiv FB0 0 CODE 0 text8 dist/default/production\Laboratorio3_digital2.X.production.o
 _verificacion 1F8A 0 CODE 0 text20 dist/default/production\Laboratorio3_digital2.X.production.o
 _OPTION_REG 81 0 ABS 0 - dist/default/production\Laboratorio3_digital2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
-___stacklo 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
+___stackhi 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
+___stacklo 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
 configADC@vel 20 0 BANK0 1 cstackBANK0 dist/default/production\Laboratorio3_digital2.X.production.o
 _centenasp1 46 0 BANK0 1 bssBANK0 dist/default/production\Laboratorio3_digital2.X.production.o
 _centenasp2 43 0 BANK0 1 bssBANK0 dist/default/production\Laboratorio3_digital2.X.production.o
@@ -824,7 +824,7 @@ __size_of_sep_nibbles 0 0 ABS 0 - dist/default/production\Laboratorio3_digital2.
 tabla_hex@selector 74 0 COMMON 1 cstackCOMMON dist/default/production\Laboratorio3_digital2.X.production.o
 __size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\Laboratorio3_digital2.X.production.o
 __end_of_initOsc F24 0 CODE 0 text3 dist/default/production\Laboratorio3_digital2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
+___int_sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -887,7 +887,7 @@ __size_of_Lcd_Write_String 0 0 ABS 0 - dist/default/production\Laboratorio3_digi
 __stringtab 1000 0 STRING 0 strings dist/default/production\Laboratorio3_digital2.X.production.o
 Lcd_Write_String@a 24 0 BANK0 1 cstackBANK0 dist/default/production\Laboratorio3_digital2.X.production.o
 Lcd_Write_String@i 22 0 BANK0 1 cstackBANK0 dist/default/production\Laboratorio3_digital2.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
 __size_of_Lcd_Clear 0 0 ABS 0 - dist/default/production\Laboratorio3_digital2.X.production.o
 __end_of_Lcd_Cmd 1E9E 0 CODE 0 text15 dist/default/production\Laboratorio3_digital2.X.production.o
 __size_of___bmul 0 0 ABS 0 - dist/default/production\Laboratorio3_digital2.X.production.o

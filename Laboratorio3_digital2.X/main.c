@@ -16,8 +16,7 @@
 #include "usart9600.h"
 
 
-#define RS RE0
-#define EN RE2
+
 //******************************************************************************
 //                             Palabras de configuracion 
 //******************************************************************************
@@ -41,8 +40,8 @@
 //                          Macros 
 //******************************************************************************
 #define _XTAL_FREQ 400000
-#define EN RE2
-#define RS RE0
+#define RS RE0 //RS del LCD asignado al RE0
+#define EN RE2 //EN del LCD asignado al RE2
 //******************************************************************************
 //                          Variables 
 //******************************************************************************
@@ -87,12 +86,12 @@ char conversion_char (uint8_t selector);
 void __interrupt() isr(void){
     if (INTCONbits.TMR0IF == 1){
         TMR0 = 236; //valor del timer para 5ms
-        sep_nibbles();
-        controlADC++;
+        sep_nibbles(); //rutina que separa el valor de los pots en nibbles 
+        controlADC++; //rutina que controla el Go del ADC y el TXIE
         INTCONbits.TMR0IF = 0; //limpiar la bandera 
     }
     
-    if (PIR1bits.ADIF == 1){
+    if (PIR1bits.ADIF == 1){ //mux del ADC para leer dos puertos analogicos 
         if (ADC_selector == 1){
           ADC_selector = 0;
           POT1 = ADRESH;
@@ -105,13 +104,13 @@ void __interrupt() isr(void){
         }
         PIR1bits.ADIF = 0;
     } 
-    if (PIR1bits.RCIF == 1){
+    if (PIR1bits.RCIF == 1){ //recibe un dato y lo guarda en una variable interna
            DATO_RECIBIDO = RCREG;
-           verificacion();
+           verificacion(); //verifica el dato para aumentar/decrementar el contador 
         }
     
     if (PIR1bits.TXIF == 1){
-        envio();
+        envio(); //rutina que envia los datos del pot en ACSSII
         PIE1bits.TXIE = 0;
         
     }
@@ -124,15 +123,15 @@ void main(void) {
     setup();
     Lcd_Clear();
     Lcd_Set_Cursor(1,1);
-    Lcd_Write_String("POT1 POT2 CONT");
+    Lcd_Write_String("POT1 POT2 CONT"); //labels del LCD  
     //**************************************************************************
     //                             mian loop
     //**************************************************************************
     while (1) {
-          mapeo();
-          ADC_GO();
-          if (LCD == 0){
-            LCD = 1;
+          mapeo(); //rutina que transforma a voltaje el valor de los pots 
+          ADC_GO(); //rutina que activa el GO y el TXIE
+          if (LCD == 0){ //muxea los valores que se muestran en el LCD
+            LCD = 1; //primer pot en ACSSII de 0a 5 V con 2 decimales
             Lcd_Set_Cursor(2,1);
             Lcd_Write_Char(centenasp1+48);
             Lcd_Set_Cursor(2,2);
@@ -144,7 +143,7 @@ void main(void) {
             Lcd_Set_Cursor(2,5);
             Lcd_Write_Char(32);
           }else if (LCD == 1){
-            LCD = 2;
+            LCD = 2; //segundo pot en ACSSII de 0a 5 V con 2 decimales
             Lcd_Set_Cursor(2,6);
             Lcd_Write_Char(centenasp2+48);
             Lcd_Set_Cursor(2,7);
@@ -155,7 +154,7 @@ void main(void) {
             Lcd_Write_Char(unidadesp2+48);
             Lcd_Set_Cursor(2,10);
             Lcd_Write_Char(32);
-          }else{
+          }else{ //valor del contador seoarado en centenas, decenas y unidades
             LCD = 0;
             Lcd_Set_Cursor(2,11);
             Lcd_Write_Char((CONT/100)+48);
@@ -173,27 +172,27 @@ void main(void) {
 //******************************************************************************
 
 void setup(void) {
-    initUSART();
+    initUSART();//funcion de configuracion del UART
     initOsc(6);//configura el osculador interno a 4Mhz
     configADC(0,2); //canal 0 y velocidad FOSC/32
     OPTION_REG = 0b11010111; //configuracion para activar las PULL - UPS del puerto B y timer 0
     ANSEL = 0;
-    ANSELH = 0;
-    ANSELbits.ANS0 = 1; //se borran las entradas analogicas 
-    ANSELbits.ANS1 = 1;
+    ANSELH = 0; //se limpian las entradas analogicas
+    ANSELbits.ANS0 = 1; 
+    ANSELbits.ANS1 = 1;//se activan las entradas del RA0 y RA1
     PORTC = 0; //se resetea el puerto C
-    TRISC = 0x80; //se selecciona el puerto C como salida 
+    TRISC = 0x80; //se selecciona como entrada el RX
     PORTD = 0; //se resetea el puerto D
     TRISD = 0; //se selecciona el puerto D como salida 
     PORTB = 0; //se resetea el puerto B
     TRISE = 0; // se marca el puerto E como salida
     PORTE = 0;  //se resetea el puerto E
-    PORTA = 0;
-    TRISA = 0;
-    TRISB = 0;
+    PORTA = 0; //se resetea el puerto A
+    TRISA = 0; //se selecciona el puerto A como salida 
+    TRISB = 0; // se selecciona el puerto B como salida 
     TRISAbits.TRISA0 = 1; //EL A0 como entrada 
-    TRISAbits.TRISA1 = 1; //RB6 como entrada 
-    Lcd_Init();
+    TRISAbits.TRISA1 = 1; //El A1 como entrada 
+    Lcd_Init(); //rutina que inicializa el LCD
 //****************************interrupcinoes************************************
     INTCONbits.GIE = 1; //se activan las interrupciones globales 
     INTCONbits.PEIE = 1; // se activan las interrupciones perifericas 
@@ -202,11 +201,11 @@ void setup(void) {
     PIR1bits.ADIF = 0; //limpiar la bandera del ADC
     INTCONbits.T0IF = 0; //limpiar bandera del timer0
     PIR1bits.RCIF = 0;//se limpia la bandera de recepcion para interrupcion 
-    PIE1bits.TXIE = 1;
-    PIR1bits.TXIF = 0;
+    PIE1bits.TXIE = 1; //se activa la interrupcion del TX
+    PIR1bits.TXIF = 0; //se limpia la babndera del TX
     PIE1bits.RCIE = 1; //se activan las interrupciones del RCREG
 }
-void sep_nibbles (void){
+void sep_nibbles (void){ //rutina que separa por nibbles los valores del por 
     NLPOT1 = POT1 & 0b00001111;
     NHPOT1 = (POT1 & 0b11110000)>>4;
     NLPOT2 = POT2 & 0b00001111;
@@ -214,24 +213,24 @@ void sep_nibbles (void){
     
 }
 void verificacion (void){
-    if (DATO_RECIBIDO == 43){
+    if (DATO_RECIBIDO == 43){ //revisa si es un +
         bandera1 = 1;      
     }
-    if (DATO_RECIBIDO != 43 && bandera1 ==1){
-        bandera1 = 0;
+    if (DATO_RECIBIDO != 43 && bandera1 ==1){ //antirrebote para que solo sume
+        bandera1 = 0;           //al darle click al + y luego a otra tecla 
         CONT++;
     }
-    if (DATO_RECIBIDO == 45){
+    if (DATO_RECIBIDO == 45){ //revisa si es un +
         bandera2 = 1;      
     }
-    if (DATO_RECIBIDO != 45 && bandera2 ==1){
-        bandera2 = 0;
+    if (DATO_RECIBIDO != 45 && bandera2 ==1){ //antirrebote para que solo reste
+        bandera2 = 0;       //al darle click al - y luego a otra tecla
         CONT--;
     }
-    PORTB = CONT;
+    PORTB = CONT; //muestra el valor del contador en el puerto b
 }
-void mapeo (void){
-    TEMP1 = ((POT1 *100)/51);
+void mapeo (void){ //mapea los valores para que pasen de ir de 0 a 255
+    TEMP1 = ((POT1 *100)/51); // para estar de 0 a 5 con 2 decimales 
     TEMP2 = ((POT2 *100)/51);
     centenasp1 = TEMP1/100;
     decenasp1 = (TEMP1-(centenasp1*100))/10;
@@ -243,14 +242,14 @@ void mapeo (void){
     
     
 }
-void ADC_GO (void){
+void ADC_GO (void){ //por cada 10 de control activa el GO y el TXIE
     if (controlADC > 10){ //revisa si el contador es mayor a 10 para dar el GO 
         controlADC = 0;
         ADCON0bits.GO_nDONE = 1;
         PIE1bits.TXIE = 1;
     }
 }
-void envio (void){
+void envio (void){ //rutina que envia datos como "POT1 , POT2 /n"
     switch (var_envio){
         case 0:
            tabla_hex(NHPOT1,&TXREG);

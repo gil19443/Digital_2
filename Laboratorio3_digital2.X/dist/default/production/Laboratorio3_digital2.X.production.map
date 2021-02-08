@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.20\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\Laboratorio3_digital2.X.production.sym \
   --cmf=dist/default/production\Laboratorio3_digital2.X.production.cmf -z \
-  -Q16F887 -oC:\Users\CARLOS~1\AppData\Local\Temp\sa64.2 \
+  -Q16F887 -oC:\Users\CARLOS~1\AppData\Local\Temp\s5p4.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Laboratorio3_digital2.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
@@ -19,7 +19,7 @@ Linker command line:
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 \
   -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o \
+  C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o \
   dist/default/production\Laboratorio3_digital2.X.production.o 
 
 Object code version is 3.11
@@ -29,7 +29,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\CARLOS~1\AppData\Local\Temp\sa64.o
+C:\Users\CARLOS~1\AppData\Local\Temp\s5p4.o
                 end_init                             12       12        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2        0       4
@@ -504,7 +504,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 123 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
+		line 122 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -541,7 +541,7 @@ Total ram usage:        4 bytes
 
  *************** function _setup *****************
  Defined at:
-		line 175 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
+		line 174 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -696,7 +696,7 @@ Total ram usage:        2 bytes
 
  *************** function _mapeo *****************
  Defined at:
-		line 233 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
+		line 232 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1051,7 +1051,7 @@ Total ram usage:        1 bytes
 
  *************** function _ADC_GO *****************
  Defined at:
-		line 246 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
+		line 245 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1081,7 +1081,7 @@ Total ram usage:        0 bytes
 
  *************** function _isr *****************
  Defined at:
-		line 87 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
+		line 86 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1144,7 +1144,7 @@ Total ram usage:        4 bytes
 
  *************** function _verificacion *****************
  Defined at:
-		line 216 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
+		line 215 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1173,7 +1173,7 @@ Total ram usage:        0 bytes
 
  *************** function _sep_nibbles *****************
  Defined at:
-		line 209 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
+		line 208 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1202,7 +1202,7 @@ Total ram usage:        1 bytes
 
  *************** function _envio *****************
  Defined at:
-		line 253 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
+		line 252 in file "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type

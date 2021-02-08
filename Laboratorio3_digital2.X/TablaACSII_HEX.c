@@ -8,8 +8,8 @@
 #include <stdint.h>
 #include <xc.h>
 #include "TablaACSII_HEX.h"
-void tabla_hex (uint8_t selector, volatile uint8_t *port){
-switch (selector){
+void tabla_hex (uint8_t selector, volatile uint8_t *port){ //recibe un selector 
+switch (selector){ //modifica el valor del puntero para pasarlo a HEX en ACSII
         case 0:
             *port = 48;
             break;

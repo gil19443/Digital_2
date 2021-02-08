@@ -22,21 +22,21 @@
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
 "8 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/librerias2.c
 [v _initOsc initOsc `(v  1 e 1 0 ]
-"87 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+"86 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 [v _isr isr `II(v  1 e 1 0 ]
-"123
+"122
 [v _main main `(v  1 e 1 0 ]
-"175
+"174
 [v _setup setup `(v  1 e 1 0 ]
-"209
+"208
 [v _sep_nibbles sep_nibbles `(v  1 e 1 0 ]
-"216
+"215
 [v _verificacion verificacion `(v  1 e 1 0 ]
-"233
+"232
 [v _mapeo mapeo `(v  1 e 1 0 ]
-"246
+"245
 [v _ADC_GO ADC_GO `(v  1 e 1 0 ]
-"253
+"252
 [v _envio envio `(v  1 e 1 0 ]
 "11 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c
 [v _tabla_hex tabla_hex `(v  1 e 1 0 ]
@@ -58,49 +58,49 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"49 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+"48 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 [v _ADC_selector ADC_selector `uc  1 e 1 0 ]
-"50
+"49
 [v _POT1 POT1 `uc  1 e 1 0 ]
-"51
+"50
 [v _POT2 POT2 `uc  1 e 1 0 ]
-"52
+"51
 [v _NHPOT1 NHPOT1 `uc  1 e 1 0 ]
-"53
+"52
 [v _NLPOT1 NLPOT1 `uc  1 e 1 0 ]
-"54
+"53
 [v _NHPOT2 NHPOT2 `uc  1 e 1 0 ]
-"55
+"54
 [v _NLPOT2 NLPOT2 `uc  1 e 1 0 ]
-"56
+"55
 [v _var_envio var_envio `uc  1 e 1 0 ]
-"58
+"57
 [v _DATO_RECIBIDO DATO_RECIBIDO `uc  1 e 1 0 ]
-"60
+"59
 [v _CONT CONT `uc  1 e 1 0 ]
-"61
+"60
 [v _unidadesp1 unidadesp1 `uc  1 e 1 0 ]
-"62
+"61
 [v _decenasp1 decenasp1 `uc  1 e 1 0 ]
-"63
+"62
 [v _centenasp1 centenasp1 `uc  1 e 1 0 ]
-"64
+"63
 [v _unidadesp2 unidadesp2 `uc  1 e 1 0 ]
-"65
+"64
 [v _decenasp2 decenasp2 `uc  1 e 1 0 ]
-"66
+"65
 [v _centenasp2 centenasp2 `uc  1 e 1 0 ]
-"67
+"66
 [v _TEMP1 TEMP1 `ui  1 e 2 0 ]
-"68
+"67
 [v _TEMP2 TEMP2 `ui  1 e 2 0 ]
-"69
+"68
 [v _controlADC controlADC `uc  1 e 1 0 ]
-"70
+"69
 [v _bandera1 bandera1 `uc  1 e 1 0 ]
-"71
+"70
 [v _bandera2 bandera2 `uc  1 e 1 0 ]
-"72
+"71
 [v _LCD LCD `uc  1 e 1 0 ]
 "59 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -299,15 +299,15 @@
 [v _RE0 RE0 `VEb  1 e 0 @72 ]
 "4211
 [v _RE2 RE2 `VEb  1 e 0 @74 ]
-"123 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+"122 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"168
+"167
 } 0
-"175
+"174
 [v _setup setup `(v  1 e 1 0 ]
 {
-"208
+"207
 } 0
 "12 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.c
 [v _initUSART initUSART `(v  1 e 1 0 ]
@@ -336,10 +336,10 @@
 {
 "56
 } 0
-"233 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+"232 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 [v _mapeo mapeo `(v  1 e 1 0 ]
 {
-"245
+"244
 } 0
 "15 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -443,15 +443,15 @@
 [v Lcd_Port@a a `uc  1 a 1 0 ]
 "16
 } 0
-"246 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+"245 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 [v _ADC_GO ADC_GO `(v  1 e 1 0 ]
 {
-"252
+"251
 } 0
-"87
+"86
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"118
+"117
 } 0
 "4 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/configuracionADC.c
 [v i1_configADC configADC `(v  1 e 1 0 ]
@@ -462,20 +462,20 @@
 [v i1configADC@canal canal `uc  1 a 1 3 ]
 "127
 } 0
-"216 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+"215 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
 [v _verificacion verificacion `(v  1 e 1 0 ]
 {
-"232
+"231
 } 0
-"209
+"208
 [v _sep_nibbles sep_nibbles `(v  1 e 1 0 ]
 {
-"215
+"214
 } 0
-"253
+"252
 [v _envio envio `(v  1 e 1 0 ]
 {
-"281
+"280
 } 0
 "11 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/TablaACSII_HEX.c
 [v _tabla_hex tabla_hex `(v  1 e 1 0 ]

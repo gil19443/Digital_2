@@ -2672,7 +2672,6 @@ void initUSART(void);
 
 
 
-
 #pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -2687,7 +2686,7 @@ void initUSART(void);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 49 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
+# 48 "C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c"
 uint8_t ADC_selector =0;
 uint8_t POT1 = 0;
 uint8_t POT2 = 0;
