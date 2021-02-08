@@ -19,8 +19,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "59
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 59: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
 [v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
-"77 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 77: void sep_nibbles (void);
+"78 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 78: void sep_nibbles (void);
 [v _sep_nibbles `(v ~T0 @X0 0 ef ]
 "543 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 543:     struct {
@@ -42,8 +42,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1140 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
 [v _RCREG `Vuc ~T0 @X0 0 e@26 ]
-"76 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 76: void envio (void);
+"79 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 79: void verificacion (void);
+[v _verificacion `(v ~T0 @X0 0 ef ]
+"77
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 77: void envio (void);
 [v _envio `(v ~T0 @X0 0 ef ]
 "1708 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1708:     struct {
@@ -57,12 +60,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1718: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
 [v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
 [p mainexit ]
-"80 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 80: void setup(void);
+"81 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 81: void setup(void);
 [v _setup `(v ~T0 @X0 0 ef ]
-"81
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 81: void ADC_GO (void);
-[v _ADC_GO `(v ~T0 @X0 0 ef ]
 "13 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h
 [; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h: 13: void Lcd_Clear(void);
 [v _Lcd_Clear `(v ~T0 @X0 0 ef ]
@@ -72,16 +72,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17
 [; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h: 17: void Lcd_Write_String(char *a);
 [v _Lcd_Write_String `(v ~T0 @X0 0 ef1`*uc ]
-[v F1256 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files\Microchip\xc8\v2.20\pic\include\pic.h
-[v __delay `JF1256 ~T0 @X0 0 e ]
-[p i __delay ]
+"80 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 80: void mapeo (void);
+[v _mapeo `(v ~T0 @X0 0 ef ]
+"82
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 82: void ADC_GO (void);
+[v _ADC_GO `(v ~T0 @X0 0 ef ]
 "16 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h
 [; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h: 16: void Lcd_Write_Char(char a);
 [v _Lcd_Write_Char `(v ~T0 @X0 0 ef1`uc ]
-"15
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h: 15: void Lcd_Init(void);
-[v _Lcd_Init `(v ~T0 @X0 0 ef ]
 "15 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.h
 [; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/usart9600.h: 15: void initUSART(void);
 [v _initUSART `(v ~T0 @X0 0 ef ]
@@ -149,7 +148,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1433
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1433: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x085)));
 [v _TRISAbits `VS52 ~T0 @X0 0 e@133 ]
-"1251
+"15 C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/Display8bits.h: 15: void Lcd_Init(void);
+[v _Lcd_Init `(v ~T0 @X0 0 ef ]
+"1251 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1251:     struct {
 [s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
 [n S45 . ADON GO_nDONE CHS ADCS ]
@@ -574,539 +576,608 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _bandera2
 -> -> 0 `i `uc
 ]
+"72
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 72: uint8_t LCD = 0;
+[v _LCD `uc ~T0 @X0 1 e ]
+[i _LCD
+-> -> 0 `i `uc
+]
 [v $root$_isr `(v ~T0 @X0 0 e ]
-"86
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 86: void __attribute__((picinterrupt(("")))) isr(void){
+"87
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 87: void __attribute__((picinterrupt(("")))) isr(void){
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
-"87
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 87:     if (INTCONbits.TMR0IF == 1){
+"88
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 88:     if (INTCONbits.TMR0IF == 1){
 [e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 139  ]
 {
-"88
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 88:         TMR0 = 236;
-[e = _TMR0 -> -> 236 `i `uc ]
 "89
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 89:         sep_nibbles();
-[e ( _sep_nibbles ..  ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 89:         TMR0 = 236;
+[e = _TMR0 -> -> 236 `i `uc ]
 "90
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 90:         controlADC++;
-[e ++ _controlADC -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 90:         sep_nibbles();
+[e ( _sep_nibbles ..  ]
 "91
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 91:         INTCONbits.TMR0IF = 0;
-[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 91:         controlADC++;
+[e ++ _controlADC -> -> 1 `i `uc ]
 "92
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 92:     }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 92:         INTCONbits.TMR0IF = 0;
+[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
+"93
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 93:     }
 }
 [e :U 139 ]
-"94
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 94:     if (PIR1bits.ADIF == 1){
+"95
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 95:     if (PIR1bits.ADIF == 1){
 [e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 140  ]
 {
-"95
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 95:         if (ADC_selector == 1){
+"96
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 96:         if (ADC_selector == 1){
 [e $ ! == -> _ADC_selector `i -> 1 `i 141  ]
 {
-"96
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 96:           ADC_selector = 0;
-[e = _ADC_selector -> -> 0 `i `uc ]
 "97
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 97:           POT1 = ADRESH;
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 97:           ADC_selector = 0;
+[e = _ADC_selector -> -> 0 `i `uc ]
+"98
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 98:           POT1 = ADRESH;
 [e = _POT1 _ADRESH ]
-"99
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 99:           configADC(1,2);
-[e ( _configADC (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
 "100
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 100:         }else{
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 100:           configADC(1,2);
+[e ( _configADC (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
+"101
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 101:         }else{
 }
 [e $U 142  ]
 [e :U 141 ]
 {
-"101
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 101:           ADC_selector = 1;
-[e = _ADC_selector -> -> 1 `i `uc ]
 "102
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 102:           POT2 = ADRESH;
-[e = _POT2 _ADRESH ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 102:           ADC_selector = 1;
+[e = _ADC_selector -> -> 1 `i `uc ]
 "103
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 103:           configADC(0,2);
-[e ( _configADC (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 103:           POT2 = ADRESH;
+[e = _POT2 _ADRESH ]
 "104
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 104:         }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 104:           configADC(0,2);
+[e ( _configADC (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
+"105
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 105:         }
 }
 [e :U 142 ]
-"105
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 105:         PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
 "106
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 106:     }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 106:         PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"107
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 107:     }
 }
 [e :U 140 ]
-"107
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 107:     if (PIR1bits.RCIF == 1){
+"108
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 108:     if (PIR1bits.RCIF == 1){
 [e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 143  ]
 {
-"108
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 108:            DATO_RECIBIDO = RCREG;
-[e = _DATO_RECIBIDO _RCREG ]
 "109
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 109:         }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 109:            DATO_RECIBIDO = RCREG;
+[e = _DATO_RECIBIDO _RCREG ]
+"110
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 110:            verificacion();
+[e ( _verificacion ..  ]
+"111
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 111:         }
 }
 [e :U 143 ]
-"111
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 111:     if (PIR1bits.TXIF == 1){
+"113
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 113:     if (PIR1bits.TXIF == 1){
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 144  ]
 {
-"112
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 112:         envio();
+"114
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 114:         envio();
 [e ( _envio ..  ]
-"113
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 113:         PIE1bits.TXIE = 0;
-[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
 "115
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 115:     }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 115:         PIE1bits.TXIE = 0;
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"117
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 117:     }
 }
 [e :U 144 ]
-"116
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 116: }
+"118
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 118: }
 [e :UE 138 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"121
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 121: void main(void) {
+"123
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 123: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"122
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 122:     setup();
+"124
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 124:     setup();
 [e ( _setup ..  ]
+"125
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 125:     Lcd_Clear();
+[e ( _Lcd_Clear ..  ]
 "126
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 126:     while (1) {
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 126:     Lcd_Set_Cursor(1,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"127
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 127:     Lcd_Write_String("POT1 POT2 CONT");
+[e ( _Lcd_Write_String (1 :s 1C ]
+"131
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 131:     while (1) {
 [e :U 147 ]
 {
-"127
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 127:           ADC_GO();
-[e ( _ADC_GO ..  ]
-"129
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 129:               Lcd_Clear();
-[e ( _Lcd_Clear ..  ]
-"130
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 130:             Lcd_Set_Cursor(1,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"131
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 131:             Lcd_Write_String("LCD Library for");
-[e ( _Lcd_Write_String (1 :s 1C ]
 "132
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 132:             Lcd_Set_Cursor(2,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 132:           mapeo();
+[e ( _mapeo ..  ]
 "133
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 133:             Lcd_Write_String("MPLAB XC8");
-[e ( _Lcd_Write_String (1 :s 2C ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 133:           ADC_GO();
+[e ( _ADC_GO ..  ]
 "134
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 134:             _delay((unsigned long)((2000)*(400000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 400000 `l `d .4000.0 `ul ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 134:           if (LCD == 0){
+[e $ ! == -> _LCD `i -> 0 `i 149  ]
+{
 "135
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 135:             Lcd_Clear();
-[e ( _Lcd_Clear ..  ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 135:             LCD = 1;
+[e = _LCD -> -> 1 `i `uc ]
 "136
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 136:             Lcd_Set_Cursor(1,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 136:             Lcd_Set_Cursor(2,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
 "137
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 137:             Lcd_Write_String("Developed By");
-[e ( _Lcd_Write_String (1 :s 3C ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 137:             Lcd_Write_Char(centenasp1+48);
+[e ( _Lcd_Write_Char (1 -> + -> _centenasp1 `i -> 48 `i `uc ]
 "138
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 138:             Lcd_Set_Cursor(2,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 138:             Lcd_Set_Cursor(2,2);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 2 `i `uc ]
 "139
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 139:             Lcd_Write_String("electroSome");
-[e ( _Lcd_Write_String (1 :s 4C ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 139:             Lcd_Write_Char(46);
+[e ( _Lcd_Write_Char (1 -> -> 46 `i `uc ]
 "140
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 140:             _delay((unsigned long)((2000)*(400000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 400000 `l `d .4000.0 `ul ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 140:             Lcd_Set_Cursor(2,3);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 3 `i `uc ]
 "141
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 141:             Lcd_Clear();
-[e ( _Lcd_Clear ..  ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 141:             Lcd_Write_Char(decenasp1+48);
+[e ( _Lcd_Write_Char (1 -> + -> _decenasp1 `i -> 48 `i `uc ]
 "142
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 142:             Lcd_Set_Cursor(1,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 142:             Lcd_Set_Cursor(2,4);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 4 `i `uc ]
 "143
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 143:             Lcd_Write_String("www.electroSome.com");
-[e ( _Lcd_Write_String (1 :s 5C ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 143:             Lcd_Write_Char(unidadesp1+48);
+[e ( _Lcd_Write_Char (1 -> + -> _unidadesp1 `i -> 48 `i `uc ]
 "144
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 144:             Lcd_Clear();
-[e ( _Lcd_Clear ..  ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 144:             Lcd_Set_Cursor(2,5);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 5 `i `uc ]
 "145
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 145:             Lcd_Set_Cursor(2,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 145:             Lcd_Write_Char(32);
+[e ( _Lcd_Write_Char (1 -> -> 32 `i `uc ]
 "146
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 146:             Lcd_Write_Char('e');
-[e ( _Lcd_Write_Char (1 -> -> 101 `ui `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 146:           }else if (LCD == 1){
+}
+[e $U 150  ]
+[e :U 149 ]
+[e $ ! == -> _LCD `i -> 1 `i 151  ]
+{
 "147
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 147:             Lcd_Write_Char('S');
-[e ( _Lcd_Write_Char (1 -> -> 83 `ui `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 147:             LCD = 2;
+[e = _LCD -> -> 2 `i `uc ]
 "148
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 148:             _delay((unsigned long)((2000)*(400000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 400000 `l `d .4000.0 `ul ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 148:             Lcd_Set_Cursor(2,6);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 6 `i `uc ]
 "149
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 149:     }
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 149:             Lcd_Write_Char(centenasp2+48);
+[e ( _Lcd_Write_Char (1 -> + -> _centenasp2 `i -> 48 `i `uc ]
+"150
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 150:             Lcd_Set_Cursor(2,7);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 7 `i `uc ]
+"151
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 151:             Lcd_Write_Char(46);
+[e ( _Lcd_Write_Char (1 -> -> 46 `i `uc ]
+"152
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 152:             Lcd_Set_Cursor(2,8);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 8 `i `uc ]
+"153
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 153:             Lcd_Write_Char(decenasp2+48);
+[e ( _Lcd_Write_Char (1 -> + -> _decenasp2 `i -> 48 `i `uc ]
+"154
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 154:             Lcd_Set_Cursor(2,9);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 9 `i `uc ]
+"155
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 155:             Lcd_Write_Char(unidadesp2+48);
+[e ( _Lcd_Write_Char (1 -> + -> _unidadesp2 `i -> 48 `i `uc ]
+"156
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 156:             Lcd_Set_Cursor(2,10);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 10 `i `uc ]
+"157
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 157:             Lcd_Write_Char(32);
+[e ( _Lcd_Write_Char (1 -> -> 32 `i `uc ]
+"158
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 158:           }else{
+}
+[e $U 152  ]
+[e :U 151 ]
+{
+"159
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 159:             LCD = 0;
+[e = _LCD -> -> 0 `i `uc ]
+"160
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 160:             Lcd_Set_Cursor(2,11);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 11 `i `uc ]
+"161
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 161:             Lcd_Write_Char((CONT/100)+48);
+[e ( _Lcd_Write_Char (1 -> + / -> _CONT `i -> 100 `i -> 48 `i `uc ]
+"162
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 162:             Lcd_Set_Cursor(2,12);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 12 `i `uc ]
+"163
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 163:             Lcd_Write_Char(((CONT-((CONT/100)*100))/10)+48);
+[e ( _Lcd_Write_Char (1 -> + / - -> _CONT `i * / -> _CONT `i -> 100 `i -> 100 `i -> 10 `i -> 48 `i `uc ]
+"164
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 164:             Lcd_Set_Cursor(2,13);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 13 `i `uc ]
+"165
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 165:             Lcd_Write_Char((CONT-(((CONT-((CONT/100)*100))/10)))+48);
+[e ( _Lcd_Write_Char (1 -> + - -> _CONT `i / - -> _CONT `i * / -> _CONT `i -> 100 `i -> 100 `i -> 10 `i -> 48 `i `uc ]
+"166
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 166:           }
+}
+[e :U 152 ]
+[e :U 150 ]
+"167
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 167:     }
 }
 [e :U 146 ]
 [e $U 147  ]
 [e :U 148 ]
-"150
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 150: }
+"168
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 168: }
 [e :UE 145 ]
 }
-"157
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 157: void setup(void) {
+"175
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 175: void setup(void) {
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"158
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 158:     Lcd_Init();
-[e ( _Lcd_Init ..  ]
-"159
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 159:     initUSART();
-[e ( _initUSART ..  ]
-"160
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 160:     initOsc(6);
-[e ( _initOsc (1 -> -> 6 `i `uc ]
-"161
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 161:     configADC(0,2);
-[e ( _configADC (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
-"162
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 162:     OPTION_REG = 0b11010111;
-[e = _OPTION_REG -> -> 215 `i `uc ]
-"163
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 163:     ANSEL = 0;
-[e = _ANSEL -> -> 0 `i `uc ]
-"164
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 164:     ANSELH = 0;
-[e = _ANSELH -> -> 0 `i `uc ]
-"165
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 165:     ANSELbits.ANS0 = 1;
-[e = . . _ANSELbits 0 0 -> -> 1 `i `uc ]
-"166
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 166:     ANSELbits.ANS1 = 1;
-[e = . . _ANSELbits 0 1 -> -> 1 `i `uc ]
-"167
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 167:     PORTC = 0;
-[e = _PORTC -> -> 0 `i `uc ]
-"168
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 168:     TRISC = 0x80;
-[e = _TRISC -> -> 128 `i `uc ]
-"169
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 169:     PORTD = 0;
-[e = _PORTD -> -> 0 `i `uc ]
-"170
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 170:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
-"171
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 171:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
-"172
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 172:     TRISE = 0;
-[e = _TRISE -> -> 0 `i `uc ]
-"173
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 173:     PORTE = 0;
-[e = _PORTE -> -> 0 `i `uc ]
-"174
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 174:     PORTA = 0;
-[e = _PORTA -> -> 0 `i `uc ]
-"175
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 175:     TRISA = 0;
-[e = _TRISA -> -> 0 `i `uc ]
 "176
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 176:     TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 176:     initUSART();
+[e ( _initUSART ..  ]
 "177
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 177:     TRISAbits.TRISA0 = 1;
-[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 177:     initOsc(6);
+[e ( _initOsc (1 -> -> 6 `i `uc ]
 "178
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 178:     TRISAbits.TRISA1 = 1;
-[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 178:     configADC(0,2);
+[e ( _configADC (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
+"179
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 179:     OPTION_REG = 0b11010111;
+[e = _OPTION_REG -> -> 215 `i `uc ]
 "180
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 180:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 180:     ANSEL = 0;
+[e = _ANSEL -> -> 0 `i `uc ]
 "181
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 181:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 181:     ANSELH = 0;
+[e = _ANSELH -> -> 0 `i `uc ]
 "182
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 182:     INTCONbits.TMR0IE = 1;
-[e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 182:     ANSELbits.ANS0 = 1;
+[e = . . _ANSELbits 0 0 -> -> 1 `i `uc ]
 "183
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 183:     PIE1bits.ADIE = 1;
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 183:     ANSELbits.ANS1 = 1;
+[e = . . _ANSELbits 0 1 -> -> 1 `i `uc ]
 "184
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 184:     PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 184:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
 "185
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 185:     INTCONbits.T0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 185:     TRISC = 0x80;
+[e = _TRISC -> -> 128 `i `uc ]
 "186
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 186:     PIR1bits.RCIF = 0;
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 186:     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
 "187
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 187:     PIE1bits.TXIE = 1;
-[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 187:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
 "188
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 188:     PIR1bits.TXIF = 0;
-[e = . . _PIR1bits 0 4 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 188:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
 "189
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 189:     PIE1bits.RCIE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 189:     TRISE = 0;
+[e = _TRISE -> -> 0 `i `uc ]
 "190
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 190: }
-[e :UE 149 ]
-}
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 190:     PORTE = 0;
+[e = _PORTE -> -> 0 `i `uc ]
 "191
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 191: void sep_nibbles (void){
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 191:     PORTA = 0;
+[e = _PORTA -> -> 0 `i `uc ]
+"192
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 192:     TRISA = 0;
+[e = _TRISA -> -> 0 `i `uc ]
+"193
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 193:     TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
+"194
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 194:     TRISAbits.TRISA0 = 1;
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+"195
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 195:     TRISAbits.TRISA1 = 1;
+[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
+"196
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 196:     Lcd_Init();
+[e ( _Lcd_Init ..  ]
+"198
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 198:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"199
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 199:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"200
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 200:     INTCONbits.TMR0IE = 1;
+[e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
+"201
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 201:     PIE1bits.ADIE = 1;
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+"202
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 202:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"203
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 203:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"204
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 204:     PIR1bits.RCIF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"205
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 205:     PIE1bits.TXIE = 1;
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"206
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 206:     PIR1bits.TXIF = 0;
+[e = . . _PIR1bits 0 4 -> -> 0 `i `uc ]
+"207
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 207:     PIE1bits.RCIE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"208
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 208: }
+[e :UE 153 ]
+}
+"209
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 209: void sep_nibbles (void){
 [v _sep_nibbles `(v ~T0 @X0 1 ef ]
 {
 [e :U _sep_nibbles ]
 [f ]
-"192
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 192:     NLPOT1 = POT1 & 0b00001111;
+"210
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 210:     NLPOT1 = POT1 & 0b00001111;
 [e = _NLPOT1 -> & -> _POT1 `i -> 15 `i `uc ]
-"193
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 193:     NHPOT1 = (POT1 & 0b11110000)>>4;
+"211
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 211:     NHPOT1 = (POT1 & 0b11110000)>>4;
 [e = _NHPOT1 -> >> & -> _POT1 `i -> 240 `i -> 4 `i `uc ]
-"194
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 194:     NLPOT2 = POT2 & 0b00001111;
+"212
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 212:     NLPOT2 = POT2 & 0b00001111;
 [e = _NLPOT2 -> & -> _POT2 `i -> 15 `i `uc ]
-"195
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 195:     NHPOT2 = (POT2 & 0b11110000)>>4;
+"213
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 213:     NHPOT2 = (POT2 & 0b11110000)>>4;
 [e = _NHPOT2 -> >> & -> _POT2 `i -> 240 `i -> 4 `i `uc ]
-"197
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 197: }
-[e :UE 150 ]
+"215
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 215: }
+[e :UE 154 ]
 }
-"198
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 198: void verificacion (void){
+"216
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 216: void verificacion (void){
 [v _verificacion `(v ~T0 @X0 1 ef ]
 {
 [e :U _verificacion ]
 [f ]
-"199
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 199:     if (DATO_RECIBIDO == 43){
-[e $ ! == -> _DATO_RECIBIDO `i -> 43 `i 152  ]
+"217
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 217:     if (DATO_RECIBIDO == 43){
+[e $ ! == -> _DATO_RECIBIDO `i -> 43 `i 156  ]
 {
-"200
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 200:         bandera1 = 1;
+"218
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 218:         bandera1 = 1;
 [e = _bandera1 -> -> 1 `i `uc ]
-"201
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 201:     }
+"219
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 219:     }
 }
-[e :U 152 ]
-"202
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 202:     if (DATO_RECIBIDO != 43 && bandera1 ==1){
-[e $ ! && != -> _DATO_RECIBIDO `i -> 43 `i == -> _bandera1 `i -> 1 `i 153  ]
+[e :U 156 ]
+"220
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 220:     if (DATO_RECIBIDO != 43 && bandera1 ==1){
+[e $ ! && != -> _DATO_RECIBIDO `i -> 43 `i == -> _bandera1 `i -> 1 `i 157  ]
 {
-"203
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 203:         bandera1 = 0;
+"221
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 221:         bandera1 = 0;
 [e = _bandera1 -> -> 0 `i `uc ]
-"204
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 204:         PORTB++;
-[e ++ _PORTB -> -> 1 `i `Vuc ]
-"205
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 205:     }
+"222
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 222:         CONT++;
+[e ++ _CONT -> -> 1 `i `uc ]
+"223
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 223:     }
 }
-[e :U 153 ]
-"206
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 206:     if (DATO_RECIBIDO == 45){
-[e $ ! == -> _DATO_RECIBIDO `i -> 45 `i 154  ]
+[e :U 157 ]
+"224
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 224:     if (DATO_RECIBIDO == 45){
+[e $ ! == -> _DATO_RECIBIDO `i -> 45 `i 158  ]
 {
-"207
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 207:         bandera2 = 1;
+"225
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 225:         bandera2 = 1;
 [e = _bandera2 -> -> 1 `i `uc ]
-"208
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 208:     }
+"226
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 226:     }
 }
-[e :U 154 ]
-"209
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 209:     if (DATO_RECIBIDO != 45 && bandera2 ==1){
-[e $ ! && != -> _DATO_RECIBIDO `i -> 45 `i == -> _bandera2 `i -> 1 `i 155  ]
+[e :U 158 ]
+"227
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 227:     if (DATO_RECIBIDO != 45 && bandera2 ==1){
+[e $ ! && != -> _DATO_RECIBIDO `i -> 45 `i == -> _bandera2 `i -> 1 `i 159  ]
 {
-"210
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 210:         bandera2 = 0;
+"228
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 228:         bandera2 = 0;
 [e = _bandera2 -> -> 0 `i `uc ]
-"211
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 211:         PORTB--;
-[e -- _PORTB -> -> 1 `i `Vuc ]
-"212
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 212:     }
+"229
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 229:         CONT--;
+[e -- _CONT -> -> 1 `i `uc ]
+"230
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 230:     }
 }
-[e :U 155 ]
-"214
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 214: }
-[e :UE 151 ]
+[e :U 159 ]
+"231
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 231:     PORTB = CONT;
+[e = _PORTB _CONT ]
+"232
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 232: }
+[e :UE 155 ]
 }
-"215
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 215: void mapeo (void){
+"233
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 233: void mapeo (void){
 [v _mapeo `(v ~T0 @X0 1 ef ]
 {
 [e :U _mapeo ]
 [f ]
-"216
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 216:     TEMP1 = ((POT1 / 5)*100);
-[e = _TEMP1 -> * / -> _POT1 `i -> 5 `i -> 100 `i `ui ]
-"217
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 217:     TEMP2 = ((POT2 / 5)*100);
-[e = _TEMP2 -> * / -> _POT2 `i -> 5 `i -> 100 `i `ui ]
-"218
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 218:     centenasp1 = TEMP1/100;
+"234
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 234:     TEMP1 = ((POT1 *100)/51);
+[e = _TEMP1 -> / * -> _POT1 `i -> 100 `i -> 51 `i `ui ]
+"235
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 235:     TEMP2 = ((POT2 *100)/51);
+[e = _TEMP2 -> / * -> _POT2 `i -> 100 `i -> 51 `i `ui ]
+"236
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 236:     centenasp1 = TEMP1/100;
 [e = _centenasp1 -> / _TEMP1 -> -> 100 `i `ui `uc ]
-"219
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 219:     decenasp1 = (TEMP1-(centenasp1*100))/10;
+"237
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 237:     decenasp1 = (TEMP1-(centenasp1*100))/10;
 [e = _decenasp1 -> / - _TEMP1 -> * -> _centenasp1 `i -> 100 `i `ui -> -> 10 `i `ui `uc ]
-"220
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 220:     unidadesp1 = (TEMP1-((centenasp1*100)+(decenasp1*10)));
+"238
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 238:     unidadesp1 = (TEMP1-((centenasp1*100)+(decenasp1*10)));
 [e = _unidadesp1 -> - _TEMP1 -> + * -> _centenasp1 `i -> 100 `i * -> _decenasp1 `i -> 10 `i `ui `uc ]
-"222
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 222:     centenasp2 = TEMP2/100;
+"240
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 240:     centenasp2 = TEMP2/100;
 [e = _centenasp2 -> / _TEMP2 -> -> 100 `i `ui `uc ]
-"223
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 223:     decenasp2 = (TEMP2-(centenasp2*100))/10;
+"241
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 241:     decenasp2 = (TEMP2-(centenasp2*100))/10;
 [e = _decenasp2 -> / - _TEMP2 -> * -> _centenasp2 `i -> 100 `i `ui -> -> 10 `i `ui `uc ]
-"224
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 224:     unidadesp2 = (TEMP2-((centenasp2*100)+(decenasp2*10)));
+"242
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 242:     unidadesp2 = (TEMP2-((centenasp2*100)+(decenasp2*10)));
 [e = _unidadesp2 -> - _TEMP2 -> + * -> _centenasp2 `i -> 100 `i * -> _decenasp2 `i -> 10 `i `ui `uc ]
-"225
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 225: }
-[e :UE 156 ]
+"245
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 245: }
+[e :UE 160 ]
 }
-"226
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 226: void ADC_GO (void){
+"246
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 246: void ADC_GO (void){
 [v _ADC_GO `(v ~T0 @X0 1 ef ]
 {
 [e :U _ADC_GO ]
 [f ]
-"227
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 227:     if (controlADC > 10){
-[e $ ! > -> _controlADC `i -> 10 `i 158  ]
+"247
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 247:     if (controlADC > 10){
+[e $ ! > -> _controlADC `i -> 10 `i 162  ]
 {
-"228
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 228:         controlADC = 0;
+"248
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 248:         controlADC = 0;
 [e = _controlADC -> -> 0 `i `uc ]
-"229
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 229:         ADCON0bits.GO_nDONE = 1;
+"249
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 249:         ADCON0bits.GO_nDONE = 1;
 [e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
-"230
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 230:         PIE1bits.TXIE = 1;
+"250
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 250:         PIE1bits.TXIE = 1;
 [e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
-"231
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 231:     }
+"251
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 251:     }
 }
-[e :U 158 ]
-"232
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 232: }
-[e :UE 157 ]
+[e :U 162 ]
+"252
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 252: }
+[e :UE 161 ]
 }
-"233
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 233: void envio (void){
+"253
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 253: void envio (void){
 [v _envio `(v ~T0 @X0 1 ef ]
 {
 [e :U _envio ]
 [f ]
-"234
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 234:     switch (var_envio){
-[e $U 161  ]
-{
-"235
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 235:         case 0:
-[e :U 162 ]
-"236
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 236:            tabla_hex(NHPOT1,&TXREG);
-[e ( _tabla_hex (2 , _NHPOT1 &U _TXREG ]
-"237
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 237:            var_envio++;
-[e ++ _var_envio -> -> 1 `i `uc ]
-"238
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 238:            break;
-[e $U 160  ]
-"239
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 239:         case 1:
-[e :U 163 ]
-"240
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 240:            tabla_hex(NLPOT1,&TXREG);
-[e ( _tabla_hex (2 , _NLPOT1 &U _TXREG ]
-"241
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 241:            var_envio++;
-[e ++ _var_envio -> -> 1 `i `uc ]
-"242
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 242:            break;
-[e $U 160  ]
-"243
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 243:         case 2:
-[e :U 164 ]
-"244
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 244:            TXREG = 44;
-[e = _TXREG -> -> 44 `i `uc ]
-"245
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 245:            var_envio++;
-[e ++ _var_envio -> -> 1 `i `uc ]
-"246
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 246:            break;
-[e $U 160  ]
-"247
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 247:         case 3:
-[e :U 165 ]
-"248
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 248:            tabla_hex(NHPOT2,&TXREG);
-[e ( _tabla_hex (2 , _NHPOT2 &U _TXREG ]
-"249
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 249:            var_envio++;
-[e ++ _var_envio -> -> 1 `i `uc ]
-"250
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 250:            break;
-[e $U 160  ]
-"251
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 251:         case 4:
-[e :U 166 ]
-"252
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 252:            tabla_hex(NLPOT2,&TXREG);
-[e ( _tabla_hex (2 , _NLPOT2 &U _TXREG ]
-"253
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 253:            var_envio++;
-[e ++ _var_envio -> -> 1 `i `uc ]
 "254
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 254:            break;
-[e $U 160  ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 254:     switch (var_envio){
+[e $U 165  ]
+{
 "255
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 255:         case 5:
-[e :U 167 ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 255:         case 0:
+[e :U 166 ]
 "256
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 256:            TXREG = 10;
-[e = _TXREG -> -> 10 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 256:            tabla_hex(NHPOT1,&TXREG);
+[e ( _tabla_hex (2 , _NHPOT1 &U _TXREG ]
 "257
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 257:            var_envio = 0;
-[e = _var_envio -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 257:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
 "258
 [; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 258:            break;
-[e $U 160  ]
+[e $U 164  ]
+"259
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 259:         case 1:
+[e :U 167 ]
 "260
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 260:     }
-}
-[e $U 160  ]
-[e :U 161 ]
-[e [\ -> _var_envio `i , $ -> 0 `i 162
- , $ -> 1 `i 163
- , $ -> 2 `i 164
- , $ -> 3 `i 165
- , $ -> 4 `i 166
- , $ -> 5 `i 167
- 160 ]
-[e :U 160 ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 260:            tabla_hex(NLPOT1,&TXREG);
+[e ( _tabla_hex (2 , _NLPOT1 &U _TXREG ]
 "261
-[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 261: }
-[e :UE 159 ]
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 261:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"262
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 262:            break;
+[e $U 164  ]
+"263
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 263:         case 2:
+[e :U 168 ]
+"264
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 264:            TXREG = 44;
+[e = _TXREG -> -> 44 `i `uc ]
+"265
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 265:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"266
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 266:            break;
+[e $U 164  ]
+"267
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 267:         case 3:
+[e :U 169 ]
+"268
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 268:            tabla_hex(NHPOT2,&TXREG);
+[e ( _tabla_hex (2 , _NHPOT2 &U _TXREG ]
+"269
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 269:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"270
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 270:            break;
+[e $U 164  ]
+"271
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 271:         case 4:
+[e :U 170 ]
+"272
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 272:            tabla_hex(NLPOT2,&TXREG);
+[e ( _tabla_hex (2 , _NLPOT2 &U _TXREG ]
+"273
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 273:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"274
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 274:            break;
+[e $U 164  ]
+"275
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 275:         case 5:
+[e :U 171 ]
+"276
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 276:            TXREG = 10;
+[e = _TXREG -> -> 10 `i `uc ]
+"277
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 277:            var_envio = 0;
+[e = _var_envio -> -> 0 `i `uc ]
+"278
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 278:            break;
+[e $U 164  ]
+"280
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 280:     }
 }
-[a 3C 68 101 118 101 108 111 112 101 100 32 66 121 0 ]
-[a 1C 76 67 68 32 76 105 98 114 97 114 121 32 102 111 114 0 ]
-[a 5C 119 119 119 46 101 108 101 99 116 114 111 83 111 109 101 46 99 111 109 0 ]
-[a 4C 101 108 101 99 116 114 111 83 111 109 101 0 ]
-[a 2C 77 80 76 65 66 32 88 67 56 0 ]
+[e $U 164  ]
+[e :U 165 ]
+[e [\ -> _var_envio `i , $ -> 0 `i 166
+ , $ -> 1 `i 167
+ , $ -> 2 `i 168
+ , $ -> 3 `i 169
+ , $ -> 4 `i 170
+ , $ -> 5 `i 171
+ 164 ]
+[e :U 164 ]
+"281
+[; ;C:/MPlab_Digital2/Digital_2/Laboratorio3_digital2.X/main.c: 281: }
+[e :UE 163 ]
+}
+[a 1C 80 79 84 49 32 80 79 84 50 32 67 79 78 84 0 ]

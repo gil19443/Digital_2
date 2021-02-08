@@ -2711,6 +2711,7 @@ uint16_t TEMP2 = 0;
 uint8_t controlADC = 0;
 uint8_t bandera1 = 0;
 uint8_t bandera2 = 0;
+uint8_t LCD = 0;
 
 
 
@@ -2721,7 +2722,7 @@ void verificacion (void);
 void mapeo (void);
 void setup(void);
 void ADC_GO (void);
-void write_data (void);
+char conversion_char (uint8_t selector);
 
 
 
@@ -2748,6 +2749,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
     }
     if (PIR1bits.RCIF == 1){
            DATO_RECIBIDO = RCREG;
+           verificacion();
         }
 
     if (PIR1bits.TXIF == 1){
@@ -2762,32 +2764,48 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 void main(void) {
     setup();
+    Lcd_Clear();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("POT1 POT2 CONT");
 
 
 
     while (1) {
+          mapeo();
           ADC_GO();
-
-              Lcd_Clear();
-            Lcd_Set_Cursor(1,1);
-            Lcd_Write_String("LCD Library for");
+          if (LCD == 0){
+            LCD = 1;
             Lcd_Set_Cursor(2,1);
-            Lcd_Write_String("MPLAB XC8");
-            _delay((unsigned long)((2000)*(400000/4000.0)));
-            Lcd_Clear();
-            Lcd_Set_Cursor(1,1);
-            Lcd_Write_String("Developed By");
-            Lcd_Set_Cursor(2,1);
-            Lcd_Write_String("electroSome");
-            _delay((unsigned long)((2000)*(400000/4000.0)));
-            Lcd_Clear();
-            Lcd_Set_Cursor(1,1);
-            Lcd_Write_String("www.electroSome.com");
-            Lcd_Clear();
-            Lcd_Set_Cursor(2,1);
-            Lcd_Write_Char('e');
-            Lcd_Write_Char('S');
-            _delay((unsigned long)((2000)*(400000/4000.0)));
+            Lcd_Write_Char(centenasp1+48);
+            Lcd_Set_Cursor(2,2);
+            Lcd_Write_Char(46);
+            Lcd_Set_Cursor(2,3);
+            Lcd_Write_Char(decenasp1+48);
+            Lcd_Set_Cursor(2,4);
+            Lcd_Write_Char(unidadesp1+48);
+            Lcd_Set_Cursor(2,5);
+            Lcd_Write_Char(32);
+          }else if (LCD == 1){
+            LCD = 2;
+            Lcd_Set_Cursor(2,6);
+            Lcd_Write_Char(centenasp2+48);
+            Lcd_Set_Cursor(2,7);
+            Lcd_Write_Char(46);
+            Lcd_Set_Cursor(2,8);
+            Lcd_Write_Char(decenasp2+48);
+            Lcd_Set_Cursor(2,9);
+            Lcd_Write_Char(unidadesp2+48);
+            Lcd_Set_Cursor(2,10);
+            Lcd_Write_Char(32);
+          }else{
+            LCD = 0;
+            Lcd_Set_Cursor(2,11);
+            Lcd_Write_Char((CONT/100)+48);
+            Lcd_Set_Cursor(2,12);
+            Lcd_Write_Char(((CONT-((CONT/100)*100))/10)+48);
+            Lcd_Set_Cursor(2,13);
+            Lcd_Write_Char((CONT-(((CONT-((CONT/100)*100))/10)))+48);
+          }
     }
 }
 
@@ -2797,7 +2815,6 @@ void main(void) {
 
 
 void setup(void) {
-    Lcd_Init();
     initUSART();
     initOsc(6);
     configADC(0,2);
@@ -2818,6 +2835,7 @@ void setup(void) {
     TRISB = 0;
     TRISAbits.TRISA0 = 1;
     TRISAbits.TRISA1 = 1;
+    Lcd_Init();
 
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
@@ -2843,20 +2861,20 @@ void verificacion (void){
     }
     if (DATO_RECIBIDO != 43 && bandera1 ==1){
         bandera1 = 0;
-        PORTB++;
+        CONT++;
     }
     if (DATO_RECIBIDO == 45){
         bandera2 = 1;
     }
     if (DATO_RECIBIDO != 45 && bandera2 ==1){
         bandera2 = 0;
-        PORTB--;
+        CONT--;
     }
-
+    PORTB = CONT;
 }
 void mapeo (void){
-    TEMP1 = ((POT1 / 5)*100);
-    TEMP2 = ((POT2 / 5)*100);
+    TEMP1 = ((POT1 *100)/51);
+    TEMP2 = ((POT2 *100)/51);
     centenasp1 = TEMP1/100;
     decenasp1 = (TEMP1-(centenasp1*100))/10;
     unidadesp1 = (TEMP1-((centenasp1*100)+(decenasp1*10)));
@@ -2864,6 +2882,8 @@ void mapeo (void){
     centenasp2 = TEMP2/100;
     decenasp2 = (TEMP2-(centenasp2*100))/10;
     unidadesp2 = (TEMP2-((centenasp2*100)+(decenasp2*10)));
+
+
 }
 void ADC_GO (void){
     if (controlADC > 10){
