@@ -137,7 +137,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
 [v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
 "149 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 149:                 PORTCbits.RC1 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 149:                 esclavo3 = spiRead();
 [c E1307 32 33 34 35 36 37 .. ]
 [n E1307 . SPI_MASTER_OSC_DIV4 SPI_MASTER_OSC_DIV16 SPI_MASTER_OSC_DIV64 SPI_MASTER_TMR2 SPI_SLAVE_SS_EN SPI_SLAVE_SS_DIS  ]
 [c E1315 0 128 .. ]
@@ -462,13 +462,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "46
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 46:     Lcd_Set_Cursor(1,1);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 46:     Lcd_Set_Cursor(1,0);
 [v _var_envio `uc ~T0 @X0 1 e ]
 [i _var_envio
 -> -> 0 `i `uc
 ]
 "47
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 47:     Lcd_Write_String("POT1 CONT LM35");
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 47:     Lcd_Write_String("POT1 LM35 CONT");
 [v _unidadesp1 `uc ~T0 @X0 1 e ]
 [i _unidadesp1
 -> -> 0 `i `uc
@@ -556,11 +556,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 80:         Lcd_Set_Cursor(2,13);
 [e ( _setup ..  ]
 "81
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 81:         Lcd_Write_Char((esclavo2-(((esclavo2-((esclavo2/100)*100))/10)))+48);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 81:         Lcd_Write_Char((esclavo2-((((esclavo2-((esclavo2/100)*100))/10)*10)+((esclavo2/100)*100)))+48);
 [e ( _Lcd_Clear ..  ]
 "82
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 82:     }
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
 "83
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 83: }
 [e ( _Lcd_Write_String (1 :s 1C ]
@@ -657,7 +657,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 13 `i `uc ]
 "117
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 117:     INTCONbits.TMR0IE = 1;
-[e ( _Lcd_Write_Char (1 -> + - -> _esclavo2 `i / - -> _esclavo2 `i * / -> _esclavo2 `i -> 100 `i -> 100 `i -> 10 `i -> 48 `i `uc ]
+[e ( _Lcd_Write_Char (1 -> + - -> _esclavo2 `i + * / - -> _esclavo2 `i * / -> _esclavo2 `i -> 100 `i -> 100 `i -> 10 `i -> 10 `i * / -> _esclavo2 `i -> 100 `i -> 100 `i -> 48 `i `uc ]
 "118
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 118:     INTCONbits.T0IF = 0;
 }
@@ -690,196 +690,187 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 129:         controles = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
 "130
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 130:         switch(slave){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 130:         PORTCbits.RC2 = 1;
 [e = _PORTC -> -> 0 `i `uc ]
 "131
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 131:             case 0:
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 131:         PORTCbits.RC1 = 1;
 [e = _PORTD -> -> 0 `i `uc ]
 "132
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 132:                 PORTCbits.RC2 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 132:         PORTCbits.RC0 = 1;
 [e = _TRISD -> -> 0 `i `uc ]
 "133
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 133:                 PORTCbits.RC1 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 133:         switch(slave){
 [e = _PORTB -> -> 0 `i `uc ]
 "134
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 134:                 PORTCbits.RC0 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 134:             case 0:
 [e = _TRISE -> -> 0 `i `uc ]
 "135
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 135:                 SSPBUF = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 135:                 PORTCbits.RC0 = 0;
 [e = _PORTE -> -> 0 `i `uc ]
 "136
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 136:                 esclavo1 = spiRead();
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 136:                 SSPBUF = 0;
 [e = _PORTA -> -> 0 `i `uc ]
 "137
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 137:                 slave++;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 137:                 esclavo1 = spiRead();
 [e = _TRISA -> -> 0 `i `uc ]
 "138
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 138:                 break;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 138:                 slave++;
 [e = _TRISB -> -> 0 `i `uc ]
 "139
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 139:             case 1:
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 139:                 break;
 [e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
 "140
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 140:                 PORTCbits.RC2 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 140:             case 1:
 [e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
 "141
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 141:                 PORTCbits.RC1 = 0;
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
 "142
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 142:                 PORTCbits.RC0 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 142:                 SSPBUF = 0;
 [e ( _Lcd_Init ..  ]
 "144
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 144:                 esclavo2 = spiRead();
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 144:                 slave++;
 [e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
 "145
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 145:                 slave++;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 145:                 break;
 [e = . . _TRISCbits 0 3 -> -> 0 `i `uc ]
 "146
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 146:                 break;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 146:             case 2:
 [e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
 "147
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 147:             case 2:
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 147:                 PORTCbits.RC2 = 0;
 [e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
 "148
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 148:                 PORTCbits.RC2 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 148:                 SSPBUF = 0;
 [e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
 "149
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 149:                 PORTCbits.RC1 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 149:                 esclavo3 = spiRead();
 [e ( _spiInit (4 , , , . `E1307 0 . `E1315 0 . `E1319 1 . `E1323 0 ]
 "151
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 151:                 SSPBUF = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 151:                 break;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "152
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 152:                 esclavo3 = spiRead();
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 152:         }
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "153
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 153:                 slave = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 153:       }
 [e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
 "154
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 154:                 break;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 154:    }
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
 "155
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 155:         }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 155: void envio (void){
 [e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
 "156
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 156:       }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 156:     switch (var_envio){
 [e = . . _PIR1bits 0 4 -> -> 0 `i `uc ]
 "157
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 157:    }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 157:         case 0:
 [e :UE 145 ]
 }
 "158
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 158: void envio (void){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 158:            tabla_hex(((esclavo1 & 0b11110000)>>4),&TXREG);
 [v _TX_GO `(v ~T0 @X0 1 ef ]
 {
 [e :U _TX_GO ]
 [f ]
 "159
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 159:     switch (var_envio){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 159:            var_envio++;
 [e $ ! == -> _controles `i -> 10 `i 147  ]
 {
 "160
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 160:         case 0:
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 160:            break;
 [e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
 "161
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 161:            tabla_hex(((esclavo1 & 0b11110000)>>4),&TXREG);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 161:         case 1:
 }
 [e :U 147 ]
 "162
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 162:            var_envio++;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 162:            tabla_hex((esclavo1 & 0b00001111),&TXREG);
 [e :UE 146 ]
 }
 "163
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 163:            break;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 163:            var_envio++;
 [v _envio_esclavos `(v ~T0 @X0 1 ef ]
 {
 [e :U _envio_esclavos ]
 [f ]
 "164
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 164:         case 1:
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 164:            break;
 [e $ ! > -> _controles `i -> 50 `i 149  ]
 {
 "165
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 165:            tabla_hex((esclavo1 & 0b00001111),&TXREG);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 165:         case 2:
 [e = _controles -> -> 0 `i `uc ]
 "166
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 166:            var_envio++;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 166:            TXREG = 44;
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+"167
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 167:            var_envio++;
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+"168
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 168:            break;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+"169
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 169:         case 3:
 [e $U 151  ]
 {
-"167
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 167:            break;
-[e :U 152 ]
-"168
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 168:         case 2:
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"169
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 169:            TXREG = 44;
-[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
 "170
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 170:            var_envio++;
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 170:            tabla_hex(((esclavo2 & 0b11110000)>>4),&TXREG);
+[e :U 152 ]
 "171
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 171:            break;
-[e = _SSPBUF -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 171:            var_envio++;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
 "172
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 172:         case 3:
-[e = _esclavo1 -> ( _spiRead ..  `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 172:            break;
+[e = _SSPBUF -> -> 0 `i `uc ]
 "173
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 173:            tabla_hex(((esclavo2 & 0b11110000)>>4),&TXREG);
-[e ++ _slave -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 173:         case 4:
+[e = _esclavo1 -> ( _spiRead ..  `uc ]
 "174
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 174:            var_envio++;
-[e $U 150  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 174:            tabla_hex((esclavo2 & 0b00001111),&TXREG);
+[e ++ _slave -> -> 1 `i `uc ]
 "175
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 175:            break;
-[e :U 153 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 175:            var_envio++;
+[e $U 150  ]
 "176
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 176:         case 4:
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 176:            break;
+[e :U 153 ]
 "177
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 177:            tabla_hex((esclavo2 & 0b00001111),&TXREG);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 177:         case 5:
 [e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
 "178
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 178:            var_envio++;
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 178:            TXREG = 44;
+[e = _SSPBUF -> -> 0 `i `uc ]
 "179
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 179:            break;
-[e = _SSPBUF -> -> 0 `i `uc ]
-"180
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 180:         case 5:
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 179:            var_envio++;
 [e = _esclavo2 -> ( _spiRead ..  `uc ]
-"181
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 181:            TXREG = 44;
+"180
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 180:            break;
 [e ++ _slave -> -> 1 `i `uc ]
+"181
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 181:         case 6:
+[e $U 150  ]
 "182
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 182:            var_envio++;
-[e $U 150  ]
-"183
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 183:            break;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 182:            tabla_hex(((esclavo3 & 0b11110000)>>4),&TXREG);
 [e :U 154 ]
-"184
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 184:         case 6:
+"183
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 183:            var_envio++;
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"185
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 185:            tabla_hex(((esclavo3 & 0b11110000)>>4),&TXREG);
-[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
-"186
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 186:            var_envio++;
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-"187
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 187:            break;
+"184
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 184:            break;
 [e = _SSPBUF -> -> 0 `i `uc ]
-"188
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 188:         case 7:
+"185
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 185:         case 7:
 [e = _esclavo3 -> ( _spiRead ..  `uc ]
-"189
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 189:            tabla_hex((esclavo3 & 0b00001111),&TXREG);
+"186
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 186:            tabla_hex((esclavo3 & 0b00001111),&TXREG);
 [e = _slave -> -> 0 `i `uc ]
-"190
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 190:            var_envio++;
+"187
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 187:            var_envio++;
 [e $U 150  ]
-"191
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 191:            break;
+"188
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 188:            break;
 }
 [e $U 150  ]
 [e :U 151 ]
@@ -888,113 +879,113 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 154
  150 ]
 [e :U 150 ]
-"192
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 192:         case 8:
+"189
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 189:         case 8:
 }
 [e :U 149 ]
-"193
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 193:            TXREG = 13;
+"190
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 190:            TXREG = 13;
 [e :UE 148 ]
 }
-"194
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 194:            var_envio = 0;
+"191
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 191:            var_envio = 0;
 [v _envio `(v ~T0 @X0 1 ef ]
 {
 [e :U _envio ]
 [f ]
-"195
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 195:            break;
+"192
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 192:            break;
 [e $U 157  ]
 {
-"196
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 196:     }
+"193
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 193:     }
 [e :U 158 ]
-"197
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 197: }
+"194
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 194: }
 [e ( _tabla_hex (2 , -> >> & -> _esclavo1 `i -> 240 `i -> 4 `i `uc &U _TXREG ]
-"198
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 198: void mapeo (void){
+"195
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 195: void mapeo (void){
 [e ++ _var_envio -> -> 1 `i `uc ]
-"199
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 199:     uint16_t TEMP1 = 0;
+"196
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 196:     uint16_t TEMP1 = 0;
 [e $U 156  ]
-"200
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 200:     uint16_t TEMP2 = 0;
+"197
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 197:     uint16_t TEMP2 = 0;
 [e :U 159 ]
-"201
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 201:     TEMP1 = ((esclavo1 *100)/51);
+"198
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 198:     TEMP1 = ((esclavo1 *100)/51);
 [e ( _tabla_hex (2 , -> & -> _esclavo1 `i -> 15 `i `uc &U _TXREG ]
-"202
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 202:     TEMP2 = ((esclavo3 *10)/17);
+"199
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 199:     TEMP2 = ((esclavo3 *10)/17);
 [e ++ _var_envio -> -> 1 `i `uc ]
-"203
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 203: 
+"200
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 200: 
 [e $U 156  ]
-"204
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 204:     centenasp1 = TEMP1/100;
+"201
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 201:     centenasp1 = TEMP1/100;
 [e :U 160 ]
+"202
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 202:     decenasp1 = (TEMP1-(centenasp1*100))/10;
+[e = _TXREG -> -> 44 `i `uc ]
+"203
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 203:     unidadesp1 = (TEMP1-((centenasp1*100)+(decenasp1*10)));
+[e ++ _var_envio -> -> 1 `i `uc ]
+"204
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 204: 
+[e $U 156  ]
 "205
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 205:     decenasp1 = (TEMP1-(centenasp1*100))/10;
-[e = _TXREG -> -> 44 `i `uc ]
-"206
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 206:     unidadesp1 = (TEMP1-((centenasp1*100)+(decenasp1*10)));
-[e ++ _var_envio -> -> 1 `i `uc ]
-"207
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 207: 
-[e $U 156  ]
-"208
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 208:     centenasp2 = TEMP2/100;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 205:     centenasp2 = TEMP2/100;
 [e :U 161 ]
-"209
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 209:     decenasp2 = (TEMP2-(centenasp2*100))/10;
+"206
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 206:     decenasp2 = (TEMP2-(centenasp2*100))/10;
 [e ( _tabla_hex (2 , -> >> & -> _esclavo2 `i -> 240 `i -> 4 `i `uc &U _TXREG ]
-"210
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 210:     unidadesp2 = (TEMP2-((centenasp2*100)+(decenasp2*10)));
+"207
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 207:     unidadesp2 = (TEMP2-((centenasp2*100)+(decenasp2*10)));
 [e ++ _var_envio -> -> 1 `i `uc ]
-"211
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 211: }
+"208
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 208: }
 [e $U 156  ]
-"212
+"209
 [e :U 162 ]
-"213
+"210
 [e ( _tabla_hex (2 , -> & -> _esclavo2 `i -> 15 `i `uc &U _TXREG ]
-"214
+"211
 [e ++ _var_envio -> -> 1 `i `uc ]
-"215
+"212
 [e $U 156  ]
-"216
+"213
 [e :U 163 ]
-"217
+"214
 [e = _TXREG -> -> 44 `i `uc ]
-"218
+"215
 [e ++ _var_envio -> -> 1 `i `uc ]
-"219
+"216
 [e $U 156  ]
-"220
+"217
 [e :U 164 ]
-"221
+"218
 [e ( _tabla_hex (2 , -> >> & -> _esclavo3 `i -> 240 `i -> 4 `i `uc &U _TXREG ]
-"222
+"219
 [e ++ _var_envio -> -> 1 `i `uc ]
-"223
+"220
 [e $U 156  ]
-"224
+"221
 [e :U 165 ]
-"225
+"222
 [e ( _tabla_hex (2 , -> & -> _esclavo3 `i -> 15 `i `uc &U _TXREG ]
-"226
+"223
 [e ++ _var_envio -> -> 1 `i `uc ]
-"227
+"224
 [e $U 156  ]
-"228
+"225
 [e :U 166 ]
-"229
+"226
 [e = _TXREG -> -> 13 `i `uc ]
-"230
+"227
 [e = _var_envio -> -> 0 `i `uc ]
-"231
+"228
 [e $U 156  ]
-"232
+"229
 }
 [e $U 156  ]
 [e :U 157 ]
@@ -1009,37 +1000,37 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 8 `i 166
  156 ]
 [e :U 156 ]
-"233
+"230
 [e :UE 155 ]
 }
-"234
+"231
 [v _mapeo `(v ~T0 @X0 1 ef ]
 {
 [e :U _mapeo ]
 [f ]
-"235
+"232
 [v _TEMP1 `ui ~T0 @X0 1 a ]
 [e = _TEMP1 -> -> 0 `i `ui ]
-"236
+"233
 [v _TEMP2 `ui ~T0 @X0 1 a ]
 [e = _TEMP2 -> -> 0 `i `ui ]
-"237
+"234
 [e = _TEMP1 -> / * -> _esclavo1 `i -> 100 `i -> 51 `i `ui ]
-"238
+"235
 [e = _TEMP2 -> / * -> _esclavo3 `i -> 10 `i -> 17 `i `ui ]
-"240
+"237
 [e = _centenasp1 -> / _TEMP1 -> -> 100 `i `ui `uc ]
-"241
+"238
 [e = _decenasp1 -> / - _TEMP1 -> * -> _centenasp1 `i -> 100 `i `ui -> -> 10 `i `ui `uc ]
-"242
+"239
 [e = _unidadesp1 -> - _TEMP1 -> + * -> _centenasp1 `i -> 100 `i * -> _decenasp1 `i -> 10 `i `ui `uc ]
-"244
+"241
 [e = _centenasp2 -> / _TEMP2 -> -> 100 `i `ui `uc ]
-"245
+"242
 [e = _decenasp2 -> / - _TEMP2 -> * -> _centenasp2 `i -> 100 `i `ui -> -> 10 `i `ui `uc ]
-"246
+"243
 [e = _unidadesp2 -> - _TEMP2 -> + * -> _centenasp2 `i -> 100 `i * -> _decenasp2 `i -> 10 `i `ui `uc ]
-"247
+"244
 [e :UE 167 ]
 }
-[a 1C 80 79 84 49 32 67 79 78 84 32 76 77 51 53 0 ]
+[a 1C 80 79 84 49 32 76 77 51 53 32 67 79 78 84 0 ]

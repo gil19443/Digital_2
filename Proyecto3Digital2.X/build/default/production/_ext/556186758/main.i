@@ -2766,8 +2766,8 @@ void __attribute__((picinterrupt(("")))) isr(void){
 void main(void) {
     setup();
     Lcd_Clear();
-    Lcd_Set_Cursor(1,1);
-    Lcd_Write_String("POT1 CONT LM35");
+    Lcd_Set_Cursor(1,0);
+    Lcd_Write_String("POT1 LM35 CONT");
 
 
 
@@ -2801,7 +2801,7 @@ void main(void) {
         Lcd_Set_Cursor(2,12);
         Lcd_Write_Char(((esclavo2-((esclavo2/100)*100))/10)+48);
         Lcd_Set_Cursor(2,13);
-        Lcd_Write_Char((esclavo2-(((esclavo2-((esclavo2/100)*100))/10)))+48);
+        Lcd_Write_Char((esclavo2-((((esclavo2-((esclavo2/100)*100))/10)*10)+((esclavo2/100)*100)))+48);
     }
 }
 
@@ -2850,27 +2850,24 @@ void TX_GO (void){
 void envio_esclavos(void){
     if (controles > 50){
         controles = 0;
+        PORTCbits.RC2 = 1;
+        PORTCbits.RC1 = 1;
+        PORTCbits.RC0 = 1;
         switch(slave){
             case 0:
-                PORTCbits.RC2 = 1;
-                PORTCbits.RC1 = 1;
                 PORTCbits.RC0 = 0;
                 SSPBUF = 0;
                 esclavo1 = spiRead();
                 slave++;
                 break;
             case 1:
-                PORTCbits.RC2 = 1;
                 PORTCbits.RC1 = 0;
-                PORTCbits.RC0 = 1;
                 SSPBUF = 0;
                 esclavo2 = spiRead();
                 slave++;
                 break;
             case 2:
                 PORTCbits.RC2 = 0;
-                PORTCbits.RC1 = 1;
-                PORTCbits.RC0 = 1;
                 SSPBUF = 0;
                 esclavo3 = spiRead();
                 slave = 0;

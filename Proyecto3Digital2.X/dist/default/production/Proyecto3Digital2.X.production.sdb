@@ -71,9 +71,9 @@ SPI_ACTIVE_2_IDLE 64
 [v _TX_GO TX_GO `(v  1 e 1 0 ]
 "163
 [v _envio_esclavos envio_esclavos `(v  1 e 1 0 ]
-"194
+"191
 [v _envio envio `(v  1 e 1 0 ]
-"234
+"231
 [v _mapeo mapeo `(v  1 e 1 0 ]
 "12 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -384,14 +384,14 @@ SPI_ACTIVE_2_IDLE 64
 {
 "56
 } 0
-"234 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c
+"231 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c
 [v _mapeo mapeo `(v  1 e 1 0 ]
 {
-"236
+"233
 [v mapeo@TEMP2 TEMP2 `ui  1 a 2 25 ]
-"235
+"232
 [v mapeo@TEMP1 TEMP1 `ui  1 a 2 23 ]
-"247
+"244
 } 0
 "15 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -420,12 +420,12 @@ SPI_ACTIVE_2_IDLE 64
 {
 [v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
 "6
-[v ___bmul@product product `uc  1 a 1 1 ]
+[v ___bmul@product product `uc  1 a 1 15 ]
 "4
 [v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
-[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 14 ]
 "6
-[v ___bmul@multiplier multiplier `uc  1 a 1 2 ]
+[v ___bmul@multiplier multiplier `uc  1 a 1 16 ]
 "51
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\awdiv.c
@@ -444,7 +444,7 @@ SPI_ACTIVE_2_IDLE 64
 "163 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c
 [v _envio_esclavos envio_esclavos `(v  1 e 1 0 ]
 {
-"193
+"190
 } 0
 "49 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c
 [v _spiRead spiRead `(uc  1 e 1 0 ]
@@ -520,10 +520,10 @@ SPI_ACTIVE_2_IDLE 64
 {
 "74
 } 0
-"194
+"191
 [v _envio envio `(v  1 e 1 0 ]
 {
-"233
+"230
 } 0
 "11 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/TablaACSII_HEX.c
 [v _tabla_hex tabla_hex `(v  1 e 1 0 ]
