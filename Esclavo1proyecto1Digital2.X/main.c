@@ -11,7 +11,7 @@
 #include <stdint.h>
 #include "Libreria2.h"
 #include "configuracionADC.h"
-#include "initSPI.h"
+#include "SPI.h"
 //******************************************************************************
 //                             Palabras de configuracion 
 //******************************************************************************
@@ -85,7 +85,6 @@ void main(void) {
 //******************************************************************************
 
 void setup(void) {
-    initSPISLAVE(0);
     initOsc(6);//configura el osculador interno a 4Mhz
     configADC(0,2); //canal 0 y velocidad FOSC/32
     OPTION_REG = 0b01010111; //configuracion para activar las PULL - UPS del puerto B y timer 0
@@ -101,7 +100,10 @@ void setup(void) {
     TRISE = 0; // se marca el puerto E como salida
     PORTE = 0;  //se resetea el puerto E
     PORTA = 0;
-    TRISAbits.TRISA0 = 0;
+    TRISAbits.TRISA0 = 1;
+    TRISCbits.TRISC5 = 0;
+    TRISAbits.TRISA5 = 1;
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 //****************************interrupcinoes************************************
     INTCONbits.GIE = 1; //se activan las interrupciones globales 
     INTCONbits.PEIE = 1; // se activan las interrupciones perifericas 
@@ -113,6 +115,7 @@ void setup(void) {
 }
 void GO_ADC (void){
        if (ADC_GO > 10){
+           ADC_GO = 0;
            ADCON0bits.GO_nDONE = 1;
        } 
     }

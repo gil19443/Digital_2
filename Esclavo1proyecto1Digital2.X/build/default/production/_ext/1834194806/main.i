@@ -2645,15 +2645,41 @@ void initOsc (uint8_t option);
 void configADC(uint8_t canal, uint8_t vel);
 # 13 "C:/MPlab_Digital2/Digital_2/Esclavo1proyecto1Digital2.X/main.c" 2
 
-# 1 "C:/MPlab_Digital2/Digital_2/Esclavo1proyecto1Digital2.X/initSPI.h" 1
-# 10 "C:/MPlab_Digital2/Digital_2/Esclavo1proyecto1Digital2.X/initSPI.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 10 "C:/MPlab_Digital2/Digital_2/Esclavo1proyecto1Digital2.X/initSPI.h" 2
+# 1 "C:/MPlab_Digital2/Digital_2/Esclavo1proyecto1Digital2.X/SPI.h" 1
+# 17 "C:/MPlab_Digital2/Digital_2/Esclavo1proyecto1Digital2.X/SPI.h"
+typedef enum
+{
+    SPI_MASTER_OSC_DIV4 = 0b00100000,
+    SPI_MASTER_OSC_DIV16 = 0b00100001,
+    SPI_MASTER_OSC_DIV64 = 0b00100010,
+    SPI_MASTER_TMR2 = 0b00100011,
+    SPI_SLAVE_SS_EN = 0b00100100,
+    SPI_SLAVE_SS_DIS = 0b00100101
+}Spi_Type;
+
+typedef enum
+{
+    SPI_DATA_SAMPLE_MIDDLE = 0b00000000,
+    SPI_DATA_SAMPLE_END = 0b10000000
+}Spi_Data_Sample;
+
+typedef enum
+{
+    SPI_CLOCK_IDLE_HIGH = 0b00010000,
+    SPI_CLOCK_IDLE_LOW = 0b00000000
+}Spi_Clock_Idle;
+
+typedef enum
+{
+    SPI_IDLE_2_ACTIVE = 0b00000000,
+    SPI_ACTIVE_2_IDLE = 0b01000000
+}Spi_Transmit_Edge;
 
 
-
-void initSPIMASTER(uint8_t modo);
-void initSPISLAVE(uint8_t modos);
+void spiInit(Spi_Type, Spi_Data_Sample, Spi_Clock_Idle, Spi_Transmit_Edge);
+void spiWrite(char);
+unsigned spiDataReady();
+char spiRead();
 # 14 "C:/MPlab_Digital2/Digital_2/Esclavo1proyecto1Digital2.X/main.c" 2
 
 
@@ -2729,7 +2755,6 @@ void main(void) {
 
 
 void setup(void) {
-    initSPISLAVE(0);
     initOsc(6);
     configADC(0,2);
     OPTION_REG = 0b01010111;
@@ -2745,7 +2770,10 @@ void setup(void) {
     TRISE = 0;
     PORTE = 0;
     PORTA = 0;
-    TRISAbits.TRISA0 = 0;
+    TRISAbits.TRISA0 = 1;
+    TRISCbits.TRISC5 = 0;
+    TRISAbits.TRISA5 = 1;
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
@@ -2757,6 +2785,7 @@ void setup(void) {
 }
 void GO_ADC (void){
        if (ADC_GO > 10){
+           ADC_GO = 0;
            ADCON0bits.GO_nDONE = 1;
        }
     }

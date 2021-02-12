@@ -2494,21 +2494,6 @@ extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
 # 10 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c" 2
 
-# 1 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Display8bits.h" 1
-# 11 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Display8bits.h"
-void Lcd_Port(char a);
-void Lcd_Cmd(char a);
-void Lcd_Clear(void);
-void Lcd_Set_Cursor(char a, char b);
-void Lcd_Init(void);
-void Lcd_Write_Char(char a);
-void Lcd_Write_String(char *a);
-void Lcd_Shift_Right(void);
-void Lcd_Shift_Left(void);
-# 11 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c" 2
-
-# 1 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.h" 1
-# 10 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
 typedef signed char int8_t;
@@ -2642,18 +2627,62 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 10 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.h" 2
+# 11 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c" 2
 
-
-
-void initSPIMASTER(uint8_t modo);
-void initSPISLAVE(uint8_t modos);
+# 1 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Display8bits.h" 1
+# 11 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Display8bits.h"
+void Lcd_Port(char a);
+void Lcd_Cmd(char a);
+void Lcd_Clear(void);
+void Lcd_Set_Cursor(char a, char b);
+void Lcd_Init(void);
+void Lcd_Write_Char(char a);
+void Lcd_Write_String(char *a);
+void Lcd_Shift_Right(void);
+void Lcd_Shift_Left(void);
 # 12 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c" 2
+
+# 1 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.h" 1
+# 17 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.h"
+typedef enum
+{
+    SPI_MASTER_OSC_DIV4 = 0b00100000,
+    SPI_MASTER_OSC_DIV16 = 0b00100001,
+    SPI_MASTER_OSC_DIV64 = 0b00100010,
+    SPI_MASTER_TMR2 = 0b00100011,
+    SPI_SLAVE_SS_EN = 0b00100100,
+    SPI_SLAVE_SS_DIS = 0b00100101
+}Spi_Type;
+
+typedef enum
+{
+    SPI_DATA_SAMPLE_MIDDLE = 0b00000000,
+    SPI_DATA_SAMPLE_END = 0b10000000
+}Spi_Data_Sample;
+
+typedef enum
+{
+    SPI_CLOCK_IDLE_HIGH = 0b00010000,
+    SPI_CLOCK_IDLE_LOW = 0b00000000
+}Spi_Clock_Idle;
+
+typedef enum
+{
+    SPI_IDLE_2_ACTIVE = 0b00000000,
+    SPI_ACTIVE_2_IDLE = 0b01000000
+}Spi_Transmit_Edge;
+
+
+void spiInit(Spi_Type, Spi_Data_Sample, Spi_Clock_Idle, Spi_Transmit_Edge);
+void spiWrite(char);
+unsigned spiDataReady();
+char spiRead();
+# 13 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c" 2
 
 # 1 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/usart9600.h" 1
 # 15 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/usart9600.h"
 void initUSART(void);
-# 13 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c" 2
+# 14 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c" 2
 
 # 1 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Libreria2.h" 1
 # 15 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Libreria2.h"
@@ -2661,7 +2690,7 @@ void initUSART(void);
 # 15 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Libreria2.h" 2
 
 void initOsc (uint8_t option);
-# 14 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c" 2
+# 15 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c" 2
 
 # 1 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/TablaACSII_HEX.h" 1
 # 16 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/TablaACSII_HEX.h"
@@ -2670,7 +2699,7 @@ void initOsc (uint8_t option);
 
 
 void tabla_hex (uint8_t selector, volatile uint8_t *port);
-# 15 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c" 2
+# 16 "C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c" 2
 
 
 
@@ -2720,7 +2749,7 @@ void envio_esclavos(void);
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
-    if (INTCONbits.T0IF = 0){
+    if (INTCONbits.T0IF = 1){
         TMR0 = 236;
         controles++;
         INTCONbits.TMR0IF = 0;
@@ -2743,6 +2772,7 @@ void main(void) {
 
 
     while (1) {
+        PORTB = slave;
         TX_GO();
         envio_esclavos();
         mapeo();
@@ -2779,14 +2809,12 @@ void main(void) {
 
 
 void setup(void) {
-    initSPIMASTER(2);
     initUSART();
     initOsc(6);
     OPTION_REG = 0b11010111;
     ANSEL = 0;
     ANSELH = 0;
     PORTC = 0;
-    TRISC = 0x80;
     PORTD = 0;
     TRISD = 0;
     PORTB = 0;
@@ -2805,6 +2833,7 @@ void setup(void) {
     TRISCbits.TRISC0 = 0;
     TRISCbits.TRISC1 = 0;
     TRISCbits.TRISC2 = 0;
+    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
@@ -2812,8 +2841,6 @@ void setup(void) {
     INTCONbits.T0IF = 0;
     PIE1bits.TXIE = 1;
     PIR1bits.TXIF = 0;
-    PIE1bits.SSPIE = 1;
-    PIR1bits.SSPIF = 0;
 }
 void TX_GO (void){
     if (controles == 10){
@@ -2823,31 +2850,34 @@ void TX_GO (void){
 void envio_esclavos(void){
     if (controles > 50){
         controles = 0;
-        PORTCbits.RC0 = 1;
-        PORTCbits.RC1 = 1;
-        PORTCbits.RC2 = 1;
-            switch(slave){
-                case 0:
-                    PORTCbits.RC0 = 0;
-                    while ( !SSPSTATbits.BF );
-                    esclavo1 = SSPBUF;
-                    slave++;
-                    break;
-                case 1:
-                    PORTCbits.RC1 = 0;
-                    while ( !SSPSTATbits.BF );
-                    esclavo2 = SSPBUF;
-                    slave++;
-                    break;
-                case 2:
-                    PORTCbits.RC2 = 1;
-                    while ( !SSPSTATbits.BF );
-                    esclavo3 = SSPBUF;
-                    slave = 0;
-                    break;
-            }
+        switch(slave){
+            case 0:
+                PORTCbits.RC2 = 1;
+                PORTCbits.RC1 = 1;
+                PORTCbits.RC0 = 0;
+                SSPBUF = 0;
+                esclavo1 = spiRead();
+                slave++;
+                break;
+            case 1:
+                PORTCbits.RC2 = 1;
+                PORTCbits.RC1 = 0;
+                PORTCbits.RC0 = 1;
+                SSPBUF = 0;
+                esclavo2 = spiRead();
+                slave++;
+                break;
+            case 2:
+                PORTCbits.RC2 = 0;
+                PORTCbits.RC1 = 1;
+                PORTCbits.RC0 = 1;
+                SSPBUF = 0;
+                esclavo3 = spiRead();
+                slave = 0;
+                break;
         }
-    }
+      }
+   }
 void envio (void){
     switch (var_envio){
         case 0:
@@ -2883,7 +2913,7 @@ void envio (void){
            var_envio++;
            break;
         case 8:
-           TXREG = 11;
+           TXREG = 13;
            var_envio = 0;
            break;
     }

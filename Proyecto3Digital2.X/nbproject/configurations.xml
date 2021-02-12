@@ -5,10 +5,10 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Display8bits.h</itemPath>
-      <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.h</itemPath>
       <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Libreria2.h</itemPath>
       <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/TablaACSII_HEX.h</itemPath>
       <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/usart9600.h</itemPath>
+      <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,11 +18,11 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Display8bits.c</itemPath>
-      <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c</itemPath>
       <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/librerias2.c</itemPath>
       <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c</itemPath>
       <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/TablaACSII_HEX.c</itemPath>
       <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/usart9600.c</itemPath>
+      <itemPath>C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

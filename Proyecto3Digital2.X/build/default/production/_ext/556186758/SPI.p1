@@ -1,5 +1,27 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"2183 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
+"12 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 12: void spiInit(Spi_Type sType, Spi_Data_Sample sDataSample, Spi_Clock_Idle sClockIdle, Spi_Transmit_Edge sTransmitEdge)
+[c E1264 32 33 34 35 36 37 .. ]
+[n E1264 . SPI_MASTER_OSC_DIV4 SPI_MASTER_OSC_DIV16 SPI_MASTER_OSC_DIV64 SPI_MASTER_TMR2 SPI_SLAVE_SS_EN SPI_SLAVE_SS_DIS  ]
+[c E1272 0 128 .. ]
+[n E1272 . SPI_DATA_SAMPLE_MIDDLE SPI_DATA_SAMPLE_END  ]
+[c E1276 16 0 .. ]
+[n E1276 . SPI_CLOCK_IDLE_HIGH SPI_CLOCK_IDLE_LOW  ]
+[c E1280 0 64 .. ]
+[n E1280 . SPI_IDLE_2_ACTIVE SPI_ACTIVE_2_IDLE  ]
+"4463 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 4463: extern volatile __bit TRISC5 __attribute__((address(0x43D)));
+[v _TRISC5 `Vb ~T0 @X0 0 e@1085 ]
+"2177
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2177: extern volatile unsigned char SSPSTAT __attribute__((address(0x094)));
+[v _SSPSTAT `Vuc ~T0 @X0 0 e@148 ]
+"4457
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 4457: extern volatile __bit TRISC3 __attribute__((address(0x43B)));
+[v _TRISC3 `Vb ~T0 @X0 0 e@1083 ]
+"850
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 850: extern volatile unsigned char SSPCON __attribute__((address(0x014)));
+[v _SSPCON `Vuc ~T0 @X0 0 e@20 ]
+"2183
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2183:     struct {
 [s S82 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S82 . BF UA R_nW S P D_nA CKE SMP ]
@@ -34,21 +56,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2231
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2231: extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0x094)));
 [v _SSPSTATbits `VS81 ~T0 @X0 0 e@148 ]
-"856
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 856:     struct {
-[s S30 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S30 . SSPM CKP SSPEN SSPOV WCOL ]
-"863
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 863:     struct {
-[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . SSPM0 SSPM1 SSPM2 SSPM3 ]
-"855
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 855: typedef union {
-[u S29 `S30 1 `S31 1 ]
-[n S29 . . . ]
-"870
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 870: extern volatile SSPCONbits_t SSPCONbits __attribute__((address(0x014)));
-[v _SSPCONbits `VS29 ~T0 @X0 0 e@20 ]
+"843
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 843: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
+[v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
 "54 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -283,185 +293,155 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"13 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 13: void initSPIMASTER(uint8_t modo) {
-[v _initSPIMASTER `(v ~T0 @X0 1 ef1`uc ]
+"12 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 12: void spiInit(Spi_Type sType, Spi_Data_Sample sDataSample, Spi_Clock_Idle sClockIdle, Spi_Transmit_Edge sTransmitEdge)
+[v _spiInit `(v ~T0 @X0 1 ef4`E1264`E1272`E1276`E1280 ]
+"13
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 13: {
 {
-[e :U _initSPIMASTER ]
-[v _modo `uc ~T0 @X0 1 r1 ]
+[e :U _spiInit ]
+"12
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 12: void spiInit(Spi_Type sType, Spi_Data_Sample sDataSample, Spi_Clock_Idle sClockIdle, Spi_Transmit_Edge sTransmitEdge)
+[v _sType `E1264 ~T0 @X0 1 r1 ]
+[v _sDataSample `E1272 ~T0 @X0 1 r2 ]
+[v _sClockIdle `E1276 ~T0 @X0 1 r3 ]
+[v _sTransmitEdge `E1280 ~T0 @X0 1 r4 ]
+"13
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 13: {
 [f ]
 "14
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 14:         SSPSTATbits.SMP = 1;
-[e = . . _SSPSTATbits 0 7 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 14:     TRISC5 = 0;
+[e = _TRISC5 -> -> 0 `i `b ]
 "15
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 15:         SSPSTATbits.CKE = 1;
-[e = . . _SSPSTATbits 0 6 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 15:     if(sType & 0b00000100)
+[e $ ! != & -> _sType `ui -> -> 4 `i `ui -> -> 0 `i `ui 139  ]
 "16
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 16:         SSPCONbits.SSPEN = 1;
-[e = . . _SSPCONbits 0 2 -> -> 1 `i `uc ]
-"17
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 17:         SSPCONbits.CKP = 0;
-[e = . . _SSPCONbits 0 1 -> -> 0 `i `uc ]
-"18
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 18:         switch(modo){
-[e $U 140  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 16:     {
 {
+"17
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 17:         SSPSTAT = sTransmitEdge;
+[e = _SSPSTAT -> _sTransmitEdge `uc ]
+"18
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 18:         TRISC3 = 1;
+[e = _TRISC3 -> -> 1 `i `b ]
 "19
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 19:             case 0:
-[e :U 141 ]
-"20
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 20:                 SSPCONbits.SSPM3 = 0;
-[e = . . _SSPCONbits 1 3 -> -> 0 `i `uc ]
-"21
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 21:                 SSPCONbits.SSPM2 = 0;
-[e = . . _SSPCONbits 1 2 -> -> 0 `i `uc ]
-"22
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 22:                 SSPCONbits.SSPM1 = 0;
-[e = . . _SSPCONbits 1 1 -> -> 0 `i `uc ]
-"23
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 23:                 SSPCONbits.SSPM0 = 0;
-[e = . . _SSPCONbits 1 0 -> -> 0 `i `uc ]
-"24
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 24:                 break;
-[e $U 139  ]
-"25
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 25:             case 1:
-[e :U 142 ]
-"26
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 26:                 SSPCONbits.SSPM3 = 0;
-[e = . . _SSPCONbits 1 3 -> -> 0 `i `uc ]
-"27
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 27:                 SSPCONbits.SSPM2 = 0;
-[e = . . _SSPCONbits 1 2 -> -> 0 `i `uc ]
-"28
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 28:                 SSPCONbits.SSPM1 = 0;
-[e = . . _SSPCONbits 1 1 -> -> 0 `i `uc ]
-"29
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 29:                 SSPCONbits.SSPM0 = 1;
-[e = . . _SSPCONbits 1 0 -> -> 1 `i `uc ]
-"30
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 30:                 break;
-[e $U 139  ]
-"31
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 31:             case 2:
-[e :U 143 ]
-"32
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 32:                 SSPCONbits.SSPM3 = 0;
-[e = . . _SSPCONbits 1 3 -> -> 0 `i `uc ]
-"33
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 33:                 SSPCONbits.SSPM2 = 0;
-[e = . . _SSPCONbits 1 2 -> -> 0 `i `uc ]
-"34
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 34:                 SSPCONbits.SSPM1 = 1;
-[e = . . _SSPCONbits 1 1 -> -> 1 `i `uc ]
-"35
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 35:                 SSPCONbits.SSPM0 = 0;
-[e = . . _SSPCONbits 1 0 -> -> 0 `i `uc ]
-"36
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 36:                 break;
-[e $U 139  ]
-"37
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 37:             case 3:
-[e :U 144 ]
-"38
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 38:                 SSPCONbits.SSPM3 = 0;
-[e = . . _SSPCONbits 1 3 -> -> 0 `i `uc ]
-"39
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 39:                 SSPCONbits.SSPM2 = 0;
-[e = . . _SSPCONbits 1 2 -> -> 0 `i `uc ]
-"40
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 40:                 SSPCONbits.SSPM1 = 1;
-[e = . . _SSPCONbits 1 1 -> -> 1 `i `uc ]
-"41
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 41:                 SSPCONbits.SSPM0 = 1;
-[e = . . _SSPCONbits 1 0 -> -> 1 `i `uc ]
-"42
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 42:                 break;
-[e $U 139  ]
-"44
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 44:         }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 19:     }
 }
-[e $U 139  ]
-[e :U 140 ]
-[e [\ -> _modo `i , $ -> 0 `i 141
- , $ -> 1 `i 142
- , $ -> 2 `i 143
- , $ -> 3 `i 144
- 139 ]
+[e $U 140  ]
+"20
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 20:     else
 [e :U 139 ]
-"45
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 45: }
+"21
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 21:     {
+{
+"22
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 22:         SSPSTAT = sDataSample | sTransmitEdge;
+[e = _SSPSTAT -> | -> _sDataSample `ui -> _sTransmitEdge `ui `uc ]
+"23
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 23:         TRISC3 = 0;
+[e = _TRISC3 -> -> 0 `i `b ]
+"24
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 24:     }
+}
+[e :U 140 ]
+"26
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 26:     SSPCON = sType | sClockIdle;
+[e = _SSPCON -> | -> _sType `ui -> _sClockIdle `ui `uc ]
+"27
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 27: }
 [e :UE 138 ]
 }
-"46
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 46: void initSPISLAVE(uint8_t modos){
-[v _initSPISLAVE `(v ~T0 @X0 1 ef1`uc ]
+"29
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 29: static void spiReceiveWait()
+[v _spiReceiveWait `(v ~T0 @X0 1 sf ]
+"30
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 30: {
 {
-[e :U _initSPISLAVE ]
-[v _modos `uc ~T0 @X0 1 r1 ]
+[e :U _spiReceiveWait ]
 [f ]
-"47
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 47:         SSPSTATbits.SMP = 0;
-[e = . . _SSPSTATbits 0 7 -> -> 0 `i `uc ]
-"48
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 48:         SSPSTATbits.CKE = 0;
-[e = . . _SSPSTATbits 0 6 -> -> 0 `i `uc ]
-"49
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 49:         SSPCONbits.SSPEN = 1;
-[e = . . _SSPCONbits 0 2 -> -> 1 `i `uc ]
-"50
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 50:         SSPCONbits.CKP = 1;
-[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
-"51
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 51:         switch(modos){
-[e $U 147  ]
-{
-"52
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 52:             case 0:
-[e :U 148 ]
-"53
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 53:                 SSPCONbits.SSPM3 = 0;
-[e = . . _SSPCONbits 1 3 -> -> 0 `i `uc ]
-"54
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 54:                 SSPCONbits.SSPM2 = 1;
-[e = . . _SSPCONbits 1 2 -> -> 1 `i `uc ]
-"55
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 55:                 SSPCONbits.SSPM1 = 0;
-[e = . . _SSPCONbits 1 1 -> -> 0 `i `uc ]
-"56
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 56:                 SSPCONbits.SSPM0 = 0;
-[e = . . _SSPCONbits 1 0 -> -> 0 `i `uc ]
-"57
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 57:                 break;
-[e $U 146  ]
-"58
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 58:             case 1:
-[e :U 149 ]
-"59
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 59:                 SSPCONbits.SSPM3 = 0;
-[e = . . _SSPCONbits 1 3 -> -> 0 `i `uc ]
-"60
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 60:                 SSPCONbits.SSPM2 = 1;
-[e = . . _SSPCONbits 1 2 -> -> 1 `i `uc ]
-"61
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 61:                 SSPCONbits.SSPM1 = 0;
-[e = . . _SSPCONbits 1 1 -> -> 0 `i `uc ]
-"62
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 62:                 SSPCONbits.SSPM0 = 1;
-[e = . . _SSPCONbits 1 0 -> -> 1 `i `uc ]
-"63
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 63:                 break;
-[e $U 146  ]
-"64
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 64:         }
+"31
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 31:     while ( !SSPSTATbits.BF );
+[e $U 142  ]
+[e :U 143 ]
+[e :U 142 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 143  ]
+[e :U 144 ]
+"32
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 32: }
+[e :UE 141 ]
 }
-[e $U 146  ]
-[e :U 147 ]
-[e [\ -> _modos `i , $ -> 0 `i 148
- , $ -> 1 `i 149
- 146 ]
-[e :U 146 ]
-"65
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/initSPI.c: 65: }
+"34
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 34: void spiWrite(char dat)
+[v _spiWrite `(v ~T0 @X0 1 ef1`uc ]
+"35
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 35: {
+{
+[e :U _spiWrite ]
+"34
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 34: void spiWrite(char dat)
+[v _dat `uc ~T0 @X0 1 r1 ]
+"35
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 35: {
+[f ]
+"36
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 36:     SSPBUF = dat;
+[e = _SSPBUF -> _dat `uc ]
+"37
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 37: }
 [e :UE 145 ]
+}
+"39
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 39: unsigned spiDataReady()
+[v _spiDataReady `(ui ~T0 @X0 1 ef ]
+"40
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 40: {
+{
+[e :U _spiDataReady ]
+[f ]
+"41
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 41:     if(SSPSTATbits.BF){
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 147  ]
+{
+"42
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 42:         return 1;
+[e ) -> -> 1 `i `ui ]
+[e $UE 146  ]
+"43
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 43:     }
+}
+[e $U 148  ]
+"44
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 44:     else{
+[e :U 147 ]
+{
+"45
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 45:         return 0;
+[e ) -> -> 0 `i `ui ]
+[e $UE 146  ]
+"46
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 46:     }
+}
+[e :U 148 ]
+"47
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 47: }
+[e :UE 146 ]
+}
+"49
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 49: char spiRead()
+[v _spiRead `(uc ~T0 @X0 1 ef ]
+"50
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 50: {
+{
+[e :U _spiRead ]
+[f ]
+"51
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 51:     spiReceiveWait();
+[e ( _spiReceiveWait ..  ]
+"52
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 52:     return(SSPBUF);
+[e ) -> _SSPBUF `uc ]
+[e $UE 149  ]
+"53
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.c: 53: }
+[e :UE 149 ]
 }

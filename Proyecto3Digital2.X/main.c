@@ -8,8 +8,9 @@
 //                      Importacion de librerias 
 //******************************************************************************
 #include <xc.h>
+#include <stdint.h>
 #include "Display8bits.h"
-#include "initSPI.h"
+#include "SPI.h"
 #include "usart9600.h"
 #include "Libreria2.h"
 #include "TablaACSII_HEX.h"
@@ -61,7 +62,7 @@ void envio_esclavos(void);
 //                          interrupciones 
 //******************************************************************************
 void __interrupt() isr(void){
-    if (INTCONbits.T0IF = 0){
+    if (INTCONbits.T0IF = 1){
         TMR0 = 236; //valor del timer para 5ms
         controles++; //rutina que controla el Go del ADC y el TXIE
         INTCONbits.TMR0IF = 0; //limpiar la bandera 
@@ -84,6 +85,7 @@ void main(void) {
     //                             mian loop
     //**************************************************************************
     while (1) {
+        PORTB = slave;
         TX_GO();
         envio_esclavos();
         mapeo();
@@ -119,15 +121,13 @@ void main(void) {
 //                          Setup
 //******************************************************************************
 
-void setup(void) {
-    initSPIMASTER(2);
+void setup(void) { 
     initUSART();//funcion de configuracion del UART
     initOsc(6);//configura el osculador interno a 4Mhz
     OPTION_REG = 0b11010111; //configuracion para activar las PULL - UPS del puerto B y timer 0
     ANSEL = 0;
     ANSELH = 0; //se limpian las entradas analogicas
     PORTC = 0; //se resetea el puerto C
-    TRISC = 0x80; //se selecciona como entrada el RX
     PORTD = 0; //se resetea el puerto D
     TRISD = 0; //se selecciona el puerto D como salida 
     PORTB = 0; //se resetea el puerto B
@@ -146,6 +146,7 @@ void setup(void) {
     TRISCbits.TRISC0 = 0;
     TRISCbits.TRISC1 = 0;
     TRISCbits.TRISC2 = 0;
+    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 //****************************interrupcinoes************************************
     INTCONbits.GIE = 1; //se activan las interrupciones globales 
     INTCONbits.PEIE = 1; // se activan las interrupciones perifericas 
@@ -153,8 +154,6 @@ void setup(void) {
     INTCONbits.T0IF = 0; //limpiar bandera del timer0
     PIE1bits.TXIE = 1; //se activa la interrupcion del TX
     PIR1bits.TXIF = 0; //se limpia la babndera del TX
-    PIE1bits.SSPIE = 1;
-    PIR1bits.SSPIF = 0;
 }
 void TX_GO (void){ //por cada 10 de control activa el TXIE
     if (controles == 10){ //revisa si el contador es mayor a 10 para dar el TXEN 
@@ -164,31 +163,34 @@ void TX_GO (void){ //por cada 10 de control activa el TXIE
 void envio_esclavos(void){
     if (controles > 50){
         controles = 0;
-        PORTCbits.RC0 = 1;
-        PORTCbits.RC1 = 1;
-        PORTCbits.RC2 = 1;
-            switch(slave){
-                case 0:
-                    PORTCbits.RC0 = 0;
-                    while ( !SSPSTATbits.BF );
-                    esclavo1 = SSPBUF;
-                    slave++;
-                    break;
-                case 1:
-                    PORTCbits.RC1 = 0;
-                    while ( !SSPSTATbits.BF );
-                    esclavo2 = SSPBUF;
-                    slave++;
-                    break;
-                case 2:
-                    PORTCbits.RC2 = 1;
-                    while ( !SSPSTATbits.BF );
-                    esclavo3 = SSPBUF;
-                    slave = 0;
-                    break;     
-            }
+        switch(slave){
+            case 0:
+                PORTCbits.RC2 = 1;
+                PORTCbits.RC1 = 1;
+                PORTCbits.RC0 = 0;
+                SSPBUF = 0;
+                esclavo1 = spiRead();
+                slave++;
+                break;
+            case 1:
+                PORTCbits.RC2 = 1;
+                PORTCbits.RC1 = 0;
+                PORTCbits.RC0 = 1;
+                SSPBUF = 0;
+                esclavo2 = spiRead();
+                slave++;
+                break;
+            case 2:
+                PORTCbits.RC2 = 0;
+                PORTCbits.RC1 = 1;
+                PORTCbits.RC0 = 1;
+                SSPBUF = 0;
+                esclavo3 = spiRead();
+                slave = 0;
+                break;     
         }
-    }
+      }
+   }
 void envio (void){ //rutina que envia datos como "POT1 , POT2 /n"
     switch (var_envio){
         case 0:
@@ -224,7 +226,7 @@ void envio (void){ //rutina que envia datos como "POT1 , POT2 /n"
            var_envio++;
            break;
         case 8:
-           TXREG = 11;
+           TXREG = 13;
            var_envio = 0;
            break;    
     }
