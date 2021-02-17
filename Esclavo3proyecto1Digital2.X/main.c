@@ -83,6 +83,7 @@ void main(void) {
 void setup(void) {
     initOsc(6);//configura el osculador interno a 4Mhz
     configADC(0,2); //canal 0 y velocidad FOSC/32
+    ADCON1 = 0b00010000;
     OPTION_REG = 0b01010111; //configuracion para activar las PULL - UPS del puerto B y timer 0
     ANSEL = 0;
     ANSELbits.ANS0 = 1;
@@ -96,6 +97,7 @@ void setup(void) {
     TRISE = 0; // se marca el puerto E como salida
     PORTE = 0;  //se resetea el puerto E
     PORTA = 0;
+    TRISAbits.TRISA3 = 1;
     TRISAbits.TRISA0 = 1;
     TRISCbits.TRISC5 = 0;
     TRISAbits.TRISA5 = 1;
@@ -116,12 +118,12 @@ void GO_ADC (void){
        } 
     }
 void LEDS (void){
-    if (ADC < 25){
+    if (ADC <= 0x29){
         PORTE = 1;
-    }else if (25 < ADC < 36){
+    }else if (0x29 < ADC <= 0x2E){
         PORTE = 2;
-    }else if (ADC > 360){
-        PORTE = 4;
+    }else if (ADC > 0x2E){
+        PORTE = 3;
     }
 }
 

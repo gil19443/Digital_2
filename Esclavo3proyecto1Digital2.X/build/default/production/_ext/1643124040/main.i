@@ -2753,6 +2753,7 @@ void main(void) {
 void setup(void) {
     initOsc(6);
     configADC(0,2);
+    ADCON1 = 0b00010000;
     OPTION_REG = 0b01010111;
     ANSEL = 0;
     ANSELbits.ANS0 = 1;
@@ -2766,6 +2767,7 @@ void setup(void) {
     TRISE = 0;
     PORTE = 0;
     PORTA = 0;
+    TRISAbits.TRISA3 = 1;
     TRISAbits.TRISA0 = 1;
     TRISCbits.TRISC5 = 0;
     TRISAbits.TRISA5 = 1;
@@ -2786,11 +2788,11 @@ void GO_ADC (void){
        }
     }
 void LEDS (void){
-    if (ADC < 25){
+    if (ADC <= 0x29){
         PORTE = 1;
-    }else if (25 < ADC < 36){
+    }else if (0x29 < ADC <= 0x2E){
         PORTE = 2;
-    }else if (ADC > 360){
-        PORTE = 4;
+    }else if (ADC > 0x2E){
+        PORTE = 3;
     }
 }

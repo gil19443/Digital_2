@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
+$C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 10 10 3 2
 config CONFIG 4 2007 2007 2 2
@@ -72,13 +72,13 @@ STRING 108-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Esclavo2proyecto1Digital2.X.production.o
-13 cinit CODE >797:C:\Users\CARLOS~1\AppData\Local\Temp\savg.s
-13 cinit CODE >800:C:\Users\CARLOS~1\AppData\Local\Temp\savg.s
-13 cinit CODE >814:C:\Users\CARLOS~1\AppData\Local\Temp\savg.s
-14 cinit CODE >815:C:\Users\CARLOS~1\AppData\Local\Temp\savg.s
-15 cinit CODE >821:C:\Users\CARLOS~1\AppData\Local\Temp\savg.s
-15 cinit CODE >823:C:\Users\CARLOS~1\AppData\Local\Temp\savg.s
-16 cinit CODE >824:C:\Users\CARLOS~1\AppData\Local\Temp\savg.s
+13 cinit CODE >797:C:\Users\CARLOS~1\AppData\Local\Temp\son4.s
+13 cinit CODE >800:C:\Users\CARLOS~1\AppData\Local\Temp\son4.s
+13 cinit CODE >814:C:\Users\CARLOS~1\AppData\Local\Temp\son4.s
+14 cinit CODE >815:C:\Users\CARLOS~1\AppData\Local\Temp\son4.s
+15 cinit CODE >821:C:\Users\CARLOS~1\AppData\Local\Temp\son4.s
+15 cinit CODE >823:C:\Users\CARLOS~1\AppData\Local\Temp\son4.s
+16 cinit CODE >824:C:\Users\CARLOS~1\AppData\Local\Temp\son4.s
 4 intentry CODE >44:C:/MPlab_Digital2/Digital_2/Esclavo2proyecto1Digital2.X/main.c
 AE text4 CODE >44:C:/MPlab_Digital2/Digital_2/Esclavo2proyecto1Digital2.X/main.c
 AE text4 CODE >45:C:/MPlab_Digital2/Digital_2/Esclavo2proyecto1Digital2.X/main.c
@@ -208,19 +208,19 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 _IOCB 96 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
+___sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
 _main 1FE 0 CODE 0 maintext dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
-start 20 0 CODE 0 init C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
+start 20 0 CODE 0 init C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
@@ -232,8 +232,8 @@ __size_of_initOsc 0 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.
 __size_of_spiInit 0 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _OPTION_REG 81 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
-___stacklo 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
+___stackhi 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
+___stacklo 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 spiInit@sDataSample 73 0 COMMON 1 cstackCOMMON dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 start_initialization 26 0 CODE 0 cinit dist/default/production\Esclavo2proyecto1Digital2.X.production.o
@@ -245,7 +245,7 @@ _SSPCON 14 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.product
 _TRISC3 43B 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 __end_of_initOsc DC 0 CODE 0 text3 dist/default/production\Esclavo2proyecto1Digital2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
+___int_sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -291,7 +291,7 @@ _boton2 77 0 COMMON 1 bssCOMMON dist/default/production\Esclavo2proyecto1Digital
 saved_w 7E 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 __end_of_isr 1D2 0 CODE 0 text4 dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\CARLOS~1\AppData\Local\Temp\savg.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\CARLOS~1\AppData\Local\Temp\son4.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 __pmaintext 1FE 0 CODE 0 maintext dist/default/production\Esclavo2proyecto1Digital2.X.production.o
 __Lcommon 0 0 ABS 0 common -

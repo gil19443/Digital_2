@@ -50,6 +50,7 @@ uint8_t centenasp1 = 0;
 uint8_t unidadesp2 = 0;
 uint8_t decenasp2 = 0;
 uint8_t centenasp2 = 0;
+uint8_t gradospos = 0;
 //******************************************************************************
 //                          Prototipos de funciones 
 //******************************************************************************
@@ -58,11 +59,13 @@ void TX_GO (void);
 void envio (void);
 void mapeo (void);
 void envio_esclavos(void);
+void temp_pos (void);
+void correccion (void);
 //******************************************************************************
 //                          interrupciones 
 //******************************************************************************
 void __interrupt() isr(void){
-    if (INTCONbits.T0IF = 1){
+    if (INTCONbits.T0IF == 1){
         TMR0 = 236; //valor del timer para 5ms
         controles++; //rutina que controla el Go del ADC y el TXIE
         INTCONbits.TMR0IF = 0; //limpiar la bandera 
@@ -79,16 +82,18 @@ void __interrupt() isr(void){
 void main(void) {
     setup();
     Lcd_Clear();
-    Lcd_Set_Cursor(1,0);
+    __delay_ms(10);
+    Lcd_Set_Cursor(1,1);
     Lcd_Write_String("POT1 LM35 CONT"); //labels del LCD  
     //**************************************************************************
     //                             mian loop
     //**************************************************************************
     while (1) {
-        PORTB = slave;
+        temp_pos();
         TX_GO();
         envio_esclavos();
         mapeo();
+        correccion();
         Lcd_Set_Cursor(2,1);
         Lcd_Write_Char(centenasp1+48);
         Lcd_Set_Cursor(2,2);
@@ -97,16 +102,32 @@ void main(void) {
         Lcd_Write_Char(decenasp1+48);
         Lcd_Set_Cursor(2,4);
         Lcd_Write_Char(unidadesp1+48);
-        Lcd_Set_Cursor(2,5);
-        Lcd_Write_Char(32);
-        Lcd_Set_Cursor(2,6);
-        Lcd_Write_Char(centenasp2+48);
-        Lcd_Set_Cursor(2,7);
-        Lcd_Write_Char(46);
-        Lcd_Set_Cursor(2,8);
-        Lcd_Write_Char(decenasp2+48);
-        Lcd_Set_Cursor(2,9);
-        Lcd_Write_Char(unidadesp2+48);
+
+        if (esclavo3< 69){
+            PORTD = 3;
+            Lcd_Set_Cursor(2,5);
+            Lcd_Write_Char(32);
+            Lcd_Set_Cursor(2,6);
+            Lcd_Write_Char(45);
+            Lcd_Set_Cursor(2,7);
+            Lcd_Write_Char(32);
+            Lcd_Set_Cursor(2,8);
+            Lcd_Write_Char(decenasp2+48);
+            Lcd_Set_Cursor(2,9);
+            Lcd_Write_Char(unidadesp2+48);
+        }else{
+            PORTD = 5;
+            Lcd_Set_Cursor(2,5);
+            Lcd_Write_Char(32);
+            Lcd_Set_Cursor(2,6);
+            Lcd_Write_Char(32);
+            Lcd_Set_Cursor(2,7);
+            Lcd_Write_Char(centenasp2+48);
+            Lcd_Set_Cursor(2,8);
+            Lcd_Write_Char(decenasp2+48);
+            Lcd_Set_Cursor(2,9);
+            Lcd_Write_Char(unidadesp2+48);
+        }
         Lcd_Set_Cursor(2,10);
         Lcd_Write_Char(32);
         Lcd_Set_Cursor(2,11);
@@ -191,38 +212,65 @@ void envio_esclavos(void){
 void envio (void){ //rutina que envia datos como "POT1 , POT2 /n"
     switch (var_envio){
         case 0:
-           tabla_hex(((esclavo1 & 0b11110000)>>4),&TXREG);
+            tabla_hex(((esclavo3 & 0b11110000)>>4),&TXREG);
+           //TXREG = centenasp1+48;
            var_envio++;
            break;
         case 1:
-           tabla_hex((esclavo1 & 0b00001111),&TXREG);
+          tabla_hex((esclavo3 & 0b00001111),&TXREG);
+            
+          // TXREG = 46; 
            var_envio++;
            break;
         case 2:
-           TXREG = 44; 
+           TXREG = decenasp1+48;
            var_envio++;
            break;
         case 3:
-           tabla_hex(((esclavo2 & 0b11110000)>>4),&TXREG); 
+           TXREG = unidadesp1+48;
            var_envio++;
            break;
         case 4:
-           tabla_hex((esclavo2 & 0b00001111),&TXREG); 
-           var_envio++;
-           break;
-        case 5:
            TXREG = 44; 
            var_envio++;
            break;
+        case 5:
+            var_envio++;
+            if (esclavo3< 69){
+                TXREG = 45;    
+            }else{
+                TXREG = 32;     
+            }
+           break;
         case 6:
-           tabla_hex(((esclavo3 & 0b11110000)>>4),&TXREG); 
+           TXREG = centenasp2+48; 
            var_envio++;
            break;
         case 7:
-           tabla_hex((esclavo3 & 0b00001111),&TXREG); 
-           var_envio++;
+            TXREG = decenasp2+48;
+            var_envio++;
            break;
         case 8:
+           TXREG = unidadesp2+48; 
+           var_envio++;
+           break;
+        case 9:
+           TXREG = 44; 
+           var_envio++;
+           break;
+        case 10:
+           TXREG = ((esclavo2/100)+48); 
+           var_envio++;
+           break;
+        case 11:
+           TXREG = ((esclavo2-((esclavo2/100)*100))/10)+48; 
+           var_envio++;
+           break;
+        case 12:
+           TXREG = ((esclavo2-((esclavo2/100)+((esclavo2-((esclavo2/100)*100))/10)))+48); 
+           var_envio++;
+           break;
+        case 13:
            TXREG = 13;
            var_envio = 0;
            break;    
@@ -230,16 +278,31 @@ void envio (void){ //rutina que envia datos como "POT1 , POT2 /n"
 }
 void mapeo (void){ //mapea los valores para que pasen de ir de 0 a 255
     uint16_t TEMP1 = 0;
-    uint16_t TEMP2 = 0;
     TEMP1 = ((esclavo1 *100)/51); // para estar de 0 a 5 con 2 decimales 
-    TEMP2 = ((esclavo3 *10)/17);
-    
     centenasp1 = TEMP1/100;
     decenasp1 = (TEMP1-(centenasp1*100))/10;
     unidadesp1 = (TEMP1-((centenasp1*100)+(decenasp1*10)));  
-    
-    centenasp2 = TEMP2/100;
-    decenasp2 = (TEMP2-(centenasp2*100))/10;
-    unidadesp2 = (TEMP2-((centenasp2*100)+(decenasp2*10)));
 }
-
+void temp_pos (void){
+    if (esclavo3 <69){
+        gradospos = (-1)*(((esclavo3*150)/186.0)-56);
+        centenasp2 = (gradospos/100);
+        decenasp2 = (((gradospos-(centenasp2*100)))/10);
+        unidadesp2 = (gradospos-((centenasp2*100)+(decenasp2*10)));
+    }else{
+        
+        gradospos = (((esclavo3*150)/186.0)-56);
+        centenasp2 = (gradospos/100);
+        decenasp2 = (((gradospos-(centenasp2*100)))/10);
+        unidadesp2 = (gradospos-((centenasp2*100)+(decenasp2*10)));
+        correccion();
+        
+    }
+}
+void correccion(void){
+    if (esclavo3 > 218){
+        gradospos = gradospos +95;
+        centenasp2 = PORTB;
+    }
+} 
+            
