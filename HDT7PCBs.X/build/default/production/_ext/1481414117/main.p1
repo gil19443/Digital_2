@@ -1,0 +1,1034 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"465 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 465:     struct {
+[s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S16 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
+"475
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 475:     struct {
+[s S17 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S17 . . TMR0IF . TMR0IE ]
+"464
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 464: typedef union {
+[u S15 `S16 1 `S17 1 ]
+[n S15 . . . ]
+"482
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 482: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
+"59
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 59: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"543
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 543:     struct {
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
+"542
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 542: typedef union {
+[u S18 `S19 1 ]
+[n S18 . . ]
+"553
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
+[v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
+"1238
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1238: extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
+"16 C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/configuracionADC.h
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/configuracionADC.h: 16: void configADC(uint8_t canal, uint8_t vel);
+[v _configADC `(v ~T0 @X0 0 ef2`uc`uc ]
+"77 C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 77: void envio (void);
+[v _envio `(v ~T0 @X0 0 ef ]
+"1708 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1708:     struct {
+[s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S63 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
+"1707
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1707: typedef union {
+[u S62 `S63 1 ]
+[n S62 . . ]
+"1718
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1718: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
+[v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
+[p mainexit ]
+"76 C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 76: void setup(void);
+[v _setup `(v ~T0 @X0 0 ef ]
+"78
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 78: void ADC_GO (void);
+[v _ADC_GO `(v ~T0 @X0 0 ef ]
+"15 C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/usart9600.h
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/usart9600.h: 15: void initUSART(void);
+[v _initUSART `(v ~T0 @X0 0 ef ]
+"36 C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/Libreria2.h
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/Libreria2.h: 36: void initOsc (uint8_t option);
+[v _initOsc `(v ~T0 @X0 0 ef1`uc ]
+"1346 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1346: extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
+"3387
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
+"3449
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
+[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"3393
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3393:     struct {
+[s S133 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S133 . ANS0 ANS1 ANS2 ANS3 ANS4 ANS5 ANS6 ANS7 ]
+"3392
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3392: typedef union {
+[u S132 `S133 1 ]
+[n S132 . . ]
+"3404
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3404: extern volatile ANSELbits_t ANSELbits __attribute__((address(0x188)));
+[v _ANSELbits `VS132 ~T0 @X0 0 e@392 ]
+"290
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 290: extern volatile unsigned char PORTC __attribute__((address(0x007)));
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"1540
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1540: extern volatile unsigned char TRISC __attribute__((address(0x087)));
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"352
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"1602
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1602: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"228
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"1664
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1664: extern volatile unsigned char TRISE __attribute__((address(0x089)));
+[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
+"414
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 414: extern volatile unsigned char PORTE __attribute__((address(0x009)));
+[v _PORTE `Vuc ~T0 @X0 0 e@9 ]
+"166
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"1416
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1416: extern volatile unsigned char TRISA __attribute__((address(0x085)));
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"1478
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1422
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1422:     struct {
+[s S53 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S53 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"1421
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1421: typedef union {
+[u S52 `S53 1 ]
+[n S52 . . ]
+"1433
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1433: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x085)));
+[v _TRISAbits `VS52 ~T0 @X0 0 e@133 ]
+"1251
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1251:     struct {
+[s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
+[n S45 . ADON GO_nDONE CHS ADCS ]
+"1257
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1257:     struct {
+[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S46 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
+"1267
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1267:     struct {
+[s S47 :1 `uc 1 :1 `uc 1 ]
+[n S47 . . nDONE ]
+"1271
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1271:     struct {
+[s S48 :1 `uc 1 :1 `uc 1 ]
+[n S48 . . GO_DONE ]
+"1250
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1250: typedef union {
+[u S44 `S45 1 `S46 1 `S47 1 `S48 1 ]
+[n S44 . . . . . ]
+"1276
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1276: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x01F)));
+[v _ADCON0bits `VS44 ~T0 @X0 0 e@31 ]
+"18 C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/TablaACSII_HEX.h
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/TablaACSII_HEX.h: 18: void tabla_hex (uint8_t selector, volatile uint8_t *port);
+[v _tabla_hex `(v ~T0 @X0 0 ef2`uc`*Vuc ]
+"1133 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1133: extern volatile unsigned char TXREG __attribute__((address(0x019)));
+[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
+"54 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"230
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 230: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"292
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 292: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"354
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 354: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"416
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 416: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"454
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 454: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"461
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 461: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"539
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 539: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"595
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 595: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"652
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 652: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"659
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 659: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"666
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 666: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"673
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 673: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"767
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 767: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"774
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 774: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"845
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 845: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"852
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 852: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"922
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 922: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"929
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 929: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"936
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 936: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"943
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 943: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"1040
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1040: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1135
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1135: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1142
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1142: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1149
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1149: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1156
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1156: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1163
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1163: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1170
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1170: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1240
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1240: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1247
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1247: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1348
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1348: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1418
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1418: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1480
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1480: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1542
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1542: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1604
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1604: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1666
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1666: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1704
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1704: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1760
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1760: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1817
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1817: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1864
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1864: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1929
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1929: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1981
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1981: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"2043
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2043: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"2050
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2050: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"2057
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2057: __asm("SSPMSK equ 093h");
+[; <" SSPMSK equ 093h ;# ">
+"2062
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2062: __asm("MSK equ 093h");
+[; <" MSK equ 093h ;# ">
+"2179
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2179: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2348
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2348: __asm("WPUB equ 095h");
+[; <" WPUB equ 095h ;# ">
+"2418
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2418: __asm("IOCB equ 096h");
+[; <" IOCB equ 096h ;# ">
+"2488
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2488: __asm("VRCON equ 097h");
+[; <" VRCON equ 097h ;# ">
+"2558
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2558: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2644
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2644: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2706
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2706: __asm("SPBRGH equ 09Ah");
+[; <" SPBRGH equ 09Ah ;# ">
+"2776
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2776: __asm("PWM1CON equ 09Bh");
+[; <" PWM1CON equ 09Bh ;# ">
+"2846
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2846: __asm("ECCPAS equ 09Ch");
+[; <" ECCPAS equ 09Ch ;# ">
+"2928
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2928: __asm("PSTRCON equ 09Dh");
+[; <" PSTRCON equ 09Dh ;# ">
+"2972
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2972: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2979
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2979: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"3013
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3013: __asm("WDTCON equ 0105h");
+[; <" WDTCON equ 0105h ;# ">
+"3066
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3066: __asm("CM1CON0 equ 0107h");
+[; <" CM1CON0 equ 0107h ;# ">
+"3131
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3131: __asm("CM2CON0 equ 0108h");
+[; <" CM2CON0 equ 0108h ;# ">
+"3196
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3196: __asm("CM2CON1 equ 0109h");
+[; <" CM2CON1 equ 0109h ;# ">
+"3247
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3247: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"3252
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3252: __asm("EEDAT equ 010Ch");
+[; <" EEDAT equ 010Ch ;# ">
+"3259
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3259: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"3266
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3266: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"3273
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3273: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"3280
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3280: __asm("SRCON equ 0185h");
+[; <" SRCON equ 0185h ;# ">
+"3337
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3337: __asm("BAUDCTL equ 0187h");
+[; <" BAUDCTL equ 0187h ;# ">
+"3389
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3389: __asm("ANSEL equ 0188h");
+[; <" ANSEL equ 0188h ;# ">
+"3451
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3451: __asm("ANSELH equ 0189h");
+[; <" ANSELH equ 0189h ;# ">
+"3501
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3501: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"3546
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"23 C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c
+[p x FOSC = INTRC_NOCLKOUT ]
+"24
+[p x WDTE = OFF ]
+"25
+[p x PWRTE = OFF ]
+"26
+[p x MCLRE = OFF ]
+"27
+[p x CP = OFF ]
+"28
+[p x CPD = OFF ]
+"29
+[p x BOREN = OFF ]
+"30
+[p x IESO = OFF ]
+"31
+[p x FCMEN = OFF ]
+"32
+[p x LVP = OFF ]
+"35
+[p x BOR4V = BOR40V ]
+"36
+[p x WRT = OFF ]
+"47
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 47: uint8_t ADC_selector =0;
+[v _ADC_selector `uc ~T0 @X0 1 e ]
+[i _ADC_selector
+-> -> 0 `i `uc
+]
+"48
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 48: uint8_t POT1 = 0;
+[v _POT1 `uc ~T0 @X0 1 e ]
+[i _POT1
+-> -> 0 `i `uc
+]
+"49
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 49: uint8_t POT2 = 0;
+[v _POT2 `uc ~T0 @X0 1 e ]
+[i _POT2
+-> -> 0 `i `uc
+]
+"50
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 50: uint8_t POT3 = 0;
+[v _POT3 `uc ~T0 @X0 1 e ]
+[i _POT3
+-> -> 0 `i `uc
+]
+"51
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 51: uint8_t POT4 = 0;
+[v _POT4 `uc ~T0 @X0 1 e ]
+[i _POT4
+-> -> 0 `i `uc
+]
+"52
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 52: uint8_t NHPOT1 = 0;
+[v _NHPOT1 `uc ~T0 @X0 1 e ]
+[i _NHPOT1
+-> -> 0 `i `uc
+]
+"53
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 53: uint8_t NLPOT1 = 0;
+[v _NLPOT1 `uc ~T0 @X0 1 e ]
+[i _NLPOT1
+-> -> 0 `i `uc
+]
+"54
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 54: uint8_t NHPOT2 = 0;
+[v _NHPOT2 `uc ~T0 @X0 1 e ]
+[i _NHPOT2
+-> -> 0 `i `uc
+]
+"55
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 55: uint8_t NLPOT2 = 0;
+[v _NLPOT2 `uc ~T0 @X0 1 e ]
+[i _NLPOT2
+-> -> 0 `i `uc
+]
+"56
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 56: uint8_t var_envio = 0;
+[v _var_envio `uc ~T0 @X0 1 e ]
+[i _var_envio
+-> -> 0 `i `uc
+]
+"57
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 57: uint8_t RC_selector = 0;
+[v _RC_selector `uc ~T0 @X0 1 e ]
+[i _RC_selector
+-> -> 0 `i `uc
+]
+"58
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 58: uint8_t DATO_RECIBIDO = 0;
+[v _DATO_RECIBIDO `uc ~T0 @X0 1 e ]
+[i _DATO_RECIBIDO
+-> -> 0 `i `uc
+]
+"59
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 59: uint8_t ENTER = 0;
+[v _ENTER `uc ~T0 @X0 1 e ]
+[i _ENTER
+-> -> 0 `i `uc
+]
+"60
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 60: uint8_t CONT = 0;
+[v _CONT `uc ~T0 @X0 1 e ]
+[i _CONT
+-> -> 0 `i `uc
+]
+"61
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 61: uint8_t unidadesp1 = 0;
+[v _unidadesp1 `uc ~T0 @X0 1 e ]
+[i _unidadesp1
+-> -> 0 `i `uc
+]
+"62
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 62: uint8_t decenasp1 = 0;
+[v _decenasp1 `uc ~T0 @X0 1 e ]
+[i _decenasp1
+-> -> 0 `i `uc
+]
+"63
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 63: uint8_t centenasp1 = 0;
+[v _centenasp1 `uc ~T0 @X0 1 e ]
+[i _centenasp1
+-> -> 0 `i `uc
+]
+"64
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 64: uint8_t unidadesp2 = 0;
+[v _unidadesp2 `uc ~T0 @X0 1 e ]
+[i _unidadesp2
+-> -> 0 `i `uc
+]
+"65
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 65: uint8_t decenasp2 = 0;
+[v _decenasp2 `uc ~T0 @X0 1 e ]
+[i _decenasp2
+-> -> 0 `i `uc
+]
+"66
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 66: uint8_t centenasp2 = 0;
+[v _centenasp2 `uc ~T0 @X0 1 e ]
+[i _centenasp2
+-> -> 0 `i `uc
+]
+"67
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 67: uint16_t TEMP1 = 0;
+[v _TEMP1 `ui ~T0 @X0 1 e ]
+[i _TEMP1
+-> -> 0 `i `ui
+]
+"68
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 68: uint16_t TEMP2 = 0;
+[v _TEMP2 `ui ~T0 @X0 1 e ]
+[i _TEMP2
+-> -> 0 `i `ui
+]
+"69
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 69: uint8_t controlADC = 0;
+[v _controlADC `uc ~T0 @X0 1 e ]
+[i _controlADC
+-> -> 0 `i `uc
+]
+"70
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 70: uint8_t bandera1 = 0;
+[v _bandera1 `uc ~T0 @X0 1 e ]
+[i _bandera1
+-> -> 0 `i `uc
+]
+"71
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 71: uint8_t bandera2 = 0;
+[v _bandera2 `uc ~T0 @X0 1 e ]
+[i _bandera2
+-> -> 0 `i `uc
+]
+"72
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 72: uint8_t LCD = 0;
+[v _LCD `uc ~T0 @X0 1 e ]
+[i _LCD
+-> -> 0 `i `uc
+]
+[v $root$_isr `(v ~T0 @X0 0 e ]
+"82
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 82: void __attribute__((picinterrupt(("")))) isr(void){
+[v _isr `(v ~T1 @X0 1 ef ]
+{
+[e :U _isr ]
+[f ]
+"83
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 83:     if (INTCONbits.TMR0IF == 1){
+[e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 139  ]
+{
+"84
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 84:         TMR0 = 236;
+[e = _TMR0 -> -> 236 `i `uc ]
+"85
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 85:         controlADC++;
+[e ++ _controlADC -> -> 1 `i `uc ]
+"86
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 86:         INTCONbits.TMR0IF = 0;
+[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
+"87
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 87:     }
+}
+[e :U 139 ]
+"89
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 89:     if (PIR1bits.ADIF == 1){
+[e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 140  ]
+{
+"90
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 90:         switch (ADC_selector){
+[e $U 142  ]
+{
+"91
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 91:             case 0:
+[e :U 143 ]
+"92
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 92:                 ADC_selector++;
+[e ++ _ADC_selector -> -> 1 `i `uc ]
+"93
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 93:                 POT1 = ADRESH;
+[e = _POT1 _ADRESH ]
+"94
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 94:                 configADC(1,2);
+[e ( _configADC (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
+"95
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 95:                 break;
+[e $U 141  ]
+"96
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 96:             case 1:
+[e :U 144 ]
+"97
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 97:                 ADC_selector++;
+[e ++ _ADC_selector -> -> 1 `i `uc ]
+"98
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 98:                 POT2 = ADRESH;
+[e = _POT2 _ADRESH ]
+"99
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 99:                 configADC(2,2);
+[e ( _configADC (2 , -> -> 2 `i `uc -> -> 2 `i `uc ]
+"100
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 100:                 break;
+[e $U 141  ]
+"101
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 101:             case 2:
+[e :U 145 ]
+"102
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 102:                 ADC_selector++;
+[e ++ _ADC_selector -> -> 1 `i `uc ]
+"103
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 103:                 POT3 = ADRESH;
+[e = _POT3 _ADRESH ]
+"104
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 104:                 configADC(3,2);
+[e ( _configADC (2 , -> -> 3 `i `uc -> -> 2 `i `uc ]
+"105
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 105:                 break;
+[e $U 141  ]
+"106
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 106:             case 3:
+[e :U 146 ]
+"107
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 107:                 ADC_selector = 0;
+[e = _ADC_selector -> -> 0 `i `uc ]
+"108
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 108:                 POT4 = ADRESH;
+[e = _POT4 _ADRESH ]
+"109
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 109:                 configADC(0,2);
+[e ( _configADC (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
+"110
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 110:                 break;
+[e $U 141  ]
+"111
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 111:         }
+}
+[e $U 141  ]
+[e :U 142 ]
+[e [\ -> _ADC_selector `i , $ -> 0 `i 143
+ , $ -> 1 `i 144
+ , $ -> 2 `i 145
+ , $ -> 3 `i 146
+ 141 ]
+[e :U 141 ]
+"112
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 112:         PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"113
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 113:     }
+}
+[e :U 140 ]
+"115
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 115:     if (PIR1bits.TXIF == 1){
+[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 147  ]
+{
+"116
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 116:         envio();
+[e ( _envio ..  ]
+"117
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 117:         PIE1bits.TXIE = 0;
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"119
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 119:     }
+}
+[e :U 147 ]
+"120
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 120: }
+[e :UE 138 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"125
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 125: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"126
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 126:     setup();
+[e ( _setup ..  ]
+"130
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 130:     while (1) {
+[e :U 150 ]
+{
+"131
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 131:           ADC_GO();
+[e ( _ADC_GO ..  ]
+"132
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 132:     }
+}
+[e :U 149 ]
+[e $U 150  ]
+[e :U 151 ]
+"133
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 133: }
+[e :UE 148 ]
+}
+"140
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 140: void setup(void) {
+[v _setup `(v ~T0 @X0 1 ef ]
+{
+[e :U _setup ]
+[f ]
+"141
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 141:     initUSART();
+[e ( _initUSART ..  ]
+"142
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 142:     initOsc(6);
+[e ( _initOsc (1 -> -> 6 `i `uc ]
+"143
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 143:     configADC(0,2);
+[e ( _configADC (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
+"144
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 144:     OPTION_REG = 0b11010111;
+[e = _OPTION_REG -> -> 215 `i `uc ]
+"145
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 145:     ANSEL = 0;
+[e = _ANSEL -> -> 0 `i `uc ]
+"146
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 146:     ANSELH = 0;
+[e = _ANSELH -> -> 0 `i `uc ]
+"147
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 147:     ANSELbits.ANS0 = 1;
+[e = . . _ANSELbits 0 0 -> -> 1 `i `uc ]
+"148
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 148:     ANSELbits.ANS1 = 1;
+[e = . . _ANSELbits 0 1 -> -> 1 `i `uc ]
+"149
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 149:     ANSELbits.ANS2 = 1;
+[e = . . _ANSELbits 0 2 -> -> 1 `i `uc ]
+"150
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 150:     ANSELbits.ANS3 = 1;
+[e = . . _ANSELbits 0 3 -> -> 1 `i `uc ]
+"151
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 151:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
+"152
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 152:     TRISC = 0x80;
+[e = _TRISC -> -> 128 `i `uc ]
+"153
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 153:     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
+"154
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 154:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+"155
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 155:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
+"156
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 156:     TRISE = 0;
+[e = _TRISE -> -> 0 `i `uc ]
+"157
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 157:     PORTE = 0;
+[e = _PORTE -> -> 0 `i `uc ]
+"158
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 158:     PORTA = 0;
+[e = _PORTA -> -> 0 `i `uc ]
+"159
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 159:     TRISA = 0;
+[e = _TRISA -> -> 0 `i `uc ]
+"160
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 160:     TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
+"161
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 161:     TRISAbits.TRISA0 = 1;
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+"162
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 162:     TRISAbits.TRISA1 = 1;
+[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
+"163
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 163:     TRISAbits.TRISA2 = 1;
+[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
+"164
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 164:     TRISAbits.TRISA3 = 1;
+[e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
+"166
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 166:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"167
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 167:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"168
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 168:     INTCONbits.TMR0IE = 1;
+[e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
+"169
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 169:     PIE1bits.ADIE = 1;
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+"170
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 170:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"171
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 171:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"172
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 172:     PIE1bits.TXIE = 1;
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"173
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 173:     PIR1bits.TXIF = 0;
+[e = . . _PIR1bits 0 4 -> -> 0 `i `uc ]
+"174
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 174: }
+[e :UE 152 ]
+}
+"176
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 176: void ADC_GO (void){
+[v _ADC_GO `(v ~T0 @X0 1 ef ]
+{
+[e :U _ADC_GO ]
+[f ]
+"177
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 177:     if (controlADC > 10){
+[e $ ! > -> _controlADC `i -> 10 `i 154  ]
+{
+"178
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 178:         controlADC = 0;
+[e = _controlADC -> -> 0 `i `uc ]
+"179
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 179:         ADCON0bits.GO_nDONE = 1;
+[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
+"180
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 180:         PIE1bits.TXIE = 1;
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"181
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 181:     }
+}
+[e :U 154 ]
+"182
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 182: }
+[e :UE 153 ]
+}
+"183
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 183: void envio (void){
+[v _envio `(v ~T0 @X0 1 ef ]
+{
+[e :U _envio ]
+[f ]
+"184
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 184:     switch (var_envio){
+[e $U 157  ]
+{
+"185
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 185:         case 0:
+[e :U 158 ]
+"186
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 186:            tabla_hex(((POT1 & 0b11110000)>>4),&TXREG);
+[e ( _tabla_hex (2 , -> >> & -> _POT1 `i -> 240 `i -> 4 `i `uc &U _TXREG ]
+"187
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 187:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"188
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 188:            break;
+[e $U 156  ]
+"189
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 189:         case 1:
+[e :U 159 ]
+"190
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 190:            tabla_hex((POT1 & 0b00001111),&TXREG);
+[e ( _tabla_hex (2 , -> & -> _POT1 `i -> 15 `i `uc &U _TXREG ]
+"191
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 191:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"192
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 192:            break;
+[e $U 156  ]
+"193
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 193:         case 2:
+[e :U 160 ]
+"194
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 194:            TXREG = 44;
+[e = _TXREG -> -> 44 `i `uc ]
+"195
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 195:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"196
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 196:            break;
+[e $U 156  ]
+"197
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 197:         case 3:
+[e :U 161 ]
+"198
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 198:            tabla_hex(((POT2 & 0b11110000)>>4),&TXREG);
+[e ( _tabla_hex (2 , -> >> & -> _POT2 `i -> 240 `i -> 4 `i `uc &U _TXREG ]
+"199
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 199:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"200
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 200:            break;
+[e $U 156  ]
+"201
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 201:         case 4:
+[e :U 162 ]
+"202
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 202:            tabla_hex((POT2 & 0b00001111),&TXREG);
+[e ( _tabla_hex (2 , -> & -> _POT2 `i -> 15 `i `uc &U _TXREG ]
+"203
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 203:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"204
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 204:            break;
+[e $U 156  ]
+"205
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 205:         case 5:
+[e :U 163 ]
+"206
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 206:            TXREG = 44;
+[e = _TXREG -> -> 44 `i `uc ]
+"207
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 207:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"208
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 208:            break;
+[e $U 156  ]
+"209
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 209:         case 6:
+[e :U 164 ]
+"210
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 210:            tabla_hex(((POT3 & 0b11110000)>>4),&TXREG);
+[e ( _tabla_hex (2 , -> >> & -> _POT3 `i -> 240 `i -> 4 `i `uc &U _TXREG ]
+"211
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 211:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"212
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 212:            break;
+[e $U 156  ]
+"213
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 213:         case 7:
+[e :U 165 ]
+"214
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 214:            tabla_hex((POT3 & 0b00001111),&TXREG);
+[e ( _tabla_hex (2 , -> & -> _POT3 `i -> 15 `i `uc &U _TXREG ]
+"215
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 215:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"216
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 216:            break;
+[e $U 156  ]
+"217
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 217:         case 8:
+[e :U 166 ]
+"218
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 218:            TXREG = 44;
+[e = _TXREG -> -> 44 `i `uc ]
+"219
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 219:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"220
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 220:            break;
+[e $U 156  ]
+"221
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 221:         case 9:
+[e :U 167 ]
+"222
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 222:            tabla_hex(((POT4 & 0b11110000)>>4),&TXREG);
+[e ( _tabla_hex (2 , -> >> & -> _POT4 `i -> 240 `i -> 4 `i `uc &U _TXREG ]
+"223
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 223:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"224
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 224:            break;
+[e $U 156  ]
+"225
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 225:         case 10:
+[e :U 168 ]
+"226
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 226:            tabla_hex((POT4 & 0b00001111),&TXREG);
+[e ( _tabla_hex (2 , -> & -> _POT4 `i -> 15 `i `uc &U _TXREG ]
+"227
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 227:            var_envio++;
+[e ++ _var_envio -> -> 1 `i `uc ]
+"228
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 228:            break;
+[e $U 156  ]
+"229
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 229:         case 11:
+[e :U 169 ]
+"230
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 230:            TXREG = 10;
+[e = _TXREG -> -> 10 `i `uc ]
+"231
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 231:            var_envio = 0;
+[e = _var_envio -> -> 0 `i `uc ]
+"232
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 232:            break;
+[e $U 156  ]
+"234
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 234:     }
+}
+[e $U 156  ]
+[e :U 157 ]
+[e [\ -> _var_envio `i , $ -> 0 `i 158
+ , $ -> 1 `i 159
+ , $ -> 2 `i 160
+ , $ -> 3 `i 161
+ , $ -> 4 `i 162
+ , $ -> 5 `i 163
+ , $ -> 6 `i 164
+ , $ -> 7 `i 165
+ , $ -> 8 `i 166
+ , $ -> 9 `i 167
+ , $ -> 10 `i 168
+ , $ -> 11 `i 169
+ 156 ]
+[e :U 156 ]
+"235
+[; ;C:/MPlab_Digital2/Digital_2/HDT7PCBS.X/main.c: 235: }
+[e :UE 155 ]
+}
