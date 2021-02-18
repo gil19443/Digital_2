@@ -30,8 +30,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "553
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
 [v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
-"59 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 59:         mapeo();
+"60 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 60:         mapeo();
 [v _envio `(v ~T0 @X0 0 ef ]
 "1708 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1708:     struct {
@@ -45,8 +45,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1718: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
 [v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
 [p mainexit ]
-"57 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 57:         TX_GO();
+"58 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 58:         TX_GO();
 [v _setup `(v ~T0 @X0 0 ef ]
 "13 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Display8bits.h
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Display8bits.h: 13: void Lcd_Clear(void);
@@ -61,21 +61,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Display8bits.h: 17: void Lcd_Write_String(char *a);
 [v _Lcd_Write_String `(v ~T0 @X0 0 ef1`*uc ]
-"62 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 62:         Lcd_Write_Char(centenasp1+48);
+"228 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"63 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 63:         Lcd_Set_Cursor(2,2);
 [v _temp_pos `(v ~T0 @X0 0 ef ]
-"58
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 58:         envio_esclavos();
+"59
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 59:         envio_esclavos();
 [v _TX_GO `(v ~T0 @X0 0 ef ]
+"62
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 62:         Lcd_Write_Char(centenasp1+48);
+[v _envio_esclavos `(v ~T0 @X0 0 ef ]
 "61
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 61:         Lcd_Set_Cursor(2,1);
-[v _envio_esclavos `(v ~T0 @X0 0 ef ]
-"60
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 60:         correccion();
 [v _mapeo `(v ~T0 @X0 0 ef ]
-"63
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 63:         Lcd_Set_Cursor(2,2);
-[v _correccion `(v ~T0 @X0 0 ef ]
 "16 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Display8bits.h
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/Display8bits.h: 16: void Lcd_Write_Char(char a);
 [v _Lcd_Write_Char `(v ~T0 @X0 0 ef1`uc ]
@@ -103,9 +103,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1602
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1602: extern volatile unsigned char TRISD __attribute__((address(0x088)));
 [v _TRISD `Vuc ~T0 @X0 0 e@136 ]
-"228
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 "1664
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1664: extern volatile unsigned char TRISE __attribute__((address(0x089)));
 [v _TRISE `Vuc ~T0 @X0 0 e@137 ]
@@ -165,9 +162,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.h
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/SPI.h: 49: char spiRead();
 [v _spiRead `(uc ~T0 @X0 0 e? ]
-"18 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/TablaACSII_HEX.h
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/TablaACSII_HEX.h: 18: void tabla_hex (uint8_t selector, volatile uint8_t *port);
-[v _tabla_hex `(v ~T0 @X0 0 ef2`uc`*Vuc ]
 "1133 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1133: extern volatile unsigned char TXREG __attribute__((address(0x019)));
 [v _TXREG `Vuc ~T0 @X0 0 e@25 ]
@@ -406,25 +400,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 "21 C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 21: void setup(void);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 21: 
 [p x FOSC = INTRC_NOCLKOUT ]
 "22
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 22: void TX_GO (void);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 22: void setup(void);
 [p x WDTE = OFF ]
 "23
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 23: void envio (void);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 23: void TX_GO (void);
 [p x PWRTE = OFF ]
 "24
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 24: void mapeo (void);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 24: void envio (void);
 [p x MCLRE = OFF ]
 "25
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 25: void envio_esclavos(void);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 25: void mapeo (void);
 [p x CP = OFF ]
 "26
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 26: void temp_pos (void);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 26: void envio_esclavos(void);
 [p x CPD = OFF ]
 "27
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 27: void correccion (void);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 27: void temp_pos (void);
 [p x BOREN = OFF ]
 "28
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 28: 
@@ -515,8 +509,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "53
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 53: 
-[v _gradospos `uc ~T0 @X0 1 e ]
+[v _gradospos `ui ~T0 @X0 1 e ]
 [i _gradospos
+-> -> 0 `i `ui
+]
+"54
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 54: 
+[v _nueva `uc ~T0 @X0 1 e ]
+[i _nueva
 -> -> 0 `i `uc
 ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
@@ -589,19 +589,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "92
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 92:             Lcd_Set_Cursor(2,9);
-[e ( _temp_pos ..  ]
+[e = _PORTB -> _gradospos `uc ]
 "93
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 93:             Lcd_Write_Char(unidadesp2+48);
-[e ( _TX_GO ..  ]
+[e ( _temp_pos ..  ]
 "94
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 94:         }
-[e ( _envio_esclavos ..  ]
+[e ( _TX_GO ..  ]
 "95
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 95:         Lcd_Set_Cursor(2,10);
-[e ( _mapeo ..  ]
+[e ( _envio_esclavos ..  ]
 "96
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 96:         Lcd_Write_Char(32);
-[e ( _correccion ..  ]
+[e ( _mapeo ..  ]
 "97
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 97:         Lcd_Set_Cursor(2,11);
 [e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
@@ -841,13 +841,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 147 ]
 }
 "179
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 179:             tabla_hex(((esclavo3 & 0b11110000)>>4),&TXREG);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 179: 
 [v _TX_GO `(v ~T0 @X0 1 ef ]
 {
 [e :U _TX_GO ]
 [f ]
 "180
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 180: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 180:            TXREG = centenasp1+48;
 [e $ ! == -> _controles `i -> 10 `i 149  ]
 {
 "181
@@ -862,7 +862,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 148 ]
 }
 "184
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 184:           tabla_hex((esclavo3 & 0b00001111),&TXREG);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 184: 
 [v _envio_esclavos `(v ~T0 @X0 1 ef ]
 {
 [e :U _envio_esclavos ]
@@ -872,7 +872,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! > -> _controles `i -> 50 `i 151  ]
 {
 "186
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 186: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 186:            TXREG = 46;
 [e = _controles -> -> 0 `i `uc ]
 "187
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 187:            var_envio++;
@@ -972,9 +972,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "214
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 214:             TXREG = decenasp2+48;
 [e :U 160 ]
-"215
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 215:             var_envio++;
-[e ( _tabla_hex (2 , -> >> & -> _esclavo3 `i -> 240 `i -> 4 `i `uc &U _TXREG ]
+"216
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 216:            break;
+[e = _TXREG -> + -> _centenasp1 `i -> 48 `i `uc ]
 "217
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 217:         case 8:
 [e ++ _var_envio -> -> 1 `i `uc ]
@@ -984,9 +984,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "219
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 219:            var_envio++;
 [e :U 161 ]
-"220
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 220:            break;
-[e ( _tabla_hex (2 , -> & -> _esclavo3 `i -> 15 `i `uc &U _TXREG ]
+"222
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 222:            TXREG = 44;
+[e = _TXREG -> -> 46 `i `uc ]
 "223
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 223:            var_envio++;
 [e ++ _var_envio -> -> 1 `i `uc ]
@@ -1077,67 +1077,62 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 250: void temp_pos (void){
 [e = _TXREG -> + -> _decenasp2 `i -> 48 `i `uc ]
 "251
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 251:     if (esclavo3 <69){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 251:     gradospos = esclavo3;
 [e ++ _var_envio -> -> 1 `i `uc ]
 "252
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 252:         gradospos = (-1)*(((esclavo3*150)/186.0)-55);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 252:     if (esclavo3 <69){
 [e $U 158  ]
 "253
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 253:         centenasp2 = (gradospos/100);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 253:         nueva = (-1)*((gradospos*0.807)-55.75);
 [e :U 170 ]
 "254
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 254:         decenasp2 = (((gradospos-(centenasp2*100)))/10);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 254:         centenasp2 = nueva/100;
 [e = _TXREG -> + -> _unidadesp2 `i -> 48 `i `uc ]
 "255
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 255:         unidadesp2 = (gradospos-((centenasp2*100)+(decenasp2*10)));
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 255:         decenasp2 = ((nueva-(centenasp2*100)))/10;
 [e ++ _var_envio -> -> 1 `i `uc ]
 "256
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 256:     }else{
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 256:         unidadesp2 = nueva-((centenasp2*100)+(decenasp2*10));
 [e $U 158  ]
 "257
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 257: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 257:     }else{
 [e :U 171 ]
 "258
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 258:         gradospos = (((esclavo3*150)/186.0)-55);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 258:         nueva = ((gradospos*0.807)-55.75);
 [e = _TXREG -> -> 44 `i `uc ]
 "259
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 259:         centenasp2 = (gradospos/100);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 259:         PORTB = nueva;
 [e ++ _var_envio -> -> 1 `i `uc ]
 "260
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 260:         decenasp2 = (((gradospos-(centenasp2*100)))/10);
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 260: 
 [e $U 158  ]
 "261
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 261:         unidadesp2 = (gradospos-((centenasp2*100)+(decenasp2*10)));
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 261:         centenasp2 = (nueva/100);
 [e :U 172 ]
 "262
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 262:         correccion();
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 262:         decenasp2 = (((nueva-(centenasp2*100)))/10);
 [e = _TXREG -> + / -> _esclavo2 `i -> 100 `i -> 48 `i `uc ]
 "263
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 263: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 263:         unidadesp2 = (nueva-((centenasp2*100)+(decenasp2*10)));
 [e ++ _var_envio -> -> 1 `i `uc ]
 "264
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 264:     }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 264: 
 [e $U 158  ]
 "265
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 265: }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 265:     }
 [e :U 173 ]
 "266
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 266: void correccion(void){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 266: }
 [e = _TXREG -> + / - -> _esclavo2 `i * / -> _esclavo2 `i -> 100 `i -> 100 `i -> 10 `i -> 48 `i `uc ]
 "267
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 267:     if (esclavo3 > 218){
 [e ++ _var_envio -> -> 1 `i `uc ]
 "268
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 268:         gradospos = gradospos +95;
 [e $U 158  ]
 "269
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 269:         centenasp2 = PORTB;
 [e :U 174 ]
 "270
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 270:     }
 [e = _TXREG -> + - -> _esclavo2 `i + / -> _esclavo2 `i -> 100 `i / - -> _esclavo2 `i * / -> _esclavo2 `i -> 100 `i -> 100 `i -> 10 `i -> 48 `i `uc ]
 "271
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto3Digital2.X/main.c: 271: }
 [e ++ _var_envio -> -> 1 `i `uc ]
 "272
 [e $U 158  ]
@@ -1197,53 +1192,37 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _temp_pos ]
 [f ]
 "287
+[e = _gradospos -> _esclavo3 `ui ]
+"288
 [e $ ! < -> _esclavo3 `i -> 69 `i 178  ]
 {
-"288
-[e = _gradospos -> * -> -U -> 1 `i `d - / -> * -> _esclavo3 `i -> 150 `i `d .186.0 -> -> 55 `i `d `uc ]
 "289
-[e = _centenasp2 -> / -> _gradospos `i -> 100 `i `uc ]
+[e = _nueva -> * -> -U -> 1 `i `d - * -> _gradospos `d .0.807 .55.75 `uc ]
 "290
-[e = _decenasp2 -> / - -> _gradospos `i * -> _centenasp2 `i -> 100 `i -> 10 `i `uc ]
+[e = _centenasp2 -> / -> _nueva `i -> 100 `i `uc ]
 "291
-[e = _unidadesp2 -> - -> _gradospos `i + * -> _centenasp2 `i -> 100 `i * -> _decenasp2 `i -> 10 `i `uc ]
+[e = _decenasp2 -> / - -> _nueva `i * -> _centenasp2 `i -> 100 `i -> 10 `i `uc ]
 "292
+[e = _unidadesp2 -> - -> _nueva `i + * -> _centenasp2 `i -> 100 `i * -> _decenasp2 `i -> 10 `i `uc ]
+"293
 }
 [e $U 179  ]
 [e :U 178 ]
 {
 "294
-[e = _gradospos -> - / -> * -> _esclavo3 `i -> 150 `i `d .186.0 -> -> 55 `i `d `uc ]
+[e = _nueva -> - * -> _gradospos `d .0.807 .55.75 `uc ]
 "295
-[e = _centenasp2 -> / -> _gradospos `i -> 100 `i `uc ]
-"296
-[e = _decenasp2 -> / - -> _gradospos `i * -> _centenasp2 `i -> 100 `i -> 10 `i `uc ]
+[e = _PORTB _nueva ]
 "297
-[e = _unidadesp2 -> - -> _gradospos `i + * -> _centenasp2 `i -> 100 `i * -> _decenasp2 `i -> 10 `i `uc ]
+[e = _centenasp2 -> / -> _nueva `i -> 100 `i `uc ]
 "298
-[e ( _correccion ..  ]
-"300
+[e = _decenasp2 -> / - -> _nueva `i * -> _centenasp2 `i -> 100 `i -> 10 `i `uc ]
+"299
+[e = _unidadesp2 -> - -> _nueva `i + * -> _centenasp2 `i -> 100 `i * -> _decenasp2 `i -> 10 `i `uc ]
+"301
 }
 [e :U 179 ]
-"301
-[e :UE 177 ]
-}
 "302
-[v _correccion `(v ~T0 @X0 1 ef ]
-{
-[e :U _correccion ]
-[f ]
-"303
-[e $ ! > -> _esclavo3 `i -> 218 `i 181  ]
-{
-"304
-[e = _gradospos -> + -> _gradospos `i -> 95 `i `uc ]
-"305
-[e = _centenasp2 _PORTB ]
-"306
-}
-[e :U 181 ]
-"307
-[e :UE 180 ]
+[e :UE 177 ]
 }
 [a 1C 80 79 84 49 32 76 77 51 53 32 67 79 78 84 0 ]

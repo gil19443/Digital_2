@@ -37,14 +37,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 843: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
 [p mainexit ]
-"41 C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 41:     }
+"42 C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 42:         LEDS();
 [v _setup `(v ~T0 @X0 0 ef ]
-"42
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 42: }
-[v _GO_ADC `(v ~T0 @X0 0 ef ]
 "43
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 43: 
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 43:     }
+[v _GO_ADC `(v ~T0 @X0 0 ef ]
+"44
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 44: }
 [v _LEDS `(v ~T0 @X0 0 ef ]
 "16 C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/Libreria2.h
 [; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/Libreria2.h: 16: void initOsc (uint8_t option);
@@ -124,7 +124,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1557
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
 [v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
-"104 C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c
+"106 C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c
 [c E1297 32 33 34 35 36 37 .. ]
 [n E1297 . SPI_MASTER_OSC_DIV4 SPI_MASTER_OSC_DIV16 SPI_MASTER_OSC_DIV64 SPI_MASTER_TMR2 SPI_SLAVE_SS_EN SPI_SLAVE_SS_DIS  ]
 [c E1305 0 128 .. ]
@@ -405,34 +405,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 "19 C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 19:     }
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 19:         INTCONbits.TMR0IF = 0;
 [p x FOSC = INTRC_NOCLKOUT ]
 "20
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 20:     if (PIR1bits.ADIF == 1){
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 20: 
 [p x WDTE = OFF ]
 "21
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 21:         ADC = ADRESH;
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 21:     }
 [p x PWRTE = OFF ]
 "22
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 22:         PIR1bits.ADIF = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 22:     if (PIR1bits.ADIF == 1){
 [p x MCLRE = OFF ]
 "23
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 23:     }
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 23:         ADC = ADRESH;
 [p x CP = OFF ]
 "24
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 24:     if (PIR1bits.SSPIF = 1){
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 24:         PIR1bits.ADIF = 0;
 [p x CPD = OFF ]
 "25
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 25:         SSPBUF = ADC;
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 25:     }
 [p x BOREN = OFF ]
 "26
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 26:         PIR1bits.SSPIF = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 26:     if (PIR1bits.SSPIF = 1){
 [p x IESO = OFF ]
 "27
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 27:     }
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 27:         SSPBUF = ADC;
 [p x FCMEN = OFF ]
 "28
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 28: }
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 28:         PIR1bits.SSPIF = 0;
 [p x LVP = OFF ]
 "31
 [; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 31: 
@@ -441,7 +441,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 32: 
 [p x WRT = OFF ]
 "36
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 36: 
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 36:     setup();
 [v _ADC `uc ~T0 @X0 1 e ]
 [i _ADC
 -> -> 0 `i `uc
@@ -452,215 +452,222 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _ADC_GO
 -> -> 0 `i `uc
 ]
+"38
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 38: 
+[v _temp `uc ~T0 @X0 1 e ]
+[i _temp
+-> -> 0 `i `uc
+]
 [v $root$_isr `(v ~T0 @X0 0 e ]
-"47
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 47: 
+"49
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 49: 
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
-"48
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 48: 
+"50
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 50: 
 [e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 139  ]
 {
-"49
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 49: void setup(void) {
-[e = _TMR0 -> -> 236 `i `uc ]
-"50
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 50:     initOsc(6);
-[e ++ _ADC_GO -> -> 1 `i `uc ]
 "51
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 51:     configADC(0,2);
-[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 51: void setup(void) {
+[e = _TMR0 -> -> 236 `i `uc ]
+"52
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 52:     initOsc(6);
+[e ++ _ADC_GO -> -> 1 `i `uc ]
 "53
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 53:     OPTION_REG = 0b01010111;
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 53:     configADC(0,2);
+[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
+"55
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 55:     OPTION_REG = 0b01010111;
 }
 [e :U 139 ]
-"54
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 54:     ANSEL = 0;
+"56
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 56:     ANSEL = 0;
 [e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 140  ]
 {
-"55
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 55:     ANSELbits.ANS0 = 1;
-[e = _ADC _ADRESH ]
-"56
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 56:     ANSELH = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
 "57
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 57:     PORTC = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 57:     ANSELbits.ANS0 = 1;
+[e = _ADC _ADRESH ]
+"58
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 58:     ANSELH = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"59
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 59:     PORTC = 0;
 }
 [e :U 140 ]
-"58
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 58:     TRISC = 0;
+"60
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 60:     TRISC = 0;
 [e $ ! != -> = . . _PIR1bits 0 3 -> -> 1 `i `uc `i -> 0 `i 141  ]
 {
-"59
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 59:     PORTD = 0;
-[e = _SSPBUF _ADC ]
-"60
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 60:     TRISD = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "61
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 61:     TRISB = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 61:     PORTD = 0;
+[e = _SSPBUF _ADC ]
+"62
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 62:     TRISD = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"63
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 63:     TRISB = 0;
 }
 [e :U 141 ]
-"62
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 62:     PORTB = 0;
+"64
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 64:     PORTB = 0;
 [e :UE 138 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"67
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 67:     TRISAbits.TRISA0 = 1;
+"69
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 69:     TRISAbits.TRISA0 = 1;
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"68
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 68:     TRISCbits.TRISC5 = 0;
+"70
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 70:     TRISCbits.TRISC5 = 0;
 [e ( _setup ..  ]
-"72
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 72:     INTCONbits.GIE = 1;
+"74
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 74:     INTCONbits.GIE = 1;
 [e :U 144 ]
 {
-"73
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 73:     INTCONbits.PEIE = 1;
-[e ( _GO_ADC ..  ]
-"74
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 74:     INTCONbits.TMR0IE = 1;
-[e ( _LEDS ..  ]
 "75
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 75:     PIE1bits.ADIE = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 75:     INTCONbits.PEIE = 1;
+[e ( _GO_ADC ..  ]
+"76
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 76:     INTCONbits.TMR0IE = 1;
+[e ( _LEDS ..  ]
+"77
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 77:     PIE1bits.ADIE = 1;
 }
 [e :U 143 ]
 [e $U 144  ]
 [e :U 145 ]
-"76
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 76:     PIE1bits.SSPIE = 1;
+"78
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 78:     PIE1bits.SSPIE = 1;
 [e :UE 142 ]
 }
-"83
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 83:            ADCON0bits.GO_nDONE = 1;
+"85
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 85:            ADCON0bits.GO_nDONE = 1;
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"84
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 84:        }
-[e ( _initOsc (1 -> -> 6 `i `uc ]
-"85
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 85:     }
-[e ( _configADC (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
 "86
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 86: void LEDS (void){
-[e = _ADCON1 -> -> 16 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 86:        }
+[e ( _initOsc (1 -> -> 6 `i `uc ]
 "87
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 87:     if (ADC <= 0x29){
-[e = _OPTION_REG -> -> 87 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 87:     }
+[e ( _configADC (2 , -> -> 0 `i `uc -> -> 2 `i `uc ]
 "88
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 88:         PORTE = 1;
-[e = _ANSEL -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 88: void LEDS (void){
+[e = _ADCON1 -> -> 16 `i `uc ]
 "89
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 89:     }else if (0x29 < ADC <= 0x2E){
-[e = . . _ANSELbits 0 0 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 89:     temp = ADC;
+[e = _OPTION_REG -> -> 87 `i `uc ]
 "90
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 90:         PORTE = 2;
-[e = _ANSELH -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 90:     if (temp <= 0x64){
+[e = _ANSEL -> -> 0 `i `uc ]
 "91
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 91:     }else if (ADC > 0x2E){
-[e = _PORTC -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 91:         PORTE = 1;
+[e = . . _ANSELbits 0 0 -> -> 1 `i `uc ]
 "92
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 92:         PORTE = 3;
-[e = _TRISC -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 92:     }else if (0x64 < temp && temp <= 0x72){
+[e = _ANSELH -> -> 0 `i `uc ]
 "93
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 93:     }
-[e = _PORTD -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 93:         PORTE = 2;
+[e = _PORTC -> -> 0 `i `uc ]
 "94
-[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 94: }
-[e = _TRISD -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 94:     }else{
+[e = _TRISC -> -> 0 `i `uc ]
 "95
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 95:         PORTE = 4;
+[e = _PORTD -> -> 0 `i `uc ]
 "96
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 96:     }
+[e = _TRISD -> -> 0 `i `uc ]
 "97
-[e = _TRISE -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 97: }
+[e = _TRISB -> -> 0 `i `uc ]
 "98
-[e = _PORTE -> -> 0 `i `uc ]
+[e = _PORTB -> -> 0 `i `uc ]
 "99
-[e = _PORTA -> -> 0 `i `uc ]
+[e = _TRISE -> -> 0 `i `uc ]
 "100
-[e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
+[e = _PORTE -> -> 0 `i `uc ]
 "101
-[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+[e = _PORTA -> -> 0 `i `uc ]
 "102
-[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
+[e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
 "103
-[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
 "104
-[e ( _spiInit (4 , , , . `E1297 4 . `E1305 0 . `E1309 1 . `E1313 0 ]
+[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
+"105
+[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
 "106
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"107
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[e ( _spiInit (4 , , , . `E1297 4 . `E1305 0 . `E1309 1 . `E1313 0 ]
 "108
-[e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "109
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "110
-[e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
+[e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
 "111
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+"112
+[e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
 "113
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"115
 [e :UE 146 ]
 }
-"114
+"116
 [v _GO_ADC `(v ~T0 @X0 1 ef ]
 {
 [e :U _GO_ADC ]
 [f ]
-"115
+"117
 [e $ ! > -> _ADC_GO `i -> 10 `i 148  ]
 {
-"116
-[e = _ADC_GO -> -> 0 `i `uc ]
-"117
-[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
 "118
+[e = _ADC_GO -> -> 0 `i `uc ]
+"119
+[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
+"120
 }
 [e :U 148 ]
-"119
+"121
 [e :UE 147 ]
 }
-"120
+"122
 [v _LEDS `(v ~T0 @X0 1 ef ]
 {
 [e :U _LEDS ]
 [f ]
-"121
-[e $ ! <= -> _ADC `i -> 41 `i 150  ]
-{
-"122
-[e = _PORTE -> -> 1 `i `uc ]
 "123
+[e = _temp _ADC ]
+"124
+[e $ ! <= -> _temp `i -> 100 `i 150  ]
+{
+"125
+[e = _PORTE -> -> 1 `i `uc ]
+"126
 }
 [e $U 151  ]
 [e :U 150 ]
-[e $ ! <= -> < -> 41 `i -> _ADC `i `i -> 46 `i 152  ]
+[e $ ! && < -> 100 `i -> _temp `i <= -> _temp `i -> 114 `i 152  ]
 {
-"124
+"127
 [e = _PORTE -> -> 2 `i `uc ]
-"125
+"128
 }
 [e $U 153  ]
 [e :U 152 ]
-[e $ ! > -> _ADC `i -> 46 `i 154  ]
 {
-"126
-[e = _PORTE -> -> 3 `i `uc ]
-"127
+"129
+[e = _PORTE -> -> 4 `i `uc ]
+"130
 }
-[e :U 154 ]
 [e :U 153 ]
 [e :U 151 ]
-"128
+"131
 [e :UE 149 ]
 }

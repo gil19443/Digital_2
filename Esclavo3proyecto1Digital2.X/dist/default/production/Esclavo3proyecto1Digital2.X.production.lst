@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
-                                                                                               Tue Feb 16 00:15:58 2021
+                                                                                               Wed Feb 17 22:23:40 2021
 
 Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1 
      1                           	processor	16F887
@@ -493,1679 +493,1712 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
    479                           ; Clear objects allocated to COMMON
    480  0013  01F7               	clrf	__pbssCOMMON& (0+127)
    481  0014  01F8               	clrf	(__pbssCOMMON+1)& (0+127)
-   482  0015                     end_of_initialization:	
-   483                           ;End of C runtime variable initialization code
-   484                           
-   485  0015                     __end_of__initialization:
-   486  0015  0183               	clrf	3
-   487  0016  120A  118A  29D3   	ljmp	_main	;jump to C main() function
-   488                           
-   489                           	psect	bssCOMMON
-   490  0077                     __pbssCOMMON:
-   491  0077                     _ADC_GO:
-   492  0077                     	ds	1
-   493  0078                     _ADC:
-   494  0078                     	ds	1
-   495                           
-   496                           	psect	cstackCOMMON
-   497  0070                     __pcstackCOMMON:
-   498  0070                     ?_setup:
-   499  0070                     ?_GO_ADC:	
-   500                           ; 1 bytes @ 0x0
-   501                           
-   502  0070                     ?_LEDS:	
+   482  0015  01F9               	clrf	(__pbssCOMMON+2)& (0+127)
+   483  0016                     end_of_initialization:	
+   484                           ;End of C runtime variable initialization code
+   485                           
+   486  0016                     __end_of__initialization:
+   487  0016  0183               	clrf	3
+   488  0017  120A  118A  29F9   	ljmp	_main	;jump to C main() function
+   489                           
+   490                           	psect	bssCOMMON
+   491  0077                     __pbssCOMMON:
+   492  0077                     _temp:
+   493  0077                     	ds	1
+   494  0078                     _ADC_GO:
+   495  0078                     	ds	1
+   496  0079                     _ADC:
+   497  0079                     	ds	1
+   498                           
+   499                           	psect	cstackCOMMON
+   500  0070                     __pcstackCOMMON:
+   501  0070                     ?_setup:
+   502  0070                     ?_GO_ADC:	
    503                           ; 1 bytes @ 0x0
    504                           
-   505  0070                     ?_initOsc:	
+   505  0070                     ?_LEDS:	
    506                           ; 1 bytes @ 0x0
    507                           
-   508  0070                     ?_isr:	
+   508  0070                     ?_initOsc:	
    509                           ; 1 bytes @ 0x0
    510                           
-   511  0070                     ??_isr:	
+   511  0070                     ?_isr:	
    512                           ; 1 bytes @ 0x0
    513                           
-   514  0070                     ?_main:	
+   514  0070                     ??_isr:	
    515                           ; 1 bytes @ 0x0
    516                           
-   517                           
+   517  0070                     ?_main:	
    518                           ; 1 bytes @ 0x0
-   519  0070                     	ds	3
-   520  0073                     ??_GO_ADC:
-   521  0073                     ??_LEDS:	
-   522                           ; 1 bytes @ 0x3
-   523                           
-   524  0073                     ?_configADC:	
+   519                           
+   520                           
+   521                           ; 1 bytes @ 0x0
+   522  0070                     	ds	3
+   523  0073                     ??_GO_ADC:
+   524  0073                     ??_LEDS:	
    525                           ; 1 bytes @ 0x3
    526                           
-   527  0073                     ?_spiInit:	
+   527  0073                     ?_configADC:	
    528                           ; 1 bytes @ 0x3
    529                           
-   530  0073                     ??_initOsc:	
+   530  0073                     ?_spiInit:	
    531                           ; 1 bytes @ 0x3
    532                           
-   533  0073                     configADC@vel:	
+   533  0073                     ??_initOsc:	
    534                           ; 1 bytes @ 0x3
    535                           
-   536  0073                     spiInit@sDataSample:	
+   536  0073                     configADC@vel:	
    537                           ; 1 bytes @ 0x3
    538                           
-   539                           
+   539  0073                     spiInit@sDataSample:	
    540                           ; 1 bytes @ 0x3
-   541  0073                     	ds	1
-   542  0074                     ??_configADC:
-   543  0074                     spiInit@sClockIdle:	
-   544                           ; 1 bytes @ 0x4
-   545                           
-   546                           
+   541                           
+   542                           
+   543                           ; 1 bytes @ 0x3
+   544  0073                     	ds	1
+   545  0074                     ??_configADC:
+   546  0074                     spiInit@sClockIdle:	
    547                           ; 1 bytes @ 0x4
-   548  0074                     	ds	1
-   549  0075                     spiInit@sTransmitEdge:
-   550  0075                     initOsc@option:	
-   551                           ; 1 bytes @ 0x5
-   552                           
-   553                           
+   548                           
+   549                           
+   550                           ; 1 bytes @ 0x4
+   551  0074                     	ds	1
+   552  0075                     spiInit@sTransmitEdge:
+   553  0075                     initOsc@option:	
    554                           ; 1 bytes @ 0x5
-   555  0075                     	ds	1
-   556  0076                     ??_spiInit:
-   557  0076                     configADC@canal:	
-   558                           ; 1 bytes @ 0x6
-   559                           
-   560  0076                     spiInit@sType:	
+   555                           
+   556                           
+   557                           ; 1 bytes @ 0x5
+   558  0075                     	ds	1
+   559  0076                     ??_spiInit:
+   560  0076                     configADC@canal:	
    561                           ; 1 bytes @ 0x6
    562                           
-   563                           
+   563  0076                     spiInit@sType:	
    564                           ; 1 bytes @ 0x6
-   565  0076                     	ds	1
-   566  0077                     ??_setup:
-   567  0077                     ??_main:	
-   568                           ; 1 bytes @ 0x7
-   569                           
-   570                           
-   571                           	psect	maintext
-   572  01D3                     __pmaintext:	
-   573                           ; 1 bytes @ 0x7
-   574 ;;
-   575 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
-   576 ;;
-   577 ;; *************** function _main *****************
-   578 ;; Defined at:
-   579 ;;		line 67 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c"
-   580 ;; Parameters:    Size  Location     Type
-   581 ;;		None
-   582 ;; Auto vars:     Size  Location     Type
-   583 ;;		None
-   584 ;; Return value:  Size  Location     Type
-   585 ;;                  1    wreg      void 
-   586 ;; Registers used:
-   587 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
-   588 ;; Tracked objects:
-   589 ;;		On entry : B00/0
-   590 ;;		On exit  : 0/0
-   591 ;;		Unchanged: 0/0
-   592 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   593 ;;      Params:         0       0       0       0       0
-   594 ;;      Locals:         0       0       0       0       0
-   595 ;;      Temps:          0       0       0       0       0
-   596 ;;      Totals:         0       0       0       0       0
-   597 ;;Total ram usage:        0 bytes
-   598 ;; Hardware stack levels required when called:    3
-   599 ;; This function calls:
-   600 ;;		_GO_ADC
-   601 ;;		_LEDS
-   602 ;;		_setup
-   603 ;; This function is called by:
-   604 ;;		Startup code after reset
-   605 ;; This function uses a non-reentrant model
-   606 ;;
-   607                           
-   608                           
-   609                           ;psect for function _main
-   610  01D3                     _main:
-   611  01D3                     l1067:	
-   612                           ;incstack = 0
-   613                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-   614                           
-   615                           
-   616                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 68:     TRISCbits.TRISC
+   565                           
+   566                           
+   567                           ; 1 bytes @ 0x6
+   568  0076                     	ds	1
+   569  0077                     ??_setup:
+   570  0077                     ??_main:	
+   571                           ; 1 bytes @ 0x7
+   572                           
+   573                           
+   574                           	psect	maintext
+   575  01F9                     __pmaintext:	
+   576                           ; 1 bytes @ 0x7
+   577 ;;
+   578 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   579 ;;
+   580 ;; *************** function _main *****************
+   581 ;; Defined at:
+   582 ;;		line 69 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c"
+   583 ;; Parameters:    Size  Location     Type
+   584 ;;		None
+   585 ;; Auto vars:     Size  Location     Type
+   586 ;;		None
+   587 ;; Return value:  Size  Location     Type
+   588 ;;                  1    wreg      void 
+   589 ;; Registers used:
+   590 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   591 ;; Tracked objects:
+   592 ;;		On entry : B00/0
+   593 ;;		On exit  : 0/0
+   594 ;;		Unchanged: 0/0
+   595 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   596 ;;      Params:         0       0       0       0       0
+   597 ;;      Locals:         0       0       0       0       0
+   598 ;;      Temps:          0       0       0       0       0
+   599 ;;      Totals:         0       0       0       0       0
+   600 ;;Total ram usage:        0 bytes
+   601 ;; Hardware stack levels required when called:    3
+   602 ;; This function calls:
+   603 ;;		_GO_ADC
+   604 ;;		_LEDS
+   605 ;;		_setup
+   606 ;; This function is called by:
+   607 ;;		Startup code after reset
+   608 ;; This function uses a non-reentrant model
+   609 ;;
+   610                           
+   611                           
+   612                           ;psect for function _main
+   613  01F9                     _main:
+   614  01F9                     l1072:	
+   615                           ;incstack = 0
+   616                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   617                           
+   618                           
+   619                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 70:     TRISCbits.TRISC
       +                          5 = 0;
-   617  01D3  120A  118A  2150  120A  118A  	fcall	_setup
-   618  01D8                     l1069:
-   619                           
-   620                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 73:     INTCONbits.PEIE
+   620  01F9  120A  118A  2151  120A  118A  	fcall	_setup
+   621  01FE                     l1074:
+   622                           
+   623                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 75:     INTCONbits.PEIE
       +                           = 1;
-   621  01D8  120A  118A  21F6  120A  118A  	fcall	_GO_ADC
-   622  01DD                     l1071:
-   623                           
-   624                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 74:     INTCONbits.TMR0
+   624  01FE  120A  118A  220C  120A  118A  	fcall	_GO_ADC
+   625  0203                     l1076:
+   626                           
+   627                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 76:     INTCONbits.TMR0
       +                          IE = 1;
-   625  01DD  120A  118A  21E6  120A  118A  	fcall	_LEDS
-   626  01E2  29D8               	goto	l1069
-   627  01E3  120A  118A  2810   	ljmp	start
-   628  01E6                     __end_of_main:
-   629                           
-   630                           	psect	text1
-   631  0150                     __ptext1:	
-   632 ;; *************** function _setup *****************
-   633 ;; Defined at:
-   634 ;;		line 83 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c"
-   635 ;; Parameters:    Size  Location     Type
-   636 ;;		None
-   637 ;; Auto vars:     Size  Location     Type
-   638 ;;		None
-   639 ;; Return value:  Size  Location     Type
-   640 ;;                  1    wreg      void 
-   641 ;; Registers used:
-   642 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
-   643 ;; Tracked objects:
-   644 ;;		On entry : 0/0
-   645 ;;		On exit  : 0/0
-   646 ;;		Unchanged: 0/0
-   647 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   648 ;;      Params:         0       0       0       0       0
-   649 ;;      Locals:         0       0       0       0       0
-   650 ;;      Temps:          0       0       0       0       0
-   651 ;;      Totals:         0       0       0       0       0
-   652 ;;Total ram usage:        0 bytes
-   653 ;; Hardware stack levels used:    1
-   654 ;; Hardware stack levels required when called:    2
-   655 ;; This function calls:
-   656 ;;		_configADC
-   657 ;;		_initOsc
-   658 ;;		_spiInit
-   659 ;; This function is called by:
-   660 ;;		_main
-   661 ;; This function uses a non-reentrant model
-   662 ;;
-   663                           
-   664                           
-   665                           ;psect for function _setup
-   666  0150                     _setup:
-   667  0150                     l1013:	
-   668                           ;incstack = 0
-   669                           ; Regs used in _setup: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-   670                           
-   671                           
-   672                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 84:        }
-   673  0150  3006               	movlw	6
-   674  0151  120A  118A  20FB  120A  118A  	fcall	_initOsc
-   675  0156                     l1015:
-   676                           
-   677                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 85:     }
-   678  0156  3002               	movlw	2
-   679  0157  00FF               	movwf	btemp+1
-   680  0158  087F               	movf	btemp+1,w
-   681  0159  00F3               	movwf	configADC@vel
-   682  015A  3000               	movlw	0
-   683  015B  120A  118A  2019  120A  118A  	fcall	_configADC
-   684  0160                     l1017:
-   685                           
-   686                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 86: void LEDS (void){
-   687  0160  3010               	movlw	16
-   688  0161  1683               	bsf	3,5	;RP0=1, select bank1
-   689  0162  1303               	bcf	3,6	;RP1=0, select bank1
-   690  0163  009F               	movwf	31	;volatile
-   691  0164                     l1019:
-   692                           
-   693                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 87:     if (ADC <= 0x29
-      +                          ){
-   694  0164  3057               	movlw	87
-   695  0165  0081               	movwf	1	;volatile
-   696  0166                     l1021:
-   697                           
-   698                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 88:         PORTE = 1;
-   699  0166  1683               	bsf	3,5	;RP0=1, select bank3
-   700  0167  1703               	bsf	3,6	;RP1=1, select bank3
-   701  0168  0188               	clrf	8	;volatile
-   702  0169                     l1023:
-   703                           
-   704                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 89:     }else if (0x29 
-      +                          < ADC <= 0x2E){
-   705  0169  1408               	bsf	8,0	;volatile
-   706  016A                     l1025:
-   707                           
-   708                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 90:         PORTE = 2;
-   709  016A  0189               	clrf	9	;volatile
-   710  016B                     l1027:
-   711                           
-   712                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 91:     }else if (ADC >
-      +                           0x2E){
-   713  016B  1283               	bcf	3,5	;RP0=0, select bank0
-   714  016C  1303               	bcf	3,6	;RP1=0, select bank0
-   715  016D  0187               	clrf	7	;volatile
-   716  016E                     l1029:
-   717                           
-   718                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 92:         PORTE = 3;
-   719  016E  1683               	bsf	3,5	;RP0=1, select bank1
-   720  016F  1303               	bcf	3,6	;RP1=0, select bank1
-   721  0170  0187               	clrf	7	;volatile
-   722  0171                     l1031:
-   723                           
-   724                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 93:     }
-   725  0171  1283               	bcf	3,5	;RP0=0, select bank0
-   726  0172  1303               	bcf	3,6	;RP1=0, select bank0
-   727  0173  0188               	clrf	8	;volatile
-   728  0174                     l1033:
-   729                           
-   730                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 94: }
-   731  0174  1683               	bsf	3,5	;RP0=1, select bank1
-   732  0175  1303               	bcf	3,6	;RP1=0, select bank1
-   733  0176  0188               	clrf	8	;volatile
-   734  0177                     l1035:
-   735  0177  0186               	clrf	6	;volatile
-   736  0178                     l1037:
-   737  0178  1283               	bcf	3,5	;RP0=0, select bank0
-   738  0179  1303               	bcf	3,6	;RP1=0, select bank0
-   739  017A  0186               	clrf	6	;volatile
-   740  017B                     l1039:
-   741  017B  1683               	bsf	3,5	;RP0=1, select bank1
-   742  017C  1303               	bcf	3,6	;RP1=0, select bank1
-   743  017D  0189               	clrf	9	;volatile
-   744  017E                     l1041:
-   745  017E  1283               	bcf	3,5	;RP0=0, select bank0
-   746  017F  1303               	bcf	3,6	;RP1=0, select bank0
-   747  0180  0189               	clrf	9	;volatile
-   748  0181                     l1043:
-   749  0181  0185               	clrf	5	;volatile
-   750  0182                     l1045:
-   751  0182  1683               	bsf	3,5	;RP0=1, select bank1
-   752  0183  1303               	bcf	3,6	;RP1=0, select bank1
-   753  0184  1585               	bsf	5,3	;volatile
-   754  0185                     l1047:
-   755  0185  1405               	bsf	5,0	;volatile
-   756  0186                     l1049:
-   757  0186  1287               	bcf	7,5	;volatile
-   758  0187                     l1051:
-   759  0187  1685               	bsf	5,5	;volatile
-   760  0188                     l1053:
-   761  0188  01F3               	clrf	spiInit@sDataSample
-   762  0189  01F4               	clrf	spiInit@sClockIdle
-   763  018A  01F5               	clrf	spiInit@sTransmitEdge
-   764  018B  3024               	movlw	36
-   765  018C  120A  118A  21BD  120A  118A  	fcall	_spiInit
-   766  0191                     l1055:
-   767  0191  178B               	bsf	11,7	;volatile
-   768  0192                     l1057:
-   769  0192  170B               	bsf	11,6	;volatile
-   770  0193                     l1059:
-   771  0193  168B               	bsf	11,5	;volatile
-   772  0194                     l1061:
-   773  0194  1683               	bsf	3,5	;RP0=1, select bank1
-   774  0195  1303               	bcf	3,6	;RP1=0, select bank1
-   775  0196  170C               	bsf	12,6	;volatile
-   776  0197                     l1063:
-   777  0197  158C               	bsf	12,3	;volatile
-   778  0198                     l1065:
-   779  0198  1283               	bcf	3,5	;RP0=0, select bank0
-   780  0199  1303               	bcf	3,6	;RP1=0, select bank0
-   781  019A  118C               	bcf	12,3	;volatile
-   782  019B                     l163:
-   783  019B  0008               	return
-   784  019C                     __end_of_setup:
-   785                           
-   786                           	psect	text2
-   787  01BD                     __ptext2:	
-   788 ;; *************** function _spiInit *****************
-   789 ;; Defined at:
-   790 ;;		line 12 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c"
-   791 ;; Parameters:    Size  Location     Type
-   792 ;;  sType           1    wreg     enum E1264
-   793 ;;  sDataSample     1    3[COMMON] enum E1272
-   794 ;;  sClockIdle      1    4[COMMON] enum E1276
-   795 ;;  sTransmitEdg    1    5[COMMON] enum E1280
-   796 ;; Auto vars:     Size  Location     Type
-   797 ;;  sType           1    6[COMMON] enum E1264
-   798 ;; Return value:  Size  Location     Type
-   799 ;;                  1    wreg      void 
-   800 ;; Registers used:
-   801 ;;		wreg, status,2, status,0
-   802 ;; Tracked objects:
-   803 ;;		On entry : 0/0
-   804 ;;		On exit  : 0/0
-   805 ;;		Unchanged: 0/0
-   806 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   807 ;;      Params:         3       0       0       0       0
-   808 ;;      Locals:         1       0       0       0       0
-   809 ;;      Temps:          0       0       0       0       0
-   810 ;;      Totals:         4       0       0       0       0
-   811 ;;Total ram usage:        4 bytes
-   812 ;; Hardware stack levels used:    1
-   813 ;; Hardware stack levels required when called:    1
-   814 ;; This function calls:
-   815 ;;		Nothing
-   816 ;; This function is called by:
-   817 ;;		_setup
-   818 ;; This function uses a non-reentrant model
-   819 ;;
-   820                           
-   821                           
-   822                           ;psect for function _spiInit
-   823  01BD                     _spiInit:
-   824                           
-   825                           ;incstack = 0
-   826                           ; Regs used in _spiInit: [wreg+status,2+status,0]
-   827                           ;spiInit@sType stored from wreg
-   828  01BD  00F6               	movwf	spiInit@sType
-   829  01BE                     l1003:
-   830                           
-   831                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 12: void spiInit(Spi_Typ
+   628  0203  120A  118A  219D  120A  118A  	fcall	_LEDS
+   629  0208  29FE               	goto	l1074
+   630  0209  120A  118A  2810   	ljmp	start
+   631  020C                     __end_of_main:
+   632                           
+   633                           	psect	text1
+   634  0151                     __ptext1:	
+   635 ;; *************** function _setup *****************
+   636 ;; Defined at:
+   637 ;;		line 85 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c"
+   638 ;; Parameters:    Size  Location     Type
+   639 ;;		None
+   640 ;; Auto vars:     Size  Location     Type
+   641 ;;		None
+   642 ;; Return value:  Size  Location     Type
+   643 ;;                  1    wreg      void 
+   644 ;; Registers used:
+   645 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   646 ;; Tracked objects:
+   647 ;;		On entry : 0/0
+   648 ;;		On exit  : 0/0
+   649 ;;		Unchanged: 0/0
+   650 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   651 ;;      Params:         0       0       0       0       0
+   652 ;;      Locals:         0       0       0       0       0
+   653 ;;      Temps:          0       0       0       0       0
+   654 ;;      Totals:         0       0       0       0       0
+   655 ;;Total ram usage:        0 bytes
+   656 ;; Hardware stack levels used:    1
+   657 ;; Hardware stack levels required when called:    2
+   658 ;; This function calls:
+   659 ;;		_configADC
+   660 ;;		_initOsc
+   661 ;;		_spiInit
+   662 ;; This function is called by:
+   663 ;;		_main
+   664 ;; This function uses a non-reentrant model
+   665 ;;
+   666                           
+   667                           
+   668                           ;psect for function _setup
+   669  0151                     _setup:
+   670  0151                     l1018:	
+   671                           ;incstack = 0
+   672                           ; Regs used in _setup: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   673                           
+   674                           
+   675                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 86:        }
+   676  0151  3006               	movlw	6
+   677  0152  120A  118A  20FC  120A  118A  	fcall	_initOsc
+   678  0157                     l1020:
+   679                           
+   680                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 87:     }
+   681  0157  3002               	movlw	2
+   682  0158  00FF               	movwf	btemp+1
+   683  0159  087F               	movf	btemp+1,w
+   684  015A  00F3               	movwf	configADC@vel
+   685  015B  3000               	movlw	0
+   686  015C  120A  118A  201A  120A  118A  	fcall	_configADC
+   687  0161                     l1022:
+   688                           
+   689                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 88: void LEDS (void){
+   690  0161  3010               	movlw	16
+   691  0162  1683               	bsf	3,5	;RP0=1, select bank1
+   692  0163  1303               	bcf	3,6	;RP1=0, select bank1
+   693  0164  009F               	movwf	31	;volatile
+   694  0165                     l1024:
+   695                           
+   696                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 89:     temp = ADC;
+   697  0165  3057               	movlw	87
+   698  0166  0081               	movwf	1	;volatile
+   699  0167                     l1026:
+   700                           
+   701                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 90:     if (temp <= 0x6
+      +                          4){
+   702  0167  1683               	bsf	3,5	;RP0=1, select bank3
+   703  0168  1703               	bsf	3,6	;RP1=1, select bank3
+   704  0169  0188               	clrf	8	;volatile
+   705  016A                     l1028:
+   706                           
+   707                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 91:         PORTE = 1;
+   708  016A  1408               	bsf	8,0	;volatile
+   709  016B                     l1030:
+   710                           
+   711                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 92:     }else if (0x64 
+      +                          < temp && temp <= 0x72){
+   712  016B  0189               	clrf	9	;volatile
+   713  016C                     l1032:
+   714                           
+   715                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 93:         PORTE = 2;
+   716  016C  1283               	bcf	3,5	;RP0=0, select bank0
+   717  016D  1303               	bcf	3,6	;RP1=0, select bank0
+   718  016E  0187               	clrf	7	;volatile
+   719  016F                     l1034:
+   720                           
+   721                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 94:     }else{
+   722  016F  1683               	bsf	3,5	;RP0=1, select bank1
+   723  0170  1303               	bcf	3,6	;RP1=0, select bank1
+   724  0171  0187               	clrf	7	;volatile
+   725  0172                     l1036:
+   726                           
+   727                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 95:         PORTE = 4;
+   728  0172  1283               	bcf	3,5	;RP0=0, select bank0
+   729  0173  1303               	bcf	3,6	;RP1=0, select bank0
+   730  0174  0188               	clrf	8	;volatile
+   731  0175                     l1038:
+   732                           
+   733                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 96:     }
+   734  0175  1683               	bsf	3,5	;RP0=1, select bank1
+   735  0176  1303               	bcf	3,6	;RP1=0, select bank1
+   736  0177  0188               	clrf	8	;volatile
+   737  0178                     l1040:
+   738                           
+   739                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 97: }
+   740  0178  0186               	clrf	6	;volatile
+   741  0179                     l1042:
+   742  0179  1283               	bcf	3,5	;RP0=0, select bank0
+   743  017A  1303               	bcf	3,6	;RP1=0, select bank0
+   744  017B  0186               	clrf	6	;volatile
+   745  017C                     l1044:
+   746  017C  1683               	bsf	3,5	;RP0=1, select bank1
+   747  017D  1303               	bcf	3,6	;RP1=0, select bank1
+   748  017E  0189               	clrf	9	;volatile
+   749  017F                     l1046:
+   750  017F  1283               	bcf	3,5	;RP0=0, select bank0
+   751  0180  1303               	bcf	3,6	;RP1=0, select bank0
+   752  0181  0189               	clrf	9	;volatile
+   753  0182                     l1048:
+   754  0182  0185               	clrf	5	;volatile
+   755  0183                     l1050:
+   756  0183  1683               	bsf	3,5	;RP0=1, select bank1
+   757  0184  1303               	bcf	3,6	;RP1=0, select bank1
+   758  0185  1585               	bsf	5,3	;volatile
+   759  0186                     l1052:
+   760  0186  1405               	bsf	5,0	;volatile
+   761  0187                     l1054:
+   762  0187  1287               	bcf	7,5	;volatile
+   763  0188                     l1056:
+   764  0188  1685               	bsf	5,5	;volatile
+   765  0189                     l1058:
+   766  0189  01F3               	clrf	spiInit@sDataSample
+   767  018A  01F4               	clrf	spiInit@sClockIdle
+   768  018B  01F5               	clrf	spiInit@sTransmitEdge
+   769  018C  3024               	movlw	36
+   770  018D  120A  118A  21E3  120A  118A  	fcall	_spiInit
+   771  0192                     l1060:
+   772  0192  178B               	bsf	11,7	;volatile
+   773  0193                     l1062:
+   774  0193  170B               	bsf	11,6	;volatile
+   775  0194                     l1064:
+   776  0194  168B               	bsf	11,5	;volatile
+   777  0195                     l1066:
+   778  0195  1683               	bsf	3,5	;RP0=1, select bank1
+   779  0196  1303               	bcf	3,6	;RP1=0, select bank1
+   780  0197  170C               	bsf	12,6	;volatile
+   781  0198                     l1068:
+   782  0198  158C               	bsf	12,3	;volatile
+   783  0199                     l1070:
+   784  0199  1283               	bcf	3,5	;RP0=0, select bank0
+   785  019A  1303               	bcf	3,6	;RP1=0, select bank0
+   786  019B  118C               	bcf	12,3	;volatile
+   787  019C                     l165:
+   788  019C  0008               	return
+   789  019D                     __end_of_setup:
+   790                           
+   791                           	psect	text2
+   792  01E3                     __ptext2:	
+   793 ;; *************** function _spiInit *****************
+   794 ;; Defined at:
+   795 ;;		line 12 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c"
+   796 ;; Parameters:    Size  Location     Type
+   797 ;;  sType           1    wreg     enum E1264
+   798 ;;  sDataSample     1    3[COMMON] enum E1272
+   799 ;;  sClockIdle      1    4[COMMON] enum E1276
+   800 ;;  sTransmitEdg    1    5[COMMON] enum E1280
+   801 ;; Auto vars:     Size  Location     Type
+   802 ;;  sType           1    6[COMMON] enum E1264
+   803 ;; Return value:  Size  Location     Type
+   804 ;;                  1    wreg      void 
+   805 ;; Registers used:
+   806 ;;		wreg, status,2, status,0
+   807 ;; Tracked objects:
+   808 ;;		On entry : 0/0
+   809 ;;		On exit  : 0/0
+   810 ;;		Unchanged: 0/0
+   811 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   812 ;;      Params:         3       0       0       0       0
+   813 ;;      Locals:         1       0       0       0       0
+   814 ;;      Temps:          0       0       0       0       0
+   815 ;;      Totals:         4       0       0       0       0
+   816 ;;Total ram usage:        4 bytes
+   817 ;; Hardware stack levels used:    1
+   818 ;; Hardware stack levels required when called:    1
+   819 ;; This function calls:
+   820 ;;		Nothing
+   821 ;; This function is called by:
+   822 ;;		_setup
+   823 ;; This function uses a non-reentrant model
+   824 ;;
+   825                           
+   826                           
+   827                           ;psect for function _spiInit
+   828  01E3                     _spiInit:
+   829                           
+   830                           ;incstack = 0
+   831                           ; Regs used in _spiInit: [wreg+status,2+status,0]
+   832                           ;spiInit@sType stored from wreg
+   833  01E3  00F6               	movwf	spiInit@sType
+   834  01E4                     l1008:
+   835                           
+   836                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 12: void spiInit(Spi_Typ
       +                          e sType, Spi_Data_Sample sDataSample, Spi_Clock_Idle sClockIdle, Spi_Transmit_Edge sTran
       +                          smitEdge);C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 13: {;C:/MPlab_
       +                          Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 14:     TRISC5 = 0;
-   832  01BE  1683               	bsf	3,5	;RP0=1, select bank1
-   833  01BF  1303               	bcf	3,6	;RP1=0, select bank1
-   834  01C0  1287               	bcf	7,5	;volatile
-   835                           
-   836                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 15:     if(sType & 0b000
+   837  01E4  1683               	bsf	3,5	;RP0=1, select bank1
+   838  01E5  1303               	bcf	3,6	;RP1=0, select bank1
+   839  01E6  1287               	bcf	7,5	;volatile
+   840                           
+   841                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 15:     if(sType & 0b000
       +                          00100)
-   837  01C1  1D76               	btfss	spiInit@sType,2
-   838  01C2  29C4               	goto	u71
-   839  01C3  29C5               	goto	u70
-   840  01C4                     u71:
-   841  01C4  29C9               	goto	l1009
-   842  01C5                     u70:
-   843  01C5                     l1005:
-   844                           
-   845                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 16:     {;C:/MPlab_Digit
-      +                          al2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 17:         SSPSTAT = sTransmitEdge;
-   846  01C5  0875               	movf	spiInit@sTransmitEdge,w
-   847  01C6  0094               	movwf	20	;volatile
-   848  01C7                     l1007:
+   842  01E7  1D76               	btfss	spiInit@sType,2
+   843  01E8  29EA               	goto	u91
+   844  01E9  29EB               	goto	u90
+   845  01EA                     u91:
+   846  01EA  29EF               	goto	l1014
+   847  01EB                     u90:
+   848  01EB                     l1010:
    849                           
-   850                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 18:         TRISC3 = 1;
-   851  01C7  1587               	bsf	7,3	;volatile
-   852                           
-   853                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 19:     }
-   854  01C8  29CD               	goto	l49
-   855  01C9                     l1009:
-   856                           
-   857                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 21:     {;C:/MPlab_Digit
+   850                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 16:     {;C:/MPlab_Digit
+      +                          al2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 17:         SSPSTAT = sTransmitEdge;
+   851  01EB  0875               	movf	spiInit@sTransmitEdge,w
+   852  01EC  0094               	movwf	20	;volatile
+   853  01ED                     l1012:
+   854                           
+   855                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 18:         TRISC3 = 1;
+   856  01ED  1587               	bsf	7,3	;volatile
+   857                           
+   858                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 19:     }
+   859  01EE  29F3               	goto	l49
+   860  01EF                     l1014:
+   861                           
+   862                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 21:     {;C:/MPlab_Digit
       +                          al2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 22:         SSPSTAT = sDataSample | sTr
       +                          ansmitEdge;
-   858  01C9  0873               	movf	spiInit@sDataSample,w
-   859  01CA  0475               	iorwf	spiInit@sTransmitEdge,w
-   860  01CB  0094               	movwf	20	;volatile
-   861  01CC                     l1011:
-   862                           
-   863                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 23:         TRISC3 = 0;
-   864  01CC  1187               	bcf	7,3	;volatile
-   865  01CD                     l49:	
-   866                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 24:     }
+   863  01EF  0873               	movf	spiInit@sDataSample,w
+   864  01F0  0475               	iorwf	spiInit@sTransmitEdge,w
+   865  01F1  0094               	movwf	20	;volatile
+   866  01F2                     l1016:
    867                           
-   868                           
-   869                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 26:     SSPCON = sType |
+   868                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 23:         TRISC3 = 0;
+   869  01F2  1187               	bcf	7,3	;volatile
+   870  01F3                     l49:	
+   871                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 24:     }
+   872                           
+   873                           
+   874                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/SPI.c: 26:     SSPCON = sType |
       +                           sClockIdle;
-   870  01CD  0876               	movf	spiInit@sType,w
-   871  01CE  0474               	iorwf	spiInit@sClockIdle,w
-   872  01CF  1283               	bcf	3,5	;RP0=0, select bank0
-   873  01D0  1303               	bcf	3,6	;RP1=0, select bank0
-   874  01D1  0094               	movwf	20	;volatile
-   875  01D2                     l50:
-   876  01D2  0008               	return
-   877  01D3                     __end_of_spiInit:
-   878                           
-   879                           	psect	text3
-   880  00FB                     __ptext3:	
-   881 ;; *************** function _initOsc *****************
-   882 ;; Defined at:
-   883 ;;		line 8 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c"
-   884 ;; Parameters:    Size  Location     Type
-   885 ;;  option          1    wreg     unsigned char 
-   886 ;; Auto vars:     Size  Location     Type
-   887 ;;  option          1    5[COMMON] unsigned char 
-   888 ;; Return value:  Size  Location     Type
-   889 ;;                  1    wreg      void 
-   890 ;; Registers used:
-   891 ;;		wreg, fsr0l, fsr0h, status,2, status,0
-   892 ;; Tracked objects:
-   893 ;;		On entry : 0/0
-   894 ;;		On exit  : 0/0
-   895 ;;		Unchanged: 0/0
-   896 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   897 ;;      Params:         0       0       0       0       0
-   898 ;;      Locals:         1       0       0       0       0
-   899 ;;      Temps:          2       0       0       0       0
-   900 ;;      Totals:         3       0       0       0       0
-   901 ;;Total ram usage:        3 bytes
-   902 ;; Hardware stack levels used:    1
-   903 ;; Hardware stack levels required when called:    1
-   904 ;; This function calls:
-   905 ;;		Nothing
-   906 ;; This function is called by:
-   907 ;;		_setup
-   908 ;; This function uses a non-reentrant model
-   909 ;;
-   910                           
-   911                           
-   912                           ;psect for function _initOsc
-   913  00FB                     _initOsc:
-   914                           
-   915                           ;incstack = 0
-   916                           ; Regs used in _initOsc: [wreg-fsr0h+status,2+status,0]
-   917                           ;initOsc@option stored from wreg
-   918  00FB  00F5               	movwf	initOsc@option
-   919  00FC                     l799:
-   920                           
-   921                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 9:     switch (op
-      +                          tion){
-   922  00FC  292D               	goto	l803
-   923  00FD                     l73:	
-   924                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 10:         case 
-      +                          0:
+   875  01F3  0876               	movf	spiInit@sType,w
+   876  01F4  0474               	iorwf	spiInit@sClockIdle,w
+   877  01F5  1283               	bcf	3,5	;RP0=0, select bank0
+   878  01F6  1303               	bcf	3,6	;RP1=0, select bank0
+   879  01F7  0094               	movwf	20	;volatile
+   880  01F8                     l50:
+   881  01F8  0008               	return
+   882  01F9                     __end_of_spiInit:
+   883                           
+   884                           	psect	text3
+   885  00FC                     __ptext3:	
+   886 ;; *************** function _initOsc *****************
+   887 ;; Defined at:
+   888 ;;		line 8 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c"
+   889 ;; Parameters:    Size  Location     Type
+   890 ;;  option          1    wreg     unsigned char 
+   891 ;; Auto vars:     Size  Location     Type
+   892 ;;  option          1    5[COMMON] unsigned char 
+   893 ;; Return value:  Size  Location     Type
+   894 ;;                  1    wreg      void 
+   895 ;; Registers used:
+   896 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   897 ;; Tracked objects:
+   898 ;;		On entry : 0/0
+   899 ;;		On exit  : 0/0
+   900 ;;		Unchanged: 0/0
+   901 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   902 ;;      Params:         0       0       0       0       0
+   903 ;;      Locals:         1       0       0       0       0
+   904 ;;      Temps:          2       0       0       0       0
+   905 ;;      Totals:         3       0       0       0       0
+   906 ;;Total ram usage:        3 bytes
+   907 ;; Hardware stack levels used:    1
+   908 ;; Hardware stack levels required when called:    1
+   909 ;; This function calls:
+   910 ;;		Nothing
+   911 ;; This function is called by:
+   912 ;;		_setup
+   913 ;; This function uses a non-reentrant model
+   914 ;;
+   915                           
+   916                           
+   917                           ;psect for function _initOsc
+   918  00FC                     _initOsc:
+   919                           
+   920                           ;incstack = 0
+   921                           ; Regs used in _initOsc: [wreg-fsr0h+status,2+status,0]
+   922                           ;initOsc@option stored from wreg
+   923  00FC  00F5               	movwf	initOsc@option
+   924  00FD                     l800:
    925                           
-   926                           
-   927                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 11:             O
-      +                          SCCONbits.IRCF2 = 0;
-   928  00FD  1683               	bsf	3,5	;RP0=1, select bank1
-   929  00FE  1303               	bcf	3,6	;RP1=0, select bank1
-   930  00FF  130F               	bcf	15,6	;volatile
+   926                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 9:     switch (op
+      +                          tion){
+   927  00FD  292E               	goto	l804
+   928  00FE                     l73:	
+   929                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 10:         case 
+      +                          0:
+   930                           
    931                           
-   932                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 12:             O
+   932                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 11:             O
+      +                          SCCONbits.IRCF2 = 0;
+   933  00FE  1683               	bsf	3,5	;RP0=1, select bank1
+   934  00FF  1303               	bcf	3,6	;RP1=0, select bank1
+   935  0100  130F               	bcf	15,6	;volatile
+   936                           
+   937                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 12:             O
       +                          SCCONbits.IRCF1 = 0;
-   933  0100  128F               	bcf	15,5	;volatile
-   934                           
-   935                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 13:             O
+   938  0101  128F               	bcf	15,5	;volatile
+   939                           
+   940                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 13:             O
       +                          SCCONbits.IRCF0 = 0;
-   936  0101  120F               	bcf	15,4	;volatile
-   937                           
-   938                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 14:             b
-      +                          reak;
-   939  0102  294F               	goto	l82
-   940  0103                     l75:	
-   941                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 15:         case 
-      +                          1:
+   941  0102  120F               	bcf	15,4	;volatile
    942                           
-   943                           
-   944                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 16:             O
-      +                          SCCONbits.IRCF2 = 0;
-   945  0103  1683               	bsf	3,5	;RP0=1, select bank1
-   946  0104  1303               	bcf	3,6	;RP1=0, select bank1
-   947  0105  130F               	bcf	15,6	;volatile
+   943                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 14:             b
+      +                          reak;
+   944  0103  2950               	goto	l82
+   945  0104                     l75:	
+   946                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 15:         case 
+      +                          1:
+   947                           
    948                           
-   949                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 17:             O
+   949                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 16:             O
+      +                          SCCONbits.IRCF2 = 0;
+   950  0104  1683               	bsf	3,5	;RP0=1, select bank1
+   951  0105  1303               	bcf	3,6	;RP1=0, select bank1
+   952  0106  130F               	bcf	15,6	;volatile
+   953                           
+   954                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 17:             O
       +                          SCCONbits.IRCF1 = 0;
-   950  0106  128F               	bcf	15,5	;volatile
-   951                           
-   952                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 18:             O
+   955  0107  128F               	bcf	15,5	;volatile
+   956                           
+   957                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 18:             O
       +                          SCCONbits.IRCF0 = 1;
-   953  0107  160F               	bsf	15,4	;volatile
-   954                           
-   955                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 19:             b
-      +                          reak;
-   956  0108  294F               	goto	l82
-   957  0109                     l76:	
-   958                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 20:         case 
-      +                          2:
+   958  0108  160F               	bsf	15,4	;volatile
    959                           
-   960                           
-   961                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 21:             O
-      +                          SCCONbits.IRCF2 = 0;
-   962  0109  1683               	bsf	3,5	;RP0=1, select bank1
-   963  010A  1303               	bcf	3,6	;RP1=0, select bank1
-   964  010B  130F               	bcf	15,6	;volatile
+   960                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 19:             b
+      +                          reak;
+   961  0109  2950               	goto	l82
+   962  010A                     l76:	
+   963                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 20:         case 
+      +                          2:
+   964                           
    965                           
-   966                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 22:             O
-      +                          SCCONbits.IRCF1 = 1;
-   967  010C  168F               	bsf	15,5	;volatile
-   968                           
-   969                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 23:             O
-      +                          SCCONbits.IRCF0 = 0;
-   970  010D  120F               	bcf	15,4	;volatile
-   971                           
-   972                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 24:             b
-      +                          reak;
-   973  010E  294F               	goto	l82
-   974  010F                     l77:	
-   975                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 25:         case 
-      +                          3:
-   976                           
-   977                           
-   978                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 26:             O
+   966                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 21:             O
       +                          SCCONbits.IRCF2 = 0;
-   979  010F  1683               	bsf	3,5	;RP0=1, select bank1
-   980  0110  1303               	bcf	3,6	;RP1=0, select bank1
-   981  0111  130F               	bcf	15,6	;volatile
+   967  010A  1683               	bsf	3,5	;RP0=1, select bank1
+   968  010B  1303               	bcf	3,6	;RP1=0, select bank1
+   969  010C  130F               	bcf	15,6	;volatile
+   970                           
+   971                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 22:             O
+      +                          SCCONbits.IRCF1 = 1;
+   972  010D  168F               	bsf	15,5	;volatile
+   973                           
+   974                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 23:             O
+      +                          SCCONbits.IRCF0 = 0;
+   975  010E  120F               	bcf	15,4	;volatile
+   976                           
+   977                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 24:             b
+      +                          reak;
+   978  010F  2950               	goto	l82
+   979  0110                     l77:	
+   980                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 25:         case 
+      +                          3:
+   981                           
    982                           
-   983                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 27:             O
+   983                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 26:             O
+      +                          SCCONbits.IRCF2 = 0;
+   984  0110  1683               	bsf	3,5	;RP0=1, select bank1
+   985  0111  1303               	bcf	3,6	;RP1=0, select bank1
+   986  0112  130F               	bcf	15,6	;volatile
+   987                           
+   988                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 27:             O
       +                          SCCONbits.IRCF1 = 1;
-   984  0112  168F               	bsf	15,5	;volatile
-   985                           
-   986                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 28:             O
+   989  0113  168F               	bsf	15,5	;volatile
+   990                           
+   991                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 28:             O
       +                          SCCONbits.IRCF0 = 1;
-   987  0113  160F               	bsf	15,4	;volatile
-   988                           
-   989                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 29:             b
-      +                          reak;
-   990  0114  294F               	goto	l82
-   991  0115                     l78:	
-   992                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 30:         case 
-      +                          4:
+   992  0114  160F               	bsf	15,4	;volatile
    993                           
-   994                           
-   995                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 31:             O
-      +                          SCCONbits.IRCF2 = 1;
-   996  0115  1683               	bsf	3,5	;RP0=1, select bank1
-   997  0116  1303               	bcf	3,6	;RP1=0, select bank1
-   998  0117  170F               	bsf	15,6	;volatile
+   994                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 29:             b
+      +                          reak;
+   995  0115  2950               	goto	l82
+   996  0116                     l78:	
+   997                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 30:         case 
+      +                          4:
+   998                           
    999                           
-  1000                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 32:             O
+  1000                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 31:             O
+      +                          SCCONbits.IRCF2 = 1;
+  1001  0116  1683               	bsf	3,5	;RP0=1, select bank1
+  1002  0117  1303               	bcf	3,6	;RP1=0, select bank1
+  1003  0118  170F               	bsf	15,6	;volatile
+  1004                           
+  1005                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 32:             O
       +                          SCCONbits.IRCF1 = 0;
-  1001  0118  128F               	bcf	15,5	;volatile
-  1002                           
-  1003                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 33:             O
+  1006  0119  128F               	bcf	15,5	;volatile
+  1007                           
+  1008                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 33:             O
       +                          SCCONbits.IRCF0 = 0;
-  1004  0119  120F               	bcf	15,4	;volatile
-  1005                           
-  1006                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 34:             b
-      +                          reak;
-  1007  011A  294F               	goto	l82
-  1008  011B                     l79:	
-  1009                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 35:         case 
-      +                          5:
+  1009  011A  120F               	bcf	15,4	;volatile
   1010                           
-  1011                           
-  1012                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 36:             O
-      +                          SCCONbits.IRCF2 = 1;
-  1013  011B  1683               	bsf	3,5	;RP0=1, select bank1
-  1014  011C  1303               	bcf	3,6	;RP1=0, select bank1
-  1015  011D  170F               	bsf	15,6	;volatile
+  1011                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 34:             b
+      +                          reak;
+  1012  011B  2950               	goto	l82
+  1013  011C                     l79:	
+  1014                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 35:         case 
+      +                          5:
+  1015                           
   1016                           
-  1017                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 37:             O
+  1017                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 36:             O
+      +                          SCCONbits.IRCF2 = 1;
+  1018  011C  1683               	bsf	3,5	;RP0=1, select bank1
+  1019  011D  1303               	bcf	3,6	;RP1=0, select bank1
+  1020  011E  170F               	bsf	15,6	;volatile
+  1021                           
+  1022                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 37:             O
       +                          SCCONbits.IRCF1 = 0;
-  1018  011E  128F               	bcf	15,5	;volatile
-  1019                           
-  1020                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 38:             O
+  1023  011F  128F               	bcf	15,5	;volatile
+  1024                           
+  1025                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 38:             O
       +                          SCCONbits.IRCF0 = 1;
-  1021  011F  160F               	bsf	15,4	;volatile
-  1022                           
-  1023                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 39:             b
-      +                          reak;
-  1024  0120  294F               	goto	l82
-  1025  0121                     l80:	
-  1026                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 40:         case 
-      +                          6:
+  1026  0120  160F               	bsf	15,4	;volatile
   1027                           
-  1028                           
-  1029                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 41:             O
-      +                          SCCONbits.IRCF2 = 1;
-  1030  0121  1683               	bsf	3,5	;RP0=1, select bank1
-  1031  0122  1303               	bcf	3,6	;RP1=0, select bank1
-  1032  0123  170F               	bsf	15,6	;volatile
+  1028                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 39:             b
+      +                          reak;
+  1029  0121  2950               	goto	l82
+  1030  0122                     l80:	
+  1031                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 40:         case 
+      +                          6:
+  1032                           
   1033                           
-  1034                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 42:             O
-      +                          SCCONbits.IRCF1 = 1;
-  1035  0124  168F               	bsf	15,5	;volatile
-  1036                           
-  1037                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 43:             O
-      +                          SCCONbits.IRCF0 = 0;
-  1038  0125  120F               	bcf	15,4	;volatile
-  1039                           
-  1040                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 44:             b
-      +                          reak;
-  1041  0126  294F               	goto	l82
-  1042  0127                     l81:	
-  1043                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 45:         case 
-      +                          7:
-  1044                           
-  1045                           
-  1046                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 46:             O
+  1034                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 41:             O
       +                          SCCONbits.IRCF2 = 1;
-  1047  0127  1683               	bsf	3,5	;RP0=1, select bank1
-  1048  0128  1303               	bcf	3,6	;RP1=0, select bank1
-  1049  0129  170F               	bsf	15,6	;volatile
-  1050                           
-  1051                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 47:             O
+  1035  0122  1683               	bsf	3,5	;RP0=1, select bank1
+  1036  0123  1303               	bcf	3,6	;RP1=0, select bank1
+  1037  0124  170F               	bsf	15,6	;volatile
+  1038                           
+  1039                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 42:             O
       +                          SCCONbits.IRCF1 = 1;
-  1052  012A  168F               	bsf	15,5	;volatile
-  1053                           
-  1054                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 48:             O
-      +                          SCCONbits.IRCF0 = 1;
-  1055  012B  160F               	bsf	15,4	;volatile
-  1056                           
-  1057                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 49:             b
+  1040  0125  168F               	bsf	15,5	;volatile
+  1041                           
+  1042                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 43:             O
+      +                          SCCONbits.IRCF0 = 0;
+  1043  0126  120F               	bcf	15,4	;volatile
+  1044                           
+  1045                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 44:             b
       +                          reak;
-  1058  012C  294F               	goto	l82
-  1059  012D                     l803:
-  1060  012D  0875               	movf	initOsc@option,w
-  1061  012E  00F3               	movwf	??_initOsc
-  1062  012F  01F4               	clrf	??_initOsc+1
-  1063                           
-  1064                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+  1046  0127  2950               	goto	l82
+  1047  0128                     l81:	
+  1048                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 45:         case 
+      +                          7:
+  1049                           
+  1050                           
+  1051                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 46:             O
+      +                          SCCONbits.IRCF2 = 1;
+  1052  0128  1683               	bsf	3,5	;RP0=1, select bank1
+  1053  0129  1303               	bcf	3,6	;RP1=0, select bank1
+  1054  012A  170F               	bsf	15,6	;volatile
+  1055                           
+  1056                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 47:             O
+      +                          SCCONbits.IRCF1 = 1;
+  1057  012B  168F               	bsf	15,5	;volatile
+  1058                           
+  1059                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 48:             O
+      +                          SCCONbits.IRCF0 = 1;
+  1060  012C  160F               	bsf	15,4	;volatile
+  1061                           
+  1062                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/librerias2.c: 49:             b
+      +                          reak;
+  1063  012D  2950               	goto	l82
+  1064  012E                     l804:
+  1065  012E  0875               	movf	initOsc@option,w
+  1066  012F  00F3               	movwf	??_initOsc
+  1067  0130  01F4               	clrf	??_initOsc+1
+  1068                           
+  1069                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
       +                          itches
-  1065                           ; Switch size 1, requested type "simple"
-  1066                           ; Number of cases is 1, Range of values is 0 to 0
-  1067                           ; switch strategies available:
-  1068                           ; Name         Instructions Cycles
-  1069                           ; simple_byte            4     3 (average)
-  1070                           ; direct_byte           11     8 (fixed)
-  1071                           ; jumptable            260     6 (fixed)
-  1072                           ;	Chosen strategy is simple_byte
-  1073  0130  0874               	movf	??_initOsc+1,w
-  1074  0131  3A00               	xorlw	0	; case 0
-  1075  0132  1903               	skipnz
-  1076  0133  2935               	goto	l1133
-  1077  0134  294F               	goto	l82
-  1078  0135                     l1133:
-  1079                           
-  1080                           ; Switch size 1, requested type "simple"
-  1081                           ; Number of cases is 8, Range of values is 0 to 7
-  1082                           ; switch strategies available:
-  1083                           ; Name         Instructions Cycles
-  1084                           ; simple_byte           25    13 (average)
-  1085                           ; direct_byte           32     8 (fixed)
-  1086                           ; jumptable            260     6 (fixed)
-  1087                           ;	Chosen strategy is simple_byte
-  1088  0135  0873               	movf	??_initOsc,w
-  1089  0136  3A00               	xorlw	0	; case 0
-  1090  0137  1903               	skipnz
-  1091  0138  28FD               	goto	l73
-  1092  0139  3A01               	xorlw	1	; case 1
-  1093  013A  1903               	skipnz
-  1094  013B  2903               	goto	l75
-  1095  013C  3A03               	xorlw	3	; case 2
-  1096  013D  1903               	skipnz
-  1097  013E  2909               	goto	l76
-  1098  013F  3A01               	xorlw	1	; case 3
-  1099  0140  1903               	skipnz
-  1100  0141  290F               	goto	l77
-  1101  0142  3A07               	xorlw	7	; case 4
-  1102  0143  1903               	skipnz
-  1103  0144  2915               	goto	l78
-  1104  0145  3A01               	xorlw	1	; case 5
-  1105  0146  1903               	skipnz
-  1106  0147  291B               	goto	l79
-  1107  0148  3A03               	xorlw	3	; case 6
-  1108  0149  1903               	skipnz
-  1109  014A  2921               	goto	l80
-  1110  014B  3A01               	xorlw	1	; case 7
-  1111  014C  1903               	skipnz
-  1112  014D  2927               	goto	l81
-  1113  014E  294F               	goto	l82
-  1114  014F                     l82:
-  1115  014F  0008               	return
-  1116  0150                     __end_of_initOsc:
-  1117                           
-  1118                           	psect	text4
-  1119  0019                     __ptext4:	
-  1120 ;; *************** function _configADC *****************
-  1121 ;; Defined at:
-  1122 ;;		line 4 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c"
-  1123 ;; Parameters:    Size  Location     Type
-  1124 ;;  canal           1    wreg     unsigned char 
-  1125 ;;  vel             1    3[COMMON] unsigned char 
-  1126 ;; Auto vars:     Size  Location     Type
-  1127 ;;  canal           1    6[COMMON] unsigned char 
-  1128 ;; Return value:  Size  Location     Type
-  1129 ;;                  1    wreg      void 
-  1130 ;; Registers used:
-  1131 ;;		wreg, fsr0l, fsr0h, status,2, status,0
-  1132 ;; Tracked objects:
-  1133 ;;		On entry : 0/0
-  1134 ;;		On exit  : 0/0
-  1135 ;;		Unchanged: 0/0
-  1136 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1137 ;;      Params:         1       0       0       0       0
-  1138 ;;      Locals:         1       0       0       0       0
-  1139 ;;      Temps:          2       0       0       0       0
-  1140 ;;      Totals:         4       0       0       0       0
-  1141 ;;Total ram usage:        4 bytes
-  1142 ;; Hardware stack levels used:    1
-  1143 ;; Hardware stack levels required when called:    1
-  1144 ;; This function calls:
-  1145 ;;		Nothing
-  1146 ;; This function is called by:
-  1147 ;;		_setup
-  1148 ;; This function uses a non-reentrant model
-  1149 ;;
-  1150                           
-  1151                           
-  1152                           ;psect for function _configADC
-  1153  0019                     _configADC:
-  1154                           
-  1155                           ;incstack = 0
-  1156                           ; Regs used in _configADC: [wreg-fsr0h+status,2+status,0]
-  1157                           ;configADC@canal stored from wreg
-  1158  0019  00F6               	movwf	configADC@canal
-  1159  001A                     l981:
-  1160                           
-  1161                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 5:     ADCO
-      +                          N1 = 0;
-  1162  001A  1683               	bsf	3,5	;RP0=1, select bank1
-  1163  001B  1303               	bcf	3,6	;RP1=0, select bank1
-  1164  001C  019F               	clrf	31	;volatile
+  1070                           ; Switch size 1, requested type "simple"
+  1071                           ; Number of cases is 1, Range of values is 0 to 0
+  1072                           ; switch strategies available:
+  1073                           ; Name         Instructions Cycles
+  1074                           ; simple_byte            4     3 (average)
+  1075                           ; direct_byte           11     8 (fixed)
+  1076                           ; jumptable            260     6 (fixed)
+  1077                           ;	Chosen strategy is simple_byte
+  1078  0131  0874               	movf	??_initOsc+1,w
+  1079  0132  3A00               	xorlw	0	; case 0
+  1080  0133  1903               	skipnz
+  1081  0134  2936               	goto	l1138
+  1082  0135  2950               	goto	l82
+  1083  0136                     l1138:
+  1084                           
+  1085                           ; Switch size 1, requested type "simple"
+  1086                           ; Number of cases is 8, Range of values is 0 to 7
+  1087                           ; switch strategies available:
+  1088                           ; Name         Instructions Cycles
+  1089                           ; simple_byte           25    13 (average)
+  1090                           ; direct_byte           32     8 (fixed)
+  1091                           ; jumptable            260     6 (fixed)
+  1092                           ;	Chosen strategy is simple_byte
+  1093  0136  0873               	movf	??_initOsc,w
+  1094  0137  3A00               	xorlw	0	; case 0
+  1095  0138  1903               	skipnz
+  1096  0139  28FE               	goto	l73
+  1097  013A  3A01               	xorlw	1	; case 1
+  1098  013B  1903               	skipnz
+  1099  013C  2904               	goto	l75
+  1100  013D  3A03               	xorlw	3	; case 2
+  1101  013E  1903               	skipnz
+  1102  013F  290A               	goto	l76
+  1103  0140  3A01               	xorlw	1	; case 3
+  1104  0141  1903               	skipnz
+  1105  0142  2910               	goto	l77
+  1106  0143  3A07               	xorlw	7	; case 4
+  1107  0144  1903               	skipnz
+  1108  0145  2916               	goto	l78
+  1109  0146  3A01               	xorlw	1	; case 5
+  1110  0147  1903               	skipnz
+  1111  0148  291C               	goto	l79
+  1112  0149  3A03               	xorlw	3	; case 6
+  1113  014A  1903               	skipnz
+  1114  014B  2922               	goto	l80
+  1115  014C  3A01               	xorlw	1	; case 7
+  1116  014D  1903               	skipnz
+  1117  014E  2928               	goto	l81
+  1118  014F  2950               	goto	l82
+  1119  0150                     l82:
+  1120  0150  0008               	return
+  1121  0151                     __end_of_initOsc:
+  1122                           
+  1123                           	psect	text4
+  1124  001A                     __ptext4:	
+  1125 ;; *************** function _configADC *****************
+  1126 ;; Defined at:
+  1127 ;;		line 4 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c"
+  1128 ;; Parameters:    Size  Location     Type
+  1129 ;;  canal           1    wreg     unsigned char 
+  1130 ;;  vel             1    3[COMMON] unsigned char 
+  1131 ;; Auto vars:     Size  Location     Type
+  1132 ;;  canal           1    6[COMMON] unsigned char 
+  1133 ;; Return value:  Size  Location     Type
+  1134 ;;                  1    wreg      void 
+  1135 ;; Registers used:
+  1136 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1137 ;; Tracked objects:
+  1138 ;;		On entry : 0/0
+  1139 ;;		On exit  : 0/0
+  1140 ;;		Unchanged: 0/0
+  1141 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1142 ;;      Params:         1       0       0       0       0
+  1143 ;;      Locals:         1       0       0       0       0
+  1144 ;;      Temps:          2       0       0       0       0
+  1145 ;;      Totals:         4       0       0       0       0
+  1146 ;;Total ram usage:        4 bytes
+  1147 ;; Hardware stack levels used:    1
+  1148 ;; Hardware stack levels required when called:    1
+  1149 ;; This function calls:
+  1150 ;;		Nothing
+  1151 ;; This function is called by:
+  1152 ;;		_setup
+  1153 ;; This function uses a non-reentrant model
+  1154 ;;
+  1155                           
+  1156                           
+  1157                           ;psect for function _configADC
+  1158  001A                     _configADC:
+  1159                           
+  1160                           ;incstack = 0
+  1161                           ; Regs used in _configADC: [wreg-fsr0h+status,2+status,0]
+  1162                           ;configADC@canal stored from wreg
+  1163  001A  00F6               	movwf	configADC@canal
+  1164  001B                     l986:
   1165                           
-  1166                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 6:     swit
-      +                          ch (canal){
-  1167  001D  288E               	goto	l985
-  1168  001E                     l10:	
-  1169                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 7:         
-      +                          case 0:
+  1166                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 5:     ADCO
+      +                          N1 = 0;
+  1167  001B  1683               	bsf	3,5	;RP0=1, select bank1
+  1168  001C  1303               	bcf	3,6	;RP1=0, select bank1
+  1169  001D  019F               	clrf	31	;volatile
   1170                           
-  1171                           
-  1172                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 8:         
-      +                              ADCON0bits.CHS3 = 0;
-  1173  001E  1283               	bcf	3,5	;RP0=0, select bank0
-  1174  001F  1303               	bcf	3,6	;RP1=0, select bank0
-  1175  0020  129F               	bcf	31,5	;volatile
+  1171                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 6:     swit
+      +                          ch (canal){
+  1172  001E  288F               	goto	l990
+  1173  001F                     l10:	
+  1174                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 7:         
+      +                          case 0:
+  1175                           
   1176                           
-  1177                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 9:         
+  1177                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 8:         
+      +                              ADCON0bits.CHS3 = 0;
+  1178  001F  1283               	bcf	3,5	;RP0=0, select bank0
+  1179  0020  1303               	bcf	3,6	;RP1=0, select bank0
+  1180  0021  129F               	bcf	31,5	;volatile
+  1181                           
+  1182                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 9:         
       +                              ADCON0bits.CHS2 = 0;
-  1178  0021  121F               	bcf	31,4	;volatile
-  1179                           
-  1180                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 10:        
+  1183  0022  121F               	bcf	31,4	;volatile
+  1184                           
+  1185                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 10:        
       +                               ADCON0bits.CHS1 = 0;
-  1181  0022  119F               	bcf	31,3	;volatile
-  1182                           
-  1183                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 11:        
+  1186  0023  119F               	bcf	31,3	;volatile
+  1187                           
+  1188                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 11:        
       +                               ADCON0bits.CHS0 = 0;
-  1184  0023  111F               	bcf	31,2	;volatile
-  1185                           
-  1186                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 12:        
-      +                               break;
-  1187  0024  28D8               	goto	l989
-  1188  0025                     l12:	
-  1189                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 13:        
-      +                           case 1:
+  1189  0024  111F               	bcf	31,2	;volatile
   1190                           
-  1191                           
-  1192                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 14:        
-      +                               ADCON0bits.CHS3 = 0;
-  1193  0025  1283               	bcf	3,5	;RP0=0, select bank0
-  1194  0026  1303               	bcf	3,6	;RP1=0, select bank0
-  1195  0027  129F               	bcf	31,5	;volatile
+  1191                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 12:        
+      +                               break;
+  1192  0025  28D9               	goto	l994
+  1193  0026                     l12:	
+  1194                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 13:        
+      +                           case 1:
+  1195                           
   1196                           
-  1197                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 15:        
+  1197                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 14:        
+      +                               ADCON0bits.CHS3 = 0;
+  1198  0026  1283               	bcf	3,5	;RP0=0, select bank0
+  1199  0027  1303               	bcf	3,6	;RP1=0, select bank0
+  1200  0028  129F               	bcf	31,5	;volatile
+  1201                           
+  1202                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 15:        
       +                               ADCON0bits.CHS2 = 0;
-  1198  0028  121F               	bcf	31,4	;volatile
-  1199                           
-  1200                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 16:        
+  1203  0029  121F               	bcf	31,4	;volatile
+  1204                           
+  1205                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 16:        
       +                               ADCON0bits.CHS1 = 0;
-  1201  0029  119F               	bcf	31,3	;volatile
-  1202                           
-  1203                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 17:        
+  1206  002A  119F               	bcf	31,3	;volatile
+  1207                           
+  1208                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 17:        
       +                               ADCON0bits.CHS0 = 1;
-  1204  002A  151F               	bsf	31,2	;volatile
-  1205                           
-  1206                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 18:        
-      +                               break;
-  1207  002B  28D8               	goto	l989
-  1208  002C                     l13:	
-  1209                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 19:        
-      +                           case 2:
+  1209  002B  151F               	bsf	31,2	;volatile
   1210                           
-  1211                           
-  1212                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 20:        
-      +                               ADCON0bits.CHS3 = 0;
-  1213  002C  1283               	bcf	3,5	;RP0=0, select bank0
-  1214  002D  1303               	bcf	3,6	;RP1=0, select bank0
-  1215  002E  129F               	bcf	31,5	;volatile
+  1211                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 18:        
+      +                               break;
+  1212  002C  28D9               	goto	l994
+  1213  002D                     l13:	
+  1214                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 19:        
+      +                           case 2:
+  1215                           
   1216                           
-  1217                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 21:        
+  1217                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 20:        
+      +                               ADCON0bits.CHS3 = 0;
+  1218  002D  1283               	bcf	3,5	;RP0=0, select bank0
+  1219  002E  1303               	bcf	3,6	;RP1=0, select bank0
+  1220  002F  129F               	bcf	31,5	;volatile
+  1221                           
+  1222                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 21:        
       +                               ADCON0bits.CHS2 = 0;
-  1218  002F  121F               	bcf	31,4	;volatile
-  1219                           
-  1220                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 22:        
+  1223  0030  121F               	bcf	31,4	;volatile
+  1224                           
+  1225                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 22:        
       +                               ADCON0bits.CHS1 = 1;
-  1221  0030  159F               	bsf	31,3	;volatile
-  1222                           
-  1223                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 23:        
+  1226  0031  159F               	bsf	31,3	;volatile
+  1227                           
+  1228                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 23:        
       +                               ADCON0bits.CHS0 = 0;
-  1224  0031  111F               	bcf	31,2	;volatile
-  1225                           
-  1226                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 24:        
-      +                               break;
-  1227  0032  28D8               	goto	l989
-  1228  0033                     l14:	
-  1229                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 25:        
-      +                           case 3:
+  1229  0032  111F               	bcf	31,2	;volatile
   1230                           
-  1231                           
-  1232                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 26:        
-      +                               ADCON0bits.CHS3 = 0;
-  1233  0033  1283               	bcf	3,5	;RP0=0, select bank0
-  1234  0034  1303               	bcf	3,6	;RP1=0, select bank0
-  1235  0035  129F               	bcf	31,5	;volatile
+  1231                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 24:        
+      +                               break;
+  1232  0033  28D9               	goto	l994
+  1233  0034                     l14:	
+  1234                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 25:        
+      +                           case 3:
+  1235                           
   1236                           
-  1237                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 27:        
+  1237                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 26:        
+      +                               ADCON0bits.CHS3 = 0;
+  1238  0034  1283               	bcf	3,5	;RP0=0, select bank0
+  1239  0035  1303               	bcf	3,6	;RP1=0, select bank0
+  1240  0036  129F               	bcf	31,5	;volatile
+  1241                           
+  1242                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 27:        
       +                               ADCON0bits.CHS2 = 0;
-  1238  0036  121F               	bcf	31,4	;volatile
-  1239                           
-  1240                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 28:        
+  1243  0037  121F               	bcf	31,4	;volatile
+  1244                           
+  1245                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 28:        
       +                               ADCON0bits.CHS1 = 1;
-  1241  0037  159F               	bsf	31,3	;volatile
-  1242                           
-  1243                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 29:        
+  1246  0038  159F               	bsf	31,3	;volatile
+  1247                           
+  1248                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 29:        
       +                               ADCON0bits.CHS0 = 1;
-  1244  0038  151F               	bsf	31,2	;volatile
-  1245                           
-  1246                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 30:        
-      +                               break;
-  1247  0039  28D8               	goto	l989
-  1248  003A                     l15:	
-  1249                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 31:        
-      +                           case 4:
+  1249  0039  151F               	bsf	31,2	;volatile
   1250                           
-  1251                           
-  1252                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 32:        
-      +                               ADCON0bits.CHS3 = 0;
-  1253  003A  1283               	bcf	3,5	;RP0=0, select bank0
-  1254  003B  1303               	bcf	3,6	;RP1=0, select bank0
-  1255  003C  129F               	bcf	31,5	;volatile
+  1251                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 30:        
+      +                               break;
+  1252  003A  28D9               	goto	l994
+  1253  003B                     l15:	
+  1254                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 31:        
+      +                           case 4:
+  1255                           
   1256                           
-  1257                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 33:        
+  1257                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 32:        
+      +                               ADCON0bits.CHS3 = 0;
+  1258  003B  1283               	bcf	3,5	;RP0=0, select bank0
+  1259  003C  1303               	bcf	3,6	;RP1=0, select bank0
+  1260  003D  129F               	bcf	31,5	;volatile
+  1261                           
+  1262                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 33:        
       +                               ADCON0bits.CHS2 = 1;
-  1258  003D  161F               	bsf	31,4	;volatile
-  1259                           
-  1260                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 34:        
+  1263  003E  161F               	bsf	31,4	;volatile
+  1264                           
+  1265                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 34:        
       +                               ADCON0bits.CHS1 = 0;
-  1261  003E  119F               	bcf	31,3	;volatile
-  1262                           
-  1263                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 35:        
+  1266  003F  119F               	bcf	31,3	;volatile
+  1267                           
+  1268                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 35:        
       +                               ADCON0bits.CHS0 = 0;
-  1264  003F  111F               	bcf	31,2	;volatile
-  1265                           
-  1266                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 36:        
-      +                               break;
-  1267  0040  28D8               	goto	l989
-  1268  0041                     l16:	
-  1269                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 37:        
-      +                           case 5:
+  1269  0040  111F               	bcf	31,2	;volatile
   1270                           
-  1271                           
-  1272                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 38:        
-      +                               ADCON0bits.CHS3 = 0;
-  1273  0041  1283               	bcf	3,5	;RP0=0, select bank0
-  1274  0042  1303               	bcf	3,6	;RP1=0, select bank0
-  1275  0043  129F               	bcf	31,5	;volatile
+  1271                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 36:        
+      +                               break;
+  1272  0041  28D9               	goto	l994
+  1273  0042                     l16:	
+  1274                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 37:        
+      +                           case 5:
+  1275                           
   1276                           
-  1277                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 39:        
+  1277                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 38:        
+      +                               ADCON0bits.CHS3 = 0;
+  1278  0042  1283               	bcf	3,5	;RP0=0, select bank0
+  1279  0043  1303               	bcf	3,6	;RP1=0, select bank0
+  1280  0044  129F               	bcf	31,5	;volatile
+  1281                           
+  1282                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 39:        
       +                               ADCON0bits.CHS2 = 1;
-  1278  0044  161F               	bsf	31,4	;volatile
-  1279                           
-  1280                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 40:        
+  1283  0045  161F               	bsf	31,4	;volatile
+  1284                           
+  1285                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 40:        
       +                               ADCON0bits.CHS1 = 0;
-  1281  0045  119F               	bcf	31,3	;volatile
-  1282                           
-  1283                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 41:        
+  1286  0046  119F               	bcf	31,3	;volatile
+  1287                           
+  1288                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 41:        
       +                               ADCON0bits.CHS0 = 1;
-  1284  0046  151F               	bsf	31,2	;volatile
-  1285                           
-  1286                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 42:        
-      +                               break;
-  1287  0047  28D8               	goto	l989
-  1288  0048                     l17:	
-  1289                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 43:        
-      +                           case 6:
+  1289  0047  151F               	bsf	31,2	;volatile
   1290                           
-  1291                           
-  1292                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 44:        
-      +                               ADCON0bits.CHS3 = 0;
-  1293  0048  1283               	bcf	3,5	;RP0=0, select bank0
-  1294  0049  1303               	bcf	3,6	;RP1=0, select bank0
-  1295  004A  129F               	bcf	31,5	;volatile
+  1291                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 42:        
+      +                               break;
+  1292  0048  28D9               	goto	l994
+  1293  0049                     l17:	
+  1294                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 43:        
+      +                           case 6:
+  1295                           
   1296                           
-  1297                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 45:        
-      +                               ADCON0bits.CHS2 = 1;
-  1298  004B  161F               	bsf	31,4	;volatile
-  1299                           
-  1300                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 46:        
-      +                               ADCON0bits.CHS1 = 1;
-  1301  004C  159F               	bsf	31,3	;volatile
-  1302                           
-  1303                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 47:        
-      +                               ADCON0bits.CHS0 = 0;
-  1304  004D  111F               	bcf	31,2	;volatile
-  1305                           
-  1306                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 48:        
-      +                               break;
-  1307  004E  28D8               	goto	l989
-  1308  004F                     l18:	
-  1309                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 49:        
-      +                           case 7:
-  1310                           
-  1311                           
-  1312                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 50:        
+  1297                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 44:        
       +                               ADCON0bits.CHS3 = 0;
-  1313  004F  1283               	bcf	3,5	;RP0=0, select bank0
-  1314  0050  1303               	bcf	3,6	;RP1=0, select bank0
-  1315  0051  129F               	bcf	31,5	;volatile
+  1298  0049  1283               	bcf	3,5	;RP0=0, select bank0
+  1299  004A  1303               	bcf	3,6	;RP1=0, select bank0
+  1300  004B  129F               	bcf	31,5	;volatile
+  1301                           
+  1302                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 45:        
+      +                               ADCON0bits.CHS2 = 1;
+  1303  004C  161F               	bsf	31,4	;volatile
+  1304                           
+  1305                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 46:        
+      +                               ADCON0bits.CHS1 = 1;
+  1306  004D  159F               	bsf	31,3	;volatile
+  1307                           
+  1308                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 47:        
+      +                               ADCON0bits.CHS0 = 0;
+  1309  004E  111F               	bcf	31,2	;volatile
+  1310                           
+  1311                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 48:        
+      +                               break;
+  1312  004F  28D9               	goto	l994
+  1313  0050                     l18:	
+  1314                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 49:        
+      +                           case 7:
+  1315                           
   1316                           
-  1317                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 51:        
+  1317                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 50:        
+      +                               ADCON0bits.CHS3 = 0;
+  1318  0050  1283               	bcf	3,5	;RP0=0, select bank0
+  1319  0051  1303               	bcf	3,6	;RP1=0, select bank0
+  1320  0052  129F               	bcf	31,5	;volatile
+  1321                           
+  1322                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 51:        
       +                               ADCON0bits.CHS2 = 1;
-  1318  0052  161F               	bsf	31,4	;volatile
-  1319                           
-  1320                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 52:        
+  1323  0053  161F               	bsf	31,4	;volatile
+  1324                           
+  1325                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 52:        
       +                               ADCON0bits.CHS1 = 1;
-  1321  0053  159F               	bsf	31,3	;volatile
-  1322                           
-  1323                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 53:        
+  1326  0054  159F               	bsf	31,3	;volatile
+  1327                           
+  1328                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 53:        
       +                               ADCON0bits.CHS0 = 1;
-  1324  0054  151F               	bsf	31,2	;volatile
-  1325                           
-  1326                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 54:        
-      +                               break;
-  1327  0055  28D8               	goto	l989
-  1328  0056                     l19:	
-  1329                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 55:        
-      +                           case 8:
+  1329  0055  151F               	bsf	31,2	;volatile
   1330                           
-  1331                           
-  1332                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 56:        
-      +                               ADCON0bits.CHS3 = 1;
-  1333  0056  1283               	bcf	3,5	;RP0=0, select bank0
-  1334  0057  1303               	bcf	3,6	;RP1=0, select bank0
-  1335  0058  169F               	bsf	31,5	;volatile
+  1331                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 54:        
+      +                               break;
+  1332  0056  28D9               	goto	l994
+  1333  0057                     l19:	
+  1334                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 55:        
+      +                           case 8:
+  1335                           
   1336                           
-  1337                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 57:        
+  1337                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 56:        
+      +                               ADCON0bits.CHS3 = 1;
+  1338  0057  1283               	bcf	3,5	;RP0=0, select bank0
+  1339  0058  1303               	bcf	3,6	;RP1=0, select bank0
+  1340  0059  169F               	bsf	31,5	;volatile
+  1341                           
+  1342                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 57:        
       +                               ADCON0bits.CHS2 = 0;
-  1338  0059  121F               	bcf	31,4	;volatile
-  1339                           
-  1340                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 58:        
+  1343  005A  121F               	bcf	31,4	;volatile
+  1344                           
+  1345                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 58:        
       +                               ADCON0bits.CHS1 = 0;
-  1341  005A  119F               	bcf	31,3	;volatile
-  1342                           
-  1343                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 59:        
+  1346  005B  119F               	bcf	31,3	;volatile
+  1347                           
+  1348                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 59:        
       +                               ADCON0bits.CHS0 = 0;
-  1344  005B  111F               	bcf	31,2	;volatile
-  1345                           
-  1346                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 60:        
-      +                               break;
-  1347  005C  28D8               	goto	l989
-  1348  005D                     l20:	
-  1349                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 61:        
-      +                           case 9:
+  1349  005C  111F               	bcf	31,2	;volatile
   1350                           
-  1351                           
-  1352                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 62:        
-      +                               ADCON0bits.CHS3 = 1;
-  1353  005D  1283               	bcf	3,5	;RP0=0, select bank0
-  1354  005E  1303               	bcf	3,6	;RP1=0, select bank0
-  1355  005F  169F               	bsf	31,5	;volatile
+  1351                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 60:        
+      +                               break;
+  1352  005D  28D9               	goto	l994
+  1353  005E                     l20:	
+  1354                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 61:        
+      +                           case 9:
+  1355                           
   1356                           
-  1357                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 63:        
+  1357                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 62:        
+      +                               ADCON0bits.CHS3 = 1;
+  1358  005E  1283               	bcf	3,5	;RP0=0, select bank0
+  1359  005F  1303               	bcf	3,6	;RP1=0, select bank0
+  1360  0060  169F               	bsf	31,5	;volatile
+  1361                           
+  1362                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 63:        
       +                               ADCON0bits.CHS2 = 0;
-  1358  0060  121F               	bcf	31,4	;volatile
-  1359                           
-  1360                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 64:        
+  1363  0061  121F               	bcf	31,4	;volatile
+  1364                           
+  1365                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 64:        
       +                               ADCON0bits.CHS1 = 0;
-  1361  0061  119F               	bcf	31,3	;volatile
-  1362                           
-  1363                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 65:        
+  1366  0062  119F               	bcf	31,3	;volatile
+  1367                           
+  1368                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 65:        
       +                               ADCON0bits.CHS0 = 1;
-  1364  0062  151F               	bsf	31,2	;volatile
-  1365                           
-  1366                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 66:        
-      +                               break;
-  1367  0063  28D8               	goto	l989
-  1368  0064                     l21:	
-  1369                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 67:        
-      +                           case 10:
+  1369  0063  151F               	bsf	31,2	;volatile
   1370                           
-  1371                           
-  1372                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 68:        
-      +                               ADCON0bits.CHS3 = 1;
-  1373  0064  1283               	bcf	3,5	;RP0=0, select bank0
-  1374  0065  1303               	bcf	3,6	;RP1=0, select bank0
-  1375  0066  169F               	bsf	31,5	;volatile
+  1371                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 66:        
+      +                               break;
+  1372  0064  28D9               	goto	l994
+  1373  0065                     l21:	
+  1374                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 67:        
+      +                           case 10:
+  1375                           
   1376                           
-  1377                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 69:        
+  1377                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 68:        
+      +                               ADCON0bits.CHS3 = 1;
+  1378  0065  1283               	bcf	3,5	;RP0=0, select bank0
+  1379  0066  1303               	bcf	3,6	;RP1=0, select bank0
+  1380  0067  169F               	bsf	31,5	;volatile
+  1381                           
+  1382                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 69:        
       +                               ADCON0bits.CHS2 = 0;
-  1378  0067  121F               	bcf	31,4	;volatile
-  1379                           
-  1380                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 70:        
+  1383  0068  121F               	bcf	31,4	;volatile
+  1384                           
+  1385                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 70:        
       +                               ADCON0bits.CHS1 = 1;
-  1381  0068  159F               	bsf	31,3	;volatile
-  1382                           
-  1383                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 71:        
+  1386  0069  159F               	bsf	31,3	;volatile
+  1387                           
+  1388                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 71:        
       +                               ADCON0bits.CHS0 = 0;
-  1384  0069  111F               	bcf	31,2	;volatile
-  1385                           
-  1386                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 72:        
-      +                               break;
-  1387  006A  28D8               	goto	l989
-  1388  006B                     l22:	
-  1389                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 73:        
-      +                           case 11:
+  1389  006A  111F               	bcf	31,2	;volatile
   1390                           
-  1391                           
-  1392                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 74:        
-      +                               ADCON0bits.CHS3 = 1;
-  1393  006B  1283               	bcf	3,5	;RP0=0, select bank0
-  1394  006C  1303               	bcf	3,6	;RP1=0, select bank0
-  1395  006D  169F               	bsf	31,5	;volatile
+  1391                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 72:        
+      +                               break;
+  1392  006B  28D9               	goto	l994
+  1393  006C                     l22:	
+  1394                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 73:        
+      +                           case 11:
+  1395                           
   1396                           
-  1397                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 75:        
+  1397                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 74:        
+      +                               ADCON0bits.CHS3 = 1;
+  1398  006C  1283               	bcf	3,5	;RP0=0, select bank0
+  1399  006D  1303               	bcf	3,6	;RP1=0, select bank0
+  1400  006E  169F               	bsf	31,5	;volatile
+  1401                           
+  1402                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 75:        
       +                               ADCON0bits.CHS2 = 0;
-  1398  006E  121F               	bcf	31,4	;volatile
-  1399                           
-  1400                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 76:        
+  1403  006F  121F               	bcf	31,4	;volatile
+  1404                           
+  1405                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 76:        
       +                               ADCON0bits.CHS1 = 1;
-  1401  006F  159F               	bsf	31,3	;volatile
-  1402                           
-  1403                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 77:        
+  1406  0070  159F               	bsf	31,3	;volatile
+  1407                           
+  1408                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 77:        
       +                               ADCON0bits.CHS0 = 1;
-  1404  0070  151F               	bsf	31,2	;volatile
-  1405                           
-  1406                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 78:        
-      +                               break;
-  1407  0071  28D8               	goto	l989
-  1408  0072                     l23:	
-  1409                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 79:        
-      +                           case 12:
+  1409  0071  151F               	bsf	31,2	;volatile
   1410                           
-  1411                           
-  1412                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 80:        
-      +                               ADCON0bits.CHS3 = 1;
-  1413  0072  1283               	bcf	3,5	;RP0=0, select bank0
-  1414  0073  1303               	bcf	3,6	;RP1=0, select bank0
-  1415  0074  169F               	bsf	31,5	;volatile
+  1411                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 78:        
+      +                               break;
+  1412  0072  28D9               	goto	l994
+  1413  0073                     l23:	
+  1414                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 79:        
+      +                           case 12:
+  1415                           
   1416                           
-  1417                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 81:        
+  1417                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 80:        
+      +                               ADCON0bits.CHS3 = 1;
+  1418  0073  1283               	bcf	3,5	;RP0=0, select bank0
+  1419  0074  1303               	bcf	3,6	;RP1=0, select bank0
+  1420  0075  169F               	bsf	31,5	;volatile
+  1421                           
+  1422                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 81:        
       +                               ADCON0bits.CHS2 = 1;
-  1418  0075  161F               	bsf	31,4	;volatile
-  1419                           
-  1420                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 82:        
+  1423  0076  161F               	bsf	31,4	;volatile
+  1424                           
+  1425                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 82:        
       +                               ADCON0bits.CHS1 = 0;
-  1421  0076  119F               	bcf	31,3	;volatile
-  1422                           
-  1423                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 83:        
+  1426  0077  119F               	bcf	31,3	;volatile
+  1427                           
+  1428                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 83:        
       +                               ADCON0bits.CHS0 = 0;
-  1424  0077  111F               	bcf	31,2	;volatile
-  1425                           
-  1426                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 84:        
-      +                               break;
-  1427  0078  28D8               	goto	l989
-  1428  0079                     l24:	
-  1429                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 85:        
-      +                           case 13:
+  1429  0078  111F               	bcf	31,2	;volatile
   1430                           
-  1431                           
-  1432                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 86:        
-      +                               ADCON0bits.CHS3 = 1;
-  1433  0079  1283               	bcf	3,5	;RP0=0, select bank0
-  1434  007A  1303               	bcf	3,6	;RP1=0, select bank0
-  1435  007B  169F               	bsf	31,5	;volatile
+  1431                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 84:        
+      +                               break;
+  1432  0079  28D9               	goto	l994
+  1433  007A                     l24:	
+  1434                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 85:        
+      +                           case 13:
+  1435                           
   1436                           
-  1437                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 87:        
+  1437                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 86:        
+      +                               ADCON0bits.CHS3 = 1;
+  1438  007A  1283               	bcf	3,5	;RP0=0, select bank0
+  1439  007B  1303               	bcf	3,6	;RP1=0, select bank0
+  1440  007C  169F               	bsf	31,5	;volatile
+  1441                           
+  1442                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 87:        
       +                               ADCON0bits.CHS2 = 1;
-  1438  007C  161F               	bsf	31,4	;volatile
-  1439                           
-  1440                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 88:        
+  1443  007D  161F               	bsf	31,4	;volatile
+  1444                           
+  1445                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 88:        
       +                               ADCON0bits.CHS1 = 0;
-  1441  007D  119F               	bcf	31,3	;volatile
-  1442                           
-  1443                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 89:        
+  1446  007E  119F               	bcf	31,3	;volatile
+  1447                           
+  1448                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 89:        
       +                               ADCON0bits.CHS0 = 1;
-  1444  007E  151F               	bsf	31,2	;volatile
-  1445                           
-  1446                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 90:        
-      +                               break;
-  1447  007F  28D8               	goto	l989
-  1448  0080                     l25:	
-  1449                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 91:        
-      +                           case 14:
+  1449  007F  151F               	bsf	31,2	;volatile
   1450                           
-  1451                           
-  1452                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 92:        
-      +                               ADCON0bits.CHS3 = 1;
-  1453  0080  1283               	bcf	3,5	;RP0=0, select bank0
-  1454  0081  1303               	bcf	3,6	;RP1=0, select bank0
-  1455  0082  169F               	bsf	31,5	;volatile
-  1456                           
-  1457                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 93:        
-      +                               ADCON0bits.CHS2 = 1;
-  1458  0083  161F               	bsf	31,4	;volatile
-  1459                           
-  1460                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 94:        
-      +                               ADCON0bits.CHS1 = 1;
-  1461  0084  159F               	bsf	31,3	;volatile
-  1462                           
-  1463                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 95:        
-      +                               ADCON0bits.CHS0 = 0;
-  1464  0085  111F               	bcf	31,2	;volatile
-  1465                           
-  1466                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 96:        
+  1451                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 90:        
       +                               break;
-  1467  0086  28D8               	goto	l989
-  1468  0087                     l26:	
-  1469                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 97:        
-      +                           case 15:
-  1470                           
-  1471                           
-  1472                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 98:        
+  1452  0080  28D9               	goto	l994
+  1453  0081                     l25:	
+  1454                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 91:        
+      +                           case 14:
+  1455                           
+  1456                           
+  1457                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 92:        
       +                               ADCON0bits.CHS3 = 1;
-  1473  0087  1283               	bcf	3,5	;RP0=0, select bank0
-  1474  0088  1303               	bcf	3,6	;RP1=0, select bank0
-  1475  0089  169F               	bsf	31,5	;volatile
-  1476                           
-  1477                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 99:        
+  1458  0081  1283               	bcf	3,5	;RP0=0, select bank0
+  1459  0082  1303               	bcf	3,6	;RP1=0, select bank0
+  1460  0083  169F               	bsf	31,5	;volatile
+  1461                           
+  1462                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 93:        
       +                               ADCON0bits.CHS2 = 1;
-  1478  008A  161F               	bsf	31,4	;volatile
-  1479                           
-  1480                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 100:       
+  1463  0084  161F               	bsf	31,4	;volatile
+  1464                           
+  1465                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 94:        
+      +                               ADCON0bits.CHS1 = 1;
+  1466  0085  159F               	bsf	31,3	;volatile
+  1467                           
+  1468                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 95:        
+      +                               ADCON0bits.CHS0 = 0;
+  1469  0086  111F               	bcf	31,2	;volatile
+  1470                           
+  1471                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 96:        
+      +                               break;
+  1472  0087  28D9               	goto	l994
+  1473  0088                     l26:	
+  1474                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 97:        
+      +                           case 15:
+  1475                           
+  1476                           
+  1477                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 98:        
+      +                               ADCON0bits.CHS3 = 1;
+  1478  0088  1283               	bcf	3,5	;RP0=0, select bank0
+  1479  0089  1303               	bcf	3,6	;RP1=0, select bank0
+  1480  008A  169F               	bsf	31,5	;volatile
+  1481                           
+  1482                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 99:        
+      +                               ADCON0bits.CHS2 = 1;
+  1483  008B  161F               	bsf	31,4	;volatile
+  1484                           
+  1485                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 100:       
       +                                ADCON0bits.CHS1 = 1;
-  1481  008B  159F               	bsf	31,3	;volatile
-  1482                           
-  1483                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 101:       
+  1486  008C  159F               	bsf	31,3	;volatile
+  1487                           
+  1488                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 101:       
       +                                ADCON0bits.CHS0 = 1;
-  1484  008C  151F               	bsf	31,2	;volatile
-  1485                           
-  1486                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 102:       
+  1489  008D  151F               	bsf	31,2	;volatile
+  1490                           
+  1491                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 102:       
       +                                break;
-  1487  008D  28D8               	goto	l989
-  1488  008E                     l985:
-  1489  008E  0876               	movf	configADC@canal,w
-  1490  008F  00F4               	movwf	??_configADC
-  1491  0090  01F5               	clrf	??_configADC+1
-  1492                           
-  1493                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+  1492  008E  28D9               	goto	l994
+  1493  008F                     l990:
+  1494  008F  0876               	movf	configADC@canal,w
+  1495  0090  00F4               	movwf	??_configADC
+  1496  0091  01F5               	clrf	??_configADC+1
+  1497                           
+  1498                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
       +                          itches
-  1494                           ; Switch size 1, requested type "simple"
-  1495                           ; Number of cases is 1, Range of values is 0 to 0
-  1496                           ; switch strategies available:
-  1497                           ; Name         Instructions Cycles
-  1498                           ; simple_byte            4     3 (average)
-  1499                           ; direct_byte           11     8 (fixed)
-  1500                           ; jumptable            260     6 (fixed)
-  1501                           ;	Chosen strategy is simple_byte
-  1502  0091  0875               	movf	??_configADC+1,w
-  1503  0092  3A00               	xorlw	0	; case 0
-  1504  0093  1903               	skipnz
-  1505  0094  2896               	goto	l1135
-  1506  0095  28D8               	goto	l989
-  1507  0096                     l1135:
-  1508                           
-  1509                           ; Switch size 1, requested type "simple"
-  1510                           ; Number of cases is 16, Range of values is 0 to 15
-  1511                           ; switch strategies available:
-  1512                           ; Name         Instructions Cycles
-  1513                           ; simple_byte           49    25 (average)
-  1514                           ; direct_byte           56     8 (fixed)
-  1515                           ; jumptable            260     6 (fixed)
-  1516                           ;	Chosen strategy is simple_byte
-  1517  0096  0874               	movf	??_configADC,w
-  1518  0097  3A00               	xorlw	0	; case 0
-  1519  0098  1903               	skipnz
-  1520  0099  281E               	goto	l10
-  1521  009A  3A01               	xorlw	1	; case 1
-  1522  009B  1903               	skipnz
-  1523  009C  2825               	goto	l12
-  1524  009D  3A03               	xorlw	3	; case 2
-  1525  009E  1903               	skipnz
-  1526  009F  282C               	goto	l13
-  1527  00A0  3A01               	xorlw	1	; case 3
-  1528  00A1  1903               	skipnz
-  1529  00A2  2833               	goto	l14
-  1530  00A3  3A07               	xorlw	7	; case 4
-  1531  00A4  1903               	skipnz
-  1532  00A5  283A               	goto	l15
-  1533  00A6  3A01               	xorlw	1	; case 5
-  1534  00A7  1903               	skipnz
-  1535  00A8  2841               	goto	l16
-  1536  00A9  3A03               	xorlw	3	; case 6
-  1537  00AA  1903               	skipnz
-  1538  00AB  2848               	goto	l17
-  1539  00AC  3A01               	xorlw	1	; case 7
-  1540  00AD  1903               	skipnz
-  1541  00AE  284F               	goto	l18
-  1542  00AF  3A0F               	xorlw	15	; case 8
-  1543  00B0  1903               	skipnz
-  1544  00B1  2856               	goto	l19
-  1545  00B2  3A01               	xorlw	1	; case 9
-  1546  00B3  1903               	skipnz
-  1547  00B4  285D               	goto	l20
-  1548  00B5  3A03               	xorlw	3	; case 10
-  1549  00B6  1903               	skipnz
-  1550  00B7  2864               	goto	l21
-  1551  00B8  3A01               	xorlw	1	; case 11
-  1552  00B9  1903               	skipnz
-  1553  00BA  286B               	goto	l22
-  1554  00BB  3A07               	xorlw	7	; case 12
-  1555  00BC  1903               	skipnz
-  1556  00BD  2872               	goto	l23
-  1557  00BE  3A01               	xorlw	1	; case 13
-  1558  00BF  1903               	skipnz
-  1559  00C0  2879               	goto	l24
-  1560  00C1  3A03               	xorlw	3	; case 14
-  1561  00C2  1903               	skipnz
-  1562  00C3  2880               	goto	l25
-  1563  00C4  3A01               	xorlw	1	; case 15
-  1564  00C5  1903               	skipnz
-  1565  00C6  2887               	goto	l26
-  1566  00C7  28D8               	goto	l989
-  1567  00C8                     l28:	
-  1568                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 105:       
+  1499                           ; Switch size 1, requested type "simple"
+  1500                           ; Number of cases is 1, Range of values is 0 to 0
+  1501                           ; switch strategies available:
+  1502                           ; Name         Instructions Cycles
+  1503                           ; simple_byte            4     3 (average)
+  1504                           ; direct_byte           11     8 (fixed)
+  1505                           ; jumptable            260     6 (fixed)
+  1506                           ;	Chosen strategy is simple_byte
+  1507  0092  0875               	movf	??_configADC+1,w
+  1508  0093  3A00               	xorlw	0	; case 0
+  1509  0094  1903               	skipnz
+  1510  0095  2897               	goto	l1140
+  1511  0096  28D9               	goto	l994
+  1512  0097                     l1140:
+  1513                           
+  1514                           ; Switch size 1, requested type "simple"
+  1515                           ; Number of cases is 16, Range of values is 0 to 15
+  1516                           ; switch strategies available:
+  1517                           ; Name         Instructions Cycles
+  1518                           ; simple_byte           49    25 (average)
+  1519                           ; direct_byte           56     8 (fixed)
+  1520                           ; jumptable            260     6 (fixed)
+  1521                           ;	Chosen strategy is simple_byte
+  1522  0097  0874               	movf	??_configADC,w
+  1523  0098  3A00               	xorlw	0	; case 0
+  1524  0099  1903               	skipnz
+  1525  009A  281F               	goto	l10
+  1526  009B  3A01               	xorlw	1	; case 1
+  1527  009C  1903               	skipnz
+  1528  009D  2826               	goto	l12
+  1529  009E  3A03               	xorlw	3	; case 2
+  1530  009F  1903               	skipnz
+  1531  00A0  282D               	goto	l13
+  1532  00A1  3A01               	xorlw	1	; case 3
+  1533  00A2  1903               	skipnz
+  1534  00A3  2834               	goto	l14
+  1535  00A4  3A07               	xorlw	7	; case 4
+  1536  00A5  1903               	skipnz
+  1537  00A6  283B               	goto	l15
+  1538  00A7  3A01               	xorlw	1	; case 5
+  1539  00A8  1903               	skipnz
+  1540  00A9  2842               	goto	l16
+  1541  00AA  3A03               	xorlw	3	; case 6
+  1542  00AB  1903               	skipnz
+  1543  00AC  2849               	goto	l17
+  1544  00AD  3A01               	xorlw	1	; case 7
+  1545  00AE  1903               	skipnz
+  1546  00AF  2850               	goto	l18
+  1547  00B0  3A0F               	xorlw	15	; case 8
+  1548  00B1  1903               	skipnz
+  1549  00B2  2857               	goto	l19
+  1550  00B3  3A01               	xorlw	1	; case 9
+  1551  00B4  1903               	skipnz
+  1552  00B5  285E               	goto	l20
+  1553  00B6  3A03               	xorlw	3	; case 10
+  1554  00B7  1903               	skipnz
+  1555  00B8  2865               	goto	l21
+  1556  00B9  3A01               	xorlw	1	; case 11
+  1557  00BA  1903               	skipnz
+  1558  00BB  286C               	goto	l22
+  1559  00BC  3A07               	xorlw	7	; case 12
+  1560  00BD  1903               	skipnz
+  1561  00BE  2873               	goto	l23
+  1562  00BF  3A01               	xorlw	1	; case 13
+  1563  00C0  1903               	skipnz
+  1564  00C1  287A               	goto	l24
+  1565  00C2  3A03               	xorlw	3	; case 14
+  1566  00C3  1903               	skipnz
+  1567  00C4  2881               	goto	l25
+  1568  00C5  3A01               	xorlw	1	; case 15
+  1569  00C6  1903               	skipnz
+  1570  00C7  2888               	goto	l26
+  1571  00C8  28D9               	goto	l994
+  1572  00C9                     l28:	
+  1573                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 105:       
       +                            case 0:
-  1569                           
-  1570                           
-  1571                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 106:       
-      +                                ADCON0bits.ADCS1 = 0;
-  1572  00C8  1283               	bcf	3,5	;RP0=0, select bank0
-  1573  00C9  139F               	bcf	31,7	;volatile
   1574                           
-  1575                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 107:       
-      +                                ADCON0bits.ADCS0 = 0;
-  1576  00CA  131F               	bcf	31,6	;volatile
-  1577                           
-  1578                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 108:       
-      +                                break;
-  1579  00CB  28EE               	goto	l29
-  1580  00CC                     l30:	
-  1581                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 109:       
-      +                            case 1:
-  1582                           
-  1583                           
-  1584                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 110:       
+  1575                           
+  1576                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 106:       
       +                                ADCON0bits.ADCS1 = 0;
-  1585  00CC  1283               	bcf	3,5	;RP0=0, select bank0
-  1586  00CD  139F               	bcf	31,7	;volatile
-  1587                           
-  1588                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 111:       
-      +                                ADCON0bits.ADCS0 = 1;
-  1589  00CE  171F               	bsf	31,6	;volatile
-  1590                           
-  1591                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 112:       
-      +                                break;
-  1592  00CF  28EE               	goto	l29
-  1593  00D0                     l31:	
-  1594                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 113:       
-      +                            case 2:
-  1595                           
-  1596                           
-  1597                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 114:       
-      +                                ADCON0bits.ADCS1 = 1;
-  1598  00D0  1283               	bcf	3,5	;RP0=0, select bank0
-  1599  00D1  179F               	bsf	31,7	;volatile
-  1600                           
-  1601                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 115:       
+  1577  00C9  1283               	bcf	3,5	;RP0=0, select bank0
+  1578  00CA  139F               	bcf	31,7	;volatile
+  1579                           
+  1580                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 107:       
       +                                ADCON0bits.ADCS0 = 0;
-  1602  00D2  131F               	bcf	31,6	;volatile
-  1603                           
-  1604                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 116:       
+  1581  00CB  131F               	bcf	31,6	;volatile
+  1582                           
+  1583                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 108:       
       +                                break;
-  1605  00D3  28EE               	goto	l29
-  1606  00D4                     l32:	
-  1607                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 117:       
-      +                            case 3:
-  1608                           
-  1609                           
-  1610                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 118:       
-      +                                ADCON0bits.ADCS1 = 1;
-  1611  00D4  1283               	bcf	3,5	;RP0=0, select bank0
-  1612  00D5  179F               	bsf	31,7	;volatile
-  1613                           
-  1614                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 119:       
+  1584  00CC  28EF               	goto	l29
+  1585  00CD                     l30:	
+  1586                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 109:       
+      +                            case 1:
+  1587                           
+  1588                           
+  1589                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 110:       
+      +                                ADCON0bits.ADCS1 = 0;
+  1590  00CD  1283               	bcf	3,5	;RP0=0, select bank0
+  1591  00CE  139F               	bcf	31,7	;volatile
+  1592                           
+  1593                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 111:       
       +                                ADCON0bits.ADCS0 = 1;
-  1615  00D6  171F               	bsf	31,6	;volatile
-  1616                           
-  1617                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 120:       
+  1594  00CF  171F               	bsf	31,6	;volatile
+  1595                           
+  1596                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 112:       
       +                                break;
-  1618  00D7  28EE               	goto	l29
-  1619  00D8                     l989:
-  1620  00D8  0873               	movf	configADC@vel,w
-  1621  00D9  00F4               	movwf	??_configADC
-  1622  00DA  01F5               	clrf	??_configADC+1
-  1623                           
-  1624                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+  1597  00D0  28EF               	goto	l29
+  1598  00D1                     l31:	
+  1599                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 113:       
+      +                            case 2:
+  1600                           
+  1601                           
+  1602                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 114:       
+      +                                ADCON0bits.ADCS1 = 1;
+  1603  00D1  1283               	bcf	3,5	;RP0=0, select bank0
+  1604  00D2  179F               	bsf	31,7	;volatile
+  1605                           
+  1606                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 115:       
+      +                                ADCON0bits.ADCS0 = 0;
+  1607  00D3  131F               	bcf	31,6	;volatile
+  1608                           
+  1609                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 116:       
+      +                                break;
+  1610  00D4  28EF               	goto	l29
+  1611  00D5                     l32:	
+  1612                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 117:       
+      +                            case 3:
+  1613                           
+  1614                           
+  1615                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 118:       
+      +                                ADCON0bits.ADCS1 = 1;
+  1616  00D5  1283               	bcf	3,5	;RP0=0, select bank0
+  1617  00D6  179F               	bsf	31,7	;volatile
+  1618                           
+  1619                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 119:       
+      +                                ADCON0bits.ADCS0 = 1;
+  1620  00D7  171F               	bsf	31,6	;volatile
+  1621                           
+  1622                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 120:       
+      +                                break;
+  1623  00D8  28EF               	goto	l29
+  1624  00D9                     l994:
+  1625  00D9  0873               	movf	configADC@vel,w
+  1626  00DA  00F4               	movwf	??_configADC
+  1627  00DB  01F5               	clrf	??_configADC+1
+  1628                           
+  1629                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
       +                          itches
-  1625                           ; Switch size 1, requested type "simple"
-  1626                           ; Number of cases is 1, Range of values is 0 to 0
-  1627                           ; switch strategies available:
-  1628                           ; Name         Instructions Cycles
-  1629                           ; simple_byte            4     3 (average)
-  1630                           ; direct_byte           11     8 (fixed)
-  1631                           ; jumptable            260     6 (fixed)
-  1632                           ;	Chosen strategy is simple_byte
-  1633  00DB  0875               	movf	??_configADC+1,w
-  1634  00DC  3A00               	xorlw	0	; case 0
-  1635  00DD  1903               	skipnz
-  1636  00DE  28E0               	goto	l1137
-  1637  00DF  28EE               	goto	l29
-  1638  00E0                     l1137:
-  1639                           
-  1640                           ; Switch size 1, requested type "simple"
-  1641                           ; Number of cases is 4, Range of values is 0 to 3
-  1642                           ; switch strategies available:
-  1643                           ; Name         Instructions Cycles
-  1644                           ; simple_byte           13     7 (average)
-  1645                           ; direct_byte           20     8 (fixed)
-  1646                           ; jumptable            260     6 (fixed)
-  1647                           ;	Chosen strategy is simple_byte
-  1648  00E0  0874               	movf	??_configADC,w
-  1649  00E1  3A00               	xorlw	0	; case 0
-  1650  00E2  1903               	skipnz
-  1651  00E3  28C8               	goto	l28
-  1652  00E4  3A01               	xorlw	1	; case 1
-  1653  00E5  1903               	skipnz
-  1654  00E6  28CC               	goto	l30
-  1655  00E7  3A03               	xorlw	3	; case 2
-  1656  00E8  1903               	skipnz
-  1657  00E9  28D0               	goto	l31
-  1658  00EA  3A01               	xorlw	1	; case 3
-  1659  00EB  1903               	skipnz
-  1660  00EC  28D4               	goto	l32
-  1661  00ED  28EE               	goto	l29
-  1662  00EE                     l29:
-  1663                           
-  1664                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 123:     AD
-      +                          CON0bits.ADON = 1;
-  1665  00EE  1283               	bcf	3,5	;RP0=0, select bank0
-  1666  00EF  141F               	bsf	31,0	;volatile
-  1667  00F0                     l991:
+  1630                           ; Switch size 1, requested type "simple"
+  1631                           ; Number of cases is 1, Range of values is 0 to 0
+  1632                           ; switch strategies available:
+  1633                           ; Name         Instructions Cycles
+  1634                           ; simple_byte            4     3 (average)
+  1635                           ; direct_byte           11     8 (fixed)
+  1636                           ; jumptable            260     6 (fixed)
+  1637                           ;	Chosen strategy is simple_byte
+  1638  00DC  0875               	movf	??_configADC+1,w
+  1639  00DD  3A00               	xorlw	0	; case 0
+  1640  00DE  1903               	skipnz
+  1641  00DF  28E1               	goto	l1142
+  1642  00E0  28EF               	goto	l29
+  1643  00E1                     l1142:
+  1644                           
+  1645                           ; Switch size 1, requested type "simple"
+  1646                           ; Number of cases is 4, Range of values is 0 to 3
+  1647                           ; switch strategies available:
+  1648                           ; Name         Instructions Cycles
+  1649                           ; simple_byte           13     7 (average)
+  1650                           ; direct_byte           20     8 (fixed)
+  1651                           ; jumptable            260     6 (fixed)
+  1652                           ;	Chosen strategy is simple_byte
+  1653  00E1  0874               	movf	??_configADC,w
+  1654  00E2  3A00               	xorlw	0	; case 0
+  1655  00E3  1903               	skipnz
+  1656  00E4  28C9               	goto	l28
+  1657  00E5  3A01               	xorlw	1	; case 1
+  1658  00E6  1903               	skipnz
+  1659  00E7  28CD               	goto	l30
+  1660  00E8  3A03               	xorlw	3	; case 2
+  1661  00E9  1903               	skipnz
+  1662  00EA  28D1               	goto	l31
+  1663  00EB  3A01               	xorlw	1	; case 3
+  1664  00EC  1903               	skipnz
+  1665  00ED  28D5               	goto	l32
+  1666  00EE  28EF               	goto	l29
+  1667  00EF                     l29:
   1668                           
-  1669                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 124:     _d
+  1669                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 123:     AD
+      +                          CON0bits.ADON = 1;
+  1670  00EF  1283               	bcf	3,5	;RP0=0, select bank0
+  1671  00F0  141F               	bsf	31,0	;volatile
+  1672  00F1                     l996:
+  1673                           
+  1674                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 124:     _d
       +                          elay((unsigned long)((11)*(400000/4000.0)));
-  1670  00F0  30DB               	movlw	219
-  1671  00F1  00F4               	movwf	??_configADC
-  1672  00F2                     u87:
-  1673  00F2  28F3               	nop2
-  1674  00F3  0BF4               	decfsz	??_configADC,f
-  1675  00F4  28F2               	goto	u87
-  1676  00F5  28F6               	nop2
-  1677  00F6  28F7               	nop2
-  1678  00F7                     l993:
-  1679                           
-  1680                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 125:     AD
+  1675  00F1  30DB               	movlw	219
+  1676  00F2  00F4               	movwf	??_configADC
+  1677  00F3                     u107:
+  1678  00F3  28F4               	nop2
+  1679  00F4  0BF4               	decfsz	??_configADC,f
+  1680  00F5  28F3               	goto	u107
+  1681  00F6  28F7               	nop2
+  1682  00F7  28F8               	nop2
+  1683  00F8                     l998:
+  1684                           
+  1685                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/configuracionADC.c: 125:     AD
       +                          CON0bits.GO_nDONE = 1;
-  1681  00F7  1283               	bcf	3,5	;RP0=0, select bank0
-  1682  00F8  1303               	bcf	3,6	;RP1=0, select bank0
-  1683  00F9  149F               	bsf	31,1	;volatile
-  1684  00FA                     l33:
-  1685  00FA  0008               	return
-  1686  00FB                     __end_of_configADC:
-  1687                           
-  1688                           	psect	text5
-  1689  01E6                     __ptext5:	
-  1690 ;; *************** function _LEDS *****************
-  1691 ;; Defined at:
-  1692 ;;		line 120 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c"
-  1693 ;; Parameters:    Size  Location     Type
-  1694 ;;		None
-  1695 ;; Auto vars:     Size  Location     Type
-  1696 ;;		None
-  1697 ;; Return value:  Size  Location     Type
-  1698 ;;                  1    wreg      void 
-  1699 ;; Registers used:
-  1700 ;;		wreg
-  1701 ;; Tracked objects:
-  1702 ;;		On entry : 0/0
-  1703 ;;		On exit  : 0/0
-  1704 ;;		Unchanged: 0/0
-  1705 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1706 ;;      Params:         0       0       0       0       0
-  1707 ;;      Locals:         0       0       0       0       0
-  1708 ;;      Temps:          0       0       0       0       0
-  1709 ;;      Totals:         0       0       0       0       0
-  1710 ;;Total ram usage:        0 bytes
-  1711 ;; Hardware stack levels used:    1
-  1712 ;; Hardware stack levels required when called:    1
-  1713 ;; This function calls:
-  1714 ;;		Nothing
-  1715 ;; This function is called by:
-  1716 ;;		_main
-  1717 ;; This function uses a non-reentrant model
-  1718 ;;
-  1719                           
-  1720                           
-  1721                           ;psect for function _LEDS
-  1722  01E6                     _LEDS:
-  1723  01E6                     l871:	
-  1724                           ;incstack = 0
-  1725                           ; Regs used in _LEDS: [wreg]
-  1726                           
-  1727  01E6  302A               	movlw	42
-  1728  01E7  0278               	subwf	_ADC,w
-  1729  01E8  1803               	skipnc
-  1730  01E9  29EB               	goto	u41
-  1731  01EA  29EC               	goto	u40
-  1732  01EB                     u41:
-  1733  01EB  29F1               	goto	l875
-  1734  01EC                     u40:
-  1735  01EC                     l873:
-  1736  01EC  3001               	movlw	1
-  1737  01ED  1283               	bcf	3,5	;RP0=0, select bank0
-  1738  01EE  1303               	bcf	3,6	;RP1=0, select bank0
-  1739  01EF  0089               	movwf	9	;volatile
-  1740  01F0  29F5               	goto	l175
-  1741  01F1                     l875:
-  1742  01F1  3002               	movlw	2
-  1743  01F2  1283               	bcf	3,5	;RP0=0, select bank0
-  1744  01F3  1303               	bcf	3,6	;RP1=0, select bank0
-  1745  01F4  0089               	movwf	9	;volatile
-  1746  01F5                     l175:
-  1747  01F5  0008               	return
-  1748  01F6                     __end_of_LEDS:
-  1749                           
-  1750                           	psect	text6
-  1751  01F6                     __ptext6:	
-  1752 ;; *************** function _GO_ADC *****************
-  1753 ;; Defined at:
-  1754 ;;		line 114 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c"
-  1755 ;; Parameters:    Size  Location     Type
-  1756 ;;		None
-  1757 ;; Auto vars:     Size  Location     Type
-  1758 ;;		None
-  1759 ;; Return value:  Size  Location     Type
-  1760 ;;                  1    wreg      void 
-  1761 ;; Registers used:
-  1762 ;;		wreg, status,2
-  1763 ;; Tracked objects:
-  1764 ;;		On entry : 0/0
-  1765 ;;		On exit  : 0/0
-  1766 ;;		Unchanged: 0/0
-  1767 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1768 ;;      Params:         0       0       0       0       0
-  1769 ;;      Locals:         0       0       0       0       0
-  1770 ;;      Temps:          0       0       0       0       0
-  1771 ;;      Totals:         0       0       0       0       0
-  1772 ;;Total ram usage:        0 bytes
-  1773 ;; Hardware stack levels used:    1
-  1774 ;; Hardware stack levels required when called:    1
-  1775 ;; This function calls:
-  1776 ;;		Nothing
-  1777 ;; This function is called by:
-  1778 ;;		_main
-  1779 ;; This function uses a non-reentrant model
-  1780 ;;
-  1781                           
-  1782                           
-  1783                           ;psect for function _GO_ADC
-  1784  01F6                     _GO_ADC:
-  1785  01F6                     l865:	
-  1786                           ;incstack = 0
-  1787                           ; Regs used in _GO_ADC: [wreg+status,2]
-  1788                           
-  1789  01F6  300B               	movlw	11
-  1790  01F7  0277               	subwf	_ADC_GO,w
-  1791  01F8  1C03               	skipc
-  1792  01F9  29FB               	goto	u31
-  1793  01FA  29FC               	goto	u30
-  1794  01FB                     u31:
-  1795  01FB  2A00               	goto	l167
-  1796  01FC                     u30:
-  1797  01FC                     l867:
-  1798  01FC  01F7               	clrf	_ADC_GO
-  1799  01FD                     l869:
-  1800  01FD  1283               	bcf	3,5	;RP0=0, select bank0
-  1801  01FE  1303               	bcf	3,6	;RP1=0, select bank0
-  1802  01FF  149F               	bsf	31,1	;volatile
-  1803  0200                     l167:
-  1804  0200  0008               	return
-  1805  0201                     __end_of_GO_ADC:
-  1806                           
-  1807                           	psect	text7
-  1808  019C                     __ptext7:	
-  1809 ;; *************** function _isr *****************
-  1810 ;; Defined at:
-  1811 ;;		line 47 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c"
-  1812 ;; Parameters:    Size  Location     Type
-  1813 ;;		None
-  1814 ;; Auto vars:     Size  Location     Type
-  1815 ;;		None
-  1816 ;; Return value:  Size  Location     Type
-  1817 ;;                  1    wreg      void 
-  1818 ;; Registers used:
-  1819 ;;		wreg, status,2, status,0, btemp+1
-  1820 ;; Tracked objects:
-  1821 ;;		On entry : 0/0
-  1822 ;;		On exit  : 0/0
-  1823 ;;		Unchanged: 0/0
-  1824 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1825 ;;      Params:         0       0       0       0       0
-  1826 ;;      Locals:         0       0       0       0       0
-  1827 ;;      Temps:          3       0       0       0       0
-  1828 ;;      Totals:         3       0       0       0       0
-  1829 ;;Total ram usage:        3 bytes
-  1830 ;; Hardware stack levels used:    1
-  1831 ;; This function calls:
-  1832 ;;		Nothing
-  1833 ;; This function is called by:
-  1834 ;;		Interrupt level 1
-  1835 ;; This function uses a non-reentrant model
-  1836 ;;
-  1837                           
-  1838                           
-  1839                           ;psect for function _isr
-  1840  019C                     _isr:
-  1841  019C                     i1l895:
-  1842                           
-  1843                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 48: 
-  1844  019C  1D0B               	btfss	11,2	;volatile
-  1845  019D  299F               	goto	u5_21
-  1846  019E  29A0               	goto	u5_20
-  1847  019F                     u5_21:
-  1848  019F  29A7               	goto	i1l903
-  1849  01A0                     u5_20:
-  1850  01A0                     i1l897:
-  1851                           
-  1852                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 49: void setup(void) {
-  1853  01A0  30EC               	movlw	236
-  1854  01A1  0081               	movwf	1	;volatile
-  1855  01A2                     i1l899:
-  1856                           
-  1857                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 50:     initOsc(6);
-  1858  01A2  3001               	movlw	1
-  1859  01A3  00FF               	movwf	btemp+1
-  1860  01A4  087F               	movf	btemp+1,w
-  1861  01A5  07F7               	addwf	_ADC_GO,f
-  1862  01A6                     i1l901:
-  1863                           
-  1864                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 51:     configADC(0,2);
-  1865  01A6  110B               	bcf	11,2	;volatile
-  1866  01A7                     i1l903:
-  1867                           
-  1868                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 54:     ANSEL = 0;
-  1869  01A7  1F0C               	btfss	12,6	;volatile
-  1870  01A8  29AA               	goto	u6_21
-  1871  01A9  29AB               	goto	u6_20
-  1872  01AA                     u6_21:
-  1873  01AA  29B0               	goto	i1l909
-  1874  01AB                     u6_20:
-  1875  01AB                     i1l905:
+  1686  00F8  1283               	bcf	3,5	;RP0=0, select bank0
+  1687  00F9  1303               	bcf	3,6	;RP1=0, select bank0
+  1688  00FA  149F               	bsf	31,1	;volatile
+  1689  00FB                     l33:
+  1690  00FB  0008               	return
+  1691  00FC                     __end_of_configADC:
+  1692                           
+  1693                           	psect	text5
+  1694  019D                     __ptext5:	
+  1695 ;; *************** function _LEDS *****************
+  1696 ;; Defined at:
+  1697 ;;		line 122 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c"
+  1698 ;; Parameters:    Size  Location     Type
+  1699 ;;		None
+  1700 ;; Auto vars:     Size  Location     Type
+  1701 ;;		None
+  1702 ;; Return value:  Size  Location     Type
+  1703 ;;                  1    wreg      void 
+  1704 ;; Registers used:
+  1705 ;;		wreg, btemp+1
+  1706 ;; Tracked objects:
+  1707 ;;		On entry : 0/0
+  1708 ;;		On exit  : 0/0
+  1709 ;;		Unchanged: 0/0
+  1710 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1711 ;;      Params:         0       0       0       0       0
+  1712 ;;      Locals:         0       0       0       0       0
+  1713 ;;      Temps:          0       0       0       0       0
+  1714 ;;      Totals:         0       0       0       0       0
+  1715 ;;Total ram usage:        0 bytes
+  1716 ;; Hardware stack levels used:    1
+  1717 ;; Hardware stack levels required when called:    1
+  1718 ;; This function calls:
+  1719 ;;		Nothing
+  1720 ;; This function is called by:
+  1721 ;;		_main
+  1722 ;; This function uses a non-reentrant model
+  1723 ;;
+  1724                           
+  1725                           
+  1726                           ;psect for function _LEDS
+  1727  019D                     _LEDS:
+  1728  019D                     l872:	
+  1729                           ;incstack = 0
+  1730                           ; Regs used in _LEDS: [wreg+btemp+1]
+  1731                           
+  1732  019D  0879               	movf	_ADC,w
+  1733  019E  00FF               	movwf	btemp+1
+  1734  019F  087F               	movf	btemp+1,w
+  1735  01A0  00F7               	movwf	_temp
+  1736  01A1                     l874:
+  1737  01A1  3065               	movlw	101
+  1738  01A2  0277               	subwf	_temp,w
+  1739  01A3  1803               	skipnc
+  1740  01A4  29A6               	goto	u41
+  1741  01A5  29A7               	goto	u40
+  1742  01A6                     u41:
+  1743  01A6  29AC               	goto	l878
+  1744  01A7                     u40:
+  1745  01A7                     l876:
+  1746  01A7  3001               	movlw	1
+  1747  01A8  1283               	bcf	3,5	;RP0=0, select bank0
+  1748  01A9  1303               	bcf	3,6	;RP1=0, select bank0
+  1749  01AA  0089               	movwf	9	;volatile
+  1750  01AB  29C1               	goto	l176
+  1751  01AC                     l878:
+  1752  01AC  3065               	movlw	101
+  1753  01AD  0277               	subwf	_temp,w
+  1754  01AE  1C03               	skipc
+  1755  01AF  29B1               	goto	u51
+  1756  01B0  29B2               	goto	u50
+  1757  01B1                     u51:
+  1758  01B1  29BD               	goto	l884
+  1759  01B2                     u50:
+  1760  01B2                     l880:
+  1761  01B2  3073               	movlw	115
+  1762  01B3  0277               	subwf	_temp,w
+  1763  01B4  1803               	skipnc
+  1764  01B5  29B7               	goto	u61
+  1765  01B6  29B8               	goto	u60
+  1766  01B7                     u61:
+  1767  01B7  29BD               	goto	l884
+  1768  01B8                     u60:
+  1769  01B8                     l882:
+  1770  01B8  3002               	movlw	2
+  1771  01B9  1283               	bcf	3,5	;RP0=0, select bank0
+  1772  01BA  1303               	bcf	3,6	;RP1=0, select bank0
+  1773  01BB  0089               	movwf	9	;volatile
+  1774  01BC  29C1               	goto	l176
+  1775  01BD                     l884:
+  1776  01BD  3004               	movlw	4
+  1777  01BE  1283               	bcf	3,5	;RP0=0, select bank0
+  1778  01BF  1303               	bcf	3,6	;RP1=0, select bank0
+  1779  01C0  0089               	movwf	9	;volatile
+  1780  01C1                     l176:
+  1781  01C1  0008               	return
+  1782  01C2                     __end_of_LEDS:
+  1783                           
+  1784                           	psect	text6
+  1785  020C                     __ptext6:	
+  1786 ;; *************** function _GO_ADC *****************
+  1787 ;; Defined at:
+  1788 ;;		line 116 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c"
+  1789 ;; Parameters:    Size  Location     Type
+  1790 ;;		None
+  1791 ;; Auto vars:     Size  Location     Type
+  1792 ;;		None
+  1793 ;; Return value:  Size  Location     Type
+  1794 ;;                  1    wreg      void 
+  1795 ;; Registers used:
+  1796 ;;		wreg, status,2
+  1797 ;; Tracked objects:
+  1798 ;;		On entry : 0/0
+  1799 ;;		On exit  : 0/0
+  1800 ;;		Unchanged: 0/0
+  1801 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1802 ;;      Params:         0       0       0       0       0
+  1803 ;;      Locals:         0       0       0       0       0
+  1804 ;;      Temps:          0       0       0       0       0
+  1805 ;;      Totals:         0       0       0       0       0
+  1806 ;;Total ram usage:        0 bytes
+  1807 ;; Hardware stack levels used:    1
+  1808 ;; Hardware stack levels required when called:    1
+  1809 ;; This function calls:
+  1810 ;;		Nothing
+  1811 ;; This function is called by:
+  1812 ;;		_main
+  1813 ;; This function uses a non-reentrant model
+  1814 ;;
+  1815                           
+  1816                           
+  1817                           ;psect for function _GO_ADC
+  1818  020C                     _GO_ADC:
+  1819  020C                     l866:	
+  1820                           ;incstack = 0
+  1821                           ; Regs used in _GO_ADC: [wreg+status,2]
+  1822                           
+  1823  020C  300B               	movlw	11
+  1824  020D  0278               	subwf	_ADC_GO,w
+  1825  020E  1C03               	skipc
+  1826  020F  2A11               	goto	u31
+  1827  0210  2A12               	goto	u30
+  1828  0211                     u31:
+  1829  0211  2A16               	goto	l169
+  1830  0212                     u30:
+  1831  0212                     l868:
+  1832  0212  01F8               	clrf	_ADC_GO
+  1833  0213                     l870:
+  1834  0213  1283               	bcf	3,5	;RP0=0, select bank0
+  1835  0214  1303               	bcf	3,6	;RP1=0, select bank0
+  1836  0215  149F               	bsf	31,1	;volatile
+  1837  0216                     l169:
+  1838  0216  0008               	return
+  1839  0217                     __end_of_GO_ADC:
+  1840                           
+  1841                           	psect	text7
+  1842  01C2                     __ptext7:	
+  1843 ;; *************** function _isr *****************
+  1844 ;; Defined at:
+  1845 ;;		line 49 in file "C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c"
+  1846 ;; Parameters:    Size  Location     Type
+  1847 ;;		None
+  1848 ;; Auto vars:     Size  Location     Type
+  1849 ;;		None
+  1850 ;; Return value:  Size  Location     Type
+  1851 ;;                  1    wreg      void 
+  1852 ;; Registers used:
+  1853 ;;		wreg, status,2, status,0, btemp+1
+  1854 ;; Tracked objects:
+  1855 ;;		On entry : 0/0
+  1856 ;;		On exit  : 0/0
+  1857 ;;		Unchanged: 0/0
+  1858 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1859 ;;      Params:         0       0       0       0       0
+  1860 ;;      Locals:         0       0       0       0       0
+  1861 ;;      Temps:          3       0       0       0       0
+  1862 ;;      Totals:         3       0       0       0       0
+  1863 ;;Total ram usage:        3 bytes
+  1864 ;; Hardware stack levels used:    1
+  1865 ;; This function calls:
+  1866 ;;		Nothing
+  1867 ;; This function is called by:
+  1868 ;;		Interrupt level 1
+  1869 ;; This function uses a non-reentrant model
+  1870 ;;
+  1871                           
+  1872                           
+  1873                           ;psect for function _isr
+  1874  01C2                     _isr:
+  1875  01C2                     i1l900:
   1876                           
-  1877                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 55:     ANSELbits.ANS0 
+  1877                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 50: 
+  1878  01C2  1D0B               	btfss	11,2	;volatile
+  1879  01C3  29C5               	goto	u7_21
+  1880  01C4  29C6               	goto	u7_20
+  1881  01C5                     u7_21:
+  1882  01C5  29CD               	goto	i1l908
+  1883  01C6                     u7_20:
+  1884  01C6                     i1l902:
+  1885                           
+  1886                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 51: void setup(void) {
+  1887  01C6  30EC               	movlw	236
+  1888  01C7  0081               	movwf	1	;volatile
+  1889  01C8                     i1l904:
+  1890                           
+  1891                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 52:     initOsc(6);
+  1892  01C8  3001               	movlw	1
+  1893  01C9  00FF               	movwf	btemp+1
+  1894  01CA  087F               	movf	btemp+1,w
+  1895  01CB  07F8               	addwf	_ADC_GO,f
+  1896  01CC                     i1l906:
+  1897                           
+  1898                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 53:     configADC(0,2);
+  1899  01CC  110B               	bcf	11,2	;volatile
+  1900  01CD                     i1l908:
+  1901                           
+  1902                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 56:     ANSEL = 0;
+  1903  01CD  1F0C               	btfss	12,6	;volatile
+  1904  01CE  29D0               	goto	u8_21
+  1905  01CF  29D1               	goto	u8_20
+  1906  01D0                     u8_21:
+  1907  01D0  29D6               	goto	i1l914
+  1908  01D1                     u8_20:
+  1909  01D1                     i1l910:
+  1910                           
+  1911                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 57:     ANSELbits.ANS0 
       +                          = 1;
-  1878  01AB  081E               	movf	30,w	;volatile
-  1879  01AC  00FF               	movwf	btemp+1
-  1880  01AD  087F               	movf	btemp+1,w
-  1881  01AE  00F8               	movwf	_ADC
-  1882  01AF                     i1l907:
-  1883                           
-  1884                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 56:     ANSELH = 0;
-  1885  01AF  130C               	bcf	12,6	;volatile
-  1886  01B0                     i1l909:
-  1887                           
-  1888                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 58:     TRISC = 0;
-  1889  01B0  158C               	bsf	12,3	;volatile
-  1890  01B1                     i1l911:
-  1891                           
-  1892                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 59:     PORTD = 0;
-  1893  01B1  0878               	movf	_ADC,w
-  1894  01B2  0093               	movwf	19	;volatile
-  1895  01B3                     i1l913:
-  1896                           
-  1897                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 60:     TRISD = 0;
-  1898  01B3  118C               	bcf	12,3	;volatile
-  1899  01B4                     i1l152:
-  1900  01B4  0872               	movf	??_isr+2,w
-  1901  01B5  00FF               	movwf	btemp+1
-  1902  01B6  0871               	movf	??_isr+1,w
-  1903  01B7  008A               	movwf	10
-  1904  01B8  0E70               	swapf	??_isr^(0+4294967168),w
-  1905  01B9  0083               	movwf	3
-  1906  01BA  0EFE               	swapf	btemp,f
-  1907  01BB  0E7E               	swapf	btemp,w
-  1908  01BC  0009               	retfie
-  1909  01BD                     __end_of_isr:
-  1910  007E                     btemp	set	126	;btemp
-  1911  007E                     wtemp0	set	126
-  1912                           
-  1913                           	psect	intentry
-  1914  0004                     __pintentry:	
-  1915                           ;incstack = 0
-  1916                           ; Regs used in _isr: [wreg+status,2+status,0+btemp+1]
+  1912  01D1  081E               	movf	30,w	;volatile
+  1913  01D2  00FF               	movwf	btemp+1
+  1914  01D3  087F               	movf	btemp+1,w
+  1915  01D4  00F9               	movwf	_ADC
+  1916  01D5                     i1l912:
   1917                           
-  1918  0004                     interrupt_function:
-  1919  007E                     saved_w	set	btemp
-  1920  0004  00FE               	movwf	btemp
-  1921  0005  0E03               	swapf	3,w
-  1922  0006  00F0               	movwf	??_isr
-  1923  0007  080A               	movf	10,w
-  1924  0008  00F1               	movwf	??_isr+1
-  1925  0009  1283               	bcf	3,5	;RP0=0, select bank0
-  1926  000A  1303               	bcf	3,6	;RP1=0, select bank0
-  1927  000B  087F               	movf	btemp+1,w
-  1928  000C  00F2               	movwf	??_isr+2
-  1929  000D  120A  118A  299C   	ljmp	_isr
+  1918                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 58:     ANSELH = 0;
+  1919  01D5  130C               	bcf	12,6	;volatile
+  1920  01D6                     i1l914:
+  1921                           
+  1922                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 60:     TRISC = 0;
+  1923  01D6  158C               	bsf	12,3	;volatile
+  1924  01D7                     i1l916:
+  1925                           
+  1926                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 61:     PORTD = 0;
+  1927  01D7  0879               	movf	_ADC,w
+  1928  01D8  0093               	movwf	19	;volatile
+  1929  01D9                     i1l918:
   1930                           
-  1931                           	psect	config
-  1932                           
-  1933                           ;Config register CONFIG1 @ 0x2007
-  1934                           ;	Oscillator Selection bits
-  1935                           ;	FOSC = INTRC_NOCLKOUT, INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O f
+  1931                           ;C:/MPlab_Digital2/Digital_2/Esclavo3proyecto1Digital2.X/main.c: 62:     TRISD = 0;
+  1932  01D9  118C               	bcf	12,3	;volatile
+  1933  01DA                     i1l154:
+  1934  01DA  0872               	movf	??_isr+2,w
+  1935  01DB  00FF               	movwf	btemp+1
+  1936  01DC  0871               	movf	??_isr+1,w
+  1937  01DD  008A               	movwf	10
+  1938  01DE  0E70               	swapf	??_isr^(0+4294967168),w
+  1939  01DF  0083               	movwf	3
+  1940  01E0  0EFE               	swapf	btemp,f
+  1941  01E1  0E7E               	swapf	btemp,w
+  1942  01E2  0009               	retfie
+  1943  01E3                     __end_of_isr:
+  1944  007E                     btemp	set	126	;btemp
+  1945  007E                     wtemp0	set	126
+  1946                           
+  1947                           	psect	intentry
+  1948  0004                     __pintentry:	
+  1949                           ;incstack = 0
+  1950                           ; Regs used in _isr: [wreg+status,2+status,0+btemp+1]
+  1951                           
+  1952  0004                     interrupt_function:
+  1953  007E                     saved_w	set	btemp
+  1954  0004  00FE               	movwf	btemp
+  1955  0005  0E03               	swapf	3,w
+  1956  0006  00F0               	movwf	??_isr
+  1957  0007  080A               	movf	10,w
+  1958  0008  00F1               	movwf	??_isr+1
+  1959  0009  1283               	bcf	3,5	;RP0=0, select bank0
+  1960  000A  1303               	bcf	3,6	;RP1=0, select bank0
+  1961  000B  087F               	movf	btemp+1,w
+  1962  000C  00F2               	movwf	??_isr+2
+  1963  000D  120A  118A  29C2   	ljmp	_isr
+  1964                           
+  1965                           	psect	config
+  1966                           
+  1967                           ;Config register CONFIG1 @ 0x2007
+  1968                           ;	Oscillator Selection bits
+  1969                           ;	FOSC = INTRC_NOCLKOUT, INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O f
       +                          unction on RA7/OSC1/CLKIN
-  1936                           ;	Watchdog Timer Enable bit
-  1937                           ;	WDTE = OFF, WDT disabled and can be enabled by SWDTEN bit of the WDTCON register
-  1938                           ;	Power-up Timer Enable bit
-  1939                           ;	PWRTE = OFF, PWRT disabled
-  1940                           ;	RE3/MCLR pin function select bit
-  1941                           ;	MCLRE = OFF, RE3/MCLR pin function is digital input, MCLR internally tied to VDD
-  1942                           ;	Code Protection bit
-  1943                           ;	CP = OFF, Program memory code protection is disabled
-  1944                           ;	Data Code Protection bit
-  1945                           ;	CPD = OFF, Data memory code protection is disabled
-  1946                           ;	Brown Out Reset Selection bits
-  1947                           ;	BOREN = OFF, BOR disabled
-  1948                           ;	Internal External Switchover bit
-  1949                           ;	IESO = OFF, Internal/External Switchover mode is disabled
-  1950                           ;	Fail-Safe Clock Monitor Enabled bit
-  1951                           ;	FCMEN = OFF, Fail-Safe Clock Monitor is disabled
-  1952                           ;	Low Voltage Programming Enable bit
-  1953                           ;	LVP = OFF, RB3 pin has digital I/O, HV on MCLR must be used for programming
-  1954                           ;	In-Circuit Debugger Mode bit
-  1955                           ;	DEBUG = 0x1, unprogrammed default
-  1956  2007                     	org	8199
-  1957  2007  20D4               	dw	8404
-  1958                           
-  1959                           ;Config register CONFIG2 @ 0x2008
-  1960                           ;	Brown-out Reset Selection bit
-  1961                           ;	BOR4V = BOR40V, Brown-out Reset set to 4.0V
-  1962                           ;	Flash Program Memory Self Write Enable bits
-  1963                           ;	WRT = OFF, Write protection off
-  1964  2008                     	org	8200
-  1965  2008  3FFF               	dw	16383
+  1970                           ;	Watchdog Timer Enable bit
+  1971                           ;	WDTE = OFF, WDT disabled and can be enabled by SWDTEN bit of the WDTCON register
+  1972                           ;	Power-up Timer Enable bit
+  1973                           ;	PWRTE = OFF, PWRT disabled
+  1974                           ;	RE3/MCLR pin function select bit
+  1975                           ;	MCLRE = OFF, RE3/MCLR pin function is digital input, MCLR internally tied to VDD
+  1976                           ;	Code Protection bit
+  1977                           ;	CP = OFF, Program memory code protection is disabled
+  1978                           ;	Data Code Protection bit
+  1979                           ;	CPD = OFF, Data memory code protection is disabled
+  1980                           ;	Brown Out Reset Selection bits
+  1981                           ;	BOREN = OFF, BOR disabled
+  1982                           ;	Internal External Switchover bit
+  1983                           ;	IESO = OFF, Internal/External Switchover mode is disabled
+  1984                           ;	Fail-Safe Clock Monitor Enabled bit
+  1985                           ;	FCMEN = OFF, Fail-Safe Clock Monitor is disabled
+  1986                           ;	Low Voltage Programming Enable bit
+  1987                           ;	LVP = OFF, RB3 pin has digital I/O, HV on MCLR must be used for programming
+  1988                           ;	In-Circuit Debugger Mode bit
+  1989                           ;	DEBUG = 0x1, unprogrammed default
+  1990  2007                     	org	8199
+  1991  2007  20D4               	dw	8404
+  1992                           
+  1993                           ;Config register CONFIG2 @ 0x2008
+  1994                           ;	Brown-out Reset Selection bit
+  1995                           ;	BOR4V = BOR40V, Brown-out Reset set to 4.0V
+  1996                           ;	Flash Program Memory Self Write Enable bits
+  1997                           ;	WRT = OFF, Write protection off
+  1998  2008                     	org	8200
+  1999  2008  3FFF               	dw	16383
 
 Data Sizes:
     Strings     0
     Constant    0
     Data        0
-    BSS         2
+    BSS         3
     Persistent  0
     Stack       0
 
 Auto Spaces:
     Space          Size  Autos    Used
-    COMMON           14      7       9
+    COMMON           14      7      10
     BANK0            80      0       0
     BANK1            80      0       0
     BANK3            96      0       0
@@ -2272,13 +2305,13 @@ BITCOMMON            E      0       0       0        0.0%
 EEDATA             100      0       0       0        0.0%
 NULL                 0      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
-COMMON               E      7       9       1       64.3%
+COMMON               E      7       A       1       71.4%
 BITSFR0              0      0       0       1        0.0%
 SFR0                 0      0       0       1        0.0%
 BITSFR1              0      0       0       2        0.0%
 SFR1                 0      0       0       2        0.0%
 STACK                0      0       0       2        0.0%
-ABS                  0      0       9       3        0.0%
+ABS                  0      0       A       3        0.0%
 BITBANK0            50      0       0       4        0.0%
 BITSFR3              0      0       0       4        0.0%
 SFR3                 0      0       0       4        0.0%
@@ -2291,79 +2324,82 @@ BITBANK3            60      0       0       8        0.0%
 BANK3               60      0       0       9        0.0%
 BITBANK2            60      0       0      10        0.0%
 BANK2               60      0       0      11        0.0%
-DATA                 0      0       9      12        0.0%
+DATA                 0      0       A      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.20 build 20200408173844 
-Symbol Table                                                                                   Tue Feb 16 00:15:58 2021
+Symbol Table                                                                                   Wed Feb 17 22:23:40 2021
 
-            _SSPSTATbits 0094                       l10 001E                       l20 005D  
-                     l12 0025                       l21 0064                       l13 002C  
-                     l30 00CC                       l22 006B                       l14 0033  
-                     l31 00D0                       l23 0072                       l15 003A  
-                     l32 00D4                       l24 0079                       l16 0041  
-                     l33 00FA                       l25 0080                       l17 0048  
-                     l26 0087                       l18 004F                       l50 01D2  
-                     l19 0056                       l28 00C8                       l29 00EE  
-                     l80 0121                       l81 0127                       l73 00FD  
-                     l49 01CD                       l82 014F                       l75 0103  
-                     l76 0109                       l77 010F                       l78 0115  
-                     l79 011B                       u30 01FC                       u31 01FB  
-                     u40 01EC                       u41 01EB                       u70 01C5  
-                     u71 01C4                       u87 00F2                      l163 019B  
-                    l167 0200                      l175 01F5                      _ADC 0078  
-                    l803 012D                      l871 01E6                      l865 01F6  
-                    l873 01EC                      l867 01FC                      l875 01F1  
-                    l869 01FD                      l981 001A                      l991 00F0  
-                    l799 00FC                      l993 00F7                      l985 008E  
-                    l989 00D8                      _isr 019C                     l1011 01CC  
-                   l1003 01BE                     l1005 01C5                     l1021 0166  
-                   l1013 0150                     l1007 01C7                     l1031 0171  
-                   l1023 0169                     l1015 0156                     l1009 01C9  
-                   l1041 017E                     l1033 0174                     l1025 016A  
-                   l1017 0160                     l1051 0187                     l1043 0181  
-                   l1035 0177                     l1027 016B                     l1019 0164  
-                   l1133 0135                     l1061 0194                     l1053 0188  
-                   l1045 0182                     l1037 0178                     l1029 016E  
-                   l1135 0096                     l1063 0197                     l1055 0191  
-                   l1047 0185                     l1039 017B                     l1071 01DD  
-                   l1137 00E0                     l1065 0198                     l1057 0192  
-                   l1049 0186                     l1059 0193                     l1067 01D3  
-                   l1069 01D8                     ?_isr 0070                     _LEDS 01E6  
-                   _TMR0 0001                     u5_20 01A0                     u5_21 019F  
-                   u6_20 01AB                     u6_21 01AA                     _main 01D3  
+            _SSPSTATbits 0094                       l10 001F                       l20 005E  
+                     l12 0026                       l21 0065                       l13 002D  
+                     l30 00CD                       l22 006C                       l14 0034  
+                     l31 00D1                       l23 0073                       l15 003B  
+                     l32 00D5                       l24 007A                       l16 0042  
+                     l33 00FB                       l25 0081                       l17 0049  
+                     l26 0088                       l18 0050                       l50 01F8  
+                     l19 0057                       l28 00C9                       l29 00EF  
+                     l80 0122                       l81 0128                       l73 00FE  
+                     l49 01F3                       l82 0150                       l75 0104  
+                     l76 010A                       l77 0110                       l78 0116  
+                     l79 011C                       u30 0212                       u31 0211  
+                     u40 01A7                       u41 01A6                       u50 01B2  
+                     u51 01B1                       u60 01B8                       u61 01B7  
+                     u90 01EB                       u91 01EA                      l165 019C  
+                    _ADC 0079                      l176 01C1                      l169 0216  
+                    l800 00FD                      l804 012E                      l870 0213  
+                    l880 01B2                      l872 019D                      l866 020C  
+                    l882 01B8                      l874 01A1                      l868 0212  
+                    l884 01BD                      l876 01A7                      l878 01AC  
+                    l990 008F                      l994 00D9                      l986 001B  
+                    l996 00F1                      l998 00F8                      u107 00F3  
+                    _isr 01C2                     l1010 01EB                     l1012 01ED  
+                   l1020 0157                     l1014 01EF                     l1030 016B  
+                   l1022 0161                     l1016 01F2                     l1008 01E4  
+                   l1040 0178                     l1032 016C                     l1024 0165  
+                   l1050 0183                     l1042 0179                     l1034 016F  
+                   l1026 0167                     l1018 0151                     l1140 0097  
+                   l1060 0192                     l1052 0186                     l1044 017C  
+                   l1036 0172                     l1028 016A                     l1142 00E1  
+                   l1070 0199                     l1062 0193                     l1054 0187  
+                   l1046 017F                     l1038 0175                     l1064 0194  
+                   l1056 0188                     l1048 0182                     l1072 01F9  
+                   l1138 0136                     l1066 0195                     l1058 0189  
+                   l1074 01FE                     l1068 0198                     l1076 0203  
+                   ?_isr 0070                     _LEDS 019D                     _TMR0 0001  
+                   u7_20 01C6                     u7_21 01C5                     u8_20 01D1  
+                   u8_21 01D0                     _main 01F9                     _temp 0077  
                    btemp 007E                     start 0010                    ??_isr 0070  
                   ?_LEDS 0070                    ?_main 0070                    _ANSEL 0188  
-                  i1l152 01B4                    i1l901 01A6                    i1l911 01B1  
-                  i1l903 01A7                    i1l913 01B3                    i1l905 01AB  
-                  i1l907 01AF                    i1l909 01B0                    i1l895 019C  
-                  i1l897 01A0                    i1l899 01A2                    _PORTA 0005  
+                  i1l154 01DA                    i1l900 01C2                    i1l910 01D1  
+                  i1l902 01C6                    i1l912 01D5                    i1l904 01C8  
+                  i1l914 01D6                    i1l906 01CC                    i1l916 01D7  
+                  i1l908 01CD                    i1l918 01D9                    _PORTA 0005  
                   _PORTB 0006                    _PORTC 0007                    _PORTD 0008  
                   _PORTE 0009                    _TRISB 0086                    _TRISC 0087  
-                  _TRISD 0088                    _TRISE 0089          __end_of_initOsc 0150  
-                  _setup 0150                    pclath 000A          __end_of_spiInit 01D3  
-                  status 0003                    wtemp0 007E             __end_of_LEDS 01F6  
-        __initialization 0013             __end_of_main 01E6                   ??_LEDS 0073  
-                 ??_main 0077                   _ADCON1 009F                   _ADC_GO 0077  
+                  _TRISD 0088                    _TRISE 0089          __end_of_initOsc 0151  
+                  _setup 0151                    pclath 000A          __end_of_spiInit 01F9  
+                  status 0003                    wtemp0 007E             __end_of_LEDS 01C2  
+        __initialization 0013             __end_of_main 020C                   ??_LEDS 0073  
+                 ??_main 0077                   _ADCON1 009F                   _ADC_GO 0078  
                  _ADRESH 001E                   ?_setup 0070                   _ANSELH 0189  
-                 _GO_ADC 01F6                   _TRISC3 043B                   _TRISC5 043D  
+                 _GO_ADC 020C                   _TRISC3 043B                   _TRISC5 043D  
                  _SSPCON 0014                   _SSPBUF 0013                ??_initOsc 0073  
-                 saved_w 007E                ??_spiInit 0076  __end_of__initialization 0015  
-         __pcstackCOMMON 0070            __end_of_setup 019C       __size_of_configADC 00E2  
-                ??_setup 0077                  ?_GO_ADC 0070               __pmaintext 01D3  
+                 saved_w 007E                ??_spiInit 0076  __end_of__initialization 0016  
+         __pcstackCOMMON 0070            __end_of_setup 019D       __size_of_configADC 00E2  
+                ??_setup 0077                  ?_GO_ADC 0070               __pmaintext 01F9  
              __pintentry 0004                  _SSPSTAT 0094          __size_of_GO_ADC 000B  
-      __end_of_configADC 00FB                _ANSELbits 0188                  __ptext1 0150  
-                __ptext2 01BD                  __ptext3 00FB                  __ptext4 0019  
-                __ptext5 01E6                  __ptext6 01F6                  __ptext7 019C  
-                _initOsc 00FB             __size_of_isr 0021                  _spiInit 01BD  
-   end_of_initialization 0015                _TRISAbits 0085                _TRISCbits 0087  
-         __end_of_GO_ADC 0201      start_initialization 0013              __end_of_isr 01BD  
+      __end_of_configADC 00FC                _ANSELbits 0188                  __ptext1 0151  
+                __ptext2 01E3                  __ptext3 00FC                  __ptext4 001A  
+                __ptext5 019D                  __ptext6 020C                  __ptext7 01C2  
+                _initOsc 00FC             __size_of_isr 0021                  _spiInit 01E3  
+   end_of_initialization 0016                _TRISAbits 0085                _TRISCbits 0087  
+         __end_of_GO_ADC 0217      start_initialization 0013              __end_of_isr 01E3  
                ??_GO_ADC 0073              __pbssCOMMON 0077                ___latbits 0002  
-              _configADC 0019                 ?_initOsc 0070                 ?_spiInit 0073  
+              _configADC 001A                 ?_initOsc 0070                 ?_spiInit 0073  
          __size_of_setup 004C     spiInit@sTransmitEdge 0075        interrupt_function 0004  
                _PIE1bits 008C       spiInit@sDataSample 0073                 _PIR1bits 000C  
           initOsc@option 0075               ?_configADC 0073               _ADCON0bits 001F  
-       __size_of_initOsc 0055         __size_of_spiInit 0016            __size_of_LEDS 0010  
+       __size_of_initOsc 0055         __size_of_spiInit 0016            __size_of_LEDS 0025  
           __size_of_main 0013             spiInit@sType 0076              ??_configADC 0074  
       spiInit@sClockIdle 0074               _INTCONbits 000B                 intlevel1 0000  
              _OSCCONbits 008F               _OPTION_REG 0081           configADC@canal 0076  

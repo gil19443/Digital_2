@@ -2737,7 +2737,8 @@ uint8_t centenasp1 = 0;
 uint8_t unidadesp2 = 0;
 uint8_t decenasp2 = 0;
 uint8_t centenasp2 = 0;
-uint8_t gradospos = 0;
+uint16_t gradospos = 0;
+uint8_t nueva = 0;
 
 
 
@@ -2747,7 +2748,6 @@ void envio (void);
 void mapeo (void);
 void envio_esclavos(void);
 void temp_pos (void);
-void correccion (void);
 
 
 
@@ -2776,11 +2776,11 @@ void main(void) {
 
 
     while (1) {
+        PORTB = gradospos;
         temp_pos();
         TX_GO();
         envio_esclavos();
         mapeo();
-        correccion();
         Lcd_Set_Cursor(2,1);
         Lcd_Write_Char(centenasp1+48);
         Lcd_Set_Cursor(2,2);
@@ -2899,14 +2899,14 @@ void envio_esclavos(void){
 void envio (void){
     switch (var_envio){
         case 0:
-            tabla_hex(((esclavo3 & 0b11110000)>>4),&TXREG);
 
+           TXREG = centenasp1+48;
            var_envio++;
            break;
         case 1:
-          tabla_hex((esclavo3 & 0b00001111),&TXREG);
 
 
+           TXREG = 46;
            var_envio++;
            break;
         case 2:
@@ -2971,24 +2971,19 @@ void mapeo (void){
     unidadesp1 = (TEMP1-((centenasp1*100)+(decenasp1*10)));
 }
 void temp_pos (void){
+    gradospos = esclavo3;
     if (esclavo3 <69){
-        gradospos = (-1)*(((esclavo3*150)/186.0)-55);
-        centenasp2 = (gradospos/100);
-        decenasp2 = (((gradospos-(centenasp2*100)))/10);
-        unidadesp2 = (gradospos-((centenasp2*100)+(decenasp2*10)));
+        nueva = (-1)*((gradospos*0.807)-55.75);
+        centenasp2 = nueva/100;
+        decenasp2 = ((nueva-(centenasp2*100)))/10;
+        unidadesp2 = nueva-((centenasp2*100)+(decenasp2*10));
     }else{
+        nueva = ((gradospos*0.807)-55.75);
+        PORTB = nueva;
 
-        gradospos = (((esclavo3*150)/186.0)-55);
-        centenasp2 = (gradospos/100);
-        decenasp2 = (((gradospos-(centenasp2*100)))/10);
-        unidadesp2 = (gradospos-((centenasp2*100)+(decenasp2*10)));
-        correccion();
+        centenasp2 = (nueva/100);
+        decenasp2 = (((nueva-(centenasp2*100)))/10);
+        unidadesp2 = (nueva-((centenasp2*100)+(decenasp2*10)));
 
-    }
-}
-void correccion(void){
-    if (esclavo3 > 218){
-        gradospos = gradospos +95;
-        centenasp2 = PORTB;
     }
 }
