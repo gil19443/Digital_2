@@ -42,10 +42,10 @@ void setup(void);
 //                          interrupciones 
 //******************************************************************************
 void __interrupt() isr(void){
-    if (INTCONbits.RBIF == 1){
-        INTCONbits.RBIF = 0;
-        if (PORTBbits.RB0 == 0){
-            boton1 = 1;
+    if (INTCONbits.RBIF == 1){ //interrupciones del puerto B
+        INTCONbits.RBIF = 0; //se limpia la bander ade interrupcion 
+        if (PORTBbits.RB0 == 0){ //rutinas de antirebote para incrementar/decrementar 
+            boton1 = 1; //el contados de 8bits
         }
         if (PORTBbits.RB0 && boton1 == 1){
             boton1  = 0;
@@ -59,8 +59,8 @@ void __interrupt() isr(void){
             PORTD--;
         }
     }
-    if (PIR1bits.SSPIF == 1){
-        SSPBUF = PORTD;
+    if (PIR1bits.SSPIF == 1){ //interrupcion del SSP
+        SSPBUF = PORTD; //se mandan los valores del contador al master 
         PIR1bits.SSPIF == 0;
     }
 }
@@ -96,20 +96,21 @@ void setup(void) {
     TRISE = 0; // se marca el puerto E como salida
     PORTE = 0;  //se resetea el puerto E
     PORTA = 0;
-    TRISBbits.TRISB0 = 1;
+    TRISBbits.TRISB0 = 1; //se seleccionan como entradas los pines donde van los botones 
     TRISBbits.TRISB1 = 1;
-    TRISCbits.TRISC5 = 0;
-    TRISCbits.TRISC4 = 0;
-    TRISCbits.TRISC3 = 1;
-    TRISAbits.TRISA5 = 1;
+    TRISCbits.TRISC5 = 0; //se selecciona el  RC5 como salida 
+    TRISCbits.TRISC4 = 0;//se selecciona el  RC4 como salida 
+    TRISCbits.TRISC3 = 1;//se selecciona el  RC3 como entrada 
+    TRISAbits.TRISA5 = 1; //se selecciona el  RA5 como salida 
     WPUB = 0b00000011; //0000 0111 pines para pull up 
-    IOCB = 0b00000011;
+    IOCB = 0b00000011; //se configura para que los botones usen la interrupcion 
+    //configuracion del SSP en modo esclavo 
     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 //****************************interrupcinoes************************************
     INTCONbits.GIE = 1; //se activan las interrupciones globales 
     INTCONbits.PEIE = 1; // se activan las interrupciones perifericas 
     INTCONbits.RBIE = 1; //se activan las interrupciones del puerto b
-    PIE1bits.SSPIE = 1;
+    PIE1bits.SSPIE = 1; //se activan las interrupciones del SSP
 //******************************************************************************
 }
 

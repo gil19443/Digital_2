@@ -49,19 +49,19 @@ void GO_ADC (void );
 //                          interrupciones 
 //******************************************************************************
 void __interrupt() isr(void){
-    if (INTCONbits.TMR0IF == 1){
-        TMR0 = 236;
-        ADC_GO++;
-        INTCONbits.TMR0IF = 0;
+    if (INTCONbits.TMR0IF == 1){ //interrupcion del TMR0
+        TMR0 = 236; //desborde cada 5ms
+        ADC_GO++; //bandera de control del ADC GO
+        INTCONbits.TMR0IF = 0; //se limpia la bandera de interrupcion 
         
     }
-    if (PIR1bits.ADIF == 1){
-        ADC = ADRESH;
-        PIR1bits.ADIF = 0;
+    if (PIR1bits.ADIF == 1){ //interrupcion del ADC
+        ADC = ADRESH; //se guardan los valores del ADC en una variable 
+        PIR1bits.ADIF = 0;//se limpia la bandera de interrupcion 
     }
-    if (PIR1bits.SSPIF = 1){
-        SSPBUF = ADC;
-        PIR1bits.SSPIF = 0;
+    if (PIR1bits.SSPIF = 1){//interrupcion del SSP
+        SSPBUF = ADC; //se mandan los valores del ADC al master
+        PIR1bits.SSPIF = 0;//se limpia la bandera de interrupcion 
     }
 }
 //******************************************************************************
@@ -74,8 +74,8 @@ void main(void) {
     //                             mian loop
     //**************************************************************************
     while (1) {
-        GO_ADC();
-        PORTB = ADC;
+        GO_ADC();//rutina que da el GO del ADC al master 
+        PORTB = ADC; //monitoreo de lectura del ADC
     }
 }
 
@@ -89,7 +89,7 @@ void setup(void) {
     configADC(0,2); //canal 0 y velocidad FOSC/32
     OPTION_REG = 0b01010111; //configuracion para activar las PULL - UPS del puerto B y timer 0
     ANSEL = 0;
-    ANSELbits.ANS0 = 1;
+    ANSELbits.ANS0 = 1;//se activa la entrada analogica del RA0
     ANSELH = 0; //se borran las entradas analogicas 
     PORTC = 0; //se resetea el puerto C
     TRISC = 0; //se selecciona el puerto C como salida 
@@ -100,21 +100,22 @@ void setup(void) {
     TRISE = 0; // se marca el puerto E como salida
     PORTE = 0;  //se resetea el puerto E
     PORTA = 0;
-    TRISAbits.TRISA0 = 1;
-    TRISCbits.TRISC5 = 0;
-    TRISAbits.TRISA5 = 1;
+    TRISAbits.TRISA0 = 1; //se seleciona el RA0 como entrada 
+    TRISCbits.TRISC5 = 0; //se selecciona el RC5 como salida 
+    TRISAbits.TRISA5 = 1; //se selecciona el RA5 como entrada
+    //configuracion del SSP en modo slave 
     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 //****************************interrupcinoes************************************
     INTCONbits.GIE = 1; //se activan las interrupciones globales 
     INTCONbits.PEIE = 1; // se activan las interrupciones perifericas 
     INTCONbits.TMR0IE = 1; //se activan las interrupciones del timer 0
     PIE1bits.ADIE = 1; //activar las interrupciones del ADC
-    PIE1bits.SSPIE = 1;
-    PIR1bits.SSPIF = 0;
+    PIE1bits.SSPIE = 1; //se activa la interrupcion del SSP
+    PIR1bits.SSPIF = 0; //se limpia la bandera de interrupcion del SSP
 //******************************************************************************
 }
 void GO_ADC (void){
-       if (ADC_GO > 10){
+       if (ADC_GO > 10){ //cuando ADC_GO llega a 10, da el GO del ADC
            ADC_GO = 0;
            ADCON0bits.GO_nDONE = 1;
        } 

@@ -48,18 +48,18 @@ void LEDS (void);
 //******************************************************************************
 void __interrupt() isr(void){
     if (INTCONbits.TMR0IF == 1){
-        TMR0 = 236;
-        ADC_GO++;
-        INTCONbits.TMR0IF = 0;
+        TMR0 = 236;//interrupcion cada 5ms
+        ADC_GO++; //variable de control para el ADC
+        INTCONbits.TMR0IF = 0; //se limpia la bandera de interrupcion 
         
     }
     if (PIR1bits.ADIF == 1){
-        ADC = ADRESH;
-        PIR1bits.ADIF = 0;
+        ADC = ADRESH; //se guardan los valores recibidos del ADC en una variable local 
+        PIR1bits.ADIF = 0;//se limpia la bandera de interrupcion 
     }
     if (PIR1bits.SSPIF = 1){
-        SSPBUF = ADC;
-        PIR1bits.SSPIF = 0;
+        SSPBUF = ADC; //se envian al master los valores guardados del ADC
+        PIR1bits.SSPIF = 0;//se limpia la bandera de interrupcion 
     }
 }
 //******************************************************************************
@@ -72,8 +72,8 @@ void main(void) {
     //                             mian loop
     //**************************************************************************
     while (1) {
-        GO_ADC();
-        LEDS();
+        GO_ADC(); //rutina que da el GO del ADC cada 50ms
+        LEDS(); //rutina que enciende LEDS acorde con la temperatura del LM35
     }
 }
 
@@ -85,47 +85,48 @@ void main(void) {
 void setup(void) {
     initOsc(6);//configura el osculador interno a 4Mhz
     configADC(0,2); //canal 0 y velocidad FOSC/32
-    ADCON1 = 0b00010000;
+    ADCON1 = 0b00010000;//se selecciono como Vref+ un pin para colocar uno distinto de 5
     OPTION_REG = 0b01010111; //configuracion para activar las PULL - UPS del puerto B y timer 0
     ANSEL = 0;
-    ANSELbits.ANS0 = 1;
+    ANSELbits.ANS0 = 1;//se activa la entrada analoca del RA0
     ANSELH = 0; //se borran las entradas analogicas 
     PORTC = 0; //se resetea el puerto C
     TRISC = 0; //se selecciona el puerto C como salida 
     PORTD = 0; //se resetea el puerto D
     TRISD = 0; //se selecciona el puerto D como salida 
-    TRISB = 0;
+    TRISB = 0; //se selecciona el puerto B como salida 
     PORTB = 0; //se resetea el puerto B
     TRISE = 0; // se marca el puerto E como salida
     PORTE = 0;  //se resetea el puerto E
-    PORTA = 0;
-    TRISAbits.TRISA3 = 1;
-    TRISAbits.TRISA0 = 1;
-    TRISCbits.TRISC5 = 0;
-    TRISAbits.TRISA5 = 1;
+    PORTA = 0; //se limpia el puerto A
+    TRISAbits.TRISA3 = 1; //se coloca como entrada el RA3
+    TRISAbits.TRISA0 = 1; //se coloca como entrada el RA0
+    TRISCbits.TRISC5 = 0; //se coloca como salida el RC5
+    TRISAbits.TRISA5 = 1; //se coloca como entrada el RA5
+    //Rutina de configuracion para el SSP en modo esclavo 
     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 //****************************interrupcinoes************************************
     INTCONbits.GIE = 1; //se activan las interrupciones globales 
     INTCONbits.PEIE = 1; // se activan las interrupciones perifericas 
     INTCONbits.TMR0IE = 1; //se activan las interrupciones del timer 0
     PIE1bits.ADIE = 1; //activar las interrupciones del ADC
-    PIE1bits.SSPIE = 1;
-    PIR1bits.SSPIF = 0;
+    PIE1bits.SSPIE = 1; //se activan lasiinterrupciones del SSP 
+    PIR1bits.SSPIF = 0;//se limpai la bandera de inerrupcion del SSP
 //******************************************************************************
 }
 void GO_ADC (void){
-       if (ADC_GO > 10){
+       if (ADC_GO > 10){ //cuando el ADC_GO llegue a 10, se le da un GO al ADC
            ADC_GO = 0;
            ADCON0bits.GO_nDONE = 1;
        } 
     }
 void LEDS (void){
     temp = ADC;
-    if (temp <= 0x64){
+    if (temp <= 0x64){ //para grados menores que 26 se enciende el LED verde 
         PORTE = 1;
-    }else if (0x64 < temp && temp <= 0x72){
-        PORTE = 2;
-    }else{
+    }else if (0x64 < temp && temp <= 0x72){ //para mayores que 26 pero menores 
+        PORTE = 2; //que 36 se enciende el LED amarillo 
+    }else{ //para grados mayores que 36 grados, se enciende el LED rojo 
         PORTE = 4;
     }
 }

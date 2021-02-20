@@ -67,12 +67,12 @@ void temp_pos (void);
 void __interrupt() isr(void){
     if (INTCONbits.T0IF == 1){
         TMR0 = 236; //valor del timer para 5ms
-        controles++; //rutina que controla el Go del ADC y el TXIE
+        controles++; //variable de control para el TXIE y el SSP
         INTCONbits.TMR0IF = 0; //limpiar la bandera 
     }
     if (PIR1bits.TXIF == 1){
-        envio(); //rutina que envia los datos del pot en ACSSII
-        PIE1bits.TXIE = 0; 
+        envio(); //rutina que envia los datos de los esclavos por el puerto serial 
+        PIE1bits.TXIE = 0;  //se limpia el enable de la interrupcion del TXREG
     }
 }
 //******************************************************************************
@@ -89,12 +89,11 @@ void main(void) {
     //                             mian loop
     //**************************************************************************
     while (1) {
-        PORTB = gradospos;
-        temp_pos();
-        TX_GO();
-        envio_esclavos();
-        mapeo();
-        Lcd_Set_Cursor(2,1);
+        temp_pos(); //rutina que mapea los valores recibidos del esclavo 2 (LM35)
+        TX_GO();//rutina que activa el enable dle TXREG cada 50 ms
+        envio_esclavos(); //rutina que establece la comunicacion entre el master y los esclavos 
+        mapeo();//rutina que mapea los valores del esclavo 1 (potencometro )
+        Lcd_Set_Cursor(2,1); //caracteres del esclavo 1 para la LCD en decimal 
         Lcd_Write_Char(centenasp1+48);
         Lcd_Set_Cursor(2,2);
         Lcd_Write_Char(46);
@@ -103,10 +102,10 @@ void main(void) {
         Lcd_Set_Cursor(2,4);
         Lcd_Write_Char(unidadesp1+48);
 
-        if (esclavo3< 69){
-            PORTD = 3;
-            Lcd_Set_Cursor(2,5);
-            Lcd_Write_Char(32);
+        if (esclavo3< 69){ //chequeo del valor del esclavo 3 para mostrar grados 
+            PORTD = 3; //positivos o negativos 
+            Lcd_Set_Cursor(2,5); //valores negativos  
+            Lcd_Write_Char(32);//del esclavo 3 de tempratura en decimal 
             Lcd_Set_Cursor(2,6);
             Lcd_Write_Char(45);
             Lcd_Set_Cursor(2,7);
@@ -117,8 +116,8 @@ void main(void) {
             Lcd_Write_Char(unidadesp2+48);
         }else{
             PORTD = 5;
-            Lcd_Set_Cursor(2,5);
-            Lcd_Write_Char(32);
+            Lcd_Set_Cursor(2,5);//valores positivos  
+            Lcd_Write_Char(32);//del esclavo 3 de tempratura en decimal 
             Lcd_Set_Cursor(2,6);
             Lcd_Write_Char(32);
             Lcd_Set_Cursor(2,7);
@@ -128,7 +127,7 @@ void main(void) {
             Lcd_Set_Cursor(2,9);
             Lcd_Write_Char(unidadesp2+48);
         }
-        Lcd_Set_Cursor(2,10);
+        Lcd_Set_Cursor(2,10); //valores del esclavo 2 en decimal (contador)
         Lcd_Write_Char(32);
         Lcd_Set_Cursor(2,11);
         Lcd_Write_Char((esclavo2/100)+48);
@@ -157,16 +156,17 @@ void setup(void) {
     PORTA = 0; //se resetea el puerto A
     TRISA = 0; //se selecciona el puerto A como salida 
     TRISB = 0; // se selecciona el puerto B como salida 
-    PORTCbits.RC0 = 1;
-    PORTCbits.RC1 = 1;
+    PORTCbits.RC0 = 1; //se inicializan en 1 los pines de comunicacion con los 
+    PORTCbits.RC1 = 1; //esclavos 
     PORTCbits.RC2 = 1;
     Lcd_Init(); //rutina que inicializa el LCD
 //****************************** SSP *******************************************
-    TRISCbits.TRISC4 = 1;
-    TRISCbits.TRISC3 = 0;
+    TRISCbits.TRISC4 = 1; //se coloca como entrada el SDI para recibir informacion de los esclavos 
+    TRISCbits.TRISC3 = 0; //se seleccinoan como salidas el SD0, los slave select y el CLK
     TRISCbits.TRISC0 = 0;
     TRISCbits.TRISC1 = 0;
     TRISCbits.TRISC2 = 0;
+    //rutina de configuracion del SSP en modo master 
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 //****************************interrupcinoes************************************
     INTCONbits.GIE = 1; //se activan las interrupciones globales 
@@ -182,18 +182,18 @@ void TX_GO (void){ //por cada 10 de control activa el TXIE
     }
 }
 void envio_esclavos(void){
-    if (controles > 50){
-        controles = 0;
-        PORTCbits.RC2 = 1;
-        PORTCbits.RC1 = 1;
+    if (controles > 50){ //condicional que hace que la comunicacion se ejecute 
+        controles = 0; //cada 250ms para evitar saturacion en el SSP
+        PORTCbits.RC2 = 1; //se colocan en 1 los slaves select para que en los cases 
+        PORTCbits.RC1 = 1; //se establezca la comunicacino al colcoarlos en 0
         PORTCbits.RC0 = 1;
-        switch(slave){
+        switch(slave){//switch case para muxear la comunicacion con los esclavos 
             case 0:
-                PORTCbits.RC0 = 0;
-                SSPBUF = 0;
-                esclavo1 = spiRead();
-                slave++;
-                break;
+                PORTCbits.RC0 = 0; //se establece comunicacion con un eslavo 
+                SSPBUF = 0; //se le envia un dato al esclavo 
+                esclavo1 = spiRead();//se revisa que no haya overflow y se lee lo que el esclavo envia 
+                slave++; //se incrementa para que al reingresar entre el siguiente case
+                break; //sucede lo mismo para los otros 2
             case 1:
                 PORTCbits.RC1 = 0;
                 SSPBUF = 0;
@@ -209,91 +209,87 @@ void envio_esclavos(void){
         }
       }
    }
-void envio (void){ //rutina que envia datos como "POT1 , POT2 /n"
+void envio (void){ //rutina que envia datos mapeados, recibidos de los esclavos 
     switch (var_envio){
         case 0:
-            //tabla_hex(((esclavo3 & 0b11110000)>>4),&TXREG);
-           TXREG = centenasp1+48;
+           TXREG = centenasp1+48;//se envian las centenas del esclavo1
            var_envio++;
            break;
-        case 1:
-          //tabla_hex((esclavo3 & 0b00001111),&TXREG);
-            
-           TXREG = 46; 
+        case 1:            
+           TXREG = 46; //se envia un punto 
            var_envio++;
            break;
         case 2:
-           TXREG = decenasp1+48;
+           TXREG = decenasp1+48; //se envian las decenas del esclavo1
            var_envio++;
            break;
         case 3:
-           TXREG = unidadesp1+48;
+           TXREG = unidadesp1+48; //se envian las unidades del esclavo1
            var_envio++;
            break;
         case 4:
-           TXREG = 44; 
+           TXREG = 44; //se envia una coma 
            var_envio++;
            break;
-        case 5:
+        case 5: //se revisa si el valor de el esclavo 3 son grados neativos o positivos 
             var_envio++;
-            if (esclavo3< 69){
+            if (esclavo3< 69){ //si son negativos se envia un signo menos 
                 TXREG = 45;    
             }else{
-                TXREG = 32;     
+                TXREG = 32; //si son positivos se envia un espacio     
             }
            break;
-        case 6:
+        case 6://se envian las centenas del esclavo 3 (termometro )
            TXREG = centenasp2+48; 
            var_envio++;
            break;
-        case 7:
-            TXREG = decenasp2+48;
+        case 7://se envian las decenas del esclavo 3 (termometro )
+            TXREG = decenasp2+48; 
             var_envio++;
            break;
-        case 8:
+        case 8://se envian las unidades  del esclavo 3 (termometro )
            TXREG = unidadesp2+48; 
            var_envio++;
            break;
         case 9:
-           TXREG = 44; 
+           TXREG = 44; //se envia una coma 
            var_envio++;
            break;
-        case 10:
+        case 10: //se envian las centenas del valor del esclavo 2 (contador)
            TXREG = ((esclavo2/100)+48); 
            var_envio++;
            break;
-        case 11:
+        case 11://se envian las decenas del valor del esclavo 2 (contador)
            TXREG = ((esclavo2-((esclavo2/100)*100))/10)+48; 
            var_envio++;
            break;
-        case 12:
+        case 12://se envian las decenas del valor del esclavo 2 (contador)
            TXREG = ((esclavo2-((esclavo2/100)+((esclavo2-((esclavo2/100)*100))/10)))+48); 
            var_envio++;
            break;
-        case 13:
+        case 13: //se envia un enter 
            TXREG = 13;
            var_envio = 0;
            break;    
     }
 }
 void mapeo (void){ //mapea los valores para que pasen de ir de 0 a 255
-    uint16_t TEMP1 = 0;
-    TEMP1 = ((esclavo1 *100)/51); // para estar de 0 a 5 con 2 decimales 
-    centenasp1 = TEMP1/100;
+    uint16_t TEMP1 = 0; //para que vayan de 0 a 5 con dos decimales 
+    TEMP1 = ((esclavo1 *100)/51); 
+    centenasp1 = TEMP1/100; //se separan las centenas, decenas y unidades
     decenasp1 = (TEMP1-(centenasp1*100))/10;
     unidadesp1 = (TEMP1-((centenasp1*100)+(decenasp1*10)));  
 }
-void temp_pos (void){
-    gradospos = esclavo3;
-    if (esclavo3 <69){
-        nueva = (-1)*((gradospos*0.807)-55.75);
-        centenasp2 = nueva/100;
+void temp_pos (void){ //se mapean los valores para que pasen de ir de 0 a 255
+    gradospos = esclavo3; //para que vayan de -55 a 150
+    if (esclavo3 <69){ //se revisa si son grados negativos, para volverlos positivos 
+        nueva = (-1)*((gradospos*0.807)-55.75); //y no tener inconvenientes 
+        centenasp2 = nueva/100; //se separan las centenas, decenas y unidades
         decenasp2 = ((nueva-(centenasp2*100)))/10;
         unidadesp2 = nueva-((centenasp2*100)+(decenasp2*10));
     }else{
         nueva = ((gradospos*0.807)-55.75);
-        PORTB = nueva;
-        //gradospos  = nueva;
+        PORTB = nueva;//se separan las centenas, decenas y unidades
         centenasp2 = (nueva/100);
         decenasp2 = (((nueva-(centenasp2*100)))/10);
         unidadesp2 = (nueva-((centenasp2*100)+(decenasp2*10)));
