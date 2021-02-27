@@ -8,45 +8,6 @@
 # 2 "<built-in>" 2
 # 1 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
 # 10 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\xc8debug.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\xc8debug.h" 3
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 23 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 1 3
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\htc.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\htc.h" 2 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 2 3
-
-
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic_chip_select.h" 1 3
-# 2733 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic_chip_select.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\proc\\pic16f887.h" 1 3
 # 44 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\proc\\pic16f887.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\__at.h" 1 3
@@ -2458,7 +2419,46 @@ extern volatile __bit nW __attribute__((address(0x4A2)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x4A2)));
-# 2733 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic_chip_select.h" 2 3
+# 10 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\xc8debug.h" 1 3
+# 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\xc8debug.h" 3
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+# 23 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 1 3
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\htc.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\htc.h" 2 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 2 3
+
+
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic_chip_select.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 2 3
 # 30 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 3
 #pragma intrinsic(__nop)
@@ -2492,7 +2492,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-# 10 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
+# 11 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
@@ -2627,7 +2627,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 11 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
+# 12 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
 
 # 1 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h" 1
 # 20 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h"
@@ -2670,7 +2670,7 @@ unsigned short I2C_Master_Read(unsigned short a);
 
 
 void I2C_Slave_Init(uint8_t address);
-# 12 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
+# 13 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
 
 # 1 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/Libreria2.h" 1
 # 15 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/Libreria2.h"
@@ -2678,12 +2678,12 @@ void I2C_Slave_Init(uint8_t address);
 # 15 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/Libreria2.h" 2
 
 void initOsc (uint8_t option);
-# 13 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
+# 14 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
 
 # 1 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.h" 1
 # 15 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.h"
 void initUSART(void);
-# 14 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
+# 15 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
 
 # 1 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.h" 1
 # 16 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.h"
@@ -2692,7 +2692,7 @@ void initUSART(void);
 
 
 void tabla_hex (uint8_t selector, volatile uint8_t *port);
-# 15 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
+# 16 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
 
 
 
@@ -2717,14 +2717,14 @@ void tabla_hex (uint8_t selector, volatile uint8_t *port);
 
 
 uint8_t controles = 0;
-uint8_t segundos = 0;
-uint8_t minutos = 0;
-uint8_t horas = 0;
-uint8_t dia_S = 0;
-uint8_t dia = 0;
-uint8_t mes = 0;
-uint8_t year = 0;
-uint8_t var_envio = 0;
+unsigned short segundos = 0;
+unsigned short minutos = 0;
+unsigned short horas = 0;
+unsigned short dia_S = 0;
+unsigned short dia = 0;
+unsigned short mes = 0;
+unsigned short year = 0;
+unsigned short var_envio = 0;
 
 
 
@@ -2762,7 +2762,6 @@ void main(void) {
     I2C_Master_Write(0b00000010);
     I2C_Master_Write(0x21);
     I2C_Master_Stop();
-    _delay((unsigned long)((200)*(4000000/4000.0)));
 
 
 
@@ -2771,18 +2770,16 @@ void main(void) {
         I2C_Master_Start();
         I2C_Master_Write(0xD0);
         I2C_Master_Write(0);
-        I2C_Master_Stop();
         I2C_Master_Start();
         I2C_Master_Write(0xD1);
         segundos = I2C_Master_Read(0);
-        minutos = I2C_Master_Read(0);
-        horas = I2C_Master_Read(0);
-        dia_S = I2C_Master_Read(0);
-        dia = I2C_Master_Read(0);
-        mes = I2C_Master_Read(0);
-        year = I2C_Master_Read(0);
+
+
+
+
+
+
         I2C_Master_Stop();
-        _delay((unsigned long)((200)*(4000000/4000.0)));
     }
 }
 
@@ -2799,7 +2796,7 @@ void setup(void) {
     ANSELH = 0;
     PORTC = 0;
     PORTD = 0;
-
+    TRISD = 0;
     PORTB = 0;
     TRISE = 0;
     PORTE = 0;

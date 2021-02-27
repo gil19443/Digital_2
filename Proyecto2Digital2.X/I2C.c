@@ -10,6 +10,7 @@
  * Basado en Link: http://microcontroladores-mrelberni.com/i2c-pic-comunicacion-serial/
  */
 #include "I2C.h"
+#include <stdint.h>
 //*****************************************************************************
 // Función para inicializar I2C Maestro
 //*****************************************************************************
@@ -17,6 +18,7 @@ void I2C_Master_Init(const unsigned long c)
 {
     SSPCON = 0b00101000;
     SSPCON2 = 0;
+    SSPCON2bits.ACKSTAT = 0;
     SSPADD = (_XTAL_FREQ/(4*c))-1;
     SSPSTAT = 0;
     TRISCbits.TRISC3 = 1;
@@ -29,14 +31,14 @@ void I2C_Master_Init(const unsigned long c)
 // una comunicación o se este transmitiendo, el IC2 PIC se esperará
 // antes de realizar algún trabajo
 //*****************************************************************************
-void I2C_Master_Wait()
+void I2C_Master_Wait(void)
 {
     while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
 }
 //*****************************************************************************
 // Función de inicio de la comunicación I2C PIC
 //*****************************************************************************
-void I2C_Master_Start()
+void I2C_Master_Start(void)
 {
     I2C_Master_Wait();      //espera que se cumplan las condiciones adecuadas
     SSPCON2bits.SEN = 1;    //inicia la comunicación i2c
@@ -44,7 +46,7 @@ void I2C_Master_Start()
 //*****************************************************************************
 // Función de reinicio de la comunicación I2C PIC
 //*****************************************************************************
-void I2C_Master_RepeatedStart()
+void I2C_Master_RepeatedStart(void)
 {
     I2C_Master_Wait();      //espera que se cumplan las condiciones adecuadas
     SSPCON2bits.RSEN = 1;   //reinicia la comunicación i2c
@@ -52,7 +54,7 @@ void I2C_Master_RepeatedStart()
 //*****************************************************************************
 // Función de parada de la comunicación I2C PIC
 //*****************************************************************************
-void I2C_Master_Stop()
+void I2C_Master_Stop(void)
 {
     I2C_Master_Wait();      //espera que se cumplan las condiciones adecuadas
     SSPCON2bits.PEN = 1;    //detener la comunicación i2c

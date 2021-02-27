@@ -7,6 +7,7 @@
 //******************************************************************************
 //                      Importacion de librerias 
 //******************************************************************************
+#include <pic16f887.h>
 #include <xc.h>
 #include <stdint.h>
 #include "I2C.h"
@@ -36,14 +37,14 @@
 //                          Variables 
 //******************************************************************************
 uint8_t controles = 0;
-uint8_t segundos = 0;
-uint8_t minutos = 0;
-uint8_t horas = 0;
-uint8_t dia_S = 0;
-uint8_t dia = 0;
-uint8_t mes = 0;
-uint8_t year = 0;
-uint8_t var_envio = 0;
+unsigned short segundos = 0;
+unsigned short minutos = 0;
+unsigned short horas = 0;
+unsigned short dia_S = 0;
+unsigned short dia = 0;
+unsigned short mes = 0;
+unsigned short year = 0;
+unsigned short var_envio = 0;
 //******************************************************************************
 //                          Prototipos de funciones 
 //******************************************************************************
@@ -81,7 +82,6 @@ void main(void) {
     I2C_Master_Write(0b00000010); //mes
     I2C_Master_Write(0x21); //year
     I2C_Master_Stop(); //finalizar comunicacion 
-    __delay_ms(200);
     //**************************************************************************
     //                             mian loop
     //**************************************************************************
@@ -90,18 +90,16 @@ void main(void) {
         I2C_Master_Start();
         I2C_Master_Write(0xD0);
         I2C_Master_Write(0);
-        I2C_Master_Stop();
         I2C_Master_Start();
         I2C_Master_Write(0xD1);
         segundos = I2C_Master_Read(0);
-        minutos = I2C_Master_Read(0);
-        horas = I2C_Master_Read(0);
-        dia_S = I2C_Master_Read(0);
-        dia = I2C_Master_Read(0);
-        mes = I2C_Master_Read(0);
-        year = I2C_Master_Read(0);
+//        minutos = I2C_Master_Read(0);
+//        horas = I2C_Master_Read(0);
+//        dia_S = I2C_Master_Read(0);
+//        dia = I2C_Master_Read(0);
+//        mes = I2C_Master_Read(0);
+//        year = I2C_Master_Read(0);
         I2C_Master_Stop();
-        __delay_ms(200);
     }
 }
 
@@ -118,7 +116,7 @@ void setup(void) {
     ANSELH = 0; //se limpian las entradas analogicas
     PORTC = 0; //se resetea el puerto C
     PORTD = 0; //se resetea el puerto D
-    //TRISD = 0; //se selecciona el puerto D como salida 
+    TRISD = 0; //se selecciona el puerto D como salida 
     PORTB = 0; //se resetea el puerto B
     TRISE = 0; // se marca el puerto E como salida
     PORTE = 0;  //se resetea el puerto E

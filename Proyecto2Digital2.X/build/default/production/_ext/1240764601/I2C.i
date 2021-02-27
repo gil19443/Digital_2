@@ -2670,6 +2670,9 @@ unsigned short I2C_Master_Read(unsigned short a);
 void I2C_Slave_Init(uint8_t address);
 # 12 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c" 2
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 13 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c" 2
+
 
 
 
@@ -2677,6 +2680,7 @@ void I2C_Master_Init(const unsigned long c)
 {
     SSPCON = 0b00101000;
     SSPCON2 = 0;
+    SSPCON2bits.ACKSTAT = 0;
     SSPADD = (4000000/(4*c))-1;
     SSPSTAT = 0;
     TRISCbits.TRISC3 = 1;
@@ -2689,14 +2693,14 @@ void I2C_Master_Init(const unsigned long c)
 
 
 
-void I2C_Master_Wait()
+void I2C_Master_Wait(void)
 {
     while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
 }
 
 
 
-void I2C_Master_Start()
+void I2C_Master_Start(void)
 {
     I2C_Master_Wait();
     SSPCON2bits.SEN = 1;
@@ -2704,7 +2708,7 @@ void I2C_Master_Start()
 
 
 
-void I2C_Master_RepeatedStart()
+void I2C_Master_RepeatedStart(void)
 {
     I2C_Master_Wait();
     SSPCON2bits.RSEN = 1;
@@ -2712,7 +2716,7 @@ void I2C_Master_RepeatedStart()
 
 
 
-void I2C_Master_Stop()
+void I2C_Master_Stop(void)
 {
     I2C_Master_Wait();
     SSPCON2bits.PEN = 1;

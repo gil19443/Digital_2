@@ -5,6 +5,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1979
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1979: extern volatile unsigned char SSPCON2 __attribute__((address(0x091)));
 [v _SSPCON2 `Vuc ~T0 @X0 0 e@145 ]
+"1985
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1985:     struct {
+[s S76 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S76 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
+"1984
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1984: typedef union {
+[u S75 `S76 1 ]
+[n S75 . . ]
+"1996
+[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1996: extern volatile SSPCON2bits_t SSPCON2bits __attribute__((address(0x091)));
+[v _SSPCON2bits `VS75 ~T0 @X0 0 e@145 ]
 "2048
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 2048: extern volatile unsigned char SSPADD __attribute__((address(0x093)));
 [v _SSPADD `Vuc ~T0 @X0 0 e@147 ]
@@ -22,17 +33,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1557
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
 [v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
-"1985
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1985:     struct {
-[s S76 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S76 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
-"1984
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1984: typedef union {
-[u S75 `S76 1 ]
-[n S75 . . ]
-"1996
-[; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1996: extern volatile SSPCON2bits_t SSPCON2bits __attribute__((address(0x091)));
-[v _SSPCON2bits `VS75 ~T0 @X0 0 e@145 ]
 "843
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 843: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
@@ -288,243 +288,246 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"16 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 16: void I2C_Master_Init(const unsigned long c)
+"17 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 17: void I2C_Master_Init(const unsigned long c)
 [v _I2C_Master_Init `(v ~T0 @X0 1 ef1`Cul ]
-"17
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 17: {
+"18
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 18: {
 {
 [e :U _I2C_Master_Init ]
-"16
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 16: void I2C_Master_Init(const unsigned long c)
-[v _c `Cul ~T0 @X0 1 r1 ]
 "17
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 17: {
-[f ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 17: void I2C_Master_Init(const unsigned long c)
+[v _c `Cul ~T0 @X0 1 r1 ]
 "18
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 18:     SSPCON = 0b00101000;
-[e = _SSPCON -> -> 40 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 18: {
+[f ]
 "19
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 19:     SSPCON2 = 0;
-[e = _SSPCON2 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 19:     SSPCON = 0b00101000;
+[e = _SSPCON -> -> 40 `i `uc ]
 "20
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 20:     SSPADD = (4000000/(4*c))-1;
-[e = _SSPADD -> - / -> -> 4000000 `l `ul * -> -> -> 4 `i `l `ul _c -> -> -> 1 `i `l `ul `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 20:     SSPCON2 = 0;
+[e = _SSPCON2 -> -> 0 `i `uc ]
 "21
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 21:     SSPSTAT = 0;
-[e = _SSPSTAT -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 21:     SSPCON2bits.ACKSTAT = 0;
+[e = . . _SSPCON2bits 0 6 -> -> 0 `i `uc ]
 "22
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 22:     TRISCbits.TRISC3 = 1;
-[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 22:     SSPADD = (4000000/(4*c))-1;
+[e = _SSPADD -> - / -> -> 4000000 `l `ul * -> -> -> 4 `i `l `ul _c -> -> -> 1 `i `l `ul `uc ]
 "23
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 23:     TRISCbits.TRISC4 = 1;
-[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 23:     SSPSTAT = 0;
+[e = _SSPSTAT -> -> 0 `i `uc ]
 "24
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 24: }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 24:     TRISCbits.TRISC3 = 1;
+[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
+"25
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 25:     TRISCbits.TRISC4 = 1;
+[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
+"26
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 26: }
 [e :UE 138 ]
 }
-"32
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 32: void I2C_Master_Wait()
+"34
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 34: void I2C_Master_Wait(void)
 [v _I2C_Master_Wait `(v ~T0 @X0 1 ef ]
-"33
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 33: {
+"35
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 35: {
 {
 [e :U _I2C_Master_Wait ]
 [f ]
-"34
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 34:     while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
+"36
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 36:     while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
 [e $U 140  ]
 [e :U 141 ]
 [e :U 140 ]
 [e $ || != & -> _SSPSTAT `i -> 4 `i -> 0 `i != & -> _SSPCON2 `i -> 31 `i -> 0 `i 141  ]
 [e :U 142 ]
-"35
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 35: }
+"37
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 37: }
 [e :UE 139 ]
 }
-"39
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 39: void I2C_Master_Start()
+"41
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 41: void I2C_Master_Start(void)
 [v _I2C_Master_Start `(v ~T0 @X0 1 ef ]
-"40
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 40: {
+"42
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 42: {
 {
 [e :U _I2C_Master_Start ]
 [f ]
-"41
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 41:     I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
-"42
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 42:     SSPCON2bits.SEN = 1;
-[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
 "43
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 43: }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 43:     I2C_Master_Wait();
+[e ( _I2C_Master_Wait ..  ]
+"44
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 44:     SSPCON2bits.SEN = 1;
+[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+"45
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 45: }
 [e :UE 143 ]
 }
-"47
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 47: void I2C_Master_RepeatedStart()
+"49
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 49: void I2C_Master_RepeatedStart(void)
 [v _I2C_Master_RepeatedStart `(v ~T0 @X0 1 ef ]
-"48
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 48: {
+"50
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 50: {
 {
 [e :U _I2C_Master_RepeatedStart ]
 [f ]
-"49
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 49:     I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
-"50
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 50:     SSPCON2bits.RSEN = 1;
-[e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
 "51
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 51: }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 51:     I2C_Master_Wait();
+[e ( _I2C_Master_Wait ..  ]
+"52
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 52:     SSPCON2bits.RSEN = 1;
+[e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
+"53
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 53: }
 [e :UE 144 ]
 }
-"55
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 55: void I2C_Master_Stop()
+"57
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 57: void I2C_Master_Stop(void)
 [v _I2C_Master_Stop `(v ~T0 @X0 1 ef ]
-"56
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 56: {
+"58
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 58: {
 {
 [e :U _I2C_Master_Stop ]
 [f ]
-"57
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 57:     I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
-"58
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 58:     SSPCON2bits.PEN = 1;
-[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
 "59
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 59: }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 59:     I2C_Master_Wait();
+[e ( _I2C_Master_Wait ..  ]
+"60
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 60:     SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"61
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 61: }
 [e :UE 145 ]
 }
-"65
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 65: void I2C_Master_Write(unsigned d)
+"67
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 67: void I2C_Master_Write(unsigned d)
 [v _I2C_Master_Write `(v ~T0 @X0 1 ef1`ui ]
-"66
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 66: {
+"68
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 68: {
 {
 [e :U _I2C_Master_Write ]
-"65
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 65: void I2C_Master_Write(unsigned d)
-[v _d `ui ~T0 @X0 1 r1 ]
-"66
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 66: {
-[f ]
 "67
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 67:     I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 67: void I2C_Master_Write(unsigned d)
+[v _d `ui ~T0 @X0 1 r1 ]
 "68
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 68:     SSPBUF = d;
-[e = _SSPBUF -> _d `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 68: {
+[f ]
 "69
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 69: }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 69:     I2C_Master_Wait();
+[e ( _I2C_Master_Wait ..  ]
+"70
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 70:     SSPBUF = d;
+[e = _SSPBUF -> _d `uc ]
+"71
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 71: }
 [e :UE 146 ]
 }
-"74
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 74: unsigned short I2C_Master_Read(unsigned short a)
+"76
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 76: unsigned short I2C_Master_Read(unsigned short a)
 [v _I2C_Master_Read `(us ~T0 @X0 1 ef1`us ]
-"75
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 75: {
+"77
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 77: {
 {
 [e :U _I2C_Master_Read ]
-"74
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 74: unsigned short I2C_Master_Read(unsigned short a)
-[v _a `us ~T0 @X0 1 r1 ]
-"75
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 75: {
-[f ]
 "76
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 76:     unsigned short temp;
-[v _temp `us ~T0 @X0 1 a ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 76: unsigned short I2C_Master_Read(unsigned short a)
+[v _a `us ~T0 @X0 1 r1 ]
 "77
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 77:     I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 77: {
+[f ]
 "78
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 78:     SSPCON2bits.RCEN = 1;
-[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 78:     unsigned short temp;
+[v _temp `us ~T0 @X0 1 a ]
 "79
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 79:     I2C_Master_Wait();
 [e ( _I2C_Master_Wait ..  ]
 "80
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 80:     temp = SSPBUF;
-[e = _temp -> _SSPBUF `us ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 80:     SSPCON2bits.RCEN = 1;
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
 "81
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 81:     I2C_Master_Wait();
 [e ( _I2C_Master_Wait ..  ]
 "82
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 82:     if(a == 1){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 82:     temp = SSPBUF;
+[e = _temp -> _SSPBUF `us ]
+"83
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 83:     I2C_Master_Wait();
+[e ( _I2C_Master_Wait ..  ]
+"84
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 84:     if(a == 1){
 [e $ ! == -> _a `ui -> -> 1 `i `ui 148  ]
 {
-"83
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 83:         SSPCON2bits.ACKDT = 0;
+"85
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 85:         SSPCON2bits.ACKDT = 0;
 [e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
-"84
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 84:     }else{
+"86
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 86:     }else{
 }
 [e $U 149  ]
 [e :U 148 ]
 {
-"85
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 85:         SSPCON2bits.ACKDT = 1;
+"87
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 87:         SSPCON2bits.ACKDT = 1;
 [e = . . _SSPCON2bits 0 5 -> -> 1 `i `uc ]
-"86
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 86:     }
+"88
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 88:     }
 }
 [e :U 149 ]
-"87
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 87:     SSPCON2bits.ACKEN = 1;
+"89
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 89:     SSPCON2bits.ACKEN = 1;
 [e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-"88
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 88:     return temp;
+"90
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 90:     return temp;
 [e ) _temp ]
 [e $UE 147  ]
-"89
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 89: }
+"91
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 91: }
 [e :UE 147 ]
 }
-"93
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 93: void I2C_Slave_Init(uint8_t address)
+"95
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 95: void I2C_Slave_Init(uint8_t address)
 [v _I2C_Slave_Init `(v ~T0 @X0 1 ef1`uc ]
-"94
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 94: {
+"96
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 96: {
 {
 [e :U _I2C_Slave_Init ]
-"93
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 93: void I2C_Slave_Init(uint8_t address)
-[v _address `uc ~T0 @X0 1 r1 ]
-"94
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 94: {
-[f ]
 "95
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 95:     SSPADD = address;
-[e = _SSPADD _address ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 95: void I2C_Slave_Init(uint8_t address)
+[v _address `uc ~T0 @X0 1 r1 ]
 "96
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 96:     SSPCON = 0x36;
-[e = _SSPCON -> -> 54 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 96: {
+[f ]
 "97
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 97:     SSPSTAT = 0x80;
-[e = _SSPSTAT -> -> 128 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 97:     SSPADD = address;
+[e = _SSPADD _address ]
 "98
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 98:     SSPCON2 = 0x01;
-[e = _SSPCON2 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 98:     SSPCON = 0x36;
+[e = _SSPCON -> -> 54 `i `uc ]
 "99
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 99:     TRISC3 = 1;
-[e = _TRISC3 -> -> 1 `i `b ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 99:     SSPSTAT = 0x80;
+[e = _SSPSTAT -> -> 128 `i `uc ]
 "100
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 100:     TRISC4 = 1;
-[e = _TRISC4 -> -> 1 `i `b ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 100:     SSPCON2 = 0x01;
+[e = _SSPCON2 -> -> 1 `i `uc ]
 "101
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 101:     GIE = 1;
-[e = _GIE -> -> 1 `i `b ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 101:     TRISC3 = 1;
+[e = _TRISC3 -> -> 1 `i `b ]
 "102
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 102:     PEIE = 1;
-[e = _PEIE -> -> 1 `i `b ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 102:     TRISC4 = 1;
+[e = _TRISC4 -> -> 1 `i `b ]
 "103
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 103:     SSPIF = 0;
-[e = _SSPIF -> -> 0 `i `b ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 103:     GIE = 1;
+[e = _GIE -> -> 1 `i `b ]
 "104
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 104:     SSPIE = 1;
-[e = _SSPIE -> -> 1 `i `b ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 104:     PEIE = 1;
+[e = _PEIE -> -> 1 `i `b ]
 "105
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 105: }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 105:     SSPIF = 0;
+[e = _SSPIF -> -> 0 `i `b ]
+"106
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 106:     SSPIE = 1;
+[e = _SSPIE -> -> 1 `i `b ]
+"107
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c: 107: }
 [e :UE 150 ]
 }
