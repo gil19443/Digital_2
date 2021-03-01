@@ -2725,6 +2725,9 @@ unsigned short dia = 0;
 unsigned short mes = 0;
 unsigned short year = 0;
 unsigned short var_envio = 0;
+uint8_t LEDS = 0;
+uint8_t toggle = 0;
+uint8_t enter = 0;
 
 
 
@@ -2744,6 +2747,32 @@ void __attribute__((picinterrupt(("")))) isr(void){
         envio();
         PIE1bits.TXIE = 0;
     }
+    if (PIR1bits.RCIF == 1){
+        PIR1bits.RCIF = 0;
+        switch (toggle){
+            case 0:
+                LEDS = RCREG;
+                toggle++;
+                break;
+            case 1:
+                enter = RCREG;
+                toggle = 0;
+                break;
+        }
+        if (enter == 10){
+            if (LEDS == 49){
+                PORTAbits.RA0 = 1;
+                PORTAbits.RA1 = 0;
+            }else if (LEDS == 50){
+                PORTAbits.RA0 = 0;
+                PORTAbits.RA1 = 1;
+            }
+        }else{
+            LEDS = 0;
+            enter = 0;
+        }
+
+    }
 }
 
 
@@ -2751,20 +2780,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 void main(void) {
     setup();
-    I2C_Master_Start();
-    I2C_Master_Write(0xD0);
-    I2C_Master_Write(0);
-    I2C_Master_Write(0);
-    I2C_Master_Write(0);
-    I2C_Master_Write(0b00011000);
-    I2C_Master_Write(0b00000100);
-    I2C_Master_Write(0b00100101);
-    I2C_Master_Write(0b00000010);
-    I2C_Master_Write(0x21);
-    I2C_Master_Stop();
-
-
-
+# 117 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c"
     while (1) {
         TX_GO();
         I2C_Master_Start();
@@ -2772,13 +2788,13 @@ void main(void) {
         I2C_Master_Write(0);
         I2C_Master_RepeatedStart();
         I2C_Master_Write(0xD1);
-        segundos = I2C_Master_Read(0);
-        minutos = I2C_Master_Read(0);
-        horas = I2C_Master_Read(0);
-        dia_S = I2C_Master_Read(0);
-        dia = I2C_Master_Read(0);
-        mes = I2C_Master_Read(0);
-        year = I2C_Master_Read(1);
+        segundos = I2C_Master_Read(1);
+        minutos = I2C_Master_Read(1);
+        horas = I2C_Master_Read(1);
+        dia_S = I2C_Master_Read(1);
+        dia = I2C_Master_Read(1);
+        mes = I2C_Master_Read(1);
+        year = I2C_Master_Read(0);
         I2C_Master_Stop();
     }
 }
@@ -2804,14 +2820,17 @@ void setup(void) {
     TRISA = 0;
     TRISB = 0;
 
-    I2C_Master_Init(100000);
-
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     INTCONbits.TMR0IE = 1;
     INTCONbits.T0IF = 0;
     PIE1bits.TXIE = 1;
     PIR1bits.TXIF = 0;
+    PIE1bits.RCIE = 1;
+    PIR1bits.RCIF = 1;
+
+    I2C_Master_Init(100000);
+
 }
 void TX_GO (void){
     if (controles>10){

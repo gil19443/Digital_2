@@ -45,6 +45,9 @@ unsigned short dia = 0;
 unsigned short mes = 0;
 unsigned short year = 0;
 unsigned short var_envio = 0;
+uint8_t LEDS = 0;
+uint8_t toggle = 0;
+uint8_t enter = 0;
 //******************************************************************************
 //                          Prototipos de funciones 
 //******************************************************************************
@@ -64,6 +67,32 @@ void __interrupt() isr(void){
         envio(); //rutina que envia los datos de los esclavos por el puerto serial 
         PIE1bits.TXIE = 0;  //se limpia el enable de la interrupcion del TXREG
     }
+    if (PIR1bits.RCIF == 1){
+        PIR1bits.RCIF = 0;
+        switch (toggle){
+            case 0:
+                LEDS = RCREG;
+                toggle++;
+                break;
+            case 1:
+                enter = RCREG;
+                toggle = 0;
+                break;
+        }
+        if (enter == 10){
+            if (LEDS == 49){
+                PORTAbits.RA0 = 1;
+                PORTAbits.RA1 = 0;
+            }else if (LEDS == 50){
+                PORTAbits.RA0 = 0;
+                PORTAbits.RA1 = 1;
+            }
+        }else{
+            LEDS = 0;
+            enter = 0;
+        }
+        
+    }
 }
 //******************************************************************************
 //                          Ciclo principal 
@@ -71,17 +100,17 @@ void __interrupt() isr(void){
 
 void main(void) {
     setup();
-    I2C_Master_Start(); //iniciar comunicacion 
-    I2C_Master_Write(0xD0);//adress del RTC para que reciba
-    I2C_Master_Write(0); //colocar pointer en 0
-    I2C_Master_Write(0); //segundos en 0
-    I2C_Master_Write(0); //minutos en 0
-    I2C_Master_Write(0b00011000); //horas
-    I2C_Master_Write(0b00000100); //dia de la semana
-    I2C_Master_Write(0b00100101); // numero de dia 
-    I2C_Master_Write(0b00000010); //mes
-    I2C_Master_Write(0x21); //year
-    I2C_Master_Stop(); //finalizar comunicacion 
+//    I2C_Master_Start(); //iniciar comunicacion 
+//    I2C_Master_Write(0xD0);//adress del RTC para que reciba
+//    I2C_Master_Write(0); //colocar pointer en 0
+//    I2C_Master_Write(0); //segundos en 0
+//    I2C_Master_Write(0x21); //minutos en 0
+//    I2C_Master_Write(0b00000000); //horas
+//    I2C_Master_Write(0b00000100); //dia de la semana
+//    I2C_Master_Write(0b00000001); // numero de dia 
+//    I2C_Master_Write(0b00000011); //mes
+//    I2C_Master_Write(0x21); //year
+//    I2C_Master_Stop(); //finalizar comunicacion 
     //**************************************************************************
     //                             mian loop
     //**************************************************************************
@@ -92,13 +121,13 @@ void main(void) {
         I2C_Master_Write(0);
         I2C_Master_RepeatedStart();
         I2C_Master_Write(0xD1);
-        segundos = I2C_Master_Read(0);
-        minutos = I2C_Master_Read(0);
-        horas = I2C_Master_Read(0);
-        dia_S = I2C_Master_Read(0);
-        dia = I2C_Master_Read(0);
-        mes = I2C_Master_Read(0);
-        year = I2C_Master_Read(1);
+        segundos = I2C_Master_Read(1);
+        minutos = I2C_Master_Read(1);
+        horas = I2C_Master_Read(1);
+        dia_S = I2C_Master_Read(1);
+        dia = I2C_Master_Read(1);
+        mes = I2C_Master_Read(1);
+        year = I2C_Master_Read(0);
         I2C_Master_Stop();
     }
 }
@@ -123,8 +152,6 @@ void setup(void) {
     PORTA = 0; //se resetea el puerto A
     TRISA = 0; //se selecciona el puerto A como salida 
     TRISB = 0; // se selecciona el puerto B como salida 
-//****************************** MSSP I2C **************************************
-    I2C_Master_Init(100000);
 //****************************interrupcinoes************************************
     INTCONbits.GIE = 1; //se activan las interrupciones globales 
     INTCONbits.PEIE = 1; // se activan las interrupciones perifericas 
@@ -132,6 +159,11 @@ void setup(void) {
     INTCONbits.T0IF = 0; //limpiar bandera del timer0
     PIE1bits.TXIE = 1; //se activa la interrupcion del TX
     PIR1bits.TXIF = 0; //se limpia la babndera del TX
+    PIE1bits.RCIE = 1;
+    PIR1bits.RCIF = 1;
+//****************************** MSSP I2C **************************************
+    I2C_Master_Init(100000);
+//******************************************************************************
 }
 void TX_GO (void){ //por cada 10 de control activa el TXIE
     if (controles>10){ //revisa si el contador es mayor a 10 para dar el TXEN 
