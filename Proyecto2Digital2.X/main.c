@@ -90,15 +90,15 @@ void main(void) {
         I2C_Master_Start();
         I2C_Master_Write(0xD0);
         I2C_Master_Write(0);
-        I2C_Master_Start();
+        I2C_Master_RepeatedStart();
         I2C_Master_Write(0xD1);
         segundos = I2C_Master_Read(0);
-//        minutos = I2C_Master_Read(0);
-//        horas = I2C_Master_Read(0);
-//        dia_S = I2C_Master_Read(0);
-//        dia = I2C_Master_Read(0);
-//        mes = I2C_Master_Read(0);
-//        year = I2C_Master_Read(0);
+        minutos = I2C_Master_Read(0);
+        horas = I2C_Master_Read(0);
+        dia_S = I2C_Master_Read(0);
+        dia = I2C_Master_Read(0);
+        mes = I2C_Master_Read(0);
+        year = I2C_Master_Read(1);
         I2C_Master_Stop();
     }
 }

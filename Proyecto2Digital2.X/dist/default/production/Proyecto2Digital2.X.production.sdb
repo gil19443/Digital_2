@@ -9,6 +9,8 @@
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
 "41
 [v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+"49
+[v _I2C_Master_RepeatedStart I2C_Master_RepeatedStart `(v  1 e 1 0 ]
 "57
 [v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
 "67
@@ -49,6 +51,8 @@
 [v _minutos minutos `us  1 e 2 0 ]
 "42
 [v _horas horas `us  1 e 2 0 ]
+"43
+[v _dia_S dia_S `us  1 e 2 0 ]
 "44
 [v _dia dia `us  1 e 2 0 ]
 "45
@@ -302,6 +306,11 @@
 [v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
 {
 "45
+} 0
+"49
+[v _I2C_Master_RepeatedStart I2C_Master_RepeatedStart `(v  1 e 1 0 ]
+{
+"53
 } 0
 "76
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]

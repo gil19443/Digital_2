@@ -1,4 +1,4 @@
-# 1 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c"
+# 1 "C:/MPlab_Digital2/Digital_2/Pruena_PIN.X/main.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,47 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
-# 10 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c"
+# 1 "C:/MPlab_Digital2/Digital_2/Pruena_PIN.X/main.c" 2
+# 10 "C:/MPlab_Digital2/Digital_2/Pruena_PIN.X/main.c"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\xc8debug.h" 1 3
+# 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\xc8debug.h" 3
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+# 23 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 1 3
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\htc.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\htc.h" 2 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 2 3
+
+
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic_chip_select.h" 1 3
+# 2733 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic_chip_select.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\proc\\pic16f887.h" 1 3
 # 44 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\proc\\pic16f887.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\__at.h" 1 3
@@ -2419,46 +2458,7 @@ extern volatile __bit nW __attribute__((address(0x4A2)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x4A2)));
-# 10 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\xc8debug.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\xc8debug.h" 3
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 23 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 1 3
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\htc.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\htc.h" 2 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 2 3
-
-
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic_chip_select.h" 1 3
+# 2733 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic_chip_select.h" 2 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 2 3
 # 30 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\pic.h" 3
 #pragma intrinsic(__nop)
@@ -2492,207 +2492,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\xc.h" 2 3
-# 11 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int8_t;
-
-
-
-
-
-
-typedef signed int int16_t;
-
-
-
-
-
-
-
-typedef __int24 int24_t;
-
-
-
-
-
-
-
-typedef signed long int int32_t;
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint8_t;
-
-
-
-
-
-typedef unsigned int uint16_t;
-
-
-
-
-
-
-typedef __uint24 uint24_t;
-
-
-
-
-
-
-typedef unsigned long int uint32_t;
-# 88 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_least8_t;
-
-
-
-
-
-
-
-typedef signed int int_least16_t;
-# 109 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_least24_t;
-# 118 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed long int int_least32_t;
-# 136 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_least8_t;
-
-
-
-
-
-
-typedef unsigned int uint_least16_t;
-# 154 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_least24_t;
-
-
-
-
-
-
-
-typedef unsigned long int uint_least32_t;
-# 181 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_fast8_t;
-
-
-
-
-
-
-typedef signed int int_fast16_t;
-# 200 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_fast24_t;
-
-
-
-
-
-
-
-typedef signed long int int_fast32_t;
-# 224 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_fast8_t;
-
-
-
-
-
-typedef unsigned int uint_fast16_t;
-# 240 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_fast24_t;
-
-
-
-
-
-
-typedef unsigned long int uint_fast32_t;
-# 268 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef int32_t intmax_t;
-# 282 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
-typedef uint32_t uintmax_t;
-
-
-
-
-
-
-typedef int16_t intptr_t;
-
-
-
-
-typedef uint16_t uintptr_t;
-# 12 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
-
-# 1 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h" 1
-# 20 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 20 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h" 2
-# 29 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h"
-void I2C_Master_Init(const unsigned long c);
-
-
-
-
-
-
-
-void I2C_Master_Wait(void);
-
-
-
-void I2C_Master_Start(void);
-
-
-
-void I2C_Master_RepeatedStart(void);
-
-
-
-void I2C_Master_Stop(void);
-
-
-
-
-
-void I2C_Master_Write(unsigned d);
-
-
-
-
-unsigned short I2C_Master_Read(unsigned short a);
-
-
-
-void I2C_Slave_Init(uint8_t address);
-# 13 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
-
-# 1 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/Libreria2.h" 1
-# 15 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/Libreria2.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 15 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/Libreria2.h" 2
-
-void initOsc (uint8_t option);
-# 14 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
-
-# 1 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.h" 1
-# 15 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.h"
-void initUSART(void);
-# 15 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
-
-# 1 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.h" 1
-# 16 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 16 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.h" 2
-
-
-void tabla_hex (uint8_t selector, volatile uint8_t *port);
-# 16 "C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c" 2
+# 10 "C:/MPlab_Digital2/Digital_2/Pruena_PIN.X/main.c" 2
 
 
 
@@ -2712,74 +2512,24 @@ void tabla_hex (uint8_t selector, volatile uint8_t *port);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-
-
-
-
-uint8_t controles = 0;
-unsigned short segundos = 0;
-unsigned short minutos = 0;
-unsigned short horas = 0;
-unsigned short dia_S = 0;
-unsigned short dia = 0;
-unsigned short mes = 0;
-unsigned short year = 0;
-unsigned short var_envio = 0;
-
-
-
+# 38 "C:/MPlab_Digital2/Digital_2/Pruena_PIN.X/main.c"
 void setup(void);
-void TX_GO (void);
-void envio (void);
 
 
-
-void __attribute__((picinterrupt(("")))) isr(void){
-    if (INTCONbits.T0IF == 1){
-        TMR0 = 236;
-        controles++;
-        INTCONbits.TMR0IF = 0;
-    }
-    if (PIR1bits.TXIF == 1){
-        envio();
-        PIE1bits.TXIE = 0;
-    }
-}
 
 
 
 
 void main(void) {
     setup();
-    I2C_Master_Start();
-    I2C_Master_Write(0xD0);
-    I2C_Master_Write(0);
-    I2C_Master_Write(0);
-    I2C_Master_Write(0);
-    I2C_Master_Write(0b00011000);
-    I2C_Master_Write(0b00000100);
-    I2C_Master_Write(0b00100101);
-    I2C_Master_Write(0b00000010);
-    I2C_Master_Write(0x21);
-    I2C_Master_Stop();
 
 
 
     while (1) {
-        TX_GO();
-        I2C_Master_Start();
-        I2C_Master_Write(0xD0);
-        I2C_Master_Write(0);
-        I2C_Master_RepeatedStart();
-        I2C_Master_Write(0xD1);
-        segundos = I2C_Master_Read(0);
-        minutos = I2C_Master_Read(0);
-        horas = I2C_Master_Read(0);
-        dia_S = I2C_Master_Read(0);
-        dia = I2C_Master_Read(0);
-        mes = I2C_Master_Read(0);
-        year = I2C_Master_Read(1);
-        I2C_Master_Stop();
+        PORTCbits.RC4 = 1;
+        _delay((unsigned long)((500)*(4000000/4000.0)));
+        PORTCbits.RC4 = 0;
+        _delay((unsigned long)((500)*(4000000/4000.0)));
     }
 }
 
@@ -2789,109 +2539,8 @@ void main(void) {
 
 
 void setup(void) {
-    initUSART();
-    initOsc(6);
-    OPTION_REG = 0b11010111;
     ANSEL = 0;
     ANSELH = 0;
+    TRISC = 0;
     PORTC = 0;
-    PORTD = 0;
-    TRISD = 0;
-    PORTB = 0;
-    TRISE = 0;
-    PORTE = 0;
-    PORTA = 0;
-    TRISA = 0;
-    TRISB = 0;
-
-    I2C_Master_Init(100000);
-
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    INTCONbits.TMR0IE = 1;
-    INTCONbits.T0IF = 0;
-    PIE1bits.TXIE = 1;
-    PIR1bits.TXIF = 0;
-}
-void TX_GO (void){
-    if (controles>10){
-        controles = 0;
-        PIE1bits.TXIE = 1;
-    }
-}
-void envio (void){
-    switch (var_envio){
-        case 0:
-            tabla_hex(((horas & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 1:
-            tabla_hex((horas & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 2:
-            TXREG = 58;
-            var_envio++;
-            break;
-        case 3:
-            tabla_hex(((minutos & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 4:
-            tabla_hex((minutos & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 5:
-            TXREG = 58;
-            var_envio++;
-            break;
-        case 6:
-            tabla_hex(((segundos & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 7:
-            tabla_hex((segundos & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 8:
-            TXREG = 44;
-            var_envio++;
-            break;
-        case 9:
-            tabla_hex(((dia & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 10:
-            tabla_hex((dia & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 11:
-            TXREG = 47;
-            var_envio++;
-            break;
-        case 12:
-            tabla_hex(((mes & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 13:
-            tabla_hex((mes & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 14:
-            TXREG = 47;
-            var_envio++;
-            break;
-        case 15:
-            tabla_hex(((year & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 16:
-            tabla_hex((year & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 17:
-            TXREG = 10;
-            var_envio = 0;
-            break;
-    }
 }

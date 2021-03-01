@@ -60,7 +60,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "52 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 52:     while (1) {
 [v _TX_GO `(v ~T0 @X0 0 ef ]
-"60 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h
+"45 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h: 45: void I2C_Master_RepeatedStart(void);
+[v _I2C_Master_RepeatedStart `(v ~T0 @X0 0 ef ]
+"60
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h: 60: unsigned short I2C_Master_Read(unsigned short a);
 [v _I2C_Master_Read `(us ~T0 @X0 0 ef1`us ]
 "15 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.h
@@ -440,7 +443,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
 "57
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 57:         I2C_Master_Start();
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 57:         I2C_Master_RepeatedStart();
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
@@ -453,24 +456,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 59:         segundos = I2C_Master_Read(0);
 [e = _TMR0 -> -> 236 `i `uc ]
 "60
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 60: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 60:         minutos = I2C_Master_Read(0);
 [e ++ _controles -> -> 1 `i `uc ]
 "61
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 61: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 61:         horas = I2C_Master_Read(0);
 [e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
 "62
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 62: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 62:         dia_S = I2C_Master_Read(0);
 }
 [e :U 139 ]
 "63
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 63: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 63:         dia = I2C_Master_Read(0);
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 140  ]
 {
 "64
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 64: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 64:         mes = I2C_Master_Read(0);
 [e ( _envio ..  ]
 "65
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 65: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 65:         year = I2C_Master_Read(1);
 [e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
 "66
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 66:         I2C_Master_Stop();
@@ -541,13 +544,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _I2C_Master_Write (1 -> -> 0 `i `ui ]
 "93
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 93:     INTCONbits.GIE = 1;
-[e ( _I2C_Master_Start ..  ]
+[e ( _I2C_Master_RepeatedStart ..  ]
 "94
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 94:     INTCONbits.PEIE = 1;
 [e ( _I2C_Master_Write (1 -> -> 209 `i `ui ]
 "95
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 95:     INTCONbits.TMR0IE = 1;
 [e = _segundos ( _I2C_Master_Read (1 -> -> 0 `i `us ]
+"96
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 96:     INTCONbits.T0IF = 0;
+[e = _minutos ( _I2C_Master_Read (1 -> -> 0 `i `us ]
+"97
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 97:     PIE1bits.TXIE = 1;
+[e = _horas ( _I2C_Master_Read (1 -> -> 0 `i `us ]
+"98
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 98:     PIR1bits.TXIF = 0;
+[e = _dia_S ( _I2C_Master_Read (1 -> -> 0 `i `us ]
+"99
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 99: }
+[e = _dia ( _I2C_Master_Read (1 -> -> 0 `i `us ]
+"100
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 100: void TX_GO (void){
+[e = _mes ( _I2C_Master_Read (1 -> -> 0 `i `us ]
+"101
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 101:     if (controles>10){
+[e = _year ( _I2C_Master_Read (1 -> -> 1 `i `us ]
 "102
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 102:         controles = 0;
 [e ( _I2C_Master_Stop ..  ]
