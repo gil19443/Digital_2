@@ -30,8 +30,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "553
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
 [v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
-"56 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 56:             enter = 0;
+"57 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 57:                 PORTAbits.RA0 = 1;
 [v _envio `(v ~T0 @X0 0 ef ]
 "1708 C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 1708:     struct {
@@ -59,11 +59,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 183: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
 [v _PORTAbits `VS5 ~T0 @X0 0 e@5 ]
 [p mainexit ]
-"54 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 54:         }else{
+"55 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 55:             }
 [v _setup `(v ~T0 @X0 0 ef ]
-"55
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 55:             LEDS = 0;
+"56
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 56:             if (LEDS == 49){
 [v _TX_GO `(v ~T0 @X0 0 ef ]
 "41 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.h: 41: void I2C_Master_Start(void);
@@ -366,7 +366,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files\Microchip\xc8\v2.20\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 "21 C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 21: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 21: void envio (void);
 [p x FOSC = INTRC_NOCLKOUT ]
 "22
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 22: 
@@ -375,632 +375,728 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 23: 
 [p x PWRTE = OFF ]
 "24
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 24: void __attribute__((picinterrupt(("")))) isr(void){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 24: 
 [p x MCLRE = OFF ]
 "25
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 25:     if (INTCONbits.T0IF == 1){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 25: void __attribute__((picinterrupt(("")))) isr(void){
 [p x CP = OFF ]
 "26
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 26:         TMR0 = 236;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 26:     if (INTCONbits.T0IF == 1){
 [p x CPD = OFF ]
 "27
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 27:         controles++;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 27:         INTCONbits.TMR0IF = 0;
 [p x BOREN = OFF ]
 "28
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 28:         INTCONbits.TMR0IF = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 28:         TMR0 = 236;
 [p x IESO = OFF ]
 "29
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 29:     }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 29:         controles++;
 [p x FCMEN = OFF ]
 "30
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 30:     if (PIR1bits.TXIF == 1){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 30: 
 [p x LVP = OFF ]
 "33
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 33:     }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 33:         envio();
 [p x BOR4V = BOR40V ]
 "34
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 34:     if (PIR1bits.RCIF == 1){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 34:         PIE1bits.TXIE = 0;
 [p x WRT = OFF ]
 "39
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 39:                 toggle++;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 39:             case 0:
 [v _controles `uc ~T0 @X0 1 e ]
 [i _controles
 -> -> 0 `i `uc
 ]
 "40
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 40:                 break;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 40:                 LEDS = RCREG;
 [v _segundos `us ~T0 @X0 1 e ]
 [i _segundos
 -> -> 0 `i `us
 ]
 "41
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 41:             case 1:
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 41:                 toggle++;
 [v _minutos `us ~T0 @X0 1 e ]
 [i _minutos
 -> -> 0 `i `us
 ]
 "42
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 42:                 enter = RCREG;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 42:                 break;
 [v _horas `us ~T0 @X0 1 e ]
 [i _horas
 -> -> 0 `i `us
 ]
 "43
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 43:                 toggle = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 43:             case 1:
 [v _dia_S `us ~T0 @X0 1 e ]
 [i _dia_S
 -> -> 0 `i `us
 ]
 "44
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 44:                 break;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 44:                 TX_EN = RCREG;
 [v _dia `us ~T0 @X0 1 e ]
 [i _dia
 -> -> 0 `i `us
 ]
 "45
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 45:         }
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 45:                 toggle++;
 [v _mes `us ~T0 @X0 1 e ]
 [i _mes
 -> -> 0 `i `us
 ]
 "46
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 46:         if (enter == 10){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 46:                 break;
 [v _year `us ~T0 @X0 1 e ]
 [i _year
 -> -> 0 `i `us
 ]
 "47
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 47:             if (LEDS == 49){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 47:             case 2:
 [v _var_envio `us ~T0 @X0 1 e ]
 [i _var_envio
 -> -> 0 `i `us
 ]
 "48
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 48:                 PORTAbits.RA0 = 1;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 48:                 enter = RCREG;
 [v _LEDS `uc ~T0 @X0 1 e ]
 [i _LEDS
 -> -> 0 `i `uc
 ]
 "49
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 49:                 PORTAbits.RA1 = 0;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 49:                 toggle = 0;
 [v _toggle `uc ~T0 @X0 1 e ]
 [i _toggle
 -> -> 0 `i `uc
 ]
 "50
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 50:             }else if (LEDS == 50){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 50:                 break;
 [v _enter `uc ~T0 @X0 1 e ]
 [i _enter
 -> -> 0 `i `uc
 ]
+"51
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 51:         }
+[v _TX_EN `uc ~T0 @X0 1 e ]
+[i _TX_EN
+-> -> 0 `i `uc
+]
 [v $root$_isr `(v ~T0 @X0 0 e ]
-"60
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 60: }
+"61
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 61:                 PORTAbits.RA0 = 0;
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
-"61
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 61: 
+"62
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 62:                 PORTAbits.RA1 = 1;
 [e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 139  ]
 {
-"62
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 62: 
-[e = _TMR0 -> -> 236 `i `uc ]
 "63
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 63: 
-[e ++ _controles -> -> 1 `i `uc ]
-"64
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 64: 
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 63:             }
 [e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
+"64
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 64:         }else{
+[e = _TMR0 -> -> 236 `i `uc ]
 "65
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 65: void main(void) {
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 65:             LEDS = 0;
+[e ++ _controles -> -> 1 `i `uc ]
+"67
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 67:             TX_EN = 0;
 }
 [e :U 139 ]
-"66
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 66:     setup();
+"68
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 68:         }
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 140  ]
 {
-"67
-[e ( _envio ..  ]
-"68
-[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
 "69
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 69: 
+[e ( _envio ..  ]
+"70
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 70:     }
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"71
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 71: }
 }
 [e :U 140 ]
-"70
+"72
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 72: 
 [e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 141  ]
 {
-"71
+"73
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 73: 
 [e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-"72
+"74
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 74: 
 [e $U 143  ]
 {
-"73
-[e :U 144 ]
-"74
-[e = _LEDS _RCREG ]
 "75
-[e ++ _toggle -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 75: 
+[e :U 144 ]
 "76
-[e $U 142  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 76: void main(void) {
+[e = _LEDS _RCREG ]
 "77
-[e :U 145 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 77:     setup();
+[e ++ _toggle -> -> 1 `i `uc ]
 "78
-[e = _enter _RCREG ]
-"79
-[e = _toggle -> -> 0 `i `uc ]
-"80
 [e $U 142  ]
+"79
+[e :U 145 ]
+"80
+[e = _TX_EN _RCREG ]
 "81
+[e ++ _toggle -> -> 1 `i `uc ]
+"82
+[e $U 142  ]
+"83
+[e :U 146 ]
+"84
+[e = _enter _RCREG ]
+"85
+[e = _toggle -> -> 0 `i `uc ]
+"86
+[e $U 142  ]
+"87
 }
 [e $U 142  ]
 [e :U 143 ]
 [e [\ -> _toggle `i , $ -> 0 `i 144
  , $ -> 1 `i 145
+ , $ -> 2 `i 146
  142 ]
 [e :U 142 ]
-"82
-[e $ ! == -> _enter `i -> 10 `i 146  ]
-{
-"83
-[e $ ! == -> _LEDS `i -> 49 `i 147  ]
-{
-"84
-[e = . . _PORTAbits 0 0 -> -> 1 `i `uc ]
-"85
-[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
-"86
-}
-[e $U 148  ]
-[e :U 147 ]
-[e $ ! == -> _LEDS `i -> 50 `i 149  ]
-{
-"87
-[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
 "88
-[e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
-"89
-}
-[e :U 149 ]
-[e :U 148 ]
-"90
-}
-[e $U 150  ]
-[e :U 146 ]
+[e $ ! == -> _enter `i -> 10 `i 147  ]
 {
+"89
+[e $ ! == -> _TX_EN `i -> 51 `i 148  ]
+{
+"90
+[e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
 "91
-[e = _LEDS -> -> 0 `i `uc ]
-"92
-[e = _enter -> -> 0 `i `uc ]
-"93
 }
-[e :U 150 ]
+[e :U 148 ]
+"92
+[e $ ! == -> _LEDS `i -> 49 `i 149  ]
+{
+"93
+[e = . . _PORTAbits 0 0 -> -> 1 `i `uc ]
+"94
+[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
 "95
 }
-[e :U 141 ]
+[e :U 149 ]
 "96
+[e $ ! == -> _LEDS `i -> 50 `i 150  ]
+{
+"97
+[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
+"98
+[e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
+"99
+}
+[e :U 150 ]
+"100
+}
+[e $U 151  ]
+[e :U 147 ]
+{
+"101
+[e = _LEDS -> -> 0 `i `uc ]
+"102
+[e = _enter -> -> 0 `i `uc ]
+"103
+[e = _TX_EN -> -> 0 `i `uc ]
+"104
+}
+[e :U 151 ]
+"106
+}
+[e :U 141 ]
+"107
 [e :UE 138 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"101
+"112
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"102
+"113
 [e ( _setup ..  ]
-"117
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 117:     while (1) {
-[e :U 153 ]
-{
-"118
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 118:         TX_GO();
-[e ( _TX_GO ..  ]
-"119
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 119:         I2C_Master_Start();
-[e ( _I2C_Master_Start ..  ]
-"120
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 120:         I2C_Master_Write(0xD0);
-[e ( _I2C_Master_Write (1 -> -> 208 `i `ui ]
-"121
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 121:         I2C_Master_Write(0);
-[e ( _I2C_Master_Write (1 -> -> 0 `i `ui ]
-"122
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 122:         I2C_Master_RepeatedStart();
-[e ( _I2C_Master_RepeatedStart ..  ]
-"123
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 123:         I2C_Master_Write(0xD1);
-[e ( _I2C_Master_Write (1 -> -> 209 `i `ui ]
-"124
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 124:         segundos = I2C_Master_Read(1);
-[e = _segundos ( _I2C_Master_Read (1 -> -> 1 `i `us ]
-"125
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 125:         minutos = I2C_Master_Read(1);
-[e = _minutos ( _I2C_Master_Read (1 -> -> 1 `i `us ]
-"126
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 126:         horas = I2C_Master_Read(1);
-[e = _horas ( _I2C_Master_Read (1 -> -> 1 `i `us ]
-"127
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 127:         dia_S = I2C_Master_Read(1);
-[e = _dia_S ( _I2C_Master_Read (1 -> -> 1 `i `us ]
 "128
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 128:         dia = I2C_Master_Read(1);
-[e = _dia ( _I2C_Master_Read (1 -> -> 1 `i `us ]
-"129
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 129:         mes = I2C_Master_Read(1);
-[e = _mes ( _I2C_Master_Read (1 -> -> 1 `i `us ]
-"130
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 130:         year = I2C_Master_Read(0);
-[e = _year ( _I2C_Master_Read (1 -> -> 0 `i `us ]
-"131
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 131:         I2C_Master_Stop();
-[e ( _I2C_Master_Stop ..  ]
-"132
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 132:     }
-}
-[e :U 152 ]
-[e $U 153  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 128:     while (1) {
 [e :U 154 ]
+{
+"129
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 129:         TX_GO();
+[e ( _TX_GO ..  ]
+"130
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 130:         I2C_Master_Start();
+[e ( _I2C_Master_Start ..  ]
+"131
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 131:         I2C_Master_Write(0xD0);
+[e ( _I2C_Master_Write (1 -> -> 208 `i `ui ]
+"132
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 132:         I2C_Master_Write(0);
+[e ( _I2C_Master_Write (1 -> -> 0 `i `ui ]
 "133
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 133: }
-[e :UE 151 ]
-}
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 133:         I2C_Master_RepeatedStart();
+[e ( _I2C_Master_RepeatedStart ..  ]
+"134
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 134:         I2C_Master_Write(0xD1);
+[e ( _I2C_Master_Write (1 -> -> 209 `i `ui ]
+"135
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 135:         segundos = I2C_Master_Read(1);
+[e = _segundos ( _I2C_Master_Read (1 -> -> 1 `i `us ]
+"136
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 136:         minutos = I2C_Master_Read(1);
+[e = _minutos ( _I2C_Master_Read (1 -> -> 1 `i `us ]
+"137
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 137:         horas = I2C_Master_Read(1);
+[e = _horas ( _I2C_Master_Read (1 -> -> 1 `i `us ]
+"138
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 138:         dia_S = I2C_Master_Read(1);
+[e = _dia_S ( _I2C_Master_Read (1 -> -> 1 `i `us ]
+"139
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 139:         dia = I2C_Master_Read(1);
+[e = _dia ( _I2C_Master_Read (1 -> -> 1 `i `us ]
 "140
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 140: void setup(void) {
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 140:         mes = I2C_Master_Read(1);
+[e = _mes ( _I2C_Master_Read (1 -> -> 1 `i `us ]
+"141
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 141:         year = I2C_Master_Read(0);
+[e = _year ( _I2C_Master_Read (1 -> -> 0 `i `us ]
+"142
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 142:         I2C_Master_Stop();
+[e ( _I2C_Master_Stop ..  ]
+"143
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 143:     }
+}
+[e :U 153 ]
+[e $U 154  ]
+[e :U 155 ]
+"144
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 144: }
+[e :UE 152 ]
+}
+"151
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 151: void setup(void) {
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"141
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 141:     initUSART();
-[e ( _initUSART ..  ]
-"142
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 142:     initOsc(6);
-[e ( _initOsc (1 -> -> 6 `i `uc ]
-"143
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 143:     OPTION_REG = 0b11010111;
-[e = _OPTION_REG -> -> 215 `i `uc ]
-"144
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 144:     ANSEL = 0;
-[e = _ANSEL -> -> 0 `i `uc ]
-"145
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 145:     ANSELH = 0;
-[e = _ANSELH -> -> 0 `i `uc ]
-"146
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 146:     PORTC = 0;
-[e = _PORTC -> -> 0 `i `uc ]
-"147
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 147:     PORTD = 0;
-[e = _PORTD -> -> 0 `i `uc ]
-"148
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 148:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
-"149
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 149:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
-"150
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 150:     TRISE = 0;
-[e = _TRISE -> -> 0 `i `uc ]
-"151
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 151:     PORTE = 0;
-[e = _PORTE -> -> 0 `i `uc ]
 "152
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 152:     PORTA = 0;
-[e = _PORTA -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 152:     initUSART();
+[e ( _initUSART ..  ]
 "153
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 153:     TRISA = 0;
-[e = _TRISA -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 153:     initOsc(6);
+[e ( _initOsc (1 -> -> 6 `i `uc ]
 "154
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 154:     TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 154:     OPTION_REG = 0b11010111;
+[e = _OPTION_REG -> -> 215 `i `uc ]
+"155
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 155:     ANSEL = 0;
+[e = _ANSEL -> -> 0 `i `uc ]
 "156
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 156:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 156:     ANSELH = 0;
+[e = _ANSELH -> -> 0 `i `uc ]
 "157
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 157:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 157:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
 "158
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 158:     INTCONbits.TMR0IE = 1;
-[e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 158:     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
 "159
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 159:     INTCONbits.T0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 159:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
 "160
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 160:     PIE1bits.TXIE = 1;
-[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 160:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
 "161
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 161:     PIR1bits.TXIF = 0;
-[e = . . _PIR1bits 0 4 -> -> 0 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 161:     TRISE = 0;
+[e = _TRISE -> -> 0 `i `uc ]
 "162
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 162:     PIE1bits.RCIE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 162:     PORTE = 0;
+[e = _PORTE -> -> 0 `i `uc ]
 "163
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 163:     PIR1bits.RCIF = 1;
-[e = . . _PIR1bits 0 5 -> -> 1 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 163:     PORTA = 0;
+[e = _PORTA -> -> 0 `i `uc ]
+"164
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 164:     TRISA = 0;
+[e = _TRISA -> -> 0 `i `uc ]
 "165
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 165:     I2C_Master_Init(100000);
-[e ( _I2C_Master_Init (1 -> -> 100000 `l `ul ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 165:     TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
 "167
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 167: }
-[e :UE 155 ]
-}
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 167:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "168
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 168: void TX_GO (void){
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 168:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"169
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 169:     INTCONbits.TMR0IE = 1;
+[e = . . _INTCONbits 1 3 -> -> 1 `i `uc ]
+"170
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 170:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"171
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 171:     PIE1bits.TXIE = 1;
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"172
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 172:     PIR1bits.TXIF = 0;
+[e = . . _PIR1bits 0 4 -> -> 0 `i `uc ]
+"173
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 173:     PIE1bits.RCIE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"174
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 174:     PIR1bits.RCIF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"176
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 176:     I2C_Master_Init(100000);
+[e ( _I2C_Master_Init (1 -> -> 100000 `l `ul ]
+"178
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 178: }
+[e :UE 156 ]
+}
+"179
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 179: void TX_GO (void){
 [v _TX_GO `(v ~T0 @X0 1 ef ]
 {
 [e :U _TX_GO ]
 [f ]
-"169
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 169:     if (controles>10){
-[e $ ! > -> _controles `i -> 10 `i 157  ]
+"180
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 180:     if (controles>10){
+[e $ ! > -> _controles `i -> 10 `i 158  ]
 {
-"170
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 170:         controles = 0;
+"181
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 181:         controles = 0;
 [e = _controles -> -> 0 `i `uc ]
-"171
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 171:         PIE1bits.TXIE = 1;
+"182
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 182:         PIE1bits.TXIE = 1;
 [e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
-"172
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 172:     }
+"183
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 183:     }
 }
-[e :U 157 ]
-"173
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 173: }
-[e :UE 156 ]
+[e :U 158 ]
+"184
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 184: }
+[e :UE 157 ]
 }
-"174
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 174: void envio (void){
+"185
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 185: void envio (void){
 [v _envio `(v ~T0 @X0 1 ef ]
 {
 [e :U _envio ]
 [f ]
-"175
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 175:     switch (var_envio){
-[e $U 160  ]
-{
-"176
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 176:         case 0:
-[e :U 161 ]
-"177
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 177:             tabla_hex(((horas & 0xF0)>>4), &TXREG);
-[e ( _tabla_hex (2 , -> >> & -> _horas `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
-"178
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 178:             var_envio++;
-[e ++ _var_envio -> -> 1 `i `us ]
-"179
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 179:             break;
-[e $U 159  ]
-"180
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 180:         case 1:
-[e :U 162 ]
-"181
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 181:             tabla_hex((horas & 0x0F), &TXREG);
-[e ( _tabla_hex (2 , -> & -> _horas `ui -> -> 15 `i `ui `uc &U _TXREG ]
-"182
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 182:             var_envio++;
-[e ++ _var_envio -> -> 1 `i `us ]
-"183
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 183:             break;
-[e $U 159  ]
-"184
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 184:         case 2:
-[e :U 163 ]
-"185
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 185:             TXREG = 58;
-[e = _TXREG -> -> 58 `i `uc ]
 "186
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 186:             var_envio++;
-[e ++ _var_envio -> -> 1 `i `us ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 186:     switch (var_envio){
+[e $U 161  ]
+{
 "187
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 187:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 187:         case 0:
+[e :U 162 ]
 "188
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 188:         case 3:
-[e :U 164 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 188:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "189
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 189:             tabla_hex(((minutos & 0xF0)>>4), &TXREG);
-[e ( _tabla_hex (2 , -> >> & -> _minutos `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 189:             tabla_hex(((horas & 0xF0)>>4), &TXREG);
+[e ( _tabla_hex (2 , -> >> & -> _horas `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
 "190
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 190:             var_envio++;
 [e ++ _var_envio -> -> 1 `i `us ]
 "191
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 191:             break;
-[e $U 159  ]
+[e $U 160  ]
 "192
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 192:         case 4:
-[e :U 165 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 192:         case 1:
+[e :U 163 ]
 "193
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 193:             tabla_hex((minutos & 0x0F), &TXREG);
-[e ( _tabla_hex (2 , -> & -> _minutos `ui -> -> 15 `i `ui `uc &U _TXREG ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 193:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "194
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 194:             var_envio++;
-[e ++ _var_envio -> -> 1 `i `us ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 194:             tabla_hex((horas & 0x0F), &TXREG);
+[e ( _tabla_hex (2 , -> & -> _horas `ui -> -> 15 `i `ui `uc &U _TXREG ]
 "195
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 195:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 195:             var_envio++;
+[e ++ _var_envio -> -> 1 `i `us ]
 "196
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 196:         case 5:
-[e :U 166 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 196:             break;
+[e $U 160  ]
 "197
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 197:             TXREG = 58;
-[e = _TXREG -> -> 58 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 197:         case 2:
+[e :U 164 ]
 "198
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 198:             var_envio++;
-[e ++ _var_envio -> -> 1 `i `us ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 198:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "199
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 199:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 199:             TXREG = 58;
+[e = _TXREG -> -> 58 `i `uc ]
 "200
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 200:         case 6:
-[e :U 167 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 200:             var_envio++;
+[e ++ _var_envio -> -> 1 `i `us ]
 "201
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 201:             tabla_hex(((segundos & 0xF0)>>4), &TXREG);
-[e ( _tabla_hex (2 , -> >> & -> _segundos `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 201:             break;
+[e $U 160  ]
 "202
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 202:             var_envio++;
-[e ++ _var_envio -> -> 1 `i `us ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 202:         case 3:
+[e :U 165 ]
 "203
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 203:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 203:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "204
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 204:         case 7:
-[e :U 168 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 204:             tabla_hex(((minutos & 0xF0)>>4), &TXREG);
+[e ( _tabla_hex (2 , -> >> & -> _minutos `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
 "205
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 205:             tabla_hex((segundos & 0x0F), &TXREG);
-[e ( _tabla_hex (2 , -> & -> _segundos `ui -> -> 15 `i `ui `uc &U _TXREG ]
-"206
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 206:             var_envio++;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 205:             var_envio++;
 [e ++ _var_envio -> -> 1 `i `us ]
+"206
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 206:             break;
+[e $U 160  ]
 "207
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 207:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 207:         case 4:
+[e :U 166 ]
 "208
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 208:         case 8:
-[e :U 169 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 208:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "209
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 209:             TXREG = 44;
-[e = _TXREG -> -> 44 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 209:             tabla_hex((minutos & 0x0F), &TXREG);
+[e ( _tabla_hex (2 , -> & -> _minutos `ui -> -> 15 `i `ui `uc &U _TXREG ]
 "210
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 210:             var_envio++;
 [e ++ _var_envio -> -> 1 `i `us ]
 "211
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 211:             break;
-[e $U 159  ]
+[e $U 160  ]
 "212
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 212:         case 9:
-[e :U 170 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 212:         case 5:
+[e :U 167 ]
 "213
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 213:             tabla_hex(((dia & 0xF0)>>4), &TXREG);
-[e ( _tabla_hex (2 , -> >> & -> _dia `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 213:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "214
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 214:             var_envio++;
-[e ++ _var_envio -> -> 1 `i `us ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 214:             TXREG = 58;
+[e = _TXREG -> -> 58 `i `uc ]
 "215
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 215:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 215:             var_envio++;
+[e ++ _var_envio -> -> 1 `i `us ]
 "216
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 216:         case 10:
-[e :U 171 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 216:             break;
+[e $U 160  ]
 "217
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 217:             tabla_hex((dia & 0x0F), &TXREG);
-[e ( _tabla_hex (2 , -> & -> _dia `ui -> -> 15 `i `ui `uc &U _TXREG ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 217:         case 6:
+[e :U 168 ]
 "218
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 218:             var_envio++;
-[e ++ _var_envio -> -> 1 `i `us ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 218:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "219
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 219:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 219:             tabla_hex(((segundos & 0xF0)>>4), &TXREG);
+[e ( _tabla_hex (2 , -> >> & -> _segundos `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
 "220
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 220:         case 11:
-[e :U 172 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 220:             var_envio++;
+[e ++ _var_envio -> -> 1 `i `us ]
 "221
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 221:             TXREG = 47;
-[e = _TXREG -> -> 47 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 221:             break;
+[e $U 160  ]
 "222
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 222:             var_envio++;
-[e ++ _var_envio -> -> 1 `i `us ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 222:         case 7:
+[e :U 169 ]
 "223
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 223:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 223:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "224
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 224:         case 12:
-[e :U 173 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 224:             tabla_hex((segundos & 0x0F), &TXREG);
+[e ( _tabla_hex (2 , -> & -> _segundos `ui -> -> 15 `i `ui `uc &U _TXREG ]
 "225
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 225:             tabla_hex(((mes & 0xF0)>>4), &TXREG);
-[e ( _tabla_hex (2 , -> >> & -> _mes `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
-"226
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 226:             var_envio++;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 225:             var_envio++;
 [e ++ _var_envio -> -> 1 `i `us ]
+"226
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 226:             break;
+[e $U 160  ]
 "227
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 227:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 227:         case 8:
+[e :U 170 ]
 "228
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 228:         case 13:
-[e :U 174 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 228:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "229
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 229:             tabla_hex((mes & 0x0F), &TXREG);
-[e ( _tabla_hex (2 , -> & -> _mes `ui -> -> 15 `i `ui `uc &U _TXREG ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 229:             TXREG = 44;
+[e = _TXREG -> -> 44 `i `uc ]
 "230
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 230:             var_envio++;
 [e ++ _var_envio -> -> 1 `i `us ]
 "231
 [; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 231:             break;
-[e $U 159  ]
+[e $U 160  ]
 "232
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 232:         case 14:
-[e :U 175 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 232:         case 9:
+[e :U 171 ]
 "233
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 233:             TXREG = 47;
-[e = _TXREG -> -> 47 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 233:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "234
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 234:             var_envio++;
-[e ++ _var_envio -> -> 1 `i `us ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 234:             tabla_hex(((dia & 0xF0)>>4), &TXREG);
+[e ( _tabla_hex (2 , -> >> & -> _dia `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
 "235
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 235:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 235:             var_envio++;
+[e ++ _var_envio -> -> 1 `i `us ]
 "236
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 236:         case 15:
-[e :U 176 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 236:             break;
+[e $U 160  ]
 "237
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 237:             tabla_hex(((year & 0xF0)>>4), &TXREG);
-[e ( _tabla_hex (2 , -> >> & -> _year `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 237:         case 10:
+[e :U 172 ]
 "238
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 238:             var_envio++;
-[e ++ _var_envio -> -> 1 `i `us ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 238:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "239
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 239:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 239:             tabla_hex((dia & 0x0F), &TXREG);
+[e ( _tabla_hex (2 , -> & -> _dia `ui -> -> 15 `i `ui `uc &U _TXREG ]
 "240
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 240:         case 16:
-[e :U 177 ]
-"241
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 241:             tabla_hex((year & 0x0F), &TXREG);
-[e ( _tabla_hex (2 , -> & -> _year `ui -> -> 15 `i `ui `uc &U _TXREG ]
-"242
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 242:             var_envio++;
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 240:             var_envio++;
 [e ++ _var_envio -> -> 1 `i `us ]
+"241
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 241:             break;
+[e $U 160  ]
+"242
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 242:         case 11:
+[e :U 173 ]
 "243
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 243:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 243:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "244
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 244:         case 17:
-[e :U 178 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 244:             TXREG = 47;
+[e = _TXREG -> -> 47 `i `uc ]
 "245
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 245:             TXREG = 10;
-[e = _TXREG -> -> 10 `i `uc ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 245:             var_envio++;
+[e ++ _var_envio -> -> 1 `i `us ]
 "246
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 246:             var_envio = 0;
-[e = _var_envio -> -> 0 `i `us ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 246:             break;
+[e $U 160  ]
 "247
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 247:             break;
-[e $U 159  ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 247:         case 12:
+[e :U 174 ]
 "248
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 248:     }
-}
-[e $U 159  ]
-[e :U 160 ]
-[e [\ -> _var_envio `ui , $ -> -> 0 `i `ui 161
- , $ -> -> 1 `i `ui 162
- , $ -> -> 2 `i `ui 163
- , $ -> -> 3 `i `ui 164
- , $ -> -> 4 `i `ui 165
- , $ -> -> 5 `i `ui 166
- , $ -> -> 6 `i `ui 167
- , $ -> -> 7 `i `ui 168
- , $ -> -> 8 `i `ui 169
- , $ -> -> 9 `i `ui 170
- , $ -> -> 10 `i `ui 171
- , $ -> -> 11 `i `ui 172
- , $ -> -> 12 `i `ui 173
- , $ -> -> 13 `i `ui 174
- , $ -> -> 14 `i `ui 175
- , $ -> -> 15 `i `ui 176
- , $ -> -> 16 `i `ui 177
- , $ -> -> 17 `i `ui 178
- 159 ]
-[e :U 159 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 248:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
 "249
-[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 249: }
-[e :UE 158 ]
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 249:             tabla_hex(((mes & 0xF0)>>4), &TXREG);
+[e ( _tabla_hex (2 , -> >> & -> _mes `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
+"250
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 250:             var_envio++;
+[e ++ _var_envio -> -> 1 `i `us ]
+"251
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 251:             break;
+[e $U 160  ]
+"252
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 252:         case 13:
+[e :U 175 ]
+"253
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 253:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
+"254
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 254:             tabla_hex((mes & 0x0F), &TXREG);
+[e ( _tabla_hex (2 , -> & -> _mes `ui -> -> 15 `i `ui `uc &U _TXREG ]
+"255
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 255:             var_envio++;
+[e ++ _var_envio -> -> 1 `i `us ]
+"256
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 256:             break;
+[e $U 160  ]
+"257
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 257:         case 14:
+[e :U 176 ]
+"258
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 258:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
+"259
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 259:             TXREG = 47;
+[e = _TXREG -> -> 47 `i `uc ]
+"260
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 260:             var_envio++;
+[e ++ _var_envio -> -> 1 `i `us ]
+"261
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 261:             break;
+[e $U 160  ]
+"262
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 262:         case 15:
+[e :U 177 ]
+"263
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 263:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
+"264
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 264:             tabla_hex(((year & 0xF0)>>4), &TXREG);
+[e ( _tabla_hex (2 , -> >> & -> _year `ui -> -> 240 `i `ui -> 4 `i `uc &U _TXREG ]
+"265
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 265:             var_envio++;
+[e ++ _var_envio -> -> 1 `i `us ]
+"266
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 266:             break;
+[e $U 160  ]
+"267
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 267:         case 16:
+[e :U 178 ]
+"268
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 268:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
+"269
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 269:             tabla_hex((year & 0x0F), &TXREG);
+[e ( _tabla_hex (2 , -> & -> _year `ui -> -> 15 `i `ui `uc &U _TXREG ]
+"270
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 270:             var_envio++;
+[e ++ _var_envio -> -> 1 `i `us ]
+"271
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 271:             break;
+[e $U 160  ]
+"272
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 272:         case 17:
+[e :U 179 ]
+"273
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 273:             PORTAbits.RA2 = 0;
+[e = . . _PORTAbits 0 2 -> -> 0 `i `uc ]
+"274
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 274:             TXREG = 10;
+[e = _TXREG -> -> 10 `i `uc ]
+"275
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 275:             var_envio = 0;
+[e = _var_envio -> -> 0 `i `us ]
+"276
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 276:             TX_EN = 0;
+[e = _TX_EN -> -> 0 `i `uc ]
+"277
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 277:             INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"278
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 278:             INTCONbits.TMR0IE =0;
+[e = . . _INTCONbits 1 3 -> -> 0 `i `uc ]
+"279
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 279:             break;
+[e $U 160  ]
+"280
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 280:     }
+}
+[e $U 160  ]
+[e :U 161 ]
+[e [\ -> _var_envio `ui , $ -> -> 0 `i `ui 162
+ , $ -> -> 1 `i `ui 163
+ , $ -> -> 2 `i `ui 164
+ , $ -> -> 3 `i `ui 165
+ , $ -> -> 4 `i `ui 166
+ , $ -> -> 5 `i `ui 167
+ , $ -> -> 6 `i `ui 168
+ , $ -> -> 7 `i `ui 169
+ , $ -> -> 8 `i `ui 170
+ , $ -> -> 9 `i `ui 171
+ , $ -> -> 10 `i `ui 172
+ , $ -> -> 11 `i `ui 173
+ , $ -> -> 12 `i `ui 174
+ , $ -> -> 13 `i `ui 175
+ , $ -> -> 14 `i `ui 176
+ , $ -> -> 15 `i `ui 177
+ , $ -> -> 16 `i `ui 178
+ , $ -> -> 17 `i `ui 179
+ 160 ]
+[e :U 160 ]
+"281
+[; ;C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c: 281: }
+[e :UE 159 ]
 }

@@ -48,6 +48,7 @@ unsigned short var_envio = 0;
 uint8_t LEDS = 0;
 uint8_t toggle = 0;
 uint8_t enter = 0;
+uint8_t TX_EN = 0;
 //******************************************************************************
 //                          Prototipos de funciones 
 //******************************************************************************
@@ -59,9 +60,10 @@ void envio (void);
 //******************************************************************************
 void __interrupt() isr(void){
     if (INTCONbits.T0IF == 1){
-        TMR0 = 236; //valor del timer para 5ms
-        controles++; //variable de control para el TXIE y el SSP
         INTCONbits.TMR0IF = 0; //limpiar la bandera 
+        TMR0 = 236; //valor del timer para 5ms   
+        controles++; //variable de control para el TXIE y el SSP
+
     }
     if (PIR1bits.TXIF == 1){
         envio(); //rutina que envia los datos de los esclavos por el puerto serial 
@@ -75,21 +77,30 @@ void __interrupt() isr(void){
                 toggle++;
                 break;
             case 1:
+                TX_EN = RCREG;
+                toggle++;
+                break;
+            case 2:
                 enter = RCREG;
                 toggle = 0;
                 break;
         }
         if (enter == 10){
+            if (TX_EN == 51){
+                INTCONbits.TMR0IE = 1;
+            }
             if (LEDS == 49){
                 PORTAbits.RA0 = 1;
                 PORTAbits.RA1 = 0;
-            }else if (LEDS == 50){
+            }
+            if (LEDS == 50){
                 PORTAbits.RA0 = 0;
                 PORTAbits.RA1 = 1;
             }
         }else{
             LEDS = 0;
             enter = 0;
+            TX_EN = 0;
         }
         
     }
@@ -160,7 +171,7 @@ void setup(void) {
     PIE1bits.TXIE = 1; //se activa la interrupcion del TX
     PIR1bits.TXIF = 0; //se limpia la babndera del TX
     PIE1bits.RCIE = 1;
-    PIR1bits.RCIF = 1;
+    PIR1bits.RCIF = 0;
 //****************************** MSSP I2C **************************************
     I2C_Master_Init(100000);
 //******************************************************************************
@@ -174,76 +185,97 @@ void TX_GO (void){ //por cada 10 de control activa el TXIE
 void envio (void){
     switch (var_envio){
         case 0:
+            PORTAbits.RA2 = 1;
             tabla_hex(((horas & 0xF0)>>4), &TXREG);
             var_envio++;
             break;
         case 1:
+            PORTAbits.RA2 = 1;
             tabla_hex((horas & 0x0F), &TXREG);
             var_envio++;
             break;
         case 2:
+            PORTAbits.RA2 = 1;
             TXREG = 58;
             var_envio++;
             break;
         case 3:
+            PORTAbits.RA2 = 1;
             tabla_hex(((minutos & 0xF0)>>4), &TXREG);
             var_envio++;
             break;
         case 4:
+            PORTAbits.RA2 = 1;
             tabla_hex((minutos & 0x0F), &TXREG);
             var_envio++;
             break;
         case 5:
+            PORTAbits.RA2 = 1;
             TXREG = 58;
             var_envio++;
             break;
         case 6:
+            PORTAbits.RA2 = 1;
             tabla_hex(((segundos & 0xF0)>>4), &TXREG);
             var_envio++;
             break;
         case 7:
+            PORTAbits.RA2 = 1;
             tabla_hex((segundos & 0x0F), &TXREG);
             var_envio++;
             break;
         case 8:
+            PORTAbits.RA2 = 1;
             TXREG = 44;
             var_envio++;
             break;
         case 9:
+            PORTAbits.RA2 = 1;
             tabla_hex(((dia & 0xF0)>>4), &TXREG);
             var_envio++;
             break;
         case 10:
+            PORTAbits.RA2 = 1;
             tabla_hex((dia & 0x0F), &TXREG);
             var_envio++;
             break;
         case 11:
+            PORTAbits.RA2 = 1;
             TXREG = 47;
             var_envio++;
             break;
         case 12:
+            PORTAbits.RA2 = 1;
             tabla_hex(((mes & 0xF0)>>4), &TXREG);
             var_envio++;
             break;
         case 13:
+            PORTAbits.RA2 = 1;
             tabla_hex((mes & 0x0F), &TXREG);
             var_envio++;
             break;
         case 14:
+            PORTAbits.RA2 = 1;
             TXREG = 47;
             var_envio++;
             break;
         case 15:
+            PORTAbits.RA2 = 1;
             tabla_hex(((year & 0xF0)>>4), &TXREG);
             var_envio++;
             break;
         case 16:
+            PORTAbits.RA2 = 1;
             tabla_hex((year & 0x0F), &TXREG);
             var_envio++;
             break;
         case 17:
+            PORTAbits.RA2 = 0;
             TXREG = 10;
             var_envio = 0;
+            TX_EN = 0;
+            INTCONbits.T0IF = 0;
+            INTCONbits.TMR0IE =0;
             break;
     }
 }
