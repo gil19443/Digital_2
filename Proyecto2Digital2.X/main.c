@@ -45,7 +45,8 @@ unsigned short dia = 0;
 unsigned short mes = 0;
 unsigned short year = 0;
 unsigned short var_envio = 0;
-uint8_t LEDS = 0;
+uint8_t LED1 = 0;
+uint8_t LED2 = 0;
 uint8_t toggle = 0;
 uint8_t enter = 0;
 uint8_t TX_EN = 0;
@@ -73,14 +74,18 @@ void __interrupt() isr(void){
         PIR1bits.RCIF = 0;
         switch (toggle){
             case 0:
-                LEDS = RCREG;
+                LED1 = RCREG;
                 toggle++;
                 break;
             case 1:
-                TX_EN = RCREG;
+                LED2 = RCREG;
                 toggle++;
                 break;
             case 2:
+                TX_EN = RCREG;
+                toggle++;
+                break;
+            case 3:
                 enter = RCREG;
                 toggle = 0;
                 break;
@@ -89,16 +94,19 @@ void __interrupt() isr(void){
             if (TX_EN == 51){
                 INTCONbits.TMR0IE = 1;
             }
-            if (LEDS == 49){
+            if (LED1 == 53){
                 PORTAbits.RA0 = 1;
+            }else{
+                PORTAbits.RA0 = 0;
+            }
+            if (LED2 == 53){
+                PORTAbits.RA1 = 1;
+            }else{
                 PORTAbits.RA1 = 0;
             }
-            if (LEDS == 50){
-                PORTAbits.RA0 = 0;
-                PORTAbits.RA1 = 1;
-            }
         }else{
-            LEDS = 0;
+            LED1 = 0;
+            LED2 = 0;
             enter = 0;
             TX_EN = 0;
         }
