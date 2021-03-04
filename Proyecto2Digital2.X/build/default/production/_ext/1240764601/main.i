@@ -2945,8 +2945,13 @@ void envio (void){
             var_envio++;
             break;
         case 17:
-            PORTAbits.RA2 = 0;
+            PORTAbits.RA2 = 1;
             TXREG = 10;
+            var_envio++;
+            break;
+        case 18:
+            PORTAbits.RA2 = 0;
+            TXREG = 44;
             var_envio = 0;
             TX_EN = 0;
             INTCONbits.T0IF = 0;

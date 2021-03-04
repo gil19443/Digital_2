@@ -3,8 +3,13 @@
 #include <AdafruitIO.h>
 #include "config.h"
 int toggle = 0;
-char lectura[16] = "";
-char date[7] = "";
+char lectura[18];
+char *segundo;
+char *minuto;
+char *hora1;
+char *checkdate;
+char *hora;
+char *i;
 char leds1;
 char leds2;
 AdafruitIO_Feed *segundos = io.feed("segundos");
@@ -43,53 +48,58 @@ void setup() {
   Serial.println(io.statusText());
 }
 void loop() {
-  concat_fecha();
+  
   // io.run(); is required for all sketches.
   // it should always be present at the top of your loop
   // function. it keeps the client connected to
   // io.adafruit.com, and processes any incoming data.
-  
   io.run();
 
-  // save count to the 'counter' feed on Adafruit IO
-  Serial.print("sending -> ");
-  Serial.println((int(lectura[6]) * 10) + int(lectura[7]));
-  segundos->save((int(lectura[6]) * 10) + int(lectura[7]));
-  Serial.print("sending -> ");
-  Serial.println((int(lectura[3]) * 10) + int(lectura[4]));
-  minutos->save((int(lectura[3]) * 10) + int(lectura[4]));
-  Serial.print("sending -> ");
-  Serial.println((int(lectura[0]) * 10) + int(lectura[1]));
-  horas->save((int(lectura[0]) * 10) + int(lectura[1]));
-  Serial.print("sending -> ");
-  Serial.println(date);
-  fecha->save(date);
+  switch(toggle){
+    case 0:
+        digitalWrite(2, HIGH);
+        Serial.print("sending -> ");
+        Serial.println(String(segundo));
+        write_adafruit (segundos, segundo);
+        Serial.print("sending -> ");
+        Serial.println(String(minuto));
+        write_adafruit (minutos, minuto);
+        toggle++;
+        break;
+    case 1:
+        digitalWrite(2, HIGH);
+        Serial.print("sending -> ");
+        Serial.println(10);
+        write_adafruit (segundos, segundo);
+        Serial.print("sending -> ");
+        Serial.println(String(hora));
+        write_adafruit (horas, hora);
+        toggle++;
+        break;
+    case 2:
+        digitalWrite(2, HIGH);
+        Serial.print("sending -> ");
+        Serial.println(10);
+        write_adafruit (segundos, segundo);
+        Serial.print("sending -> ");
+        Serial.println(String(checkdate));
+        write_adafruit (fecha, checkdate);
+        toggle = 0;
+        break;
+  }
   // Adafruit IO is rate limited for publishing, so a delay is required in
   // between feed->save events. In this example, we will wait three seconds
   // (1000 milliseconds == 1 second) during each loop.
-  delay(8000);
-  digitalWrite(2, HIGH);
-  if (Serial2.available() > 0) {
-    Serial2.write(leds1);
-    Serial2.write(leds2);
-    Serial2.write(51);
-    Serial2.write(10);
-    Serial2.readBytesUntil(10, lectura, 17);
-    Serial.print("los segundos son");
-    Serial.println(lectura[7]);
-
-  }
+  delay(4000);
+  TX_PIC();
+  concat_fecha();
 }
 void concat_fecha (void) {
-  date[0] = lectura[9];
-  date[1] = lectura[10];
-  date[2] = lectura[11];
-  date[3] = lectura[12];
-  date[4] = lectura[13];
-  date[5] = lectura[14];
-  date[6] = lectura[15];
-  date[7] = lectura[16];
-}
+  hora = strtok(lectura, ":");
+  minuto = strtok(NULL, ":");
+  segundo = strtok(NULL, ",");
+  checkdate = strtok(NULL, ",");
+  }
 void handleMessage(AdafruitIO_Data *data) {
   String led1 = data->toString();
   if (led1 == "1"){
@@ -110,5 +120,23 @@ void handleMessage1(AdafruitIO_Data *data) {
   }
   Serial.print("received <- ");
   Serial.println(data->value());
+
+}
+void TX_PIC (void){
+    if (Serial2.available() > 0) {
+    Serial2.write(leds1);
+    Serial2.write(leds2);
+    Serial2.write(51);
+    Serial2.write(10);
+    Serial2.readBytesUntil(44, lectura, 19);
+    Serial.println(lectura);
+    Serial.println(hora);
+    digitalWrite(2, LOW);
+  }
+}
+void write_adafruit (AdafruitIO_Feed *port, char *port1){
+  if (port1 !=NULL){
+      port->save(String(port1));
+  }
 
 }
