@@ -7,29 +7,23 @@ char lectura[8];
 char leds1;
 char leds2;
 int EN;
-AdafruitIO_Feed *segundos = io.feed("segundos");
-AdafruitIO_Feed *minutos = io.feed("minutos");
-AdafruitIO_Feed *horas = io.feed("horas");
-AdafruitIO_Feed *fecha = io.feed("fecha");
-AdafruitIO_Feed *LED1 = io.feed("LED1");
-AdafruitIO_Feed *LED2 = io.feed("LED2");
-void concat_fecha (void);
+AdafruitIO_Feed *horas = io.feed("horas"); //feed que muestra la hora 
+AdafruitIO_Feed *LED1 = io.feed("LED1"); //feed que escribe en una de las luces piloto 
+AdafruitIO_Feed *LED2 = io.feed("LED2"); //feed que escribe en otra de las luces piloto 
 void setup() {
-  pinMode(2, OUTPUT);
-  Serial.begin(9600);
-  Serial2.begin(9600, SERIAL_8N1, RXD2, TXD2);
-  // start the serial connection
-  // wait for serial monitor to open
-  while (! Serial);
+  pinMode(2, OUTPUT); //LED interno del ESP32 como salida para que sirva como indicador 
+  Serial.begin(9600); //se inicializa el Serial entre el ESP32 y la computadora
+  Serial2.begin(9600, SERIAL_8N1, RXD2, TXD2); //se inicializa el Serial2 para comunicar el ESP32 con el PIC16F887
+  while (! Serial); //esperar el serial 
 
   Serial.print("Connecting to Adafruit IO");
 
   // connect to io.adafruit.com
   io.connect();
-  LED1->onMessage(handleMessage);
+  LED1->onMessage(handleMessage); //rutinas que reciben y traducen los valores que se mandan de la plataforma 
   LED2->onMessage(handleMessage1);
   // wait for a connection
-  while (io.status() < AIO_CONNECTED) {
+  while (io.status() < AIO_CONNECTED) { //espera a que se concecte con Adafruit 
     Serial.print(".");
     delay(500);
   }
@@ -48,26 +42,26 @@ void loop() {
   // function. it keeps the client connected to
   // io.adafruit.com, and processes any incoming data.
   io.run();
-  digitalWrite(2, HIGH);
+  digitalWrite(2, HIGH); //Encender indicador LED como indicador de comunicacion con Adafruit 
   Serial.print("sending -> ");
-  Serial.println(lectura);
-  if (EN == 1){
-    horas->save(lectura);
+  Serial.println(lectura); //imprimir el valor que se recibe del PIC en el puerto serial 
+  if (EN == 1){ //verificacion de datos 
+    horas->save(lectura); // si los datos estan en el orden correcto, enviar el valor recibido al feed horas
   }
-  delay(2200);
-  digitalWrite(2, LOW);
-  if (Serial2.available() > 0) {
-    Serial2.write(leds1);
+  delay(2200); //esperar 2.2ms ya que por la version gratis de adafruit solo se puede enviar un dato cada 2seg
+  digitalWrite(2, LOW); //apagar indicador LED de comuniacion con Adafruit 
+  if (Serial2.available() > 0) { //secion de envio y recepcion UART con el PIC 
+    Serial2.write(leds1); //se escribe una cadena de 4 bytes en el orden mencionado 
     Serial2.write(leds2);
-    Serial2.write(1);
-    Serial2.write(10);
-    Serial2.readBytesUntil(10, lectura, 8);
-    correccion();
+    Serial2.write(1); //dato que le dice al PIC que el ESP32 esta dispuesto a escuchar los datos del puerto serial 
+    Serial2.write(10); //caracter para verificar el orden en el PIC
+    Serial2.readBytesUntil(10, lectura, 8); //rutina que lee 8 bytes hasta el caracter "n" y lo guarda en el arreglo llamado lectura 
+    correccion(); //rutina que verifica el orden de los datos para verificar el ENABLE 
   }
         
 }
 void handleMessage(AdafruitIO_Data *data) {
-  if (data->toString() == "1"){
+  if (data->toString() == "1"){ //verifica el dato recibido del feed LED1 para asignar un valor a una variable que se envia el PIC
     leds1 = 53;
   }else{
     leds1 = 0;
@@ -77,7 +71,7 @@ void handleMessage(AdafruitIO_Data *data) {
 
 }
 void handleMessage1(AdafruitIO_Data *data) {
-  if (data->toString() == "1"){
+  if (data->toString() == "1"){ //verifica el dato recibido del feed LED1 para asignar un valor a una variable que se envia el PIC
       leds2 = 53;
   }else{
       leds2 = 0;
@@ -86,9 +80,9 @@ void handleMessage1(AdafruitIO_Data *data) {
   Serial.println(data->value());
 
 }
-void correccion(void){
-  if (lectura[2] == ':' && lectura[5] == ':'){
-      EN = 1;
+void correccion(void){ //rutina de correcion 
+  if (lectura[2] == ':' && lectura[5] == ':'){ //por el formato de hora se sabe que se envio de la forma HH:MM:SS de modo deben haber 
+      EN = 1; //: en las posiciones 2 y 5 del buffer que se leyo 
   }else{
       EN = 0;   
   }

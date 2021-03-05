@@ -55,7 +55,6 @@ uint8_t TX_EN = 0;
 //******************************************************************************
 void setup(void);
 void TX_GO (void);
-void envio (void);
 void envio_nuevo (void);
 //******************************************************************************
 //                          interrupciones 
@@ -136,20 +135,20 @@ void main(void) {
     //                             mian loop
     //**************************************************************************
     while (1) {
-        TX_GO(); //
-        I2C_Master_Start();
-        I2C_Master_Write(0xD0);
-        I2C_Master_Write(0);
-        I2C_Master_RepeatedStart();
-        I2C_Master_Write(0xD1);
-        segundos = I2C_Master_Read(1);
-        minutos = I2C_Master_Read(1);
+        TX_GO(); //rutina que activa la interrupcion del TX cada 50ms
+        I2C_Master_Start(); //inicia comunicacion I2C
+        I2C_Master_Write(0xD0); //address del slave y bit 0 para escribir 
+        I2C_Master_Write(0); //colocar el puntero en la direccion 0 del RTC
+        I2C_Master_RepeatedStart(); //reiniciar la comunicacion 
+        I2C_Master_Write(0xD1); //address del slave y bit 1 para leer
+        segundos = I2C_Master_Read(1); //leer desde la posiscion 0 los 
+        minutos = I2C_Master_Read(1); //valores que manda el slave 
         horas = I2C_Master_Read(1);
         dia_S = I2C_Master_Read(1);
         dia = I2C_Master_Read(1);
         mes = I2C_Master_Read(1);
-        year = I2C_Master_Read(0);
-        I2C_Master_Stop();
+        year = I2C_Master_Read(0); //A negado para indicar que se termino de leer 
+        I2C_Master_Stop(); //se finaliza la comunicacion 
     }
 }
 
@@ -192,12 +191,13 @@ void TX_GO (void){ //por cada 10 de control activa el TXIE
         PIE1bits.TXIE = 1;
     }
 }
-void envio (void){
+
+void envio_nuevo (void){ //toggle de envio 
     switch (var_envio){
         case 0:
-            PORTAbits.RA2 = 1;
-            tabla_hex(((horas & 0xF0)>>4), &TXREG);
-            var_envio++;
+            PORTAbits.RA2 = 1; //indicador LED de que inicio el proceso de envio 
+            tabla_hex(((horas & 0xF0)>>4), &TXREG); //se envian los segundos 
+            var_envio++; //en hex, es valido hacerlo ya que el RTC maneja los datos en BCD
             break;
         case 1:
             PORTAbits.RA2 = 1;
@@ -205,14 +205,14 @@ void envio (void){
             var_envio++;
             break;
         case 2:
-            PORTAbits.RA2 = 1;
+            PORTAbits.RA2 = 1; //separador de : 
             TXREG = 58;
             var_envio++;
             break;
         case 3:
-            PORTAbits.RA2 = 1;
-            tabla_hex(((minutos & 0xF0)>>4), &TXREG);
-            var_envio++;
+            PORTAbits.RA2 = 1; 
+            tabla_hex(((minutos & 0xF0)>>4), &TXREG); //se envian los minutos  
+            var_envio++; //en hex, es valido hacerlo ya que el RTC maneja los datos en BCD
             break;
         case 4:
             PORTAbits.RA2 = 1;
@@ -221,12 +221,12 @@ void envio (void){
             break;
         case 5:
             PORTAbits.RA2 = 1;
-            TXREG = 58;
-            var_envio++;
+            TXREG = 58; //separador :
+            var_envio++; 
             break;
         case 6:
-            PORTAbits.RA2 = 1;
-            tabla_hex(((segundos & 0xF0)>>4), &TXREG);
+            PORTAbits.RA2 = 1; //se envian los segundos 
+            tabla_hex(((segundos & 0xF0)>>4), &TXREG); //en hex, es valido hacerlo ya que el RTC maneja los datos en BCD
             var_envio++;
             break;
         case 7:
@@ -235,114 +235,12 @@ void envio (void){
             var_envio++;
             break;
         case 8:
-            PORTAbits.RA2 = 1;
-            TXREG = 44;
-            var_envio++;
-            break;
-        case 9:
-            PORTAbits.RA2 = 1;
-            tabla_hex(((dia & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 10:
-            PORTAbits.RA2 = 1;
-            tabla_hex((dia & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 11:
-            PORTAbits.RA2 = 1;
-            TXREG = 47;
-            var_envio++;
-            break;
-        case 12:
-            PORTAbits.RA2 = 1;
-            tabla_hex(((mes & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 13:
-            PORTAbits.RA2 = 1;
-            tabla_hex((mes & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 14:
-            PORTAbits.RA2 = 1;
-            TXREG = 47;
-            var_envio++;
-            break;
-        case 15:
-            PORTAbits.RA2 = 1;
-            tabla_hex(((year & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 16:
-            PORTAbits.RA2 = 1;
-            tabla_hex((year & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 17:
-            PORTAbits.RA2 = 1;
-            TXREG = 10;
-            var_envio++;
-            break;
-        case 18:
-            PORTAbits.RA2 = 0;
-            TXREG = 44;
-            var_envio = 0;
-            TX_EN = 0;
-            INTCONbits.T0IF = 0;
-            INTCONbits.TMR0IE =0;
-            break;
-    }
-}
-void envio_nuevo (void){
-    switch (var_envio){
-        case 0:
-            PORTAbits.RA2 = 1;
-            tabla_hex(((horas & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 1:
-            PORTAbits.RA2 = 1;
-            tabla_hex((horas & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 2:
-            PORTAbits.RA2 = 1;
-            TXREG = 58;
-            var_envio++;
-            break;
-        case 3:
-            PORTAbits.RA2 = 1;
-            tabla_hex(((minutos & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 4:
-            PORTAbits.RA2 = 1;
-            tabla_hex((minutos & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 5:
-            PORTAbits.RA2 = 1;
-            TXREG = 58;
-            var_envio++;
-            break;
-        case 6:
-            PORTAbits.RA2 = 1;
-            tabla_hex(((segundos & 0xF0)>>4), &TXREG);
-            var_envio++;
-            break;
-        case 7:
-            PORTAbits.RA2 = 1;
-            tabla_hex((segundos & 0x0F), &TXREG);
-            var_envio++;
-            break;
-        case 8:
-            PORTAbits.RA2 = 0;
-            TXREG = 10;
-            var_envio = 0;
-            TX_EN = 0;
-            INTCONbits.T0IF = 0;
-            INTCONbits.TMR0IE =0;
+            PORTAbits.RA2 = 0; //se apaga el indicador de la transmision 
+            TXREG = 10; //se manda un \n
+            var_envio = 0; //se limpia la variable del switch case
+            TX_EN = 0; //se limpia la bandera que habilita el envio de datos 
+            INTCONbits.T0IF = 0; //se bloquea la interrupcion hasta que el ESP32
+            INTCONbits.TMR0IE =0; //vuelva a confirmar que desea leer 
             break;
     }
 }
