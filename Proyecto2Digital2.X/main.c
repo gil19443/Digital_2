@@ -56,6 +56,7 @@ uint8_t TX_EN = 0;
 void setup(void);
 void TX_GO (void);
 void envio (void);
+void envio_nuevo (void);
 //******************************************************************************
 //                          interrupciones 
 //******************************************************************************
@@ -67,7 +68,7 @@ void __interrupt() isr(void){
 
     }
     if (PIR1bits.TXIF == 1){
-        envio(); //rutina que envia los datos de los esclavos por el puerto serial 
+        envio_nuevo(); //rutina que envia los datos de los esclavos por el puerto serial 
         PIE1bits.TXIE = 0;  //se limpia el enable de la interrupcion del TXREG
     }
     if (PIR1bits.RCIF == 1){
@@ -91,7 +92,7 @@ void __interrupt() isr(void){
                 break;
         }
         if (enter == 10){
-            if (TX_EN == 51){
+            if (TX_EN == 1){
                 INTCONbits.TMR0IE = 1;
             }
             if (LED1 == 53){
@@ -285,6 +286,58 @@ void envio (void){
         case 18:
             PORTAbits.RA2 = 0;
             TXREG = 44;
+            var_envio = 0;
+            TX_EN = 0;
+            INTCONbits.T0IF = 0;
+            INTCONbits.TMR0IE =0;
+            break;
+    }
+}
+void envio_nuevo (void){
+    switch (var_envio){
+        case 0:
+            PORTAbits.RA2 = 1;
+            tabla_hex(((horas & 0xF0)>>4), &TXREG);
+            var_envio++;
+            break;
+        case 1:
+            PORTAbits.RA2 = 1;
+            tabla_hex((horas & 0x0F), &TXREG);
+            var_envio++;
+            break;
+        case 2:
+            PORTAbits.RA2 = 1;
+            TXREG = 58;
+            var_envio++;
+            break;
+        case 3:
+            PORTAbits.RA2 = 1;
+            tabla_hex(((minutos & 0xF0)>>4), &TXREG);
+            var_envio++;
+            break;
+        case 4:
+            PORTAbits.RA2 = 1;
+            tabla_hex((minutos & 0x0F), &TXREG);
+            var_envio++;
+            break;
+        case 5:
+            PORTAbits.RA2 = 1;
+            TXREG = 58;
+            var_envio++;
+            break;
+        case 6:
+            PORTAbits.RA2 = 1;
+            tabla_hex(((segundos & 0xF0)>>4), &TXREG);
+            var_envio++;
+            break;
+        case 7:
+            PORTAbits.RA2 = 1;
+            tabla_hex((segundos & 0x0F), &TXREG);
+            var_envio++;
+            break;
+        case 8:
+            PORTAbits.RA2 = 0;
+            TXREG = 10;
             var_envio = 0;
             TX_EN = 0;
             INTCONbits.T0IF = 0;

@@ -11,33 +11,33 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
+$C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 12 12 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Proyecto2Digital2.X.production.o
 cinit CODE 0 15 15 E 2
-text1 CODE 0 441 441 44 2
-text2 CODE 0 4F2 4F2 14 2
-text3 CODE 0 3EA 3EA 57 2
-text4 CODE 0 485 485 3B 2
-text5 CODE 0 382 382 68 2
-text6 CODE 0 513 513 B 2
-text7 CODE 0 51E 51E A 2
-text8 CODE 0 528 528 9 2
-text9 CODE 0 531 531 9 2
-text10 CODE 0 53A 53A 9 2
-text11 CODE 0 4C0 4C0 32 2
-text12 CODE 0 506 506 D 2
-text13 CODE 0 306 306 7C 2
-text14 CODE 0 23 23 15F 2
-text15 CODE 0 182 182 DD 2
-maintext CODE 0 25F 25F A7 2
+text1 CODE 0 393 393 44 2
+text2 CODE 0 444 444 14 2
+text3 CODE 0 33C 33C 57 2
+text4 CODE 0 3D7 3D7 3B 2
+text5 CODE 0 2D4 2D4 68 2
+text6 CODE 0 465 465 B 2
+text7 CODE 0 470 470 A 2
+text8 CODE 0 47A 47A 9 2
+text9 CODE 0 483 483 9 2
+text10 CODE 0 48C 48C 9 2
+text11 CODE 0 412 412 32 2
+text12 CODE 0 458 458 D 2
+text13 CODE 0 259 259 7B 2
+text14 CODE 0 100 100 B2 2
+text15 CODE 0 23 23 DD 2
+maintext CODE 0 1B2 1B2 A7 2
 cstackCOMMON COMMON 1 70 70 D 1
 cstackBANK0 BANK0 1 20 20 16 1
 intentry CODE 0 4 4 E 2
 bssBANK0 BANK0 1 36 36 15 1
-clrtext CODE 0 543 543 8 2
+clrtext CODE 0 495 495 8 2
 bssCOMMON COMMON 1 7D 7D 1 1
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
@@ -55,22 +55,22 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 54B-1FFF 2
+CONST 49D-1FFF 2
 ENTRY 3-3 2
-ENTRY 54B-1FFF 2
+ENTRY 49D-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 54B-1FFF 2
+CODE 49D-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 54B-1FFF 2
+STRCODE 49D-1FFF 2
 STRING 3-3 2
-STRING 54B-1FFF 2
+STRING 49D-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -85,334 +85,299 @@ STRING 54B-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Proyecto2Digital2.X.production.o
-15 cinit CODE >1158:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-15 cinit CODE >1161:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-15 cinit CODE >1229:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-16 cinit CODE >1232:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-17 cinit CODE >1233:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-18 cinit CODE >1234:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-19 cinit CODE >1235:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-1A cinit CODE >1236:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-1F cinit CODE >1242:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-1F cinit CODE >1244:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-20 cinit CODE >1245:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-4 intentry CODE >62:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-182 text15 CODE >11:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-183 text15 CODE >12:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-184 text15 CODE >14:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-18D text15 CODE >15:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-18E text15 CODE >17:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-197 text15 CODE >18:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-198 text15 CODE >20:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1A1 text15 CODE >21:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1A2 text15 CODE >23:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1AB text15 CODE >24:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1AC text15 CODE >26:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1B5 text15 CODE >27:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1B6 text15 CODE >29:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1BF text15 CODE >30:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1C0 text15 CODE >32:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1C9 text15 CODE >33:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1CA text15 CODE >35:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1D3 text15 CODE >36:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1D4 text15 CODE >38:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1DD text15 CODE >39:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1DE text15 CODE >41:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1E7 text15 CODE >42:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1E8 text15 CODE >44:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1F1 text15 CODE >45:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1F2 text15 CODE >47:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1FB text15 CODE >48:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-1FC text15 CODE >50:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-205 text15 CODE >51:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-206 text15 CODE >53:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-20F text15 CODE >54:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-210 text15 CODE >56:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-219 text15 CODE >57:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-21A text15 CODE >59:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-223 text15 CODE >60:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-224 text15 CODE >65:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-25E text15 CODE >67:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
-23 text14 CODE >193:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-23 text14 CODE >194:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-24 text14 CODE >195:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-24 text14 CODE >196:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-25 text14 CODE >197:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-3B text14 CODE >198:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-43 text14 CODE >199:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-44 text14 CODE >200:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-44 text14 CODE >201:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-45 text14 CODE >202:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-51 text14 CODE >205:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-51 text14 CODE >206:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-52 text14 CODE >207:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-54 text14 CODE >208:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-5A text14 CODE >209:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-5B text14 CODE >210:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-5B text14 CODE >211:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-5C text14 CODE >212:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-73 text14 CODE >215:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-73 text14 CODE >216:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-74 text14 CODE >217:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-80 text14 CODE >220:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-80 text14 CODE >221:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-82 text14 CODE >225:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-82 text14 CODE >226:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-83 text14 CODE >227:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-9A text14 CODE >230:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-9A text14 CODE >231:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-9B text14 CODE >232:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-A7 text14 CODE >235:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-A7 text14 CODE >236:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-A8 text14 CODE >237:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-AA text14 CODE >238:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-B0 text14 CODE >239:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-B1 text14 CODE >240:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-B1 text14 CODE >241:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-B2 text14 CODE >242:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-C9 text14 CODE >245:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-C9 text14 CODE >246:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-CA text14 CODE >247:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-D6 text14 CODE >250:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-D6 text14 CODE >251:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-D7 text14 CODE >252:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-D9 text14 CODE >253:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-DF text14 CODE >254:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-E0 text14 CODE >255:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-E0 text14 CODE >256:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-E1 text14 CODE >257:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-F8 text14 CODE >260:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-F8 text14 CODE >261:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-F9 text14 CODE >262:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-105 text14 CODE >265:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-105 text14 CODE >266:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-107 text14 CODE >270:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-107 text14 CODE >271:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-108 text14 CODE >272:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-11F text14 CODE >275:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-11F text14 CODE >276:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-120 text14 CODE >277:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-12C text14 CODE >280:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-12C text14 CODE >281:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-12D text14 CODE >282:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-12F text14 CODE >283:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-135 text14 CODE >284:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-136 text14 CODE >285:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-136 text14 CODE >286:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-137 text14 CODE >287:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-139 text14 CODE >288:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-13B text14 CODE >289:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-13C text14 CODE >290:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-13D text14 CODE >291:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-13E text14 CODE >292:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-13F text14 CODE >293:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-181 text14 CODE >294:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-306 text13 CODE >62:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-306 text13 CODE >63:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-30A text13 CODE >64:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-30B text13 CODE >65:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-30D text13 CODE >66:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-311 text13 CODE >69:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-315 text13 CODE >70:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-31A text13 CODE >71:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-31D text13 CODE >73:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-322 text13 CODE >74:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-323 text13 CODE >75:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-324 text13 CODE >77:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-328 text13 CODE >78:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-32C text13 CODE >79:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-32D text13 CODE >81:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-332 text13 CODE >85:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-337 text13 CODE >89:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-33B text13 CODE >90:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-33C text13 CODE >91:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-33D text13 CODE >92:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-353 text13 CODE >93:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-359 text13 CODE >94:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-35F text13 CODE >95:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-360 text13 CODE >97:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-366 text13 CODE >98:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-367 text13 CODE >99:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-368 text13 CODE >100:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-369 text13 CODE >102:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-36F text13 CODE >103:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-370 text13 CODE >104:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-371 text13 CODE >105:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-373 text13 CODE >108:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-374 text13 CODE >109:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-375 text13 CODE >110:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-376 text13 CODE >111:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-377 text13 CODE >115:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-506 text12 CODE >34:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-506 text12 CODE >36:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-512 text12 CODE >37:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4C0 text11 CODE >76:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4C0 text11 CODE >79:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4C5 text11 CODE >80:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4C8 text11 CODE >81:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4CD text11 CODE >82:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4D6 text11 CODE >83:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4DB text11 CODE >84:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4E3 text11 CODE >85:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4E6 text11 CODE >86:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4E7 text11 CODE >87:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4EA text11 CODE >88:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4EA text11 CODE >89:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4EB text11 CODE >90:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4F1 text11 CODE >91:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-53A text10 CODE >49:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-53A text10 CODE >51:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-53F text10 CODE >52:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-542 text10 CODE >53:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-531 text9 CODE >41:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-531 text9 CODE >43:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-536 text9 CODE >44:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-539 text9 CODE >45:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-528 text8 CODE >57:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-528 text8 CODE >59:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-52D text8 CODE >60:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-530 text8 CODE >61:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-51E text7 CODE >67:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-51E text7 CODE >69:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-523 text7 CODE >70:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-527 text7 CODE >71:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-513 text6 CODE >187:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-513 text6 CODE >188:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-519 text6 CODE >189:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-51A text6 CODE >190:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-51D text6 CODE >192:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-382 text5 CODE >5:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-382 text5 CODE >13:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-38C text5 CODE >14:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-394 text5 CODE >15:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-396 text5 CODE >16:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-397 text5 CODE >17:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-3A0 text5 CODE >18:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-3A4 text5 CODE >16:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-3A8 text5 CODE >21:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-3B1 text5 CODE >22:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-3C3 text5 CODE >23:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-3D1 text5 CODE >24:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-3D2 text5 CODE >26:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-3DB text5 CODE >27:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-3E1 text5 CODE >29:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-3E9 text5 CODE >30:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
-485 text4 CODE >17:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-485 text4 CODE >19:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-489 text4 CODE >20:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-48C text4 CODE >21:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-48D text4 CODE >22:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4BC text4 CODE >23:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4BD text4 CODE >24:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4BE text4 CODE >25:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-4BF text4 CODE >26:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
-3EA text3 CODE >8:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3ED text3 CODE >9:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3EE text3 CODE >10:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3EE text3 CODE >11:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3F1 text3 CODE >12:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3F2 text3 CODE >13:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3F3 text3 CODE >14:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3F4 text3 CODE >15:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3F4 text3 CODE >16:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3F7 text3 CODE >17:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3F8 text3 CODE >18:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3F9 text3 CODE >19:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3FA text3 CODE >20:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3FA text3 CODE >21:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3FD text3 CODE >22:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3FE text3 CODE >23:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-3FF text3 CODE >24:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-400 text3 CODE >25:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-400 text3 CODE >26:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-403 text3 CODE >27:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-404 text3 CODE >28:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-405 text3 CODE >29:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-406 text3 CODE >30:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-406 text3 CODE >31:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-409 text3 CODE >32:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-40A text3 CODE >33:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-40B text3 CODE >34:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-40C text3 CODE >35:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-40C text3 CODE >36:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-40F text3 CODE >37:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-410 text3 CODE >38:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-411 text3 CODE >39:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-412 text3 CODE >40:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-412 text3 CODE >41:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-415 text3 CODE >42:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-416 text3 CODE >43:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-417 text3 CODE >44:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-418 text3 CODE >45:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-418 text3 CODE >46:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-41B text3 CODE >47:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-41C text3 CODE >48:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-41D text3 CODE >49:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-41E text3 CODE >50:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-440 text3 CODE >51:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
-4F2 text2 CODE >12:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-4F2 text2 CODE >13:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-4F5 text2 CODE >14:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-4F6 text2 CODE >15:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-4F7 text2 CODE >16:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-4FA text2 CODE >17:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-4FE text2 CODE >18:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-4FF text2 CODE >19:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-500 text2 CODE >20:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-503 text2 CODE >21:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-504 text2 CODE >22:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-505 text2 CODE >23:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
-441 text1 CODE >159:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-441 text1 CODE >160:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-446 text1 CODE >161:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-44C text1 CODE >162:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-450 text1 CODE >163:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-453 text1 CODE >164:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-454 text1 CODE >165:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-457 text1 CODE >166:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-458 text1 CODE >167:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-45B text1 CODE >168:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-45E text1 CODE >169:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-461 text1 CODE >170:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-464 text1 CODE >171:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-465 text1 CODE >172:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-468 text1 CODE >173:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-469 text1 CODE >175:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-46A text1 CODE >176:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-46B text1 CODE >177:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-46C text1 CODE >178:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-46D text1 CODE >179:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-46E text1 CODE >180:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-471 text1 CODE >181:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-474 text1 CODE >182:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-477 text1 CODE >184:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-484 text1 CODE >186:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-25F maintext CODE >120:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-25F maintext CODE >121:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-264 maintext CODE >137:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-269 maintext CODE >138:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-26E maintext CODE >139:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-279 maintext CODE >140:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-283 maintext CODE >141:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-288 maintext CODE >142:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-293 maintext CODE >143:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-2A4 maintext CODE >144:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-2B3 maintext CODE >145:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-2C2 maintext CODE >146:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-2D1 maintext CODE >147:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-2E0 maintext CODE >148:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-2EF maintext CODE >149:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-2FD maintext CODE >150:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
-543 clrtext CODE >1216:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-543 clrtext CODE >1217:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-544 clrtext CODE >1218:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-544 clrtext CODE >1219:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-545 clrtext CODE >1220:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-546 clrtext CODE >1221:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-547 clrtext CODE >1222:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-548 clrtext CODE >1223:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-549 clrtext CODE >1224:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
-54A clrtext CODE >1225:C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.s
+15 cinit CODE >1158:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+15 cinit CODE >1161:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+15 cinit CODE >1229:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+16 cinit CODE >1232:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+17 cinit CODE >1233:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+18 cinit CODE >1234:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+19 cinit CODE >1235:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+1A cinit CODE >1236:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+1F cinit CODE >1242:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+1F cinit CODE >1244:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+20 cinit CODE >1245:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+4 intentry CODE >63:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+23 text15 CODE >11:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+24 text15 CODE >12:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+25 text15 CODE >14:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+2E text15 CODE >15:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+2F text15 CODE >17:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+38 text15 CODE >18:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+39 text15 CODE >20:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+42 text15 CODE >21:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+43 text15 CODE >23:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+4C text15 CODE >24:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+4D text15 CODE >26:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+56 text15 CODE >27:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+57 text15 CODE >29:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+60 text15 CODE >30:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+61 text15 CODE >32:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+6A text15 CODE >33:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+6B text15 CODE >35:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+74 text15 CODE >36:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+75 text15 CODE >38:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+7E text15 CODE >39:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+7F text15 CODE >41:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+88 text15 CODE >42:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+89 text15 CODE >44:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+92 text15 CODE >45:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+93 text15 CODE >47:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+9C text15 CODE >48:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+9D text15 CODE >50:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+A6 text15 CODE >51:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+A7 text15 CODE >53:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+B0 text15 CODE >54:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+B1 text15 CODE >56:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+BA text15 CODE >57:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+BB text15 CODE >59:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+C4 text15 CODE >60:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+C5 text15 CODE >65:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+FF text15 CODE >67:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/TablaACSII_HEX.c
+100 text14 CODE >296:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+100 text14 CODE >297:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+101 text14 CODE >298:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+101 text14 CODE >299:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+102 text14 CODE >300:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+118 text14 CODE >301:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+120 text14 CODE >302:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+121 text14 CODE >303:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+121 text14 CODE >304:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+122 text14 CODE >305:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+12E text14 CODE >308:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+12E text14 CODE >309:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+12F text14 CODE >310:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+131 text14 CODE >311:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+137 text14 CODE >312:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+138 text14 CODE >313:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+138 text14 CODE >314:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+139 text14 CODE >315:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+150 text14 CODE >318:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+150 text14 CODE >319:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+151 text14 CODE >320:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+15D text14 CODE >323:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+15D text14 CODE >324:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+15F text14 CODE >328:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+15F text14 CODE >329:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+160 text14 CODE >330:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+177 text14 CODE >333:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+177 text14 CODE >334:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+178 text14 CODE >335:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+184 text14 CODE >338:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+184 text14 CODE >339:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+185 text14 CODE >340:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+187 text14 CODE >341:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+189 text14 CODE >342:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+18A text14 CODE >343:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+18B text14 CODE >344:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+18C text14 CODE >345:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+18D text14 CODE >346:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+1B1 text14 CODE >347:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+259 text13 CODE >63:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+259 text13 CODE >64:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+25D text13 CODE >65:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+25E text13 CODE >66:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+260 text13 CODE >67:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+264 text13 CODE >70:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+268 text13 CODE >71:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+26D text13 CODE >72:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+270 text13 CODE >74:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+275 text13 CODE >75:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+276 text13 CODE >76:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+277 text13 CODE >78:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+27B text13 CODE >79:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+27F text13 CODE >80:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+280 text13 CODE >82:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+285 text13 CODE >86:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+28A text13 CODE >90:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+28E text13 CODE >91:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+28F text13 CODE >92:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+290 text13 CODE >93:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2A6 text13 CODE >94:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2AC text13 CODE >95:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2B1 text13 CODE >96:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2B2 text13 CODE >98:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2B8 text13 CODE >99:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2B9 text13 CODE >100:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2BA text13 CODE >101:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2BB text13 CODE >103:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2C1 text13 CODE >104:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2C2 text13 CODE >105:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2C3 text13 CODE >106:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2C5 text13 CODE >109:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2C6 text13 CODE >110:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2C7 text13 CODE >111:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2C8 text13 CODE >112:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2C9 text13 CODE >116:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+458 text12 CODE >34:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+458 text12 CODE >36:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+464 text12 CODE >37:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+412 text11 CODE >76:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+412 text11 CODE >79:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+417 text11 CODE >80:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+41A text11 CODE >81:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+41F text11 CODE >82:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+428 text11 CODE >83:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+42D text11 CODE >84:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+435 text11 CODE >85:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+438 text11 CODE >86:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+439 text11 CODE >87:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+43C text11 CODE >88:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+43C text11 CODE >89:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+43D text11 CODE >90:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+443 text11 CODE >91:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+48C text10 CODE >49:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+48C text10 CODE >51:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+491 text10 CODE >52:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+494 text10 CODE >53:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+483 text9 CODE >41:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+483 text9 CODE >43:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+488 text9 CODE >44:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+48B text9 CODE >45:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+47A text8 CODE >57:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+47A text8 CODE >59:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+47F text8 CODE >60:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+482 text8 CODE >61:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+470 text7 CODE >67:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+470 text7 CODE >69:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+475 text7 CODE >70:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+479 text7 CODE >71:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+465 text6 CODE >188:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+465 text6 CODE >189:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+46B text6 CODE >190:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+46C text6 CODE >191:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+46F text6 CODE >193:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+2D4 text5 CODE >5:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+2D4 text5 CODE >13:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+2DE text5 CODE >14:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+2E6 text5 CODE >15:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+2E8 text5 CODE >16:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+2E9 text5 CODE >17:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+2F2 text5 CODE >18:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+2F6 text5 CODE >16:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+2FA text5 CODE >21:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+303 text5 CODE >22:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+315 text5 CODE >23:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+323 text5 CODE >24:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+324 text5 CODE >26:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+32D text5 CODE >27:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+333 text5 CODE >29:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+33B text5 CODE >30:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\__lldiv.c
+3D7 text4 CODE >17:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+3D7 text4 CODE >19:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+3DB text4 CODE >20:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+3DE text4 CODE >21:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+3DF text4 CODE >22:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+40E text4 CODE >23:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+40F text4 CODE >24:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+410 text4 CODE >25:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+411 text4 CODE >26:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/I2C.c
+33C text3 CODE >8:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+33F text3 CODE >9:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+340 text3 CODE >10:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+340 text3 CODE >11:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+343 text3 CODE >12:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+344 text3 CODE >13:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+345 text3 CODE >14:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+346 text3 CODE >15:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+346 text3 CODE >16:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+349 text3 CODE >17:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+34A text3 CODE >18:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+34B text3 CODE >19:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+34C text3 CODE >20:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+34C text3 CODE >21:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+34F text3 CODE >22:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+350 text3 CODE >23:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+351 text3 CODE >24:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+352 text3 CODE >25:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+352 text3 CODE >26:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+355 text3 CODE >27:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+356 text3 CODE >28:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+357 text3 CODE >29:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+358 text3 CODE >30:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+358 text3 CODE >31:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+35B text3 CODE >32:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+35C text3 CODE >33:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+35D text3 CODE >34:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+35E text3 CODE >35:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+35E text3 CODE >36:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+361 text3 CODE >37:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+362 text3 CODE >38:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+363 text3 CODE >39:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+364 text3 CODE >40:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+364 text3 CODE >41:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+367 text3 CODE >42:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+368 text3 CODE >43:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+369 text3 CODE >44:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+36A text3 CODE >45:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+36A text3 CODE >46:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+36D text3 CODE >47:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+36E text3 CODE >48:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+36F text3 CODE >49:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+370 text3 CODE >50:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+392 text3 CODE >51:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/librerias2.c
+444 text2 CODE >12:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+444 text2 CODE >13:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+447 text2 CODE >14:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+448 text2 CODE >15:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+449 text2 CODE >16:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+44C text2 CODE >17:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+450 text2 CODE >18:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+451 text2 CODE >19:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+452 text2 CODE >20:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+455 text2 CODE >21:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+456 text2 CODE >22:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+457 text2 CODE >23:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/usart9600.c
+393 text1 CODE >160:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+393 text1 CODE >161:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+398 text1 CODE >162:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+39E text1 CODE >163:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3A2 text1 CODE >164:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3A5 text1 CODE >165:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3A6 text1 CODE >166:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3A9 text1 CODE >167:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3AA text1 CODE >168:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3AD text1 CODE >169:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3B0 text1 CODE >170:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3B3 text1 CODE >171:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3B6 text1 CODE >172:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3B7 text1 CODE >173:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3BA text1 CODE >174:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3BB text1 CODE >176:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3BC text1 CODE >177:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3BD text1 CODE >178:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3BE text1 CODE >179:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3BF text1 CODE >180:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3C0 text1 CODE >181:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3C3 text1 CODE >182:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3C6 text1 CODE >183:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3C9 text1 CODE >185:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+3D6 text1 CODE >187:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+1B2 maintext CODE >121:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+1B2 maintext CODE >122:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+1B7 maintext CODE >138:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+1BC maintext CODE >139:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+1C1 maintext CODE >140:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+1CC maintext CODE >141:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+1D6 maintext CODE >142:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+1DB maintext CODE >143:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+1E6 maintext CODE >144:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+1F7 maintext CODE >145:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+206 maintext CODE >146:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+215 maintext CODE >147:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+224 maintext CODE >148:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+233 maintext CODE >149:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+242 maintext CODE >150:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+250 maintext CODE >151:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
+495 clrtext CODE >1216:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+495 clrtext CODE >1217:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+496 clrtext CODE >1218:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+496 clrtext CODE >1219:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+497 clrtext CODE >1220:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+498 clrtext CODE >1221:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+499 clrtext CODE >1222:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+49A clrtext CODE >1223:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+49B clrtext CODE >1224:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
+49C clrtext CODE >1225:C:\Users\CARLOS~1\AppData\Local\Temp\saq0.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -426,7 +391,7 @@ F9 text14 CODE >262:C:/MPlab_Digital2/Digital_2/Proyecto2Digital2.X/main.c
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
-__Hspace_0 54B 0 ABS 0 - -
+__Hspace_0 49D 0 ABS 0 - -
 __Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
@@ -438,23 +403,24 @@ _LED1 4A 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.producti
 _LED2 49 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
-_main 4BE 0 CODE 0 maintext dist/default/production\Proyecto2Digital2.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
+_main 364 0 CODE 0 maintext dist/default/production\Proyecto2Digital2.X.production.o
 _year 38 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
-start 24 0 CODE 0 init C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
+start 24 0 CODE 0 init C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _var_envio 36 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 I2C_Master_Read@a 20 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto2Digital2.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
+__end_of_envio_nuevo 364 0 CODE 0 text14 dist/default/production\Proyecto2Digital2.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
@@ -466,19 +432,18 @@ tabla_hex@port 70 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto2Digit
 _ANSELH 189 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 __size_of_initOsc 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of___lldiv 7D4 0 CODE 0 text5 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of___lldiv 678 0 CODE 0 text5 dist/default/production\Proyecto2Digital2.X.production.o
 _OPTION_REG 81 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
-___stacklo 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
+___stackhi 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
+___stacklo 0 0 ABS 0 - C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 __size_of_TX_GO 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
-__size_of_envio 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 ___lldiv@counter 2D 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto2Digital2.X.production.o
 start_initialization 2A 0 CODE 0 cinit dist/default/production\Proyecto2Digital2.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 ___lldiv@dividend 24 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto2Digital2.X.production.o
-clear_ram0 A86 0 CODE 0 clrtext dist/default/production\Proyecto2Digital2.X.production.o
+clear_ram0 92A 0 CODE 0 clrtext dist/default/production\Proyecto2Digital2.X.production.o
 _SPBRGH 9A 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto2Digital2.X.production.o
 _SSPADD 93 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
@@ -488,8 +453,9 @@ _controles 7D 0 COMMON 1 bssCOMMON dist/default/production\Proyecto2Digital2.X.p
 _TRISC3 43B 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 tabla_hex@selector 74 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto2Digital2.X.production.o
-__end_of_initOsc 882 0 CODE 0 text3 dist/default/production\Proyecto2Digital2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
+__end_of_initOsc 726 0 CODE 0 text3 dist/default/production\Proyecto2Digital2.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
+__size_of_envio_nuevo 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -498,10 +464,10 @@ __Hcinit 46 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
 I2C_Master_Write@d 20 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto2Digital2.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
-_I2C_Master_RepeatedStart A74 0 CODE 0 text10 dist/default/production\Proyecto2Digital2.X.production.o
+_I2C_Master_RepeatedStart 918 0 CODE 0 text10 dist/default/production\Proyecto2Digital2.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
-__end_of_tabla_hex 4BE 0 CODE 0 text15 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_tabla_hex 200 0 CODE 0 text15 dist/default/production\Proyecto2Digital2.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -530,52 +496,52 @@ __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
-__S0 54B 0 ABS 0 - -
+__S0 49D 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 _dia 3C 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
-_isr 60C 0 CODE 0 text13 dist/default/production\Proyecto2Digital2.X.production.o
+_isr 4B2 0 CODE 0 text13 dist/default/production\Proyecto2Digital2.X.production.o
 _mes 3A 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
-_tabla_hex 304 0 CODE 0 text15 dist/default/production\Proyecto2Digital2.X.production.o
+_tabla_hex 46 0 CODE 0 text15 dist/default/production\Proyecto2Digital2.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
-_I2C_Master_Start A62 0 CODE 0 text9 dist/default/production\Proyecto2Digital2.X.production.o
-_I2C_Master_Write A3C 0 CODE 0 text7 dist/default/production\Proyecto2Digital2.X.production.o
-__end_of_isr 704 0 CODE 0 text13 dist/default/production\Proyecto2Digital2.X.production.o
+_I2C_Master_Start 906 0 CODE 0 text9 dist/default/production\Proyecto2Digital2.X.production.o
+_I2C_Master_Write 8E0 0 CODE 0 text7 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_isr 5A8 0 CODE 0 text13 dist/default/production\Proyecto2Digital2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 ___lldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto2Digital2.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\CARLOS~1\AppData\Local\Temp\s5gk.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\CARLOS~1\AppData\Local\Temp\saq0.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _RCSTAbits 18 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
-__end_of_initUSART A0C 0 CODE 0 text2 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext10 A74 0 CODE 0 text10 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext11 980 0 CODE 0 text11 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext12 A0C 0 CODE 0 text12 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext13 60C 0 CODE 0 text13 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext14 46 0 CODE 0 text14 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext15 304 0 CODE 0 text15 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_initUSART 8B0 0 CODE 0 text2 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext10 918 0 CODE 0 text10 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext11 824 0 CODE 0 text11 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext12 8B0 0 CODE 0 text12 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext13 4B2 0 CODE 0 text13 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext14 200 0 CODE 0 text14 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext15 46 0 CODE 0 text15 dist/default/production\Proyecto2Digital2.X.production.o
 __size_of_initUSART 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
-___lldiv 704 0 CODE 0 text5 dist/default/production\Proyecto2Digital2.X.production.o
-__pmaintext 4BE 0 CODE 0 maintext dist/default/production\Proyecto2Digital2.X.production.o
+___lldiv 5A8 0 CODE 0 text5 dist/default/production\Proyecto2Digital2.X.production.o
+__pmaintext 364 0 CODE 0 maintext dist/default/production\Proyecto2Digital2.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 _segundos 44 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
-_initUSART 9E4 0 CODE 0 text2 dist/default/production\Proyecto2Digital2.X.production.o
+_initUSART 888 0 CODE 0 text2 dist/default/production\Proyecto2Digital2.X.production.o
 __size_of_I2C_Master_RepeatedStart 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 ?_I2C_Master_Read 20 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto2Digital2.X.production.o
 _toggle 48 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
-__end_of_I2C_Master_Init 980 0 CODE 0 text4 dist/default/production\Proyecto2Digital2.X.production.o
-__end_of_I2C_Master_Read 9E4 0 CODE 0 text11 dist/default/production\Proyecto2Digital2.X.production.o
-__end_of_I2C_Master_Stop A62 0 CODE 0 text8 dist/default/production\Proyecto2Digital2.X.production.o
-__end_of_I2C_Master_Wait A26 0 CODE 0 text12 dist/default/production\Proyecto2Digital2.X.production.o
-__end_of_I2C_Master_Start A74 0 CODE 0 text9 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_I2C_Master_Init 824 0 CODE 0 text4 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_I2C_Master_Read 888 0 CODE 0 text11 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_I2C_Master_Stop 906 0 CODE 0 text8 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_I2C_Master_Wait 8CA 0 CODE 0 text12 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_I2C_Master_Start 918 0 CODE 0 text9 dist/default/production\Proyecto2Digital2.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__end_of_I2C_Master_Write A50 0 CODE 0 text7 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_I2C_Master_Write 8F4 0 CODE 0 text7 dist/default/production\Proyecto2Digital2.X.production.o
 __pbssCOMMON 7D 0 COMMON 1 bssCOMMON dist/default/production\Proyecto2Digital2.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
@@ -584,30 +550,31 @@ __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_I2C_Master_Start 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 __size_of_I2C_Master_Write 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 end_of_initialization 3E 0 CODE 0 cinit dist/default/production\Proyecto2Digital2.X.production.o
+_envio_nuevo 200 0 CODE 0 text14 dist/default/production\Proyecto2Digital2.X.production.o
 __Hintentry 24 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 ?___lldiv 20 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto2Digital2.X.production.o
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-_initOsc 7D4 0 CODE 0 text3 dist/default/production\Proyecto2Digital2.X.production.o
+_initOsc 678 0 CODE 0 text3 dist/default/production\Proyecto2Digital2.X.production.o
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
-__ptext1 882 0 CODE 0 text1 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext2 9E4 0 CODE 0 text2 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext3 7D4 0 CODE 0 text3 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext4 90A 0 CODE 0 text4 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext5 704 0 CODE 0 text5 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext6 A26 0 CODE 0 text6 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext7 A3C 0 CODE 0 text7 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext8 A50 0 CODE 0 text8 dist/default/production\Proyecto2Digital2.X.production.o
-__ptext9 A62 0 CODE 0 text9 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext1 726 0 CODE 0 text1 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext2 888 0 CODE 0 text2 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext3 678 0 CODE 0 text3 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext4 7AE 0 CODE 0 text4 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext5 5A8 0 CODE 0 text5 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext6 8CA 0 CODE 0 text6 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext7 8E0 0 CODE 0 text7 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext8 8F4 0 CODE 0 text8 dist/default/production\Proyecto2Digital2.X.production.o
+__ptext9 906 0 CODE 0 text9 dist/default/production\Proyecto2Digital2.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_I2C_Master_Init 90A 0 CODE 0 text4 dist/default/production\Proyecto2Digital2.X.production.o
-_I2C_Master_Read 980 0 CODE 0 text11 dist/default/production\Proyecto2Digital2.X.production.o
-_I2C_Master_Stop A50 0 CODE 0 text8 dist/default/production\Proyecto2Digital2.X.production.o
-_I2C_Master_Wait A0C 0 CODE 0 text12 dist/default/production\Proyecto2Digital2.X.production.o
+_I2C_Master_Init 7AE 0 CODE 0 text4 dist/default/production\Proyecto2Digital2.X.production.o
+_I2C_Master_Read 824 0 CODE 0 text11 dist/default/production\Proyecto2Digital2.X.production.o
+_I2C_Master_Stop 8F4 0 CODE 0 text8 dist/default/production\Proyecto2Digital2.X.production.o
+_I2C_Master_Wait 8B0 0 CODE 0 text12 dist/default/production\Proyecto2Digital2.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of_I2C_Master_RepeatedStart A86 0 CODE 0 text10 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_I2C_Master_RepeatedStart 92A 0 CODE 0 text10 dist/default/production\Proyecto2Digital2.X.production.o
 __end_of__initialization 3E 0 CODE 0 cinit dist/default/production\Proyecto2Digital2.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
@@ -617,10 +584,9 @@ _TXSTAbits 98 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 _SSPCON2 91 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 __Hend_init 2A 0 CODE 0 end_init -
-__end_of_main 60C 0 CODE 0 maintext dist/default/production\Proyecto2Digital2.X.production.o
-__end_of_TX_GO A3C 0 CODE 0 text6 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_main 4B2 0 CODE 0 maintext dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_TX_GO 8E0 0 CODE 0 text6 dist/default/production\Proyecto2Digital2.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
-__end_of_envio 304 0 CODE 0 text14 dist/default/production\Proyecto2Digital2.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
@@ -636,17 +602,16 @@ _TRISD 88 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 _TRISE 89 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 _TXREG 19 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 _TX_EN 46 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
-_TX_GO A26 0 CODE 0 text6 dist/default/production\Proyecto2Digital2.X.production.o
+_TX_GO 8CA 0 CODE 0 text6 dist/default/production\Proyecto2Digital2.X.production.o
 _minutos 42 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
-__end_of_setup 90A 0 CODE 0 text1 dist/default/production\Proyecto2Digital2.X.production.o
+__end_of_setup 7AE 0 CODE 0 text1 dist/default/production\Proyecto2Digital2.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\Proyecto2Digital2.X.production.o
 _dia_S 3E 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
 _enter 47 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
-_envio 46 0 CODE 0 text14 dist/default/production\Proyecto2Digital2.X.production.o
 _horas 40 0 BANK0 1 bssBANK0 dist/default/production\Proyecto2Digital2.X.production.o
-_setup 882 0 CODE 0 text1 dist/default/production\Proyecto2Digital2.X.production.o
+_setup 726 0 CODE 0 text1 dist/default/production\Proyecto2Digital2.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\Proyecto2Digital2.X.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.X.production.o
 __initialization 2A 0 CODE 0 cinit dist/default/production\Proyecto2Digital2.X.production.o
@@ -682,7 +647,7 @@ __size_of_I2C_Master_Wait 0 0 ABS 0 - dist/default/production\Proyecto2Digital2.
 %SEGMENTS
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 2B 1
-intentry 0 4 8 547 2
+intentry 0 4 8 499 2
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
