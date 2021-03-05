@@ -68,12 +68,12 @@ void __interrupt() isr(void){
 
     }
     if (PIR1bits.TXIF == 1){
-        envio_nuevo(); //rutina que envia los datos de los esclavos por el puerto serial 
+        envio_nuevo(); //rutina que envia el valor del sensor por el puerto I2C por el puerto serial 
         PIE1bits.TXIE = 0;  //se limpia el enable de la interrupcion del TXREG
     }
     if (PIR1bits.RCIF == 1){
         PIR1bits.RCIF = 0;
-        switch (toggle){
+        switch (toggle){ //toggle de recepcion para 4 datos
             case 0:
                 LED1 = RCREG;
                 toggle++;
@@ -91,21 +91,21 @@ void __interrupt() isr(void){
                 toggle = 0;
                 break;
         }
-        if (enter == 10){
-            if (TX_EN == 1){
+        if (enter == 10){ //rutina de verificacion de los datos 
+            if (TX_EN == 1){ //activa el envio solo cuando el ESP32 manda la confirmacion 
                 INTCONbits.TMR0IE = 1;
             }
-            if (LED1 == 53){
-                PORTAbits.RA0 = 1;
+            if (LED1 == 53){ //Enciende el LED1 acrode con la variable que se escibe del ESP32
+                PORTAbits.RA0 = 1; //la cual es modificada en Adafruit
             }else{
                 PORTAbits.RA0 = 0;
             }
-            if (LED2 == 53){
+            if (LED2 == 53){ //lo mismo que la variable anterior pero con otro LED
                 PORTAbits.RA1 = 1;
             }else{
                 PORTAbits.RA1 = 0;
             }
-        }else{
+        }else{ //si los datos vienen en desorden, limpia las variables de recepcion 
             LED1 = 0;
             LED2 = 0;
             enter = 0;
@@ -119,7 +119,8 @@ void __interrupt() isr(void){
 //******************************************************************************
 
 void main(void) {
-    setup();
+    setup(); //configuracion general del circuiot 
+    //condiciones iniclaes del sensor 
 //    I2C_Master_Start(); //iniciar comunicacion 
 //    I2C_Master_Write(0xD0);//adress del RTC para que reciba
 //    I2C_Master_Write(0); //colocar pointer en 0
@@ -135,7 +136,7 @@ void main(void) {
     //                             mian loop
     //**************************************************************************
     while (1) {
-        TX_GO();
+        TX_GO(); //
         I2C_Master_Start();
         I2C_Master_Write(0xD0);
         I2C_Master_Write(0);
