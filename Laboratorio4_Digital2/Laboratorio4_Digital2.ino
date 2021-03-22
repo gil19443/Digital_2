@@ -75,11 +75,11 @@ void loop() {
 void luces (void) { //rutina que enciende y apaga las lueces RGB de la tiva como un semaforo
   digitalWrite(RED_LED, HIGH);
   delay(500);
-  digitalWrite(RED_LED, LOW);
+  digitalWrite(RED_LED, HIGH);
   digitalWrite(GREEN_LED, HIGH);
-  digitalWrite(BLUE_LED, HIGH);
+  digitalWrite(BLUE_LED, LOW);
   delay(500);
-  digitalWrite(GREEN_LED, LOW);
+  digitalWrite(RED_LED, LOW);
   digitalWrite(BLUE_LED, LOW);
   digitalWrite(GREEN_LED,HIGH);
   delay(500);
