@@ -57,23 +57,23 @@ void setup(){
 }
 
 void loop(){
-  checkserial();
-  if (enable == 1){
-    archivos();
+  checkserial(); //revisar lo que ingreso al puerto serial para habilitar que se muestre el archivo seleccionado
+  if (enable == 1){ //condicional para que los archivos dentro de la SD solo se muestren al inicio y luego de que el usuario muestre un archivo 
+    archivos(); //subrutina que lee el contenido en la SD y lo imprime en pantalla 
   }
-  if (enable1 == 1){
+  if (enable1 == 1){//condicional que habilita que se imprima el archivo seleccionado unicamente cuando se seleccione 
     printimages();
   }
   delay(100);
-  enable1 = 0;
+  enable1 = 0; //se limpian las variables 
   var1 = 0;
 }
 
-void archivos (void){
+void archivos (void){ //subrutina que lee el contenido en la SD y lo imprime en pantalla 
     enable = 0;
     root = SD.open("/");
 
-    printDirectory(root, 0);
+    printDirectory(root, 0); 
 }
 void printDirectory(File dir, int numTabs) {
    Serial.println("Seleccione el emoji que desea imprimir");
@@ -81,14 +81,14 @@ void printDirectory(File dir, int numTabs) {
    while(true) {
      
      File entry =  dir.openNextFile();
-     if (! entry) {
+     if (! entry) { //se revisa que hayan archivos para abrir 
        // no more files
        break;
      }
     for (uint8_t i=0; i<numTabs; i++) {
        Serial.print('\t');
      }
-    switch(toggle){
+    switch(toggle){ //por cada archivo entra, se omite el primero y para los demas se le coloca la numeracion al apar del nombre del archivo 
         case 0:
           entry.name();
           toggle = 1;
@@ -113,23 +113,23 @@ void printDirectory(File dir, int numTabs) {
           break;
        }
      
-     if (entry.isDirectory()) {
-       //Serial.println("/");
+     if (entry.isDirectory()) { //se revisa si es un directorio o un archivo 
+       //Serial.println("/"); //para este laboratorio no es necesario mostrar los directorios 
        //printDirectory(entry, numTabs+1);
      } else {
        // files have sizes, directories do not
        
-       Serial.print("\t\t");
+       Serial.print("\t\t"); //si es un archivo colocar su tamaño 
        Serial.println(entry.size(), DEC);
      }
-     entry.close();
+     entry.close();//cerrar el arcivho 
    }
 }
 void printimages(void){
   enable = 1;
   enable1 = 0;
-  printselect(var1);
-  if (myFile) {
+  printselect(var1); //toggle que abre el archivo actode con lo que se ingreso en el puerto serial 
+  if (myFile) { //si se logra abrir el archivo y tiene algo dentro 
     Serial.println("el archivo seleccionado fue");
     
     // read from the file until there's nothing else in it:
@@ -143,7 +143,7 @@ void printimages(void){
     Serial.println("error opening test.txt");
   }
 }
-void printselect(int selector){
+void printselect(int selector){ //el selector de la rutina acorde con lo ingresado en el puerto serial 
     switch(selector){
       case 1:
        myFile = SD.open("carafe~1.txt");
@@ -159,7 +159,7 @@ void printselect(int selector){
         break;
     }
 }
-void checkserial (void){
+void checkserial (void){ //condicionales para colocar el valor de la variable de toggle de los archivos, acorde con el valor equivalente en ASCII
     int check = Serial.read();
     if (check == 49){
       enable1 = 1;
