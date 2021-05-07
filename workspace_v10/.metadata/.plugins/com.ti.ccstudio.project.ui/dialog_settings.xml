@@ -5,6 +5,7 @@
 	<section name="com.ti.ccstudio.project.ui.internal.properties.DynamicPropertiesPageManager">
 	</section>
 	<section name="com.ti.ccstudio.project.ui.internal.wizards.importexport.ProjectImportPage">
+		<item key="CCS.BROWSE_DIRS_FILTER" value="C:\MPlab_Digital2\Digital_2\workspace_v10\Laboratorio7Digital2"/>
 	</section>
 	<section name="com.ti.ccstudio.project.ui.internal.wizards.project.ProjectSettingsPage">
 		<item key="CCS.TARGET" value="devices/tm4c123gh6pm.xml"/>
