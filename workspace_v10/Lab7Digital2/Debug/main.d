@@ -19,6 +19,7 @@ main.obj: C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/sysctl.h
 main.obj: C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/interrupt.h
 main.obj: C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/gpio.h
 main.obj: C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/timer.h
+main.obj: C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/uart.h
 
 ../main.c:
 
@@ -57,4 +58,6 @@ C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/interrupt.h:
 C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/gpio.h:
 
 C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/timer.h:
+
+C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/uart.h:
 
