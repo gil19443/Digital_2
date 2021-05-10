@@ -9,6 +9,7 @@
 #include "driverlib/gpio.h"
 #include "driverlib/timer.h"
 #include "driverlib/uart.h"
+#include "driverlib/pin_map.h"
 //*****************************************************************************************
 //                                               variables
 //*****************************************************************************************
@@ -28,25 +29,7 @@ int main(void){
     setup();
     while(1)
     {
-       if (rec == rec1){
-           var = 5;
-           GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 8);
-           rec1  = rec;
-        }else{
-            if ((rec == 'r') || (rec1 == 'r')) {
-               var = 0;
-               rec1  = rec;
-               //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 0);
-           }else if((rec == 'g') || (rec1 == 'g')){
-               var = 2;
-               rec1  = rec;
-               //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 0);
-           }else if ((rec == 'b') || (rec1 == 'b')){
-               var = 1;
-               rec1  = rec;
-               //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 0);
-          }
-        }
+
     }
 }
 //******************************************************************************************
@@ -82,7 +65,11 @@ void setup (void){
 
     while(!SysCtlPeripheralReady(SYSCTL_PERIPH_UART0)){} //esperar a que el UART este habilitado
 
-    UARTConfigSetExpClk(UART0_BASE, SysCtlClockGet(), 115200, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE)); //configuracion UART
+    UARTConfigSetExpClk(UART0_BASE, SysCtlClockGet(), 115200, UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE); //configuracion UART
+
+    GPIOPinConfigure(GPIO_PA0_U0RX);
+
+    GPIOPinConfigure(GPIO_PA1_U0TX);
 
     GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);//pines 0 y 1 del PORTA para el UART
 
@@ -99,14 +86,20 @@ void setup (void){
 }
 void UARTIntHandler (void){
     UARTIntClear(UART0_BASE, UART_INT_RX | UART_INT_RT);
-    if (UARTCharsAvail(UART0_BASE)){
-        rec =  UARTCharGetNonBlocking(UART0_BASE);
-      /*  if (rec == UARTCharGetNonBlocking(UART0_BASE)){
-            rec1 = 0;
-        }else{
-            rec =  UARTCharGetNonBlocking(UART0_BASE);
-            rec1 =1;
-        }*/
+    rec =  UARTCharGet(UART0_BASE);
+    if (rec1 != rec){
+        if (rec == 'r') {
+              var = 0;
+              rec1  = rec;
+        }else if(rec == 'g'){
+              var = 2;
+              rec1  = rec;
+        }else if (rec == 'b'){
+            var = 1;
+            rec1  = rec;
+        }
+    }else{
+        var = 5;
     }
 }
 void Timer0IntHandler(void){
@@ -124,6 +117,10 @@ void Timer0IntHandler(void){
         case 2://LED verde
             toggle(GPIO_PORTF_BASE, GPIO_PIN_3);
             break;
+        default:
+            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, 0);
+            break;
+
     }
 }
 void toggle (uint32_t port, uint8_t pins){
