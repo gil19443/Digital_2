@@ -89,17 +89,18 @@ void UARTIntHandler (void){
     rec =  UARTCharGet(UART0_BASE);
     if (rec1 != rec){
         if (rec == 'r') {
-              var = 0;
-              rec1  = rec;
+            var = 0;
+            rec1  = rec;
         }else if(rec == 'g'){
-              var = 2;
-              rec1  = rec;
+            var = 2;
+            rec1  = rec;
         }else if (rec == 'b'){
             var = 1;
             rec1  = rec;
         }
     }else{
         var = 5;
+        rec1 = 0;
     }
 }
 void Timer0IntHandler(void){
