@@ -17,14 +17,15 @@ void tabla(uint8_t g, uint8_t f, uint8_t e, uint8_t d, uint8_t c, uint8_t b, uin
 void conteo (uint8_t var);
 //*************************************************************************************
 void setup() {
-  pinMode(33, OUTPUT);// put your setup code here, to run once:
+  pinMode(33, OUTPUT);//Pines de salida para el display
   pinMode(32, OUTPUT);
   pinMode(27, OUTPUT);
   pinMode(13, OUTPUT);
   pinMode(21, OUTPUT);
   pinMode(19, OUTPUT);
   pinMode(22, OUTPUT);
-  Serial.begin(115200);
+  Serial.begin(115200);//inicializacion del UART0
+  //Configuracion para el servidor 
   Serial.println("Try Connecting to ");
   Serial.println(ssid);
   Serial2.begin(115200, SERIAL_8N1, RXD2, TXD2);
@@ -40,40 +41,44 @@ void setup() {
   Serial.print("Got IP: ");
   Serial.println(WiFi.localIP());  //Show ESP32 IP on serial
 
+  //estando en la direccion ip, si no sucede nada, llamar a la funcion handle_OnConnect
+  //esto es util en este caso, ya que la interfaz no tiene botones
   server.on("/", handle_OnConnect); // Directamente desde e.g. 192.168.0.8
-  
-  server.onNotFound(handle_NotFound);
 
+  //si el servidor no funciona, ir a la funcion handle_NotFound
+  server.onNotFound(handle_NotFound);
+  //iniciar el servidor 
   server.begin();
   Serial.println("HTTP server started");
   delay(100);
 }
 
 void loop() {
+  //enlazar al cliente 
   server.handleClient();
-  if (Serial2.available() > 0) { //secion de envio y recepcion UART con el PIC 
-    Serial2.readBytesUntil(10, lectura, 4); //rutina que lee 8 bytes hasta el caracter "n" y lo guarda en el arreglo llamado lectura 
-    //Serial.println(lectura);
+  if (Serial2.available() > 0) { //secion de envio y recepcion UART con la tiva  
+    Serial2.readBytesUntil(10, lectura, 4); //rutina que lee 8 bytes hasta el caracter "\n" y lo guarda en el arreglo llamado lectura 
+    //Serial.println(lectura); //se verfica que los datos guardados en lectura sean correctos 
   }
-  var1 = 0;
-  for (int i = 0; i<4;i++){
-    if (lectura[i] =='1'){
+  var1 = 0;//se limpia variable temporal que almacena el numero de parqueos ocupados 
+  for (int i = 0; i<4;i++){//ciclo que revisa el numero de parqueos ocupados en el arreglo llamado lecutra 
+    if (lectura[i] =='1'){//cada ver que encuentra uno, incrementa la variable temporal 
       var1++;
     }
     }
-    conteo(4-var1);
+    conteo(4-var1);//funcion que muestra el valor de parqueos disponibles en el display 
 }
 //************************************************************************************************
 // Handler de Inicio página
 //************************************************************************************************
-void handle_OnConnect() {
+void handle_OnConnect() { //funcion que se llama cuandno no sucede nada a la interfaz, envia el string SendHTML
   server.send(200, "text/html", SendHTML(lectura[0],lectura[1],lectura[2],lectura[3]));
 }
 //************************************************************************************************
 // Procesador de HTML
 //************************************************************************************************
-String SendHTML(char p1, char p2, char p3, char p4) {
-  String ptr = "<!DOCTYPE html>\n";
+String SendHTML(char p1, char p2, char p3, char p4) {//esta funcion contiene la programacion de la interfaz
+  String ptr = "<!DOCTYPE html>\n"; //recibe cada uno de los caracteres recibidos para determinar los graficos que se muestran
   ptr += "<html>\n";
   ptr += "<head>\n";
   ptr += "<script>\n";
@@ -123,7 +128,7 @@ String SendHTML(char p1, char p2, char p3, char p4) {
   ptr +="    <th>Parqueo 4</th>\n";
   ptr +="  </tr>\n";
   ptr +="  <tr>\n";
-  if (lectura[0]=='0'){
+  if (lectura[0]=='0'){ //acrode con el estado de cada parqueo, se escoge si mostrar le corazon verde o el circuilo rojo 
     ptr +="    <td>&#x1f49a;</td>\n";
   }else{
     ptr +="    <td>&#x1f534;</td>\n";
@@ -145,7 +150,7 @@ String SendHTML(char p1, char p2, char p3, char p4) {
   }  
   ptr +="  </tr>\n";
   ptr +="  <tr>\n";
-  if (lectura[0] == '1'){
+  if (lectura[0] == '1'){//acrode con el estado de cada parqueo, se escoge si mostrar el carro o la mano que apunta 
     ptr +="    <td>&#x1f698;</td>\n";
   }else{
     ptr +="    <td>&#x1f446;</td>\n";
@@ -168,8 +173,8 @@ String SendHTML(char p1, char p2, char p3, char p4) {
   ptr +="  </tr>\n";
   ptr +="</table>\n";
   ptr +="<footer>\n";
-  if (var1 == 0){
-    ptr +="<h2>Parqueos disponibles: 4</h2>\n";
+  if (var1 == 0){ //se revisa la misma variable que ingresa al display de 7 segmentos 
+    ptr +="<h2>Parqueos disponibles: 4</h2>\n"; //para colocar el numero de parqueos disponibles 
   }else if (var1 == 1){
     ptr +="<h2>Parqueos disponibles: 3</h2>\n";
   }else if (var1 == 2){
@@ -187,13 +192,13 @@ String SendHTML(char p1, char p2, char p3, char p4) {
 //************************************************************************************************
 // Handler de not found
 //************************************************************************************************
-void handle_NotFound() {
+void handle_NotFound() { //funcion para cuando no funciona el servidor
   server.send(404, "text/plain", "Not found");
 }
-void conteo (uint8_t var){
+void conteo (uint8_t var){ //funcion que recibe un valor en decimal para colocar le mismo valor en el display de 7 segmentos 
     switch(var){
     case 0:
-      tabla(1,0,0,0,0,0,0);
+      tabla(1,0,0,0,0,0,0); //funcion que codifica los pines del display 
       break;
     case 1:
       tabla(1,1,1,1,0,0,1);
@@ -209,7 +214,7 @@ void conteo (uint8_t var){
       break;
   }
 }
-void tabla(uint8_t g, uint8_t f, uint8_t e, uint8_t d, uint8_t c, uint8_t b, uint8_t a){
+void tabla(uint8_t g, uint8_t f, uint8_t e, uint8_t d, uint8_t c, uint8_t b, uint8_t a){//funcion para encender los pines del display 
   if (g == 1){
     digitalWrite(33, HIGH);
   }else{

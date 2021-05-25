@@ -2,6 +2,7 @@
 <html>
 <head>
 <script>
+//funcion que actualiza la pagina cada 5 segundos
 <!--
 function timedRefresh(timeoutPeriod) {
 	setTimeout("location.reload(true);",timeoutPeriod);
@@ -9,7 +10,8 @@ function timedRefresh(timeoutPeriod) {
 
 window.onload = timedRefresh(5000);
 
-//   -->
+   -->
+<!--programacion en CSS donde se coloca el estilo de cada uno de los elementos -->
 </script>
 <style>
 header {
@@ -37,9 +39,11 @@ header {
 </style>
 </head>
 <body>
+	<!-- titulo -->
   <header>
   <h2>PARQUE - O - MATIC</h2>
   </header>
+	<!-- elementos de la tabla de parqueos -->
 <table>
   <tr>
     <th>Parqueo 1</th>
@@ -48,20 +52,21 @@ header {
     <th>Parqueo 4</th>
   </tr>
   <tr>
-    <td>&#x1f49a;&#x1f534;</td>
-    <td>&#x1f49a;&#x1f534;</td>
-    <td>&#x1f49a;&#x1f534;</td>
-    <td>&#x1f49a;&#x1f534;</td>
+    <td>&#x1f49a;</td>
+    <td>&#x1f534;</td>
+    <td>&#x1f49a;</td>
+    <td>&#x1f534;</td>
   </tr>
   <tr>
-    <td>&#x1f446;&#x1f698;</td>
-    <td>&#x1f446;&#x1f698;</td>
-    <td>&#x1f446;&#x1f698;</td>
-    <td>&#x1f446;&#x1f698;</td>
+    <td>&#x1f446;</td>
+    <td>&#x1f698;</td>
+    <td>&#x1f446;</td>
+    <td>&#x1f698;</td>
   </tr>
 </table>
+<!-- texto de parqueos dispoinibles  -->
 <footer>
-<h2>Parqueos disponibles: 1</h2>
+<h2>Parqueos disponibles: 2</h2>
 </footer>
 </body>
 </html>

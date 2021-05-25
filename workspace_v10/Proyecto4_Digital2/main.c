@@ -13,15 +13,15 @@
 //*****************************************************************************************
 //                                               variables
 //*****************************************************************************************
-uint8_t parqueo1 = 0;
+uint8_t parqueo1 = 0; //variables de cada parqueo
 uint8_t parqueo2 = 0;
 uint8_t parqueo3 = 0;
 uint8_t parqueo4 = 0;
 //*****************************************************************************************
 //                                  Prototipos de funciones
 //*****************************************************************************************
-void leds (uint32_t puertoLG,uint32_t puertoLR, uint32_t puerto, uint8_t boton, uint8_t ledrojo, uint8_t ledverde);
-void setup (void);
+void leds (uint32_t puertoLG,uint32_t puertoLR, uint32_t puerto, uint8_t boton, uint8_t ledrojo, uint8_t ledverde);//funcion para encender leds con botones
+void setup (void); //configuracino
 //*****************************************************************************************
 //                                  ciclo principal
 //******************************************************************************************
@@ -29,8 +29,8 @@ int main(void){
     setup();
     while(1)
     {
-     leds(GPIO_PORTF_BASE,GPIO_PORTF_BASE,GPIO_PORTB_BASE,GPIO_PIN_4,GPIO_PIN_3,GPIO_PIN_2);
-     leds(GPIO_PORTB_BASE,GPIO_PORTC_BASE,GPIO_PORTA_BASE,GPIO_PIN_5,GPIO_PIN_4,GPIO_PIN_3);
+     leds(GPIO_PORTF_BASE,GPIO_PORTF_BASE,GPIO_PORTB_BASE,GPIO_PIN_4,GPIO_PIN_3,GPIO_PIN_2);//funciones para encender un par de LEDs por cada boton, y modificar
+     leds(GPIO_PORTB_BASE,GPIO_PORTC_BASE,GPIO_PORTA_BASE,GPIO_PIN_5,GPIO_PIN_4,GPIO_PIN_3);//las variables de los parqueos que se enviaran por UART
      leds(GPIO_PORTC_BASE,GPIO_PORTC_BASE,GPIO_PORTA_BASE,GPIO_PIN_6,GPIO_PIN_6,GPIO_PIN_5);
      leds(GPIO_PORTC_BASE,GPIO_PORTD_BASE,GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_6,GPIO_PIN_7);
     }
@@ -52,7 +52,7 @@ void setup (void){
 
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);//habilita el puerto D
 
-    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2|GPIO_PIN_3);
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2|GPIO_PIN_3);//Pines de salida para los leds
 
     GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE, GPIO_PIN_6);
 
@@ -60,7 +60,7 @@ void setup (void){
 
     GPIOPinTypeGPIOOutput(GPIO_PORTC_BASE,GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7);
 
-    GPIOPadConfigSet(GPIO_PORTB_BASE, GPIO_PIN_4, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
+    GPIOPadConfigSet(GPIO_PORTB_BASE, GPIO_PIN_4, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);//Pines como entrada en pull-ups para los botonres
 
     GPIOPadConfigSet(GPIO_PORTA_BASE, GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
     //************************************** configuracion timer 0*****************************************
@@ -69,7 +69,7 @@ void setup (void){
 
     TimerConfigure(TIMER0_BASE, TIMER_CFG_PERIODIC); // Configuración del Timer 0 como temporizador períodico
 
-    TimerLoadSet(TIMER0_BASE, TIMER_A, ((SysCtlClockGet())/200) - 1); // Establecer el periodo del temporizador con periodo de 1seg
+    TimerLoadSet(TIMER0_BASE, TIMER_A, ((SysCtlClockGet())/200) - 1); // Establecer el periodo del temporizador con periodo de 5ms
 
     IntEnable(INT_TIMER0A); // Se habilita la interrupción por el TIMER0A
 
@@ -79,21 +79,21 @@ void setup (void){
 
     //************************************** configuracion UART*****************************************
 
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);//habilita el puerto A
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);//habilita el puerto b para UART1
 
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1); //habilita el periferico del UART
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1); //habilita el periferico del UART1
 
-    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_UART1)){} //esperar a que el UART este habilitado
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_UART1)){} //esperar a que el UART1 este habilitado
 
-    UARTConfigSetExpClk(UART1_BASE, SysCtlClockGet(), 115200, UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE); //configuracion UART
+    UARTConfigSetExpClk(UART1_BASE, SysCtlClockGet(), 115200, UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE); //configuracion UART1
 
-    GPIOPinConfigure(GPIO_PB0_U1RX);
+    GPIOPinConfigure(GPIO_PB0_U1RX);//confogurar los pines para el UART1
 
     GPIOPinConfigure(GPIO_PB1_U1TX);
 
-    GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);//pines 0 y 1 del PORTA para el UART
+    GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);//pines 0 y 1 del PORTB para el UART1
 
-    UARTEnable(UART1_BASE);
+    UARTEnable(UART1_BASE); //Habilitar el UART1
 
     IntMasterEnable(); // Se habilitan las interrupciones Globales
 
@@ -104,18 +104,18 @@ void Timer0IntHandler(void){
     TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
     // Read the current state of the GPIO pin and
     // write back the opposite state
-    UARTCharPutNonBlocking(UART1_BASE, parqueo1+48);
+    UARTCharPutNonBlocking(UART1_BASE, parqueo1+48);//Enviar el estado de los 4 parqueos en ACSII
     UARTCharPutNonBlocking(UART1_BASE, parqueo2+48);
     UARTCharPutNonBlocking(UART1_BASE, parqueo3+48);
     UARTCharPutNonBlocking(UART1_BASE, parqueo4+48);
-    UARTCharPutNonBlocking(UART1_BASE, 10);
+    UARTCharPutNonBlocking(UART1_BASE, 10);//Enviar un enter al final
 
 }
 void leds (uint32_t puertoLG,uint32_t puertoLR, uint32_t puerto, uint8_t boton, uint8_t ledrojo, uint8_t ledverde){
-    if(GPIOPinRead(puerto, boton) == 0){
-        GPIOPinWrite(puertoLR, ledrojo, ledrojo);
+    if(GPIOPinRead(puerto, boton) == 0){//revisa si el boton esta persionado
+        GPIOPinWrite(puertoLR, ledrojo, ledrojo); //si el boton esta presionado, enciende el led rojo y apaga el led verde
         GPIOPinWrite(puertoLG, ledverde,0);
-        if (boton == GPIO_PIN_4){
+        if (boton == GPIO_PIN_4){//revisa el boton presionado para saber cual parqueo esta ocupado
             parqueo1 = 1;
         }else if (boton == GPIO_PIN_5){
             parqueo2 = 1;
@@ -125,9 +125,9 @@ void leds (uint32_t puertoLG,uint32_t puertoLR, uint32_t puerto, uint8_t boton, 
             parqueo4 = 1;
         }
     }else{
-        GPIOPinWrite(puertoLG, ledverde, ledverde);
+        GPIOPinWrite(puertoLG, ledverde, ledverde);//si el boton no esta presionado, se enciende el led verde y se apaga el rojo
         GPIOPinWrite(puertoLR, ledrojo, 0);
-        if (boton == GPIO_PIN_4){
+        if (boton == GPIO_PIN_4){//revisa el boton presionado para saber cual parqueo esta disponible
             parqueo1 = 0;
         }else if (boton == GPIO_PIN_5){
             parqueo2 = 0;
